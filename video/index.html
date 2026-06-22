@@ -1,26 +1,15 @@
-<?php
-// Ensure the CMS helper functions are available
-if (!function_exists('cms')) {
-    require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/cms.php';
-}
-
-// Include centralized Twig setup
-require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/twig-setup.php';
-?>
-
-
 <!doctype html>
 <html class="scroll-smooth" lang="en">
  <head> 
-  <script defer src="../rw/elements/com.realmac.corepack/alpine-collapse.js?rwcache=803859073"></script> 
-  <script defer src="../rw/elements/com.realmac.corepack/alpine-focus.js?rwcache=803859073"></script> 
-  <script defer src="../rw/elements/com.realmac.corepack/alpine-intersect.js?rwcache=803859073"></script> 
-  <script defer src="../rw/elements/com.realmac.corepack/alpine-ui.js?rwcache=803859073"></script> 
-  <script defer src="../rw/elements/com.realmac.corepack/alpine.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/smoothscroll.min.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/gsap.min.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/ScrollTrigger.min.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/gsap-effects.js?rwcache=803859073"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-collapse.js?rwcache=803860189"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-focus.js?rwcache=803860189"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-intersect.js?rwcache=803860189"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-ui.js?rwcache=803860189"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/smoothscroll.min.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/gsap.min.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/ScrollTrigger.min.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/gsap-effects.js?rwcache=803860189"></script> 
   <meta charset="utf-8" /> 
   <meta http-equiv="x-ua-compatible" content="ie=edge" /> 
   <meta name="viewport" content="width=device-width" /> 
@@ -41,7 +30,7 @@ require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/twig-setup.
   <meta property="og:title" content="Glen Allan | Video" /> 
   <meta property="og:url" content="https://glenallan.art/video/" /> 
   <title>Glen Allan | Video</title> 
-  <link href="index.css?rwcache=803859073" media="all" rel="stylesheet" type="text/css" /> 
+  <link href="index.css?rwcache=803860189" media="all" rel="stylesheet" type="text/css" /> 
   <style lang="css">
     /* Required for alpine.js x-cloak directive to work */
     [x-cloak] {
@@ -67,60 +56,14 @@ require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/twig-setup.
         /* Firefox */
     }
 </style> 
-  <script src="../rw/elements/com.realmac.corepack/effectsTransforms.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/modal.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/alpine-store-filters.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/alpine-store-transitions.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/alpine-exit-intent.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.realmac.corepack/image-lightbox.js?rwcache=803859073"></script> 
-  <?php
-(function () {
-    $wantsRSS = 'false' === 'true';
-    $wantsSitemap = 'false' === 'true';
-
-    if ($wantsRSS) {
-        $rssFolder = '';
-        $rssFilename = 'feed.xml' !== '' ? 'feed.xml' : 'feed.xml';
-        $currentScriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
-
-        if (empty($rssFolder)) {
-            $absoluteRssDir = $currentScriptDir;
-        } else {
-            $absoluteRssDir = realpath($currentScriptDir . '/' . $rssFolder);
-            if ($absoluteRssDir === false) {
-                $absoluteRssDir = $currentScriptDir . '/' . $rssFolder;
-            }
-        }
-
-        $absoluteRssPath = rtrim($absoluteRssDir, '/') . '/' . $rssFilename;
-        $rssFilePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $absoluteRssPath);
-
-        echo '<link rel="alternate" type="application/rss+xml" title="" href="' . htmlspecialchars($rssFilePath) . '" />';
-    }
-
-    if ($wantsSitemap) {
-        $sitemapFolder = '';
-        $sitemapFilename = 'sitemap.xml' !== '' ? 'sitemap.xml' : 'sitemap.xml';
-        $currentScriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
-
-        if (empty($sitemapFolder)) {
-            $absoluteSitemapDir = $currentScriptDir;
-        } else {
-            $absoluteSitemapDir = realpath($currentScriptDir . '/' . $sitemapFolder);
-            if ($absoluteSitemapDir === false) {
-                $absoluteSitemapDir = $currentScriptDir . '/' . $sitemapFolder;
-            }
-        }
-
-        $absoluteSitemapPath = rtrim($absoluteSitemapDir, '/') . '/' . $sitemapFilename;
-        $sitemapFilePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $absoluteSitemapPath);
-
-        echo '<link rel="sitemap" type="application/xml" title="Sitemap" href="' . htmlspecialchars($sitemapFilePath) . '" />';
-    }
-})();
-?> 
-  <link rel="stylesheet" href="../rw/elements/com.elementsplatform.gallerypropack/css/lightgallery-bundle.css?rwcache=803859073" /> 
-  <link rel="stylesheet" type="text/css" media="all" href="../rw/styles/consolidated.css?rwcache=803859073" /> 
+  <script src="../rw/elements/com.realmac.corepack/effectsTransforms.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/modal.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-store-filters.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-store-transitions.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-exit-intent.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.realmac.corepack/image-lightbox.js?rwcache=803860189"></script> 
+  <link rel="stylesheet" href="../rw/elements/com.elementsplatform.gallerypropack/css/lightgallery-bundle.css?rwcache=803860189" /> 
+  <link rel="stylesheet" type="text/css" media="all" href="../rw/styles/consolidated.css?rwcache=803860189" /> 
  </head> 
  <body class="bg-black-50"> 
   <div x-data="navigationStandard('mobile-menu-rw0190565F_5625_4D6B_840E_3619DC4F1756')" class="relative z-50"> 
@@ -169,11 +112,11 @@ require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/twig-setup.
    </div> 
   </div> 
   <header class="group/rw0190565F_5625_4D6B_840E_3619DC4F1756 group/navbar items-center sticky z-[31] top-0 right-md bottom-md left-md isolate flex w-full h-auto mt-0 mb-0 ml-auto mr-auto bg-black-100 bg-opacity-[90%] dark:bg-opacity-[90%] brightness-[100%] drop-shadow-none saturate-[100%] backdrop-blur-[6px] shadow-sm opacity-[100%]" id=""> 
-   <nav class="mx-auto flex items-center justify-between container w-full h-auto pt-6 pb-6 pl-5 pr-5"> 
+   <nav class="mx-auto flex items-center justify-between container w-full h-auto pt-2 pb-2 pl-5 pr-5"> 
     <!-- Logo --> 
     <div class="flex lg:flex-1 pt-0 pb-0 pl-0 pr-0"> 
-     <a class="w-16 h-auto block transition-all duration-[550ms] delay-[0ms] ease-in-out transform origin-center scale-[100%] rotate-[0deg] skew-x-[0deg] skew-y-[0deg] translate-x-[0px] translate-y-[0px] hover:scale-[110%] hover:rotate-[3deg] hover:skew-x-[0deg] hover:skew-y-[0deg] hover:translate-x-[0px] hover:translate-y-[0px]" href="../" id="" rwresourcedropzone="svg" target="" title="Home"> 
-      <svg class="w-16 h-auto transition-all duration-[550ms] delay-[0ms] ease-in-out fill-white-50/[--svgOpacity] text-white-50/[--svgOpacity] [--svgOpacity:_100%] hover:fill-violet-600/[--svgOpacity] hover:text-violet-600/[--svgOpacity] hover:[--svgOpacity:100%]" viewbox="0 0 4082 4222" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
+     <a class="w-20 h-auto block transition-all duration-[550ms] delay-[0ms] ease-in-out transform origin-center scale-[100%] rotate-[0deg] skew-x-[0deg] skew-y-[0deg] translate-x-[0px] translate-y-[0px] hover:scale-[110%] hover:rotate-[3deg] hover:skew-x-[0deg] hover:skew-y-[0deg] hover:translate-x-[0px] hover:translate-y-[0px]" href="../" id="" rwresourcedropzone="svg" target="" title="Home"> 
+      <svg class="w-20 h-auto transition-all duration-[550ms] delay-[0ms] ease-in-out fill-white-50/[--svgOpacity] text-white-50/[--svgOpacity] [--svgOpacity:_100%] hover:fill-violet-600/[--svgOpacity] hover:text-violet-600/[--svgOpacity] hover:[--svgOpacity:100%]" viewbox="0 0 4082 4222" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
        <g id="Artboard1" transform="matrix(0.51025,0,0,0.938222,0,0)">
         <rect x="0" y="0" />
         <g transform="matrix(8.16593,0,0,4.44102,-3839.29,-149.375)">
@@ -212,317 +155,164 @@ require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/twig-setup.
     </div> 
    </nav> 
   </header>
-  <h1 class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-3.5 mb-3.5 ml-0 mr-0 pt-0 pb-0 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-lg font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-4xl">Glen Allan | Video Archive</span> </h1>
-  <div class="group/rw0C219E76_6D0F_40B6_B5C5_45FD13A94064 group/flex transform flex w-full h-auto gap-x-2 gap-y-2 flex-col flex-nowrap items-[normal] justify-items-normal content-normal justify-normal" data-filter-tags="" id=""> 
-   <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-[80%] h-auto mt-0 mb-0 ml-auto mr-auto pt-4 pb-0 pl-auto pr-auto text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[300] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">Here You’ll find all of the video projects I’ve made over the years. For the most part they have been integrated into Keynote presentations to take advantage of adding context, plus with the oldest being much smaller videos, containing them made sense.</span><br /><span class="text-brand-50 font-montserrat"></span><br /><span class="text-brand-50 font-montserrat">The page is broken into sections with descriptions &amp; context for each. Go with me on a journey through my exploration in video editing and all of the other arts that are needed to accomplish it!</span> </p> 
-  </div>
-  <div class="group/rwA36EBE94_C007_488A_B1AC_A61B151CDBA5 group/flex transform flex w-full h-auto gap-x-2 gap-y-2 flex-col flex-nowrap items-[normal] justify-items-normal content-normal justify-normal" data-filter-tags="" id=""> 
-   <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-auto mb-auto ml-0 mr-0 pt-3.5 pb-3.5 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-3xl font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-2xl">Gallery of Works | 1990’s - 2000’s</span> </p>
-   <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-[80%] h-auto mt-0 mb-0 ml-auto mr-auto pt-4 pb-0 pl-auto pr-auto text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[300] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">When putting together my portfolio, I had a lot of old straggler videos from three decades of work, and instead of having them all be really small videos that are from the 90s through the 2000s that, at full size, are just not going to be the best quality, I decided to create an entire presentation for every one of them and put it all into this one video.</span><br /><span class="text-brand-50 font-montserrat"></span><br /><span class="text-brand-50 font-montserrat">This presentation was created using a combination of Keynote, Final Cut Pro, Logic Pro, Pixelmator Pro, ocenaudio, QuickTime. I designed this whole setup for context and the story behind each of these pieces of video work. This is your introduction, one of my most recent and one of the most complicated and in-depth video editing projects I've ever done.</span> </p>
-   <div class="group/rwA42A7F72_C43B_46EB_92B1_702280187D50 group/video relative aspect-video block w-[80%] h-auto mt-3.5 mb-3.5 ml-auto mr-auto pt-0 pb-0 pl-0 pr-0" id="" rwresourcedropzone="video" x-data="videoPlayer('rwA42A7F72_C43B_46EB_92B1_702280187D50', 'youtube', 'BLjl2UZoozo', {'autoplay':'never','loop':false,'muted':false,'controls':true,'wantsLightbox':false,'startAt':'0'})"> 
-    <div x-bind="trigger" class="absolute inset-0 z-10 cursor-pointer w-full h-full grid place-content-center bg-black-50 bg-opacity-[61%] dark:bg-opacity-[61%]"> 
-     <div class="w-32 h-auto block transition-all duration-[1000ms] delay-[0ms] ease-in-out brightness-[100%] [filter:drop-shadow(0px_6px_27px_rgba(0,0,0,1.00))_drop-shadow(6px_6px_2px_rgba(0,0,0,0.50))] saturate-[100%]" id="" rwresourcedropzone="svg"> 
-      <svg class="w-32 h-auto transition-all duration-[1000ms] delay-[0ms] ease-in-out fill-green-600/[--svgOpacity] text-green-600/[--svgOpacity] [--svgOpacity:_100%] hover:fill-violet-800/[--svgOpacity] hover:text-violet-800/[--svgOpacity] hover:[--svgOpacity:100%]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"> 
-       <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" /> 
-      </svg> 
-     </div> 
-    </div> 
-    <img src="../resources/glen-allan---gallery-of-works---1990-s---2010-s.jpg" alt="Glen Allan | Gallery of Works | 1990's - 2010's" class="absolute inset-0 z-0 cursor-pointer w-full h-full pt-0 pb-0 pl-0 pr-0 object-center" x-show="!showVideo" x-ref="thumbnail" @click="showVideo = true" /> 
-    <template x-if="showVideo"> 
-     <iframe :src="iframeUrl" width="100%" height="auto" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="aspect-video w-full h-auto object-center pt-0 pb-0 pl-0 pr-0"> </iframe> 
-    </template> 
+  <div class="rw84EE425E_B92D_49D6_B36B_0BD1BEF5C479 group/container group/rw84EE425E_B92D_49D6_B36B_0BD1BEF5C479 grid-cols-1 [&amp;>*]:col-start-1 [&amp;>*]:row-start-1 [&amp;>*]:min-w-0 grid w-[80vw] h-auto mt-3 mb-3 ml-auto mr-auto" data-filter-tags="" id=""> 
+   <div class="relative z-30 flex flex-col peer container w-full h-auto self-center justify-self-center gap-md pt-0 pb-0 pl-0 pr-0">
+    <h1 class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-lg font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-5xl">Glen Allan | Video Archive</span> </h1>
+   </div> 
+   <div class="z-0 transform-gpu overflow-hidden"> 
    </div> 
   </div>
-  <div class="rwE60E564A_A072_460D_9A78_884E3D7F47BC group/container group/rwE60E564A_A072_460D_9A78_884E3D7F47BC grid-cols-1 [&amp;>*]:col-start-1 [&amp;>*]:row-start-1 [&amp;>*]:min-w-0 grid w-[80%] h-auto mt-0 mb-0 ml-auto mr-auto" data-filter-tags="" id=""> 
+  <div class="rwC77F1420_B857_47DF_B08C_E897F862952B group/container group/rwC77F1420_B857_47DF_B08C_E897F862952B grid-cols-1 [&amp;>*]:col-start-1 [&amp;>*]:row-start-1 [&amp;>*]:min-w-0 grid w-[80vw] h-auto mt-0 mb-10 ml-auto mr-auto" data-filter-tags="" id=""> 
    <div class="relative z-30 flex flex-col peer container w-full h-auto self-center justify-self-center gap-md pt-0 pb-0 pl-0 pr-0">
-    <div class="rw9A1669E0_57FE_42DA_9EDE_920FFC8E6661 group/collection group/rw9A1669E0_57FE_42DA_9EDE_920FFC8E6661" id="">
-      <?php
-require_once __DIR__ . '/../rw/elements/com.elementsplatform.cms/api/cms.php';
-
-$collectionPath = '' !== ''
-    ? ''
-    : '../rw/elements/com.elementsplatform.cms/api/examples/content/blog';
-
-$collectionPathClean = '';
-$collectionPathDepth = (int) '0';
-$resourcesPathClean = 'resources';
-$resourcesPathDepth = (int) '1';
-
-$_currentPageDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
-$pagePath = resolveToAbsoluteWebPath($_currentPageDir, '');
-$tagPagePath = resolveToAbsoluteWebPath($_currentPageDir, '');
-$authorPagePath = resolveToAbsoluteWebPath($_currentPageDir, '');
-$prettyUrls = 'false' === 'true';
-
-$itemsPerPage = (int) "10";
-$paginationOffset = (int) "0";
-$currentPage = (int) ($_GET['page'] ?? 1);
-
-// Build filters
-$filters = [];
-
-$filterTags = "all";
-if ($filterTags !== 'all') {
-    $tags = match ($filterTags) {
-        'url' => is_array($_GET['tags'] ?? '')
-            ? $_GET['tags']
-            : array_filter(array_map('trim', explode(',', $_GET['tags'] ?? ''))),
-        default => array_filter(array_map('trim', explode(',', '')))
-    };
-    if (!empty($tags)) {
-        $filters['tags'] = implode(',', $tags);
-    }
-}
-
-$filterAuthor = "all";
-if ($filterAuthor !== 'all') {
-    $author = match ($filterAuthor) {
-        'url' => is_array($_GET['author'] ?? '')
-            ? $_GET['author']
-            : array_filter(array_map('trim', explode(',', $_GET['author'] ?? ''))),
-        default => array_filter(array_map('trim', explode(',', '')))
-    };
-    if (!empty($author)) {
-        $filters['author'] = implode(',', $author);
-    }
-}
-
-$filterFeatured = "all";
-if ($filterFeatured !== 'all') {
-    $filters['featured'] = $filterFeatured === 'true' ? 'true' : 'false';
-}
-
-$filterStatus = "published";
-if ($filterStatus !== 'all') {
-    $filters['status'] = $filterStatus;
-} else {
-    $filters['status'] = 'published';
-}
-
-$filterDate = "past";
-if ($filterDate === 'past') {
-    $filters['date_before'] = date('Y-m-d H:i:s');
-} elseif ($filterDate === 'future') {
-    $filters['date_after'] = date('Y-m-d H:i:s');
-}
-
-$orderBy = "date";
-$orderDirection = "desc";
-
-$ECMS_options = [
-    'site_url' => 'https://glenallan.art',
-    'resources' => [
-        'path' => '../resources'
-    ]
-];
-$query = cms($ECMS_options)->collection($collectionPath)
-    ->pagePath($pagePath)
-    ->tagPagePath('')
-    ->authorPagePath('')
-    ->prettyUrls($prettyUrls)
-    ->orderBy($orderBy, $orderDirection)
-    ->offset($paginationOffset)
-    ->applyFilters($filters);
-
-// RSS generation
-$rssURL = null;
-$sitemapURL = null;
-
-if ('false' === 'true') {
-    $rssFilename = 'feed.xml' !== '' ? 'feed.xml' : 'feed.xml';
-    $rssURL = $query->generateFeed(
-        'Glen Allan Portfolio - ',
-        'RSS feed for ',
-        'https://glenallan.art',
-        \CMS\CollectionBuilder::resolveOutputPath('', $rssFilename)
-    );
-}
-
-if ('false' === 'true') {
-    $sitemapFilename = 'sitemap.xml' !== '' ? 'sitemap.xml' : 'sitemap.xml';
-    $sitemapURL = $query->generateSitemap(
-        'https://glenallan.art',
-        \CMS\CollectionBuilder::resolveOutputPath('', $sitemapFilename)
-    );
-}
-
-try {
-    $collection = $query->paginate($currentPage, $itemsPerPage)->get();
-    $collection->rssURL = $rssURL;
-    $collection->sitemapURL = $sitemapURL;
-    $pagination = $collection->pagination;
-} catch (Exception $e) {
-    $collection = new \CMS\CollectionResult([], [
-        'current_page' => 1,
-        'total_pages' => 1,
-        'total_items' => 0,
-        'items_per_page' => $itemsPerPage,
-        'has_prev' => false,
-        'has_next' => false
-    ]);
-    $collection->rssURL = $rssURL;
-    $collection->sitemapURL = $sitemapURL;
-    $pagination = $collection->pagination;
-}
-
-$templateContext = [
-    'pagination' => $collection->pagination,
-    'items' => $collection->items,
-    'collection' => $collection,
-    'filters' => $filters,
-    'orderBy' => $orderBy,
-    'orderDirection' => $orderDirection,
-    'collectionPath' => $collectionPath,
-    'pagePath' => $pagePath,
-    'itemsPerPage' => $itemsPerPage,
-    'paginationOffset' => $paginationOffset,
-    'prettyUrls' => $prettyUrls,
-    'collectionItemTemplateId' => null
-];
-?> <?php ob_start(); ?> 
-     <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-auto mb-auto ml-0 mr-0 pt-3.5 pb-3.5 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-2xl font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-2xl">The Chaos System</span> </p>
-     <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-[80%] h-auto mt-0 mb-0 ml-auto mr-auto pt-0 pb-0 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[300] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">These are all keynote projects specifically connected to the Chaos System. A number of advanced animation and motion graphics setups, plus a fun one at the end.</span> </p> <?php
-$beforeTemplate = ob_get_clean();
-echo renderTemplate($beforeTemplate, $templateContext);
-?> 
-     <div class="grid grid-cols-1 gap-x-md gap-y-md">
-       <?php ob_start(); ?> 
-      <div class="" data-config="{&quot;lightboxBreakpoints&quot;:[{&quot;minWidth&quot;:0,&quot;enabled&quot;:true}],&quot;layoutMode&quot;:&quot;cssMasonry&quot;,&quot;lightboxOptions&quot;:{&quot;mode&quot;:&quot;lg-slide&quot;,&quot;speed&quot;:400,&quot;easing&quot;:&quot;ease&quot;,&quot;zoomFromOrigin&quot;:true,&quot;startAnimationDuration&quot;:400,&quot;counter&quot;:true,&quot;download&quot;:false,&quot;showZoomInOutIcons&quot;:true,&quot;actualSize&quot;:false,&quot;rotate&quot;:false,&quot;thumbnail&quot;:true,&quot;closable&quot;:true,&quot;controls&quot;:true,&quot;loop&quot;:true,&quot;closeOnTap&quot;:true,&quot;swipeToClose&quot;:true,&quot;mousewheel&quot;:false,&quot;hideScrollbar&quot;:true,&quot;hash&quot;:false,&quot;autoplay&quot;:false,&quot;slideShowAutoplay&quot;:false,&quot;slideShowInterval&quot;:5000,&quot;forceSlideShowAutoplay&quot;:false,&quot;progressBar&quot;:true,&quot;fullScreen&quot;:true,&quot;thumbWidth&quot;:100,&quot;thumbHeight&quot;:&quot;56px&quot;,&quot;thumbMargin&quot;:5},&quot;lightboxBgColor&quot;:&quot;bg-black-950&quot;,&quot;lightboxBgOpacity&quot;:100,&quot;videoAutoplay&quot;:false,&quot;videoMuted&quot;:false,&quot;videoLoop&quot;:false,&quot;videoControls&quot;:true,&quot;videoPreload&quot;:&quot;metadata&quot;,&quot;videoPlaysInline&quot;:true,&quot;lbThumbBorderRadius&quot;:4,&quot;lbThumbBorderSize&quot;:1,&quot;lightboxArrowBgOpacity&quot;:45,&quot;imageProtection&quot;:false}" rwresourcedropzone="resources" x-data="galleryPro()"> 
-       <div x-ref="gallery" class="grid grid-flow-dense grid-cols-2 gap-x-3"> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---sneak@1024.jpg" data-src="https://www.youtube.com/watch?v=1dwowdHgvNo" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/the-chaos-system---sneak.jpg" alt="The Chaos System | Sneak" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
+    <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-0 mb-0 ml-auto mr-auto pt-4 pb-0 pl-auto pr-auto text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[200] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">Here You’ll find all of the video projects I’ve made over the years. For the most part they have been integrated into Keynote presentations to take advantage of adding context, plus with the oldest being much smaller videos, containing them made sense.</span><br /><span class="text-brand-50 font-montserrat"></span><br /><span class="text-brand-50 font-montserrat">The page is broken into sections with descriptions &amp; context for each. Go with me on a journey through my exploration in video editing and all of the other arts that are needed to accomplish it!</span> </p>
+   </div> 
+   <div class="z-0 transform-gpu overflow-hidden"> 
+   </div> 
+  </div>
+  <div class="rw0D87687D_7BBB_4DA4_A14A_6889D9F6D9B4 group/container group/rw0D87687D_7BBB_4DA4_A14A_6889D9F6D9B4 grid-cols-1 [&amp;>*]:col-start-1 [&amp;>*]:row-start-1 [&amp;>*]:min-w-0 grid w-[80vw] h-auto mt-0 mb-10 ml-auto mr-auto" data-filter-tags="" id=""> 
+   <div class="relative z-30 flex flex-col peer container w-full h-auto self-center justify-self-center gap-md pt-0 pb-0 pl-0 pr-0">
+    <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-auto mb-auto ml-0 mr-0 pt-3.5 pb-3.5 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-3xl font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-3xl">Gallery of Works | 1990’s - 2000’s</span> </p>
+    <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-0 mb-0 ml-auto mr-auto pt-4 pb-0 pl-auto pr-auto text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[200] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">When putting together my portfolio, I had a lot of old straggler videos from three decades of work, and instead of having them all be really small videos that are from the 90s through the 2000s that, at full size, are just not going to be the best quality, I decided to create an entire presentation for every one of them and put it all into this one video.</span><br /><span class="text-brand-50 font-montserrat"></span><br /><span class="text-brand-50 font-montserrat">This presentation was created using a combination of Keynote, Final Cut Pro, Logic Pro, Pixelmator Pro, ocenaudio, QuickTime. I designed this whole setup for context and the story behind each of these pieces of video work. This is your introduction, one of my most recent and one of the most complicated and in-depth video editing projects I've ever done.</span> </p>
+    <div class="group/rw4295809F_7EFE_47AD_AF65_8781DFE6BD68 group/video relative aspect-video block w-[100%] h-auto mt-3.5 mb-3.5 ml-auto mr-auto pt-0 pb-0 pl-0 pr-0" id="" rwresourcedropzone="video" x-data="videoPlayer('rw4295809F_7EFE_47AD_AF65_8781DFE6BD68', 'youtube', 'BLjl2UZoozo', {'autoplay':'never','loop':false,'muted':false,'controls':true,'wantsLightbox':false,'startAt':'0'})"> 
+     <div x-bind="trigger" class="absolute inset-0 z-10 cursor-pointer w-full h-full grid place-content-center bg-black-50 bg-opacity-[61%] dark:bg-opacity-[61%]"> 
+      <div class="w-32 h-auto block transition-all duration-[1000ms] delay-[0ms] ease-in-out brightness-[100%] [filter:drop-shadow(0px_6px_27px_rgba(0,0,0,1.00))_drop-shadow(6px_6px_2px_rgba(0,0,0,0.50))] saturate-[100%]" id="" rwresourcedropzone="svg"> 
+       <svg class="w-32 h-auto transition-all duration-[1000ms] delay-[0ms] ease-in-out fill-green-600/[--svgOpacity] text-green-600/[--svgOpacity] [--svgOpacity:_100%] hover:fill-violet-800/[--svgOpacity] hover:text-violet-800/[--svgOpacity] hover:[--svgOpacity:100%]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"> 
+        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z" clip-rule="evenodd" /> 
+       </svg> 
+      </div> 
+     </div> 
+     <img src="../resources/glen-allan---gallery-of-works---1990-s---2010-s.jpg" alt="Glen Allan | Gallery of Works | 1990's - 2010's" class="absolute inset-0 z-0 cursor-pointer w-full h-full pt-0 pb-0 pl-0 pr-0 object-center" x-show="!showVideo" x-ref="thumbnail" @click="showVideo = true" /> 
+     <template x-if="showVideo"> 
+      <iframe :src="iframeUrl" width="100%" height="auto" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="aspect-video w-full h-auto object-center pt-0 pb-0 pl-0 pr-0"> </iframe> 
+     </template> 
+    </div>
+   </div> 
+   <div class="z-0 transform-gpu overflow-hidden"> 
+   </div> 
+  </div>
+  <div class="rw5A29C5A1_3862_4177_ABA4_6911210D9257 group/container group/rw5A29C5A1_3862_4177_ABA4_6911210D9257 grid-cols-1 [&amp;>*]:col-start-1 [&amp;>*]:row-start-1 [&amp;>*]:min-w-0 grid w-[80%] h-auto mt-0 mb-0 ml-auto mr-auto" data-filter-tags="" id=""> 
+   <div class="relative z-30 flex flex-col peer container w-full h-auto self-center justify-self-center gap-md pt-0 pb-0 pl-0 pr-0">
+    <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-auto mb-auto ml-0 mr-0 pt-3.5 pb-3.5 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-body text-3xl font-[100] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-center" id=""> <span class="text-brand-50 font-montserrat text-3xl">The Chaos System</span> </p>
+    <p class="[&amp;_a]:text-brand-500 [&amp;_a]:no-underline [&amp;_a]:font-[400] [&amp;_a:hover]:text-brand-800 [&amp;_a:hover]:no-underline [&amp;_a:hover]:font-[400] [&amp;_a:visited]:text-brand-800 [&amp;_a:visited]:no-underline [&amp;_a:visited]:font-[400] block w-auto h-auto mt-0 mb-0 ml-auto mr-auto pt-0 pb-0 pl-0 pr-0 text-text-50 text-opacity-[100%] dark:text-opacity-[100%] font-montserrat text-sm font-[300] tracking-normal leading-normal not-italic text-shadow-none normal-case whitespace-none text-left" id=""> <span class="text-brand-50 font-montserrat">These are all keynote projects specifically connected to the Chaos System. A number of advanced animation and motion graphics setups, plus a fun one at the end.</span> </p>
+    <div class="" data-config="{&quot;lightboxBreakpoints&quot;:[{&quot;minWidth&quot;:0,&quot;enabled&quot;:true}],&quot;layoutMode&quot;:&quot;cssMasonry&quot;,&quot;lightboxOptions&quot;:{&quot;mode&quot;:&quot;lg-slide&quot;,&quot;speed&quot;:400,&quot;easing&quot;:&quot;ease&quot;,&quot;zoomFromOrigin&quot;:true,&quot;startAnimationDuration&quot;:400,&quot;counter&quot;:true,&quot;download&quot;:false,&quot;showZoomInOutIcons&quot;:true,&quot;actualSize&quot;:false,&quot;rotate&quot;:false,&quot;thumbnail&quot;:true,&quot;closable&quot;:true,&quot;controls&quot;:true,&quot;loop&quot;:true,&quot;closeOnTap&quot;:true,&quot;swipeToClose&quot;:true,&quot;mousewheel&quot;:false,&quot;hideScrollbar&quot;:true,&quot;hash&quot;:false,&quot;autoplay&quot;:false,&quot;slideShowAutoplay&quot;:false,&quot;slideShowInterval&quot;:5000,&quot;forceSlideShowAutoplay&quot;:false,&quot;progressBar&quot;:true,&quot;fullScreen&quot;:true,&quot;thumbWidth&quot;:100,&quot;thumbHeight&quot;:&quot;56px&quot;,&quot;thumbMargin&quot;:5},&quot;lightboxBgColor&quot;:&quot;bg-black-950&quot;,&quot;lightboxBgOpacity&quot;:100,&quot;videoAutoplay&quot;:false,&quot;videoMuted&quot;:false,&quot;videoLoop&quot;:false,&quot;videoControls&quot;:true,&quot;videoPreload&quot;:&quot;metadata&quot;,&quot;videoPlaysInline&quot;:true,&quot;lbThumbBorderRadius&quot;:4,&quot;lbThumbBorderSize&quot;:1,&quot;lightboxArrowBgOpacity&quot;:45,&quot;imageProtection&quot;:false}" rwresourcedropzone="resources" x-data="galleryPro()"> 
+     <div x-ref="gallery" class="grid grid-flow-dense grid-cols-2 gap-x-2"> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---sneak@1024.jpg" data-src="https://www.youtube.com/watch?v=1dwowdHgvNo" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/the-chaos-system---sneak.jpg" alt="The Chaos System | Sneak" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
          </div> 
-         <!-- Below meta --> 
         </div> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---signal-flowchart@1024.jpg" data-src="https://www.youtube.com/watch?v=MrJSbMATulU" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/the-chaos-system---signal-flowchart.jpg" alt="The Chaos System | Signal Flowchart" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
-         </div> 
-         <!-- Below meta --> 
-        </div> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---signal-flowchart-omega@1024.jpg" data-src="https://www.youtube.com/watch?v=braSfLrC6Zs" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/the-chaos-system---signal-flowchart-omega.jpg" alt="The Chaos System | Signal Flowchart Omega" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
-         </div> 
-         <!-- Below meta --> 
-        </div> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/pan-s-chaos---omega@1024.jpg" data-src="https://www.youtube.com/watch?v=HK9p9qiD3HE" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/pan-s-chaos---omega.jpg" alt="Pan's Chaos | Omega" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
-         </div> 
-         <!-- Below meta --> 
-        </div> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/pan-s-chaos---omega---black-cloud@1024.jpg" data-src="https://www.youtube.com/watch?v=B5ZHKT5RZz8" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/pan-s-chaos---omega---black-cloud.jpg" alt="Pan's Chaos | Omega - Black Cloud" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
-         </div> 
-         <!-- Below meta --> 
-        </div> 
-        <div data-gallery-item class="pb-3"> 
-         <!-- Thumbnail --> 
-         <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/gpt-0----chaos-circuit-eye@1024.jpg" data-src="https://www.youtube.com/watch?v=3J522N0c4qY" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
-          <!-- Image --> 
-          <img src="../resources/the-chaos-system/gpt-0----chaos-circuit-eye.jpg" alt="GPT 0Ω ⇌ Chaos Circuit Eye" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
-          <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
-           <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
-             <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
-            </svg> 
-           </div> 
-          </div> 
-          <!-- Overlay meta --> 
-         </div> 
-         <!-- Below meta --> 
-        </div> 
+        <!-- Overlay meta --> 
        </div> 
-       <span data-lb-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
-       <span data-lb-thumb-border-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-thumb-border-active-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-thumb-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
-       <span data-lb-media-radius-ref class="rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg hidden" aria-hidden="true"></span> 
-       <span data-lb-media-shadow-ref class="shadow-none hidden" aria-hidden="true"></span> 
-       <span data-lb-arrow-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-arrow-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
-       <span data-lb-toolbar-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-counter-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-progress-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-caption-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-caption-size-ref class="text-sm hidden" aria-hidden="true"></span> 
-       <span data-lb-caption-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
-       <span data-lb-author-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-author-size-ref class="text-sm hidden" aria-hidden="true"></span> 
-       <span data-lb-author-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
-       <span data-lb-exif-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
-       <span data-lb-exif-size-ref class="text-sm hidden" aria-hidden="true"></span> 
-       <span data-lb-exif-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
-      </div> <?php
-    $collectionItemTemplateId = "cms-collection-item-template-" . uniqid();
-    $templateContext['collectionItemTemplateId'] = $collectionItemTemplateId;
-    $collectionItemTemplate = ob_get_clean();
-
-    $collection->each(function ($item) use ($collectionItemTemplate, $templateContext) {
-        echo renderTemplate($collectionItemTemplate, ['item' => $item] + $templateContext);
-    });
-
-    echo '<template data-collection-item-template="true" id="' . $collectionItemTemplateId . '">';
-    echo $collectionItemTemplate;
-    echo '</template>';
-    ?> 
-     </div> <?php ob_start(); ?> <?php
-$afterTemplate = ob_get_clean();
-echo renderTemplate($afterTemplate, $templateContext);
-?> 
+       <!-- Below meta --> 
+      </div> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---signal-flowchart@1024.jpg" data-src="https://www.youtube.com/watch?v=MrJSbMATulU" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/the-chaos-system---signal-flowchart.jpg" alt="The Chaos System | Signal Flowchart" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
+         </div> 
+        </div> 
+        <!-- Overlay meta --> 
+       </div> 
+       <!-- Below meta --> 
+      </div> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/the-chaos-system---signal-flowchart-omega@1024.jpg" data-src="https://www.youtube.com/watch?v=braSfLrC6Zs" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/the-chaos-system---signal-flowchart-omega.jpg" alt="The Chaos System | Signal Flowchart Omega" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
+         </div> 
+        </div> 
+        <!-- Overlay meta --> 
+       </div> 
+       <!-- Below meta --> 
+      </div> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/pan-s-chaos---omega@1024.jpg" data-src="https://www.youtube.com/watch?v=HK9p9qiD3HE" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/pan-s-chaos---omega.jpg" alt="Pan's Chaos | Omega" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
+         </div> 
+        </div> 
+        <!-- Overlay meta --> 
+       </div> 
+       <!-- Below meta --> 
+      </div> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/pan-s-chaos---omega---black-cloud@1024.jpg" data-src="https://www.youtube.com/watch?v=B5ZHKT5RZz8" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/pan-s-chaos---omega---black-cloud.jpg" alt="Pan's Chaos | Omega - Black Cloud" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
+         </div> 
+        </div> 
+        <!-- Overlay meta --> 
+       </div> 
+       <!-- Below meta --> 
+      </div> 
+      <div data-gallery-item class="pb-2"> 
+       <!-- Thumbnail --> 
+       <div class="relative overflow-hidden cursor-pointer h-full rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none shadow-none group/thumb" data-lg-item data-poster="../resources/the-chaos-system/gpt-0----chaos-circuit-eye@1024.jpg" data-src="https://www.youtube.com/watch?v=3J522N0c4qY" data-sub-html=" " data-thumb="../resources/the-chaos-system.jpg"> 
+        <!-- Image --> 
+        <img src="../resources/the-chaos-system/gpt-0----chaos-circuit-eye.jpg" alt="GPT 0Ω ⇌ Chaos Circuit Eye" class="w-full h-full object-cover object-center rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none transition-transform duration-300 group-hover/thumb:scale-[1.13]" loading="lazy" /> 
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black-950/[var(--video-overlay-opacity)] [--video-overlay-opacity:20%]"> 
+         <div class="rounded-full p-3 bg-black-950/[var(--play-bg-opacity)] [--play-bg-opacity:50%]"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white-50"> 
+           <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" /> 
+          </svg> 
+         </div> 
+        </div> 
+        <!-- Overlay meta --> 
+       </div> 
+       <!-- Below meta --> 
+      </div> 
+     </div> 
+     <span data-lb-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
+     <span data-lb-thumb-border-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-thumb-border-active-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-thumb-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
+     <span data-lb-media-radius-ref class="rounded-tl-lg rounded-tr-lg rounded-bl-lg rounded-br-lg hidden" aria-hidden="true"></span> 
+     <span data-lb-media-shadow-ref class="shadow-none hidden" aria-hidden="true"></span> 
+     <span data-lb-arrow-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-arrow-bg-ref class="bg-black-950 hidden" aria-hidden="true"></span> 
+     <span data-lb-toolbar-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-counter-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-progress-color-ref class="bg-white-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-caption-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-caption-size-ref class="text-sm hidden" aria-hidden="true"></span> 
+     <span data-lb-caption-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
+     <span data-lb-author-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-author-size-ref class="text-sm hidden" aria-hidden="true"></span> 
+     <span data-lb-author-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
+     <span data-lb-exif-color-ref class="text-text-50 hidden" aria-hidden="true"></span> 
+     <span data-lb-exif-size-ref class="text-sm hidden" aria-hidden="true"></span> 
+     <span data-lb-exif-weight-ref class="font-[400] hidden" aria-hidden="true"></span> 
     </div>
    </div> 
    <div class="z-0 transform-gpu overflow-hidden"> 
@@ -1108,14 +898,14 @@ echo renderTemplate($afterTemplate, $templateContext);
         }));
     });
 </script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lightgallery.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-zoom.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-thumbnail.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-video.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-hash.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-autoplay.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-fullscreen.umd.js?rwcache=803859073"></script> 
-  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-rotate.umd.js?rwcache=803859073"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lightgallery.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-zoom.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-thumbnail.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-video.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-hash.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-autoplay.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-fullscreen.umd.js?rwcache=803860189"></script> 
+  <script src="../rw/elements/com.elementsplatform.gallerypropack/js/lg-rotate.umd.js?rwcache=803860189"></script> 
   <script>
     document.addEventListener("alpine:init", () => {
         Alpine.data("desktopSubmenu", () => ({
