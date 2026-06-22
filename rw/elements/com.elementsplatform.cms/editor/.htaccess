@@ -1,0 +1,36 @@
+# Block direct access to license cache files and other dotfiles
+<FilesMatch "^\.(elements_|mcp-debug)">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # PHP-FPM / FastCGI strip the Authorization header by default, leaving
+    # $_SERVER['HTTP_AUTHORIZATION'] empty and breaking every bearer-protected
+    # entry point: mcp.php (mcp_ static tokens), api.php (api_ tokens), and
+    # the OAuth-bearer paths. Re-inject the header as an env var so the
+    # existing reader functions (oauth_read_bearer_header, mcp_read_bearer)
+    # can find it. Conditional so we never overwrite an already-set value.
+    RewriteCond %{HTTP:Authorization} ^(.+)$
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Serve RFC 9728 OAuth Protected Resource Metadata at the conventional
+    # well-known path. Pointed at by the MCP endpoint's WWW-Authenticate
+    # header so clients that auto-discover (e.g. Claude.ai's hosted custom
+    # connector) succeed.
+    RewriteRule ^\.well-known/oauth-protected-resource$ oauth-protected-resource.php [L]
+
+    # RFC 8414 Authorization Server Metadata — advertises the OAuth 2.1 +
+    # DCR endpoints below.
+    RewriteRule ^\.well-known/oauth-authorization-server$ oauth-authorization-server.php [L]
+
+    # OAuth 2.1 endpoints. Clean paths so the discovery document and DCR
+    # responses can advertise stable URLs without ".php" suffixes.
+    RewriteRule ^oauth/register$  oauth-register.php  [L]
+    RewriteRule ^oauth/authorize$ oauth-authorize.php [L]
+    RewriteRule ^oauth/token$     oauth-token.php     [L]
+
+    # Block access to the php/ directory (only api.php should be accessible)
+    RewriteRule ^php/ - [F,L]
+</IfModule>
