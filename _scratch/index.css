@@ -1,55 +1,7 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-200.ttf') format('truetype');
         font-weight: 100;
         font-style: regular;
         font-stretch: normal;
@@ -65,8 +17,56 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat-700.ttf') format('truetype');
         font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -81,28 +81,146 @@
     .z-0{z-index:0}
     .z-30{z-index:30}
     .mb-0{margin-bottom:0.0rem}
+    .mb-1{margin-bottom:0.25rem}
+    .mb-auto{margin-bottom:auto}
+    .ml-0{margin-left:0.0rem}
+    .ml-3{margin-left:0.75rem}
     .ml-auto{margin-left:auto}
+    .mr-0{margin-right:0.0rem}
+    .mr-3{margin-right:0.75rem}
     .mr-auto{margin-right:auto}
     .mt-0{margin-top:0.0rem}
+    .mt-1{margin-top:0.25rem}
+    .mt-auto{margin-top:auto}
+    .block{display:block}
     .flex{display:flex}
     .grid{display:grid}
+    .h-0{height:0.0rem}
+    .h-0\.5{height:0.125rem}
+    .h-\[13vw\]{height:13vw}
+    .h-\[\]{height:}
     .h-auto{height:auto}
+    .w-14{width:3.5rem}
+    .w-2{width:0.5rem}
+    .w-2\.5{width:0.625rem}
+    .w-7{width:1.75rem}
+    .w-\[80vw\]{width:80vw}
+    .w-auto{width:auto}
     .w-full{width:100%}
+    .origin-center{transform-origin:center}
+    .translate-x-\[0px\]{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .translate-y-\[0px\]{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .rotate-\[0deg\]{--tw-rotate:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .skew-x-\[0deg\]{--tw-skew-x:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .skew-y-\[0deg\]{--tw-skew-y:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .scale-\[100\%\]{--tw-scale-x:100%;--tw-scale-y:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .transform-gpu{transform:translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
+    .flex-row{flex-direction:row}
     .flex-col{flex-direction:column}
+    .flex-nowrap{flex-wrap:nowrap}
+    .content-normal{align-content:normal}
+    .content-center{align-content:center}
+    .content-between{align-content:space-between}
+    .items-center{align-items:center}
+    .justify-normal{justify-content:normal}
+    .justify-center{justify-content:center}
+    .justify-between{justify-content:space-between}
+    .justify-items-center{justify-items:center}
+    .gap-x-0{-moz-column-gap:0.0rem;column-gap:0.0rem}
+    .gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}
+    .gap-x-8{-moz-column-gap:2.0rem;column-gap:2.0rem}
+    .gap-y-0{row-gap:0.0rem}
+    .gap-y-2{row-gap:0.5rem}
     .self-center{align-self:center}
     .justify-self-center{justify-self:center}
     .overflow-hidden{overflow:hidden}
     .scroll-smooth{scroll-behavior:smooth}
+    .whitespace-nowrap{white-space:nowrap}
     .bg-black-50{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
+    .bg-white-500{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
+    .bg-opacity-\[100\%\]{--tw-bg-opacity:100%}
+    .fill-violet-600\/\[--svgOpacity\]{fill:rgb(124 58 237 / var(--svgOpacity))}
+    .fill-violet-700\/\[--svgOpacity\]{fill:rgb(109 40 217 / var(--svgOpacity))}
+    .fill-white-50\/\[--svgOpacity\]{fill:rgb(255 255 255 / var(--svgOpacity))}
     .pb-0{padding-bottom:0.0rem}
+    .pb-3{padding-bottom:0.75rem}
+    .pb-3\.5{padding-bottom:0.875rem}
+    .pb-6{padding-bottom:1.5rem}
     .pl-0{padding-left:0.0rem}
+    .pl-6{padding-left:1.5rem}
     .pr-0{padding-right:0.0rem}
+    .pr-6{padding-right:1.5rem}
     .pt-0{padding-top:0.0rem}
+    .pt-3{padding-top:0.75rem}
+    .pt-3\.5{padding-top:0.875rem}
+    .text-left{text-align:left}
+    .text-center{text-align:center}
+    .font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}
+    .text-sm{font-size:0.88rem;line-height:1.25rem}
+    .text-xl{font-size:1.25rem;line-height:1.75rem}
+    .font-\[400\]{font-weight:400}
+    .normal-case{text-transform:none}
+    .not-italic{font-style:normal}
+    .leading-normal{line-height:1.5}
+    .tracking-normal{letter-spacing:0em}
+    .text-text-50{--tw-text-opacity:1;color:rgb(33 40 46 / var(--tw-text-opacity))}
+    .text-violet-600\/\[--svgOpacity\]{color:rgb(124 58 237 / var(--svgOpacity))}
+    .text-violet-700\/\[--svgOpacity\]{color:rgb(109 40 217 / var(--svgOpacity))}
+    .text-white-50{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
+    .text-white-50\/\[--svgOpacity\]{color:rgb(255 255 255 / var(--svgOpacity))}
+    .text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity))}
+    .text-opacity-\[100\%\]{--tw-text-opacity:100%}
+    .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
+    .delay-\[0ms\]{transition-delay:0ms}
+    .duration-\[1000ms\]{transition-duration:1000ms}
+    .duration-\[1500ms\]{transition-duration:1500ms}
+    .duration-\[800ms\]{transition-duration:800ms}
+    .ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}
+    .ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}
+    .text-shadow-none{text-shadow:}
+    .\[--svgOpacity\:_100\%\]{--svgOpacity:100%}
+    .hover\:translate-x-\[0px\]:hover{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:translate-y-\[0px\]:hover{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:rotate-\[3deg\]:hover{--tw-rotate:3deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:rotate-\[6deg\]:hover{--tw-rotate:6deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:skew-x-\[0deg\]:hover{--tw-skew-x:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:skew-y-\[0deg\]:hover{--tw-skew-y:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:scale-\[103\%\]:hover{--tw-scale-x:103%;--tw-scale-y:103%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:scale-\[120\%\]:hover{--tw-scale-x:120%;--tw-scale-y:120%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .hover\:fill-brand-50\/\[--svgOpacity\]:hover{fill:rgb(239 247 255 / var(--svgOpacity))}
+    .hover\:fill-ultragreen-300\/\[--svgOpacity\]:hover{fill:rgb(33 145 22 / var(--svgOpacity))}
+    .hover\:fill-violet-700\/\[--svgOpacity\]:hover{fill:rgb(109 40 217 / var(--svgOpacity))}
+    .hover\:text-brand-50\/\[--svgOpacity\]:hover{color:rgb(239 247 255 / var(--svgOpacity))}
+    .hover\:text-text-800:hover{--tw-text-opacity:1;color:rgb(214 219 225 / var(--tw-text-opacity))}
+    .hover\:text-ultragreen-300\/\[--svgOpacity\]:hover{color:rgb(33 145 22 / var(--svgOpacity))}
+    .hover\:text-violet-700\/\[--svgOpacity\]:hover{color:rgb(109 40 217 / var(--svgOpacity))}
+    .hover\:text-opacity-\[100\%\]:hover{--tw-text-opacity:100%}
+    .hover\:\[--svgOpacity\:100\%\]:hover{--svgOpacity:100%}
+    :is(.dark .dark\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
+    :is(.dark .dark\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
+    :is(.dark .dark\:hover\:text-opacity-\[100\%\]:hover){--tw-text-opacity:100%}
+    @media (min-width: 640px){.sm\:mb-0{margin-bottom:0.0rem}.sm\:mb-0\.5{margin-bottom:0.125rem}.sm\:mb-1{margin-bottom:0.25rem}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mt-0{margin-top:0.0rem}.sm\:mt-0\.5{margin-top:0.125rem}.sm\:mt-1{margin-top:0.25rem}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:w-20{width:5.0rem}.sm\:w-3{width:0.75rem}.sm\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.sm\:text-base{font-size:1.00rem;line-height:1.50rem}}
+    @media (min-width: 768px){.md\:mb-0{margin-bottom:0.0rem}.md\:mb-0\.5{margin-bottom:0.125rem}.md\:mb-2{margin-bottom:0.5rem}.md\:ml-0{margin-left:0.0rem}.md\:ml-auto{margin-left:auto}.md\:mr-0{margin-right:0.0rem}.md\:mt-0{margin-top:0.0rem}.md\:mt-0\.5{margin-top:0.125rem}.md\:mt-2{margin-top:0.5rem}.md\:h-0{height:0.0rem}.md\:h-0\.5{height:0.125rem}.md\:w-3{width:0.75rem}.md\:w-32{width:8.0rem}.md\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.md\:text-lg{font-size:1.12rem;line-height:1.75rem}}
+    @media (min-width: 1024px){.lg\:mb-0{margin-bottom:0.0rem}.lg\:mb-0\.5{margin-bottom:0.125rem}.lg\:mb-3{margin-bottom:0.75rem}.lg\:ml-0{margin-left:0.0rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0.0rem}.lg\:mt-0{margin-top:0.0rem}.lg\:mt-0\.5{margin-top:0.125rem}.lg\:mt-3{margin-top:0.75rem}.lg\:h-0{height:0.0rem}.lg\:h-0\.5{height:0.125rem}.lg\:w-3{width:0.75rem}.lg\:w-40{width:10.0rem}.lg\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.lg\:text-lg{font-size:1.12rem;line-height:1.75rem}}
+    @media (min-width: 1280px){.xl\:mb-0{margin-bottom:0.0rem}.xl\:mb-1{margin-bottom:0.25rem}.xl\:mb-4{margin-bottom:1.0rem}.xl\:ml-0{margin-left:0.0rem}.xl\:ml-auto{margin-left:auto}.xl\:mr-0{margin-right:0.0rem}.xl\:mt-0{margin-top:0.0rem}.xl\:mt-1{margin-top:0.25rem}.xl\:mt-4{margin-top:1.0rem}.xl\:h-1{height:0.25rem}.xl\:w-4{width:1.0rem}.xl\:w-52{width:13.0rem}.xl\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.xl\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+    @media (min-width: 1536px){.\32xl\:mb-0{margin-bottom:0.0rem}.\32xl\:mb-1{margin-bottom:0.25rem}.\32xl\:mb-4{margin-bottom:1.0rem}.\32xl\:ml-0{margin-left:0.0rem}.\32xl\:ml-auto{margin-left:auto}.\32xl\:mr-0{margin-right:0.0rem}.\32xl\:mt-0{margin-top:0.0rem}.\32xl\:mt-1{margin-top:0.25rem}.\32xl\:mt-4{margin-top:1.0rem}.\32xl\:h-0{height:0.0rem}.\32xl\:h-0\.5{height:0.125rem}.\32xl\:w-3{width:0.75rem}.\32xl\:w-48{width:12.0rem}.\32xl\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.\32xl\:text-xl{font-size:1.25rem;line-height:1.75rem}}
     .\[\&\>\*\]\:col-start-1>*{grid-column-start:1}
     .\[\&\>\*\]\:row-start-1>*{grid-row-start:1}
     .\[\&\>\*\]\:min-w-0>*{min-width:0.0rem}
+    .\[\&_a\:hover\]\:font-\[400\] a:hover{font-weight:400}
+    .\[\&_a\:hover\]\:text-brand-800 a:hover{--tw-text-opacity:1;color:rgb(29 75 176 / var(--tw-text-opacity))}
+    .\[\&_a\:hover\]\:text-ultragreen-50 a:hover{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
+    .\[\&_a\:hover\]\:no-underline a:hover{text-decoration-line:none}
+    .\[\&_a\:visited\]\:font-\[400\] a:visited{font-weight:400}
+    .\[\&_a\:visited\]\:text-brand-800 a:visited{--tw-text-opacity:1;color:rgb(29 75 176 / var(--tw-text-opacity))}
+    .\[\&_a\:visited\]\:text-ultragreen-50 a:visited{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
+    .\[\&_a\:visited\]\:no-underline a:visited{text-decoration-line:none}
+    .\[\&_a\]\:font-\[400\] a{font-weight:400}
+    .\[\&_a\]\:text-brand-500 a{--tw-text-opacity:1;color:rgb(56 146 248 / var(--tw-text-opacity))}
+    .\[\&_a\]\:text-white-50 a{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
+    .\[\&_a\]\:no-underline a{text-decoration-line:none}
 .container{max-width:100%;}
 @media (min-width: 640px){.container{max-width:640px}}
 @media (min-width: 768px){.container{max-width:768px}}
