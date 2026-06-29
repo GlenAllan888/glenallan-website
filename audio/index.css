@@ -1,32 +1,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -41,8 +17,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,6 +33,14 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat-600.ttf') format('truetype');
         font-weight: 500;
         font-style: regular;
@@ -65,8 +49,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -255,11 +255,14 @@
     .bg-ultragreen-300{--tw-bg-opacity:1;background-color:rgb(33 145 22 / var(--tw-bg-opacity))}
     .bg-ultragreen-400{--tw-bg-opacity:1;background-color:rgb(33 126 23 / var(--tw-bg-opacity))}
     .bg-ultragreen-800{--tw-bg-opacity:1;background-color:rgb(25 54 18 / var(--tw-bg-opacity))}
+    .bg-violet-600{--tw-bg-opacity:1;background-color:rgb(124 58 237 / var(--tw-bg-opacity))}
     .bg-violet-800{--tw-bg-opacity:1;background-color:rgb(91 33 182 / var(--tw-bg-opacity))}
     .bg-violet-950{--tw-bg-opacity:1;background-color:rgb(46 16 101 / var(--tw-bg-opacity))}
     .bg-white-500{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
     .bg-opacity-\[100\%\]{--tw-bg-opacity:100%}
     .bg-opacity-\[20\%\]{--tw-bg-opacity:20%}
+    .bg-opacity-\[21\%\]{--tw-bg-opacity:21%}
+    .bg-opacity-\[24\%\]{--tw-bg-opacity:24%}
     .bg-opacity-\[27\%\]{--tw-bg-opacity:27%}
     .bg-opacity-\[40\%\]{--tw-bg-opacity:40%}
     .bg-opacity-\[76\%\]{--tw-bg-opacity:76%}
@@ -373,6 +376,7 @@
     .text-shadow-none{text-shadow:}
     .\[--svgOpacity\:_100\%\]{--svgOpacity:100%}
     .\[clip\:rect\(0\2c _auto\2c _auto\2c _0\)\]{clip:rect(0, auto, auto, 0)}
+    .\[filter\:drop-shadow\(0px_0px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 0px rgba(0,0,0,1.00)) drop-shadow(0px 0px 7px rgba(0,0,0,1.00))}
     .\[filter\:drop-shadow\(0px_0px_2px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_4px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 2px rgba(0,0,0,1.00)) drop-shadow(0px 0px 4px rgba(0,0,0,1.00))}
     .\[filter\:drop-shadow\(0px_0px_8px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_9px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 8px rgba(0,0,0,1.00)) drop-shadow(0px 0px 9px rgba(0,0,0,1.00))}
     .\[transform\:translateZ\(0\)\]{transform:translateZ(0)}
@@ -412,6 +416,8 @@
     .aria-\[current\=page\]\:text-shadow-none[aria-current=page]{text-shadow:}
     :is(.dark .dark\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
     :is(.dark .dark\:bg-opacity-\[20\%\]){--tw-bg-opacity:20%}
+    :is(.dark .dark\:bg-opacity-\[21\%\]){--tw-bg-opacity:21%}
+    :is(.dark .dark\:bg-opacity-\[24\%\]){--tw-bg-opacity:24%}
     :is(.dark .dark\:bg-opacity-\[27\%\]){--tw-bg-opacity:27%}
     :is(.dark .dark\:bg-opacity-\[40\%\]){--tw-bg-opacity:40%}
     :is(.dark .dark\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
