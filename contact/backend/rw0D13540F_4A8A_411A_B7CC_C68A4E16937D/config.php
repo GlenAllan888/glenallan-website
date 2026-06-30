@@ -5,9 +5,9 @@ return [
         'enabled' => '1' === '1',
         'to' => 'john.doe@example.com',
         'subject' => 'New Form Submission',
-        'template' => '',
-        'from_email' => '',
-        'from_name' => '',
+        'template' => 'default',
+        'from_email' => 'john.doe@example.com',
+        'from_name' => 'John Doe',
         'smtp_host' => 'smtp.example.com',
         'smtp_port' => '587',
         'smtp_username' => 'username@example.com',
@@ -18,12 +18,12 @@ return [
         'charset' => 'UTF-8',
 
         // Email Template Customization
-        'email_title' => '',
+        'email_title' => 'New Form Submission',
         'email_footer' => '',
 
         // SSL Configuration (for troubleshooting hosting issues)
-        'smtp_verify_peer' =>  'false' === 'true', // Set to false if certificate issues
-        'smtp_verify_peer_name' => 'false' === 'true', // Set to false if hostname mismatch
+        'smtp_verify_peer' =>  'true' === 'true', // Set to false if certificate issues
+        'smtp_verify_peer_name' => 'true' === 'true', // Set to false if hostname mismatch
         'smtp_allow_self_signed' => 'false' === 'true', // Allow self-signed certificates
     ],
 
