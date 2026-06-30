@@ -1,0 +1,53 @@
+# Forms API - Apache Configuration
+# ==================================
+
+# Enable RewriteEngine
+RewriteEngine On
+
+# Route all requests through index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Protect sensitive directories
+<IfModule mod_rewrite.c>
+    RewriteRule ^src/ - [F,L]
+    RewriteRule ^vendor/ - [F,L]
+    RewriteRule ^_cache/ - [F,L]
+    RewriteRule ^logs/ - [F,L]
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+</IfModule>
+
+# Protect config files
+<FilesMatch "^config\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Allow only specific HTTP methods
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} !^(GET|POST|OPTIONS)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# PHP Settings (if allowed)
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 30
+    php_value memory_limit 128M
+</IfModule>
+
