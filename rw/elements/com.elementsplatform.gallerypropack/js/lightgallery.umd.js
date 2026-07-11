@@ -2792,4 +2792,3 @@
     return lightGallery;
 
 })));
-//# sourceMappingURL=lightgallery.umd.js.map
