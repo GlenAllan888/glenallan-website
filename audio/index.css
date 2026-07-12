@@ -1,6 +1,30 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
         font-weight: 600;
         font-style: regular;
@@ -25,8 +49,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -41,32 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,32 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
         font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -126,9 +102,17 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
         font-stretch: normal;
     }
 
@@ -142,16 +126,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -174,9 +158,25 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
         font-stretch: normal;
     }
     @font-face {
@@ -411,6 +411,7 @@
     .bg-no-repeat{background-repeat:no-repeat}
     .fill-black-50\/\[--svgOpacity\]{fill:rgb(0 0 0 / var(--svgOpacity))}
     .fill-surface-50\/\[--svgOpacity\]{fill:rgb(245 247 250 / var(--svgOpacity))}
+    .fill-ultragreen-50\/\[--svgOpacity\]{fill:rgb(0 226 0 / var(--svgOpacity))}
     .fill-violet-600\/\[--svgOpacity\]{fill:rgb(124 58 237 / var(--svgOpacity))}
     .fill-white-50\/\[--svgOpacity\]{fill:rgb(255 255 255 / var(--svgOpacity))}
     .fill-zinc-400\/\[--svgOpacity\]{fill:rgb(161 161 170 / var(--svgOpacity))}
@@ -484,6 +485,7 @@
     .text-text-950{--tw-text-opacity:1;color:rgb(246 248 249 / var(--tw-text-opacity))}
     .text-ultragreen-300{--tw-text-opacity:1;color:rgb(33 145 22 / var(--tw-text-opacity))}
     .text-ultragreen-50{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
+    .text-ultragreen-50\/\[--svgOpacity\]{color:rgb(0 226 0 / var(--svgOpacity))}
     .text-violet-500{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
     .text-violet-600{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity))}
     .text-violet-600\/\[--svgOpacity\]{color:rgb(124 58 237 / var(--svgOpacity))}
@@ -513,12 +515,14 @@
     .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
     .transition-colors{transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
     .delay-\[0ms\]{transition-delay:0ms}
+    .delay-\[1ms\]{transition-delay:1ms}
     .duration-150{transition-duration:150ms}
     .duration-300{transition-duration:300ms}
     .duration-\[0ms\]{transition-duration:0ms}
     .duration-\[1000ms\]{transition-duration:1000ms}
     .duration-\[1300ms\]{transition-duration:1300ms}
     .duration-\[1500ms\]{transition-duration:1500ms}
+    .duration-\[23000ms\]{transition-duration:23000ms}
     .duration-\[500ms\]{transition-duration:500ms}
     .duration-\[800ms\]{transition-duration:800ms}
     .ease-in{transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}
@@ -582,18 +586,27 @@
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:translate-x-\[0px\]{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:translate-y-\[0px\]{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:translate-y-\[30px\]{--tw-translate-y:30px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:translate-x-\[0px\]{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:translate-y-\[0px\]{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:rotate-\[0deg\]{--tw-rotate:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:rotate-\[720deg\]{--tw-rotate:720deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:skew-x-\[0deg\]{--tw-skew-x:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:skew-y-\[0deg\]{--tw-skew-y:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:skew-x-\[0deg\]{--tw-skew-x:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:skew-y-\[0deg\]{--tw-skew-y:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:scale-\[100\%\]{--tw-scale-x:100%;--tw-scale-y:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:scale-\[100\%\]{--tw-scale-x:100%;--tw-scale-y:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:fill-violet-700\/\[--svgOpacity\]{fill:rgb(109 40 217 / var(--svgOpacity))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:fill-violet-700\/\[--svgOpacity\]{fill:rgb(109 40 217 / var(--svgOpacity))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:stroke-ultragreen-50\/\[--strokeOpacity\]{stroke:rgb(0 226 0 / var(--strokeOpacity))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:stroke-\[1px\]{stroke-width:1px}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:text-violet-700\/\[--svgOpacity\]{color:rgb(109 40 217 / var(--svgOpacity))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:text-violet-700\/\[--svgOpacity\]{color:rgb(109 40 217 / var(--svgOpacity))}
     .group\/track:hover .group-hover\/track\:text-ultragreen-50{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
     .group\/track:hover .group-hover\/track\:text-violet-500{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:\[--strokeOpacity\:45\%\]{--strokeOpacity:45%}
     .group\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC:hover .group-hover\/rw04A3E0AE_33B0_446D_BC82_1A281BF562AC\:\[--svgOpacity\:100\%\]{--svgOpacity:100%}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:\[--svgOpacity\:100\%\]{--svgOpacity:100%}
     .aria-\[current\=page\]\:text-violet-500[aria-current=page]{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
     .aria-\[current\=page\]\:text-opacity-\[100\%\][aria-current=page]{--tw-text-opacity:100%}
     .aria-\[current\=page\]\:text-shadow-none[aria-current=page]{text-shadow:}
