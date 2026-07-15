@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+ <head> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-collapse.js?rwcache=805814960"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-focus.js?rwcache=805814960"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-intersect.js?rwcache=805814960"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine-ui.js?rwcache=805814960"></script> 
+  <script defer src="../rw/elements/com.realmac.corepack/alpine.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/smoothscroll.min.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/gsap.min.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/ScrollTrigger.min.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/gsap-effects.js?rwcache=805814960"></script> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="x-ua-compatible" content="ie=edge" /> 
+  <meta name="viewport" content="width=device-width" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <link rel="canonical" href="https://glenallan.art" /> 
+  <meta name="description" content="Gallery of Works, Portfolio, Creative Expression &amp; Philosophical Anchor for Glen Allan" /> 
+  <meta name="robots" content="index, follow" /> 
+  <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" /> 
+  <link rel="apple-touch-icon" type="image/png" href="../resources/apple-touch-icon-180x180.png" sizes="180x180" /> 
+  <link rel="apple-touch-icon" type="image/png" href="../resources/apple-touch-icon-167x167.png" sizes="167x167" /> 
+  <link rel="apple-touch-icon" type="image/png" href="../resources/apple-touch-icon-152x152.png" sizes="152x152" /> 
+  <link rel="mask-icon" href="../resources/safari-pinned-tab.svg" color="#FFFFFF" /> 
+  <link rel="icon" type="image/png" href="../resources/favicon-48x48.png" sizes="48x48" /> 
+  <link rel="icon" type="image/png" href="../resources/favicon-32x32.png" sizes="32x32" /> 
+  <link rel="icon" type="image/png" href="../resources/favicon-16x16.png" sizes="16x16" /> 
+  <meta property="og:type" content="website" /> 
+  <meta property="og:site_name" content="Glen Allan Portfolio" /> 
+  <meta property="og:title" content="Glen Allan | Home" /> 
+  <meta property="og:description" content="Gallery of Works, Portfolio, Creative Expression &amp; Philosophical Anchor for Glen Allan" /> 
+  <meta property="og:image" content="https://glenallan.art/resources/images/misc/chaos-circuit-eye_inverter.jpg" /> 
+  <meta property="og:url" content="https://glenallan.art/chaos/" /> 
+  <title>Glen Allan Portfolio Copy</title> 
+  <link href="index.css?rwcache=805814960" media="all" rel="stylesheet" type="text/css" /> 
+  <script src="../rw/elements/com.realmac.corepack/effectsTransforms.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/modal.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-store-filters.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-store-transitions.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/alpine-exit-intent.js?rwcache=805814960"></script> 
+  <script src="../rw/elements/com.realmac.corepack/image-lightbox.js?rwcache=805814960"></script> 
+  <style lang="css">
+    /* Required for alpine.js x-cloak directive to work */
+    [x-cloak] {
+        display: none !important;
+    }
+
+    [data-rwx-droparea] {
+        /* width: 100%; */
+        min-width: 60px !important;
+        /* height: 100%; */
+    }
+
+    /* For Webkit-based browsers (Chrome, Safari and Opera) */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For IE, Edge and Firefox */
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+</style> 
+  <link rel="stylesheet" type="text/css" media="all" href="../rw/styles/consolidated.css?rwcache=805814960" /> 
+ </head> 
+ <body class="bg-black-600"> 
+  <div class="group/rw5E1B4C7C_03DA_456C_B387_0714D52BDBB8 group/grid grid w-[85vw] h-[85vh] mt-auto mb-auto ml-auto mr-auto pt-0 pb-0 pl-0 pr-0 grid-cols-1 grid-rows-auto gap-x-md gap-y-md grid-flow-col justify-items-center justify-center items-center content-center" data-filter-tags="" id=""> 
+  </div> 
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    document.addEventListener("DOMContentLoaded", () => {
+        const revealElements = document.querySelectorAll("[data-reveal]");
+        revealElements.forEach((element, index) => {
+            element.style.visibility = "hidden";
+            element.style.transitionProperty = "none";
+
+            const {
+                revealAnimation: animation = "fadeUpIn",
+                revealExitAnimation: exitAnimation = "fadeUpOut",
+                revealPlay: play = "enter-exit",
+                revealStart: start = "top bottom",
+                revealEnd: end = "top top",
+                revealDelay: delay = 0,
+                revealDuration: duration = 0.5,
+                revealEasing: easing = "power1.out",
+                revealDistance: distance = 200,
+                revealDegrees: degrees = 90,
+                revealScrub: scrub = false,
+                revealDebug: debug = false,
+                revealId,
+            } = element.dataset;
+
+            const id = `${revealId}-${index}`;
+            const wantsScrub = scrub === "true";
+            const wantsDebug = debug === "true";
+            const wantsExitAnimation = play == "enter-exit";
+            const playOnce = play == "enter-once";
+            const durationNumber = parseFloat(duration);
+            const delayNumber = parseFloat(delay);
+            const degreesNumber = parseFloat(degrees);
+            const degreesNumberOut = degreesNumber * -1;
+            
+            let triggeredOnce = false;
+            
+            const config = {
+                duration: durationNumber,
+                ease: easing,
+                delay: delayNumber,
+                distance: distance,
+                degrees: degreesNumber,
+                degreesOut: degreesNumberOut,
+                clearProps: "auto",
+                onComplete: () => {
+                    element.style.transitionProperty = "";
+                },
+            }
+
+            const markers = wantsDebug
+                ? {
+                    startColor: "green",
+                    endColor: "red",
+                    fontSize: "12px",
+                    fontWeight: "bold",
+                    indent: 20,
+                }
+                : false;
+
+            if (wantsScrub) {
+                gsap.effects[animation](element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: start,
+                        end: end,
+                        scrub: true,
+                        markers,
+                        id,
+                    },
+                    ...config
+                });
+            } else {
+                ScrollTrigger.create({
+                    trigger: element,
+                    start: start,
+                    end: end,
+                    markers,
+                    id,
+                    onEnter: () => {
+                        if (playOnce && triggeredOnce) return;
+                        element.style.transitionProperty = "none";
+                        triggeredOnce = true;
+                        gsap.effects[animation](element, config);
+                    },
+                    onLeave: () => {
+                        if (wantsExitAnimation) {
+                            element.style.transitionProperty = "none";
+                            gsap.effects[exitAnimation](element, { delay: 0, ...config });
+                        }
+                    },
+                    onEnterBack: () => {
+                        if (wantsExitAnimation) {
+                            element.style.transitionProperty = "none";
+                            gsap.effects[animation](element, config);
+                        }
+                    },
+                    onLeaveBack: () => {
+                        if (wantsExitAnimation) {
+                            element.style.transitionProperty = "none";
+                            gsap.effects[exitAnimation](element, { delay: 0, ...config });
+                        }
+                    },
+                });
+            }
+        });
+    });
+</script>  
+ </body>
+</html>
