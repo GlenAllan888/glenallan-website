@@ -1,8 +1,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -11,6 +27,30 @@
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
         font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -30,46 +70,6 @@
         font-style: regular;
         font-stretch: normal;
     }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
     @font-face {
         font-family: 'font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264';
         src: url('resources/fonts/capsule/capsule-gxmr6.ttf') format('truetype');
@@ -84,6 +84,22 @@
         font-style: regular;
         font-stretch: normal;
     }
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
@@ -102,14 +118,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
         font-style: regular;
@@ -118,8 +126,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
+        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -142,16 +150,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -166,16 +166,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
+        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
+        src: url('resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -357,4 +357,182 @@
 @media (min-width: 1280px){.container{max-width:1280px}}
 @media (min-width: 1536px){.container{max-width:1536px}}[data-rwx-droparea] {
     width: auto !important;
+}
+/* ============================================================
+   CHAOS SYSTEM HOMEPAGE NAVIGATION
+   Global tuning values live here.
+   ============================================================ */
+
+.chaos-navigation {
+  /* Layout inside the RapidWeaver container */
+  display: grid;
+  place-items: center;
+  width: min(88vw, 88svh);
+  max-width: 100%;
+  margin-inline: auto;
+  line-height: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Background dimming */
+  --chaos-background-opacity: 0.16;
+
+  /* Shared active-route glow */
+  --chaos-glow-color: rgb(132 255 105);
+  --chaos-glow-near: 5px;
+  --chaos-glow-mid: 15px;
+  --chaos-glow-far: 34px;
+
+  /* Transition timing */
+  --chaos-icon-out-duration: 360ms;
+  --chaos-icon-in-duration: 440ms;
+  --chaos-icon-in-delay: 30ms;
+  --chaos-center-duration: 580ms;
+  --chaos-route-duration: 660ms;
+  --chaos-background-duration: 520ms;
+
+  /* Timing curves */
+  --chaos-icon-ease: cubic-bezier(.22, .7, .2, 1);
+  --chaos-center-ease: cubic-bezier(.2, .72, .2, 1);
+  --chaos-route-ease: cubic-bezier(.18, .72, .2, 1);
+  --chaos-background-ease: ease-in-out;
+}
+
+.chaos-navigation svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow: visible;
+}
+
+/* JavaScript assigns these classes from the existing SVG IDs. */
+.chaos-navigation .chaos-route,
+.chaos-navigation .chaos-center,
+.chaos-navigation .chaos-node-inverted,
+.chaos-navigation .chaos-node-inverted-background {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Normal outer node icons remain fully bright unless that node is selected. */
+.chaos-navigation .chaos-node-normal,
+.chaos-navigation .chaos-node-normal-background {
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* The default center starts visible. */
+.chaos-navigation #chaos-eye {
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* The whole passive circuit field dims. Outer node icons do not. */
+.chaos-navigation #chaos-tendrils {
+  opacity: 1;
+  pointer-events: none;
+  transition:
+    opacity var(--chaos-background-duration)
+    var(--chaos-background-ease);
+}
+
+.chaos-navigation.is-engaged #chaos-tendrils {
+  opacity: var(--chaos-background-opacity);
+}
+
+/* Active route only. This is the only glowing element. */
+.chaos-navigation .chaos-route {
+  transition:
+    opacity var(--chaos-route-duration) var(--chaos-route-ease),
+    filter var(--chaos-route-duration) var(--chaos-route-ease);
+}
+
+.chaos-navigation .chaos-route.is-active {
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 var(--chaos-glow-near) var(--chaos-glow-color))
+    drop-shadow(0 0 var(--chaos-glow-mid) var(--chaos-glow-color))
+    drop-shadow(0 0 var(--chaos-glow-far) var(--chaos-glow-color));
+}
+
+/* Center transition: Chaos Eye out, selected center in. */
+.chaos-navigation #chaos-eye,
+.chaos-navigation .chaos-center {
+  transition:
+    opacity var(--chaos-center-duration)
+    var(--chaos-center-ease);
+}
+
+.chaos-navigation.is-engaged #chaos-eye {
+  opacity: 0;
+}
+
+.chaos-navigation .chaos-center.is-active {
+  opacity: 1;
+}
+
+/* Selected outer icon inversion. */
+.chaos-navigation .chaos-node-normal,
+.chaos-navigation .chaos-node-normal-background {
+  transition:
+    opacity var(--chaos-icon-out-duration)
+    var(--chaos-icon-ease);
+}
+
+.chaos-navigation .chaos-node-inverted,
+.chaos-navigation .chaos-node-inverted-background {
+  transition:
+    opacity var(--chaos-icon-in-duration)
+    var(--chaos-icon-ease)
+    var(--chaos-icon-in-delay);
+}
+
+.chaos-navigation .chaos-node-normal.is-selected,
+.chaos-navigation .chaos-node-normal-background.is-selected {
+  opacity: 0;
+}
+
+.chaos-navigation .chaos-node-inverted.is-selected,
+.chaos-navigation .chaos-node-inverted-background.is-selected {
+  opacity: 1;
+}
+
+/* Invisible interaction geometry generated by JavaScript. */
+.chaos-navigation .chaos-hit-target {
+  fill: transparent;
+  stroke: none;
+  cursor: pointer;
+  pointer-events: all;
+  outline: none;
+}
+
+.chaos-navigation .chaos-center-hit-target {
+  cursor: pointer;
+}
+
+.chaos-navigation .chaos-hit-target:focus-visible {
+  stroke: currentColor;
+  stroke-width: 8;
+  stroke-opacity: 0.72;
+  vector-effect: non-scaling-stroke;
+}
+
+/* The component remains fluid. The containing Elements container can set
+   its maximum width, viewport spacing, and breakpoint-specific dimensions. */
+@media (max-width: 767px) {
+  .chaos-navigation {
+    --chaos-glow-near: 4px;
+    --chaos-glow-mid: 12px;
+    --chaos-glow-far: 27px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chaos-navigation,
+  .chaos-navigation * {
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+  }
 }
