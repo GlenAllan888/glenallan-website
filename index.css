@@ -1,40 +1,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -49,8 +17,32 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -65,8 +57,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,25 +86,9 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
         font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
         font-stretch: normal;
     }
 
@@ -118,24 +102,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
+        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
+        src: url('resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -150,9 +126,17 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
+        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -166,16 +150,32 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
+        src: url('resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -244,23 +244,28 @@ body {
   --chaos-background-opacity: 0.16;
 
   /* Shared active-route glow */
-  --chaos-glow-color: rgb(132 255 105);
+  --chaos-glow-color: rgb(16, 216, 2);
   --chaos-glow-near: 5px;
   --chaos-glow-mid: 15px;
   --chaos-glow-far: 34px;
 
+  /* Soft dark separation around the active route */
+  --chaos-edge-color: rgb(0 0 0 / 1);
+  --chaos-edge-near: 10px;
+  --chaos-edge-far: 16px;
+
   /* Transition timing */
-  --chaos-icon-out-duration: 360ms;
+  --chaos-icon-out-duration: 560ms;
   --chaos-icon-in-duration: 440ms;
   --chaos-icon-in-delay: 30ms;
   --chaos-center-duration: 580ms;
-  --chaos-route-duration: 660ms;
-  --chaos-background-duration: 520ms;
+  --chaos-route-duration: 1500ms;
+  --chaos-background-duration: 620ms;
 
   /* Timing curves */
   --chaos-icon-ease: cubic-bezier(.22, .7, .2, 1);
   --chaos-center-ease: cubic-bezier(.2, .72, .2, 1);
-  --chaos-route-ease: cubic-bezier(.18, .72, .2, 1);
+  --chaos-route-ease: cubic-bezier(.15, .8, .25, 1);
   --chaos-background-ease: ease-in-out;
 }
 
@@ -307,19 +312,15 @@ body {
   opacity: var(--chaos-background-opacity);
 }
 
-/* Active route only. This is the only glowing element. */
+/* Active route only. The SVG-native filter is assigned by JavaScript. */
 .chaos-navigation .chaos-route {
   transition:
-    opacity var(--chaos-route-duration) var(--chaos-route-ease),
-    filter var(--chaos-route-duration) var(--chaos-route-ease);
+    opacity var(--chaos-route-duration)
+    var(--chaos-route-ease);
 }
 
 .chaos-navigation .chaos-route.is-active {
   opacity: 1;
-  filter:
-    drop-shadow(0 0 var(--chaos-glow-near) var(--chaos-glow-color))
-    drop-shadow(0 0 var(--chaos-glow-mid) var(--chaos-glow-color))
-    drop-shadow(0 0 var(--chaos-glow-far) var(--chaos-glow-color));
 }
 
 /* Center transition: Chaos Eye out, selected center in. */
