@@ -680,12 +680,14 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       }
     });
 
-    /* A touch outside the component resets the held selection. */
+    /*
+     * A pointer interaction outside the component resets the held selection.
+     * This provides a consistent escape path for both touch and desktop.
+     */
     document.addEventListener(
       "pointerdown",
       event => {
         if (
-          event.pointerType === "touch" &&
           activeNode &&
           !root.contains(event.target)
         ) {
