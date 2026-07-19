@@ -17,8 +17,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
+        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -33,6 +33,14 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
         font-weight: 100;
         font-style: regular;
@@ -41,24 +49,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
         font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,56 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -166,9 +118,57 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
         font-weight: 600;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -244,29 +244,51 @@ body {
   --chaos-background-opacity: 0.16;
 
   /* Shared active-route glow */
-  --chaos-glow-color: rgb(16, 216, 2);
-  --chaos-glow-near: 5px;
-  --chaos-glow-mid: 15px;
-  --chaos-glow-far: 34px;
+    --chaos-glow-color: rgb(16, 216, 2);
+    --chaos-glow-near: 5px;
+    --chaos-glow-mid: 15px;
+    --chaos-glow-far: 34px;
 
   /* Soft dark separation around the active route */
-  --chaos-edge-color: rgb(0 0 0 / 1);
-  --chaos-edge-near: 10px;
-  --chaos-edge-far: 16px;
+    --chaos-edge-color: rgb(0 0 0 / 1);
+    --chaos-edge-near: 10px;
+    --chaos-edge-far: 16px;
 
   /* Transition timing */
-  --chaos-icon-out-duration: 560ms;
-  --chaos-icon-in-duration: 440ms;
-  --chaos-icon-in-delay: 30ms;
-  --chaos-center-duration: 580ms;
-  --chaos-route-duration: 1500ms;
-  --chaos-background-duration: 620ms;
+    --chaos-icon-out-duration: 560ms;
+    --chaos-icon-in-duration: 440ms;
+    --chaos-icon-in-delay: 30ms;
+    --chaos-center-duration: 580ms;
+    --chaos-route-duration: 1000ms;
+    --chaos-background-duration: 620ms;
 
+/* 
+  TIMING CURVE CHEAT SHEET: cubic-bezier(x1, y1, x2, y2)
+  -------------------------------------------------------------
+  X-Axis = TIME (0 to 1)       | Y-Axis = PROGRESS (0 to 1)
+  (x1, y1) = Start Handle      | (x2, y2) = End Handle
+  
+x1 = When acceleration begins.
+     Lower = reacts immediately.
+     Higher = slight hesitation.
+y1 = How aggressively it accelerates.
+     Higher = explosive launch.
+     Lower = gentle ease-in.
+x2 = When deceleration begins.
+     Higher = carries momentum longer.
+     Lower = starts braking sooner.
+y2 = How softly it settles.
+     1.0  = smooth landing.
+     >1   = overshoot / bounce.
+     <1   = firmer stop.
+
+cubic-bezier.com
+*/
   /* Timing curves */
-  --chaos-icon-ease: cubic-bezier(.22, .7, .2, 1);
-  --chaos-center-ease: cubic-bezier(.2, .72, .2, 1);
-  --chaos-route-ease: cubic-bezier(.15, .8, .25, 1);
-  --chaos-background-ease: ease-in-out;
+    --chaos-icon-ease: cubic-bezier(.22, .7, .2, 1);
+    --chaos-center-ease: cubic-bezier(.2, .72, .2, 1);
+    --chaos-route-ease: cubic-bezier(.08,.25,.5,1);
+    --chaos-background-ease: ease-in-out;
 }
 
 .chaos-navigation svg {
@@ -387,11 +409,20 @@ body {
 
 /* The component remains fluid. The containing Elements container can set
    its maximum width, viewport spacing, and breakpoint-specific dimensions. */
+/* Shared active-route glow */
 @media (max-width: 767px) {
   .chaos-navigation {
-    --chaos-glow-near: 4px;
-    --chaos-glow-mid: 12px;
-    --chaos-glow-far: 27px;
+    --chaos-glow-color: rgb(16, 216, 2);
+    --chaos-glow-mid: 20px;
+    --chaos-glow-far: 38px;
+  }
+}
+/* Soft dark separation around the active route */
+@media (max-width: 767px) {
+  .chaos-navigation {
+    --chaos-edge-color: rgb(0 0 0 / 1);
+    --chaos-edge-near: 16px;
+    --chaos-edge-far: 23px;
   }
 }
 

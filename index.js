@@ -96,7 +96,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
      * Prevents the interface from immediately collapsing while the pointer
      * moves through the space between desktop nodes.
      */
-    desktopResetDelay: 500,
+    desktopResetDelay: 1000,
 
     /*
      * CSS drop-shadow blur values and SVG Gaussian standard deviation are not
@@ -789,16 +789,13 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
        * Remove exported fixed dimensions so CSS controls sizing.
        * The viewBox remains, preserving the square aspect ratio.
        */
-      svg.removeAttribute("width");
-      svg.removeAttribute("height");
+        svg.removeAttribute("width");
+        svg.removeAttribute("height");
 
-      svg.setAttribute("width", "100%");
-      svg.setAttribute("height", "auto");
-
-      svg.setAttribute(
-        "preserveAspectRatio",
-        "xMidYMid meet"
-      );
+        svg.setAttribute(
+          "preserveAspectRatio",
+          "xMidYMid meet"
+);
 
       initChaosNavigation(root);
 
