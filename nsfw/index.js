@@ -9,7 +9,7 @@ RWElements.rw51D47120_A363_444A_A4EF_23E532E842EE = (function(componentId) {
 
 const FADE_EFFECT_ENABLED = true;
 const MIN_SCREEN_WIDTH = 100;
-const BODY_DURATION = 2500;
+const BODY_DURATION = 1512;
 const BODY_DELAY = 150;
 const BODY_EASING = 'ease';
 

@@ -9,7 +9,7 @@ RWElements.rw117A718D_7DDE_4F64_A52B_8E6CEA3D9B79 = (function(componentId) {
 
 const FADE_EFFECT_ENABLED = true;
 const MIN_SCREEN_WIDTH = 100;
-const BODY_DURATION = 2500;
+const BODY_DURATION = 1512;
 const BODY_DELAY = 150;
 const BODY_EASING = 'ease';
 
