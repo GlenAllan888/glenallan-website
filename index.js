@@ -32,16 +32,16 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
         url: "/ai/",
         label: "AI"
       },
-      context: {
-        routeId: "node-5_context",
-        url: "/context/",
-        label: "Context"
-      },
       resume: {
-        routeId: "node-6_resume",
+        routeId: "node-5_resume",
         url: "/resume/",
         label: "Resume"
-      }
+      },
+      context: {
+        routeId: "node-6_context",
+        url: "/context/",
+        label: "Context"
+      }  
     },
 
     /* Slightly enlarges each visible circular node into a forgiving hit area. */
