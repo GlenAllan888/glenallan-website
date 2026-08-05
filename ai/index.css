@@ -17,8 +17,32 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -41,32 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,72 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
         font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -166,8 +102,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -177,6 +121,62 @@
         src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
         font-weight: 100;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
         font-stretch: normal;
     }
     @font-face {
@@ -492,7 +492,6 @@
     .hover\:text-opacity-\[100\%\]:hover{--tw-text-opacity:100%}
     .hover\:opacity-\[100\%\]:hover{opacity:100%}
     .hover\:shadow-\[0px_0px_8px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_10px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_7px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_18px_0px_rgba\(111\2c 68\2c 206\2c 1\.00\)\]:hover{--tw-shadow:0px 0px 8px 0px rgba(0,0,0,1.00),0px 0px 10px 0px rgba(0,0,0,1.00),0px 0px 7px 0px rgba(0,0,0,1.00),0px 0px 18px 0px rgba(111,68,206,1.00);--tw-shadow-colored:0px 0px 8px 0px var(--tw-shadow-color), 0px 0px 10px 0px var(--tw-shadow-color), 0px 0px 7px 0px var(--tw-shadow-color), 0px 0px 18px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
-    .hover\:shadow-\[0px_0px_8px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_10px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_7px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_18px_0px_rgba\(119\2c 65\2c 214\2c 1\.00\)\]:hover{--tw-shadow:0px 0px 8px 0px rgba(0,0,0,1.00),0px 0px 10px 0px rgba(0,0,0,1.00),0px 0px 7px 0px rgba(0,0,0,1.00),0px 0px 18px 0px rgba(119,65,214,1.00);--tw-shadow-colored:0px 0px 8px 0px var(--tw-shadow-color), 0px 0px 10px 0px var(--tw-shadow-color), 0px 0px 7px 0px var(--tw-shadow-color), 0px 0px 18px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
     .hover\:text-shadow-none:hover{text-shadow:}
     .hover\:\[--bg-opacity\:100\%\]:hover{--bg-opacity:100%}
     .hover\:\[--svgOpacity\:100\%\]:hover{--svgOpacity:100%}
@@ -527,7 +526,7 @@
     .group\/rwDB4E3210_197B_4D27_9B59_B795B2E530BD:hover .group-hover\/rwDB4E3210_197B_4D27_9B59_B795B2E530BD\:\[--svgOpacity\:100\%\]{--svgOpacity:100%}
     .group\/rwDB4E3210_197B_4D27_9B59_B795B2E530BD:hover .group-hover\/rwDB4E3210_197B_4D27_9B59_B795B2E530BD\:\[filter\:drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_8px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_27px_rgba\(27\2c 222\2c 16\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 8px rgba(0,0,0,1.00)) drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 27px rgba(27,222,16,1.00))}
     .group\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2:hover .group-hover\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2\:\[--svgOpacity\:100\%\]{--svgOpacity:100%}
-    .group\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2:hover .group-hover\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2\:\[filter\:drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_8px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_27px_rgba\(0\2c 226\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 8px rgba(0,0,0,1.00)) drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 27px rgba(0,226,0,1.00))}
+    .group\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2:hover .group-hover\/rwF9C81A29_D807_4384_B83B_2F4DD80549E2\:\[filter\:drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_8px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_27px_rgba\(27\2c 222\2c 16\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 8px rgba(0,0,0,1.00)) drop-shadow(0px 0px 7px rgba(0,0,0,1.00)) drop-shadow(0px 0px 27px rgba(27,222,16,1.00))}
     .aria-\[current\=page\]\:text-violet-500[aria-current=page]{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
     .aria-\[current\=page\]\:text-opacity-\[100\%\][aria-current=page]{--tw-text-opacity:100%}
     .aria-\[current\=page\]\:text-shadow-none[aria-current=page]{text-shadow:}
