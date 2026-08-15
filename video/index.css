@@ -1,6 +1,30 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
         font-weight: 100;
         font-style: regular;
@@ -17,24 +41,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
         font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -49,8 +57,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -59,14 +67,6 @@
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
         font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,16 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -110,25 +102,17 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -136,6 +120,22 @@
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
         font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -150,14 +150,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
         font-weight: 800;
         font-style: oblique;
@@ -166,17 +158,25 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
         font-stretch: normal;
     }
     @font-face {
@@ -272,6 +272,7 @@
     .h-8{height:2.0rem}
     .h-\[120px\]{height:120px}
     .h-\[2px\]{height:2px}
+    .h-\[800px\]{height:800px}
     .h-\[95vh\]{height:95vh}
     .h-\[\]{height:}
     .h-auto{height:auto}
@@ -291,6 +292,7 @@
     .w-\[100\%\]{width:100%}
     .w-\[100vw\]{width:100vw}
     .w-\[40\%\]{width:40%}
+    .w-\[40vw\]{width:40vw}
     .w-\[70vw\]{width:70vw}
     .w-\[80vw\]{width:80vw}
     .w-\[90vw\]{width:90vw}
@@ -317,6 +319,7 @@
     .transform-gpu{transform:translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .cursor-pointer{cursor:pointer}
     .list-outside{list-style-position:outside}
+    .grid-flow-col{grid-auto-flow:column}
     .grid-flow-dense{grid-auto-flow:dense}
     .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
     .grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
@@ -373,6 +376,7 @@
     .border-black-500\/\[100\%\]{border-color:rgb(0 0 0 / 100%)}
     .border-black-950{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity))}
     .border-black-950\/\[100\%\]{border-color:rgb(0 0 0 / 100%)}
+    .border-ultragreen-50\/\[100\%\]{border-color:rgb(0 226 0 / 100%)}
     .border-violet-800\/\[100\%\]{border-color:rgb(91 33 182 / 100%)}
     .bg-black-50{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
     .bg-black-600\/\[var\(--play-bg-opacity\)\]{background-color:rgb(0 0 0 / var(--play-bg-opacity))}
@@ -395,7 +399,9 @@
     .bg-opacity-\[68\%\]{--tw-bg-opacity:68%}
     .bg-\[url\(\.\.\/resources\/images\/webp\/chaos-field\.webp\)\]{background-image:url(../resources/images/webp/chaos-field.webp)}
     .bg-\[url\(\.\.\/resources\/images\/webp\/chaos\.webp\)\]{background-image:url(../resources/images/webp/chaos.webp)}
+    .bg-\[url\(\.\.\/resources\/main-pdfs\/youtube-studio-channel-plans\.jpg\)\]{background-image:url(../resources/main-pdfs/youtube-studio-channel-plans.jpg)}
     .bg-contain{background-size:contain}
+    .bg-cover{background-size:cover}
     .bg-center{background-position:center}
     .bg-left-top{background-position:left top}
     .bg-no-repeat{background-repeat:no-repeat}
@@ -448,6 +454,7 @@
     .text-fuck{font-size:0.55rem}
     .text-lg{font-size:1.12rem;line-height:1.75rem}
     .text-sm{font-size:0.88rem;line-height:1.25rem}
+    .text-xl{font-size:1.25rem;line-height:1.75rem}
     .text-xs{font-size:0.75rem;line-height:1.00rem}
     .font-\[100\]{font-weight:100}
     .font-\[200\]{font-weight:200}
@@ -543,6 +550,7 @@
     .hover\:border-r-2:hover{border-right-width:0.125rem}
     .hover\:border-t-2:hover{border-top-width:0.125rem}
     .hover\:border-solid:hover{border-style:solid}
+    .hover\:border-violet-500\/\[100\%\]:hover{border-color:rgb(139 92 246 / 100%)}
     .hover\:border-violet-800\/\[100\%\]:hover{border-color:rgb(91 33 182 / 100%)}
     .hover\:fill-brand-50\/\[--svgOpacity\]:hover{fill:rgb(239 247 255 / var(--svgOpacity))}
     .hover\:fill-violet-700\/\[--svgOpacity\]:hover{fill:rgb(109 40 217 / var(--svgOpacity))}
@@ -626,6 +634,10 @@
 @media (min-width: 1536px){.container{max-width:1536px}}[data-rwx-droparea] {
     width: auto !important;
 }
+/* [data-rwx-droparea] {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+} */
 /* [data-rwx-droparea] {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
