@@ -1,48 +1,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,8 +17,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -67,6 +35,38 @@
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
         font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,16 +86,16 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -110,16 +110,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -129,6 +129,22 @@
         src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
         font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
         font-stretch: normal;
     }
 
@@ -152,22 +168,6 @@
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
         font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -223,6 +223,7 @@
     .mb-4{margin-bottom:1.0rem}
     .mb-5{margin-bottom:1.25rem}
     .mb-6{margin-bottom:1.5rem}
+    .mb-7{margin-bottom:1.75rem}
     .mb-8{margin-bottom:2.0rem}
     .mb-9{margin-bottom:2.25rem}
     .mb-\[0px\]{margin-bottom:0px}
@@ -247,6 +248,7 @@
     .mt-4{margin-top:1.0rem}
     .mt-5{margin-top:1.25rem}
     .mt-6{margin-top:1.5rem}
+    .mt-7{margin-top:1.75rem}
     .mt-8{margin-top:2.0rem}
     .mt-9{margin-top:2.25rem}
     .mt-\[0px\]{margin-top:0px}
@@ -258,6 +260,7 @@
     .\!grid{display:grid !important}
     .grid{display:grid}
     .hidden{display:none}
+    .aspect-\[0\.772656261920929\]{aspect-ratio:0.772656261920929}
     .size-6{width:1.5rem;height:1.5rem}
     .h-0{height:0.0rem}
     .h-0\.5{height:0.125rem}
@@ -265,7 +268,6 @@
     .h-6{height:1.5rem}
     .h-\[2px\]{height:2px}
     .h-\[33px\]{height:33px}
-    .h-\[800px\]{height:800px}
     .h-\[\]{height:}
     .h-auto{height:auto}
     .h-full{height:100%}
@@ -276,12 +278,13 @@
     .w-14{width:3.5rem}
     .w-2{width:0.5rem}
     .w-2\.5{width:0.625rem}
+    .w-24{width:6.0rem}
     .w-5{width:1.25rem}
     .w-6{width:1.5rem}
     .w-8{width:2.0rem}
     .w-\[100\%\]{width:100%}
+    .w-\[20vw\]{width:20vw}
     .w-\[40\%\]{width:40%}
-    .w-\[40vw\]{width:40vw}
     .w-\[48px\]{width:48px}
     .w-\[50vw\]{width:50vw}
     .w-\[60\%\]{width:60%}
@@ -292,6 +295,7 @@
     .w-\[90vw\]{width:90vw}
     .w-auto{width:auto}
     .w-full{width:100%}
+    .max-w-\[100\%\]{max-width:100%}
     .flex-1{flex:1 1 0%}
     .grow{flex-grow:1}
     .origin-center{transform-origin:center}
@@ -311,7 +315,6 @@
     .transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .transform-gpu{transform:translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .cursor-pointer{cursor:pointer}
-    .grid-flow-col{grid-auto-flow:column}
     .grid-flow-dense{grid-auto-flow:dense}
     .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
     .grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
@@ -347,18 +350,22 @@
     .rounded-bl-2xl{border-bottom-left-radius:1.0rem}
     .rounded-bl-full{border-bottom-left-radius:36.0rem}
     .rounded-bl-lg{border-bottom-left-radius:0.5rem}
+    .rounded-bl-md{border-bottom-left-radius:0.375rem}
     .rounded-bl-none{border-bottom-left-radius:0.0rem}
     .rounded-br-2xl{border-bottom-right-radius:1.0rem}
     .rounded-br-full{border-bottom-right-radius:36.0rem}
     .rounded-br-lg{border-bottom-right-radius:0.5rem}
+    .rounded-br-md{border-bottom-right-radius:0.375rem}
     .rounded-br-none{border-bottom-right-radius:0.0rem}
     .rounded-tl-2xl{border-top-left-radius:1.0rem}
     .rounded-tl-full{border-top-left-radius:36.0rem}
     .rounded-tl-lg{border-top-left-radius:0.5rem}
+    .rounded-tl-md{border-top-left-radius:0.375rem}
     .rounded-tl-none{border-top-left-radius:0.0rem}
     .rounded-tr-2xl{border-top-right-radius:1.0rem}
     .rounded-tr-full{border-top-right-radius:36.0rem}
     .rounded-tr-lg{border-top-right-radius:0.5rem}
+    .rounded-tr-md{border-top-right-radius:0.375rem}
     .rounded-tr-none{border-top-right-radius:0.0rem}
     .border{border-width:0.12rem}
     .border-b-2{border-bottom-width:0.125rem}
@@ -377,8 +384,8 @@
     .border-black-500\/\[100\%\]{border-color:rgb(0 0 0 / 100%)}
     .border-black-950{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity))}
     .border-black-950\/\[100\%\]{border-color:rgb(0 0 0 / 100%)}
+    .border-ultragreen-300\/\[100\%\]{border-color:rgb(33 145 22 / 100%)}
     .border-violet-800\/\[100\%\]{border-color:rgb(91 33 182 / 100%)}
-    .border-white-500\/\[100\%\]{border-color:rgb(255 255 255 / 100%)}
     .border-zinc-600\/\[100\%\]{border-color:rgb(82 82 91 / 100%)}
     .bg-black-50{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
     .bg-black-950{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
@@ -398,7 +405,6 @@
     .bg-\[url\(\.\.\/resources\/images\/webp\/chaos-field\.webp\)\]{background-image:url(../resources/images/webp/chaos-field.webp)}
     .bg-\[url\(\.\.\/resources\/images\/webp\/chaos-field_dark\.webp\)\]{background-image:url(../resources/images/webp/chaos-field_dark.webp)}
     .bg-\[url\(\.\.\/resources\/images\/webp\/chaos\.webp\)\]{background-image:url(../resources/images/webp/chaos.webp)}
-    .bg-\[url\(\.\.\/resources\/main-pdfs\/black-and-white-arts-business-plan\.jpg\)\]{background-image:url(../resources/main-pdfs/black-and-white-arts-business-plan.jpg)}
     .bg-contain{background-size:contain}
     .bg-cover{background-size:cover}
     .bg-bottom{background-position:bottom}
@@ -465,6 +471,7 @@
     .leading-snug{line-height:1.375}
     .leading-tight{line-height:1.25}
     .tracking-normal{letter-spacing:0em}
+    .text-black-50{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}
     .text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity))}
     .text-surface-50\/\[--svgOpacity\]{color:rgb(245 247 250 / var(--svgOpacity))}
     .text-text-50{--tw-text-opacity:1;color:rgb(33 40 46 / var(--tw-text-opacity))}
@@ -481,6 +488,7 @@
     .text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity))}
     .text-zinc-600\/\[--svgOpacity\]{color:rgb(82 82 91 / var(--svgOpacity))}
     .text-zinc-700{--tw-text-opacity:1;color:rgb(63 63 70 / var(--tw-text-opacity))}
+    .text-opacity-\[0\%\]{--tw-text-opacity:0%}
     .text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .opacity-0{opacity:0}
     .opacity-100{opacity:1}
@@ -523,6 +531,7 @@
     .\[clip\:rect\(0\2c _auto\2c _auto\2c _0\)\]{clip:rect(0, auto, auto, 0)}
     .\[filter\:drop-shadow\(0px_0px_12px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_4px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_9px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 12px rgba(0,0,0,1.00)) drop-shadow(0px 0px 4px rgba(0,0,0,1.00)) drop-shadow(0px 0px 9px rgba(0,0,0,1.00))}
     .\[filter\:drop-shadow\(0px_0px_4px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_4px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_3px_rgba\(0\2c 0\2c 0\2c 0\.50\)\)\]{filter:drop-shadow(0px 0px 4px rgba(0,0,0,1.00)) drop-shadow(0px 0px 4px rgba(0,0,0,1.00)) drop-shadow(0px 0px 3px rgba(0,0,0,0.50))}
+    .\[filter\:drop-shadow\(0px_0px_9px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_9px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)_drop-shadow\(0px_0px_7px_rgba\(0\2c 0\2c 0\2c 1\.00\)\)\]{filter:drop-shadow(0px 0px 9px rgba(0,0,0,1.00)) drop-shadow(0px 0px 9px rgba(0,0,0,1.00)) drop-shadow(0px 0px 7px rgba(0,0,0,1.00))}
     .\[transform\:translateZ\(0\)\]{transform:translateZ(0)}
     .\[will-change\:transform\]{will-change:transform}
     .hover\:translate-x-\[0px\]:hover{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
@@ -537,20 +546,24 @@
     .hover\:scale-\[110\%\]:hover{--tw-scale-x:110%;--tw-scale-y:110%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .hover\:scale-\[120\%\]:hover{--tw-scale-x:120%;--tw-scale-y:120%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .hover\:rounded-bl-2xl:hover{border-bottom-left-radius:1.0rem}
+    .hover\:rounded-bl-3xl:hover{border-bottom-left-radius:1.5rem}
     .hover\:rounded-bl-full:hover{border-bottom-left-radius:36.0rem}
     .hover\:rounded-br-2xl:hover{border-bottom-right-radius:1.0rem}
+    .hover\:rounded-br-3xl:hover{border-bottom-right-radius:1.5rem}
     .hover\:rounded-br-full:hover{border-bottom-right-radius:36.0rem}
     .hover\:rounded-tl-2xl:hover{border-top-left-radius:1.0rem}
+    .hover\:rounded-tl-3xl:hover{border-top-left-radius:1.5rem}
     .hover\:rounded-tl-full:hover{border-top-left-radius:36.0rem}
     .hover\:rounded-tr-2xl:hover{border-top-right-radius:1.0rem}
+    .hover\:rounded-tr-3xl:hover{border-top-right-radius:1.5rem}
     .hover\:rounded-tr-full:hover{border-top-right-radius:36.0rem}
     .hover\:border-b-2:hover{border-bottom-width:0.125rem}
     .hover\:border-l-2:hover{border-left-width:0.125rem}
     .hover\:border-r-2:hover{border-right-width:0.125rem}
     .hover\:border-t-2:hover{border-top-width:0.125rem}
     .hover\:border-solid:hover{border-style:solid}
+    .hover\:border-violet-500\/\[100\%\]:hover{border-color:rgb(139 92 246 / 100%)}
     .hover\:border-violet-800\/\[100\%\]:hover{border-color:rgb(91 33 182 / 100%)}
-    .hover\:border-yellow-500\/\[100\%\]:hover{border-color:rgb(234 179 8 / 100%)}
     .hover\:bg-violet-700:hover{--tw-bg-opacity:1;background-color:rgb(109 40 217 / var(--tw-bg-opacity))}
     .hover\:bg-opacity-\[100\%\]:hover{--tw-bg-opacity:100%}
     .hover\:fill-brand-50\/\[--svgOpacity\]:hover{fill:rgb(239 247 255 / var(--svgOpacity))}
@@ -567,6 +580,9 @@
     .hover\:text-opacity-\[100\%\]:hover{--tw-text-opacity:100%}
     .hover\:opacity-\[100\%\]:hover{opacity:100%}
     .hover\:shadow-\[0px_0px_7px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_7px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_3px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_9px_0px_rgba\(27\2c 222\2c 16\2c 1\.00\)\2c 0px_0px_7px_0px_rgba\(27\2c 222\2c 16\2c 1\.00\)\]:hover{--tw-shadow:0px 0px 7px 0px rgba(0,0,0,1.00),0px 0px 7px 0px rgba(0,0,0,1.00),0px 0px 3px 0px rgba(0,0,0,1.00),0px 0px 9px 0px rgba(27,222,16,1.00),0px 0px 7px 0px rgba(27,222,16,1.00);--tw-shadow-colored:0px 0px 7px 0px var(--tw-shadow-color), 0px 0px 7px 0px var(--tw-shadow-color), 0px 0px 3px 0px var(--tw-shadow-color), 0px 0px 9px 0px var(--tw-shadow-color), 0px 0px 7px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+    .hover\:brightness-\[100\%\]:hover{--tw-brightness:brightness(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+    .hover\:drop-shadow-none:hover{--tw-drop-shadow:;filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
+    .hover\:saturate-\[100\%\]:hover{--tw-saturate:saturate(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}
     .hover\:text-shadow-none:hover{text-shadow:}
     .hover\:\[--bg-opacity\:100\%\]:hover{--bg-opacity:100%}
     .hover\:\[--svgOpacity\:100\%\]:hover{--svgOpacity:100%}
@@ -582,6 +598,8 @@
     .group\/thumb:hover .group-hover\/thumb\:scale-\[1\.23\]{--tw-scale-x:1.23;--tw-scale-y:1.23;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw9C19C830_D82E_4A54_BC75_1F2F36FC5C92:hover .group-hover\/rw9C19C830_D82E_4A54_BC75_1F2F36FC5C92\:border-solid{border-style:solid}
     .group\/rw9C19C830_D82E_4A54_BC75_1F2F36FC5C92:hover .group-hover\/rw9C19C830_D82E_4A54_BC75_1F2F36FC5C92\:border-ultragreen-50\/\[100\%\]{border-color:rgb(0 226 0 / 100%)}
+    .group\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6:hover .group-hover\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6\:text-white-200{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
+    .group\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6:hover .group-hover\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6\:text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .peer:hover ~ .peer-hover\:rounded-bl-full{border-bottom-left-radius:36.0rem}
     .peer:hover ~ .peer-hover\:rounded-br-full{border-bottom-right-radius:36.0rem}
     .peer:hover ~ .peer-hover\:rounded-tl-full{border-top-left-radius:36.0rem}
@@ -596,9 +614,11 @@
     :is(.dark .dark\:bg-opacity-\[51\%\]){--tw-bg-opacity:51%}
     :is(.dark .dark\:bg-opacity-\[62\%\]){--tw-bg-opacity:62%}
     :is(.dark .dark\:bg-opacity-\[68\%\]){--tw-bg-opacity:68%}
+    :is(.dark .dark\:text-opacity-\[0\%\]){--tw-text-opacity:0%}
     :is(.dark .dark\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
     :is(.dark .dark\:hover\:bg-opacity-\[100\%\]:hover){--tw-bg-opacity:100%}
     :is(.dark .dark\:hover\:text-opacity-\[100\%\]:hover){--tw-text-opacity:100%}
+    :is(.dark .group\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6:hover .dark\:group-hover\/rw46E0FFF2_018A_45D7_8A2A_D0ED546664F6\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
     :is(.dark .peer:hover ~ .dark\:peer-hover\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
     :is(.dark .dark\:aria-\[current\=page\]\:text-opacity-\[100\%\][aria-current=page]){--tw-text-opacity:100%}
     @media (min-width: 640px){.sm\:mb-0{margin-bottom:0.0rem}.sm\:mb-1{margin-bottom:0.25rem}.sm\:mb-10{margin-bottom:2.5rem}.sm\:mb-12{margin-bottom:3.0rem}.sm\:mb-3{margin-bottom:0.75rem}.sm\:mb-3\.5{margin-bottom:0.875rem}.sm\:mb-4{margin-bottom:1.0rem}.sm\:mb-auto{margin-bottom:auto}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-3{margin-left:0.75rem}.sm\:ml-3\.5{margin-left:0.875rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mr-3{margin-right:0.75rem}.sm\:mr-3\.5{margin-right:0.875rem}.sm\:mr-auto{margin-right:auto}.sm\:mt-0{margin-top:0.0rem}.sm\:mt-0\.5{margin-top:0.125rem}.sm\:mt-1{margin-top:0.25rem}.sm\:mt-1\.5{margin-top:0.375rem}.sm\:mt-10{margin-top:2.5rem}.sm\:mt-12{margin-top:3.0rem}.sm\:mt-2{margin-top:0.5rem}.sm\:mt-2\.5{margin-top:0.625rem}.sm\:mt-4{margin-top:1.0rem}.sm\:mt-auto{margin-top:auto}.sm\:flex{display:flex}.sm\:grid{display:grid}.sm\:hidden{display:none}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:h-\[33px\]{height:33px}.sm\:h-auto{height:auto}.sm\:w-14{width:3.5rem}.sm\:w-2{width:0.5rem}.sm\:w-2\.5{width:0.625rem}.sm\:w-20{width:5.0rem}.sm\:w-3{width:0.75rem}.sm\:w-5{width:1.25rem}.sm\:w-8{width:2.0rem}.sm\:w-\[100\%\]{width:100%}.sm\:w-\[50vw\]{width:50vw}.sm\:w-\[55vw\]{width:55vw}.sm\:w-\[60vw\]{width:60vw}.sm\:w-\[80vw\]{width:80vw}.sm\:w-\[85px\]{width:85px}.sm\:flex-1{flex:1 1 0%}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:flex-nowrap{flex-wrap:nowrap}.sm\:justify-end{justify-content:flex-end}.sm\:gap-5{gap:1.25rem}.sm\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.sm\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.sm\:gap-x-4{-moz-column-gap:1.0rem;column-gap:1.0rem}.sm\:gap-y-0{row-gap:0.0rem}.sm\:border-b-\[2px\]{border-bottom-width:2px}.sm\:border-l-\[2px\]{border-left-width:2px}.sm\:border-r-\[2px\]{border-right-width:2px}.sm\:border-t-\[2px\]{border-top-width:2px}.sm\:pb-0{padding-bottom:0.0rem}.sm\:pb-2{padding-bottom:0.5rem}.sm\:pb-2\.5{padding-bottom:0.625rem}.sm\:pb-3{padding-bottom:0.75rem}.sm\:pl-0{padding-left:0.0rem}.sm\:pl-2{padding-left:0.5rem}.sm\:pl-3{padding-left:0.75rem}.sm\:pr-0{padding-right:0.0rem}.sm\:pr-2{padding-right:0.5rem}.sm\:pr-3{padding-right:0.75rem}.sm\:pt-0{padding-top:0.0rem}.sm\:pt-2{padding-top:0.5rem}.sm\:pt-2\.5{padding-top:0.625rem}.sm\:pt-3{padding-top:0.75rem}.sm\:text-left{text-align:left}.sm\:text-center{text-align:center}.sm\:font-capsule{font-family:font-EDCFB6DA-8E13-40AA-9D76-3BA469AD3264}.sm\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.sm\:text-3xl{font-size:1.88rem;line-height:2.25rem}.sm\:text-base{font-size:1.00rem;line-height:1.50rem}.sm\:text-sm{font-size:0.88rem;line-height:1.25rem}.sm\:text-xs{font-size:0.75rem;line-height:1.00rem}.sm\:font-\[100\]{font-weight:100}.sm\:font-\[200\]{font-weight:200}.sm\:font-\[300\]{font-weight:300}.sm\:font-\[400\]{font-weight:400}.sm\:leading-none{line-height:1}.sm\:shadow-\[0px_0px_4px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_7px_0px_rgba\(0\2c 0\2c 0\2c 1\.00\)\2c 0px_0px_12px_0px_rgba\(141\2c 76\2c 255\2c 1\.00\)\2c 0px_0px_12px_0px_rgba\(141\2c 76\2c 255\2c 1\.00\)\]{--tw-shadow:0px 0px 4px 0px rgba(0,0,0,1.00),0px 0px 7px 0px rgba(0,0,0,1.00),0px 0px 12px 0px rgba(141,76,255,1.00),0px 0px 12px 0px rgba(141,76,255,1.00);--tw-shadow-colored:0px 0px 4px 0px var(--tw-shadow-color), 0px 0px 7px 0px var(--tw-shadow-color), 0px 0px 12px 0px var(--tw-shadow-color), 0px 0px 12px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}
@@ -647,11 +667,307 @@
 @media (min-width: 1536px){.container{max-width:1536px}}[data-rwx-droparea] {
     width: auto !important;
 }
-/* [data-rwx-droparea] {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-} */
-button[title="Back to top button"] {
+/*** Sitewide PDF Open in New Window Behavior Control ***/
+
+/* Text — OUT / resting state */
+.pdf-text {
+    color: rgba(255, 255, 255);
+    opacity: 0;
+    transform: translateY(-60px);
+
+    /* OUT */
+    transition:
+        color 350ms ease,
+        opacity 350ms ease,
+        transform 550ms ease;
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* Text — IN / hover or touch-active state */
+.pdf-card:hover .pdf-text,
+.pdf-card.pdf-active .pdf-text {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transform: translateY(0);
+
+    /* IN */
+    transition:
+        color 1300ms ease,
+        opacity 1300ms ease,
+        transform 650ms ease;
+
+    transition-delay:
+        600ms,
+        600ms,
+        600ms;
+}
+
+
+/* SVG Opacity & Transform Only Parameters */
+
+/* SVG — OUT / resting state */
+.pdf-svg {
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(0.4) rotate(-23deg);
+
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .pdf-svg,
+.pdf-card.pdf-active .pdf-svg {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(1) rotate(0deg);
+
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}
+
+
+/* SVG Color Only Parameters */
+
+/* SVG — OUT / resting state */
+.pdf-svg path {
+    fill: rgb(0,0,0);
+    stroke: rgb(0,255,100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+
+    transition:
+        stroke-dashoffset 700ms ease,
+        fill 256ms ease;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .pdf-svg path,
+.pdf-card.pdf-active .pdf-svg path {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    transition:
+        stroke-dashoffset 5000ms cubic-bezier(.4,0,.2,1),
+        fill 1000ms ease;
+
+    transition-delay:
+        800ms,
+        1100ms;
+}
+
+/* PDF Overlay — OUT / resting state */
+.pdf-overlay {
+    background-color: rgba(0, 0, 0, 0);
+
+    transition:
+        background-color 350ms ease;
+
+    transition-delay:
+        250ms;
+}
+
+/* PDF Overlay — IN / hover or touch-active state */
+.pdf-card:hover .pdf-overlay,
+.pdf-card.pdf-active .pdf-overlay {
+    background-color: rgba(0, 0, 0, 0.80);
+
+    transition:
+        background-color 900ms ease;
+
+    transition-delay:
+        0ms;
+}
+
+/*** END Sitewide PDF Open in New Window Behavior Control ***/
+
+.chaos-link-svg path {
+    fill: rgb(0,0,0);
+    stroke: rgb(0,255,100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+    stroke-dasharray: 3197.484619140625;
+    stroke-dashoffset: 3197.484619140625;
+
+    transition:
+        stroke-dashoffset 4300ms ease,
+        fill 3000ms ease;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .chaos-link-svg path,
+.pdf-card.pdf-active .chaos-link-svg path {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    transition:
+        stroke-dashoffset 5000ms cubic-bezier(0,0,.2,0),
+        fill 3000ms ease;
+
+    transition-delay:
+        800ms,
+        2100ms;
+}
+
+
+.chaos-link-svg {
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(0.4) rotate(-23deg);
+
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .chaos-link-svg,
+.pdf-card.pdf-active .chaos-link-svg {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(1) rotate(0deg);
+
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}
+
+.gpt-zero-omega-svg path {
+    fill: rgb(0,0,0);
+    stroke: rgb(0,255,100);
+    stroke-width: 3.5px;
+    paint-order: fill stroke;
+    stroke-dasharray: 8259.3818359375;
+    stroke-dashoffset: 8259.3818359375;
+
+    transition:
+        stroke-dashoffset 1300ms ease,
+        fill 256ms ease;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .gpt-zero-omega-svg path,
+.pdf-card.pdf-active .gpt-zero-omega-svg path {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    transition:
+        stroke-dashoffset 5000ms cubic-bezier(.4,0,.2,1),
+        fill 1000ms ease;
+
+    transition-delay:
+        800ms,
+        1100ms;
+}
+
+
+.gpt-zero-omega-svg {
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(0.4) rotate(-23deg);
+
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .gpt-zero-omega-svg,
+.pdf-card.pdf-active .gpt-zero-omega-svg {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(1) rotate(0deg);
+
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}button[title="Back to top button"] {
   color: #0eba00 !important;
   box-shadow: 0px 0px 8px 2px #0eba00 !important;
   transition:
@@ -744,6 +1060,4 @@ a:hover {
 
 .rw-pdf-frame {
     background: black !important;
-}
-
- [x-cloak] {display: block !important;} /* Display block for testing only -  none by default */
+} [x-cloak] {display: block !important;} /* Display block for testing only -  none by default */

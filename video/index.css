@@ -9,8 +9,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
         font-style: regular;
         font-stretch: normal;
     }
@@ -25,16 +33,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,16 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,72 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
         font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -166,9 +102,41 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -177,6 +145,38 @@
         src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
         font-weight: 600;
         font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
+        font-style: oblique;
         font-stretch: normal;
     }
     @font-face {
@@ -293,7 +293,7 @@
     .w-8{width:2.0rem}
     .w-\[100\%\]{width:100%}
     .w-\[100vw\]{width:100vw}
-    .w-\[20vw\]{width:20vw}
+    .w-\[25vw\]{width:25vw}
     .w-\[40\%\]{width:40%}
     .w-\[70vw\]{width:70vw}
     .w-\[80vw\]{width:80vw}
@@ -830,7 +830,7 @@
 /* PDF Overlay — IN / hover or touch-active state */
 .pdf-card:hover .pdf-overlay,
 .pdf-card.pdf-active .pdf-overlay {
-    background-color: rgba(0, 0, 0, 0.67);
+    background-color: rgba(0, 0, 0, 0.80);
 
     transition:
         background-color 900ms ease;
@@ -839,7 +839,161 @@
         0ms;
 }
 
-/*** END Sitewide PDF Open in New Window Behavior Control ***/button[title="Back to top button"] {
+/*** END Sitewide PDF Open in New Window Behavior Control ***/
+
+.chaos-link-svg path {
+    fill: rgb(0,0,0);
+    stroke: rgb(0,255,100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+    stroke-dasharray: 3197.484619140625;
+    stroke-dashoffset: 3197.484619140625;
+
+    transition:
+        stroke-dashoffset 4300ms ease,
+        fill 3000ms ease;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .chaos-link-svg path,
+.pdf-card.pdf-active .chaos-link-svg path {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    transition:
+        stroke-dashoffset 5000ms cubic-bezier(0,0,.2,0),
+        fill 3000ms ease;
+
+    transition-delay:
+        800ms,
+        2100ms;
+}
+
+
+.chaos-link-svg {
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(0.4) rotate(-23deg);
+
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .chaos-link-svg,
+.pdf-card.pdf-active .chaos-link-svg {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(1) rotate(0deg);
+
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}
+
+.gpt-zero-omega-svg path {
+    fill: rgb(0,0,0);
+    stroke: rgb(0,255,100);
+    stroke-width: 3.5px;
+    paint-order: fill stroke;
+    stroke-dasharray: 8259.3818359375;
+    stroke-dashoffset: 8259.3818359375;
+
+    transition:
+        stroke-dashoffset 1300ms ease,
+        fill 256ms ease;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .gpt-zero-omega-svg path,
+.pdf-card.pdf-active .gpt-zero-omega-svg path {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    transition:
+        stroke-dashoffset 5000ms cubic-bezier(.4,0,.2,1),
+        fill 1000ms ease;
+
+    transition-delay:
+        800ms,
+        1100ms;
+}
+
+
+.gpt-zero-omega-svg {
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(0.4) rotate(-23deg);
+
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .gpt-zero-omega-svg,
+.pdf-card.pdf-active .gpt-zero-omega-svg {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+
+    transform: scale(1) rotate(0deg);
+
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}button[title="Back to top button"] {
   color: #0eba00 !important;
   box-shadow: 0px 0px 8px 2px #0eba00 !important;
   transition:
@@ -932,6 +1086,4 @@ a:hover {
 
 .rw-pdf-frame {
     background: black !important;
-}
-
- [x-cloak] {display: block !important;} /* Display block for testing only -  none by default */
+} [x-cloak] {display: block !important;} /* Display block for testing only -  none by default */
