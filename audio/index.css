@@ -1,24 +1,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -33,16 +25,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,16 +57,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,40 +86,24 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -150,17 +134,33 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -174,8 +174,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -875,27 +875,24 @@
 .pdf-card:hover .chaos-link-svg,
 .pdf-card.pdf-active .chaos-link-svg {
     opacity: 1;
-
     filter:
         drop-shadow(0 0 1px rgba(0, 0, 0, 1))
         drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
         drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
         drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
-
     transform: scale(1) rotate(0deg);
-
     /* IN */
     transition:
         opacity 1300ms cubic-bezier(.3, 0, .2, 1),
         transform 1000ms ease,
         filter 1600ms cubic-bezier(.22,.61,.36,1);
-
     transition-delay:
         100ms,
         0ms,
         800ms;
 }
 
+/* GPT-0Ω LOGO ANIMATION */
 .gpt-zero-omega-svg path {
     fill: rgb(0,0,0);
     stroke: rgb(0,255,100);
@@ -903,31 +900,65 @@
     paint-order: fill stroke;
     stroke-dasharray: 8259.3818359375;
     stroke-dashoffset: 8259.3818359375;
-
     transition:
         stroke-dashoffset 1300ms ease,
         fill 256ms ease;
 }
-
 /* SVG — IN / hover or touch-active state */
 .pdf-card:hover .gpt-zero-omega-svg path,
 .pdf-card.pdf-active .gpt-zero-omega-svg path {
     stroke-dashoffset: 0;
     fill: rgb(116, 1, 232);
-
     transition:
         stroke-dashoffset 5000ms cubic-bezier(.4,0,.2,1),
         fill 2000ms ease;
-
     transition-delay:
         800ms,
         2200ms;
 }
-
-
 .gpt-zero-omega-svg {
     opacity: 0;
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+    transform: scale(0.4) rotate(-23deg);
+    /* OUT */
+    transition:
+        opacity 850ms ease,
+        transform 550ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+    transition-delay:
+        0ms,
+        0ms,
+        0ms;
+}
+/* SVG — IN / hover or touch-active state */
+.pdf-card:hover .gpt-zero-omega-svg,
+.pdf-card.pdf-active .gpt-zero-omega-svg {
+    opacity: 1;
+    filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 1))
+        drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 4px rgba(0, 0, 0, 0.85))
+        drop-shadow(0 0 11px rgba(98, 0, 255, 0.85));
+    transform: scale(1) rotate(0deg);
+    /* IN */
+    transition:
+        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
+        transform 1000ms ease,
+        filter 1600ms cubic-bezier(.22,.61,.36,1);
+    transition-delay:
+        100ms,
+        0ms,
+        800ms;
+}
 
+/* NEW CHAOS SYSTEM LOGO ANIMATION & SHADOW */
+/* SVG — IN / hover or touch-active state */
+.chaos-link-layered-svg {
+    opacity: 0;
     filter:
         drop-shadow(0 0 1px rgba(0, 0, 0, 1))
         drop-shadow(0 0 2px rgba(0, 0, 0, 0.95))
@@ -949,8 +980,8 @@
 }
 
 /* SVG — IN / hover or touch-active state */
-.pdf-card:hover .gpt-zero-omega-svg,
-.pdf-card.pdf-active .gpt-zero-omega-svg {
+.pdf-card:hover .chaos-link-layered-svg,
+.pdf-card.pdf-active .chaos-link-layered-svg {
     opacity: 1;
 
     filter:
@@ -963,15 +994,198 @@
 
     /* IN */
     transition:
-        opacity 1300ms cubic-bezier(.3, 0, .2, 1),
-        transform 1000ms ease,
+        opacity 2000ms cubic-bezier(.3, 0, .2, 1),
+        transform 2000ms ease,
         filter 1600ms cubic-bezier(.22,.61,.36,1);
 
     transition-delay:
         100ms,
         0ms,
         800ms;
-}button[title="Back to top button"] {
+}
+
+/*** Chaos System GPT — Layered SVG Experimental Animation ***/
+/* =========================================================
+   CHAOS EYE
+   First element to activate.
+   Green stroke draws first; purple resolves near the end.
+   ========================================================= */
+
+.chaos-eye {
+    --path-length: 250;
+
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+
+    stroke-dasharray:
+        var(--path-length)
+        var(--path-length);
+
+    stroke-dashoffset: var(--path-length);
+
+    /* OUT / resting */
+    transition:
+        stroke-dashoffset 700ms ease,
+        fill 350ms ease;
+
+    transition-delay:
+        0ms,
+        0ms;
+}
+
+.pdf-card:hover .chaos-eye,
+.pdf-card.pdf-active .chaos-eye {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    /* IN */
+    transition:
+        stroke-dashoffset 7000ms ease,
+        fill 700ms ease;
+
+    transition-delay:
+        1200ms,
+        2500ms;
+}
+
+/* =========================================================
+   CHAOS ARROWS
+   Begins shortly before the eye completely resolves.
+   Multiple arrow contours should draw simultaneously.
+   ========================================================= */
+
+.chaos-arrows {
+    --path-length: 1400;
+
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+
+    stroke-dasharray:
+        var(--path-length)
+        var(--path-length);
+
+    stroke-dashoffset: var(--path-length);
+
+    /* OUT / resting */
+    transition:
+        stroke-dashoffset 700ms ease,
+        fill 350ms ease;
+
+    transition-delay:
+        0ms,
+        0ms;
+}
+
+.pdf-card:hover .chaos-arrows,
+.pdf-card.pdf-active .chaos-arrows {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    /* IN */
+    transition:
+        stroke-dashoffset 18000ms ease,
+        fill 700ms ease;
+
+    transition-delay:
+        2200ms,
+        3350ms;
+}
+
+/* =========================================================
+   CHAOS RING
+   Begins as the arrow layer is nearing completion.
+   Purple again resolves toward the end of the green trace.
+   ========================================================= */
+
+.chaos-ring {
+    --path-length: 1000;
+
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+
+    stroke-dasharray:
+        var(--path-length)
+        var(--path-length);
+
+    stroke-dashoffset: var(--path-length);
+
+    /* OUT / resting */
+    transition:
+        stroke-dashoffset 700ms ease,
+        fill 350ms ease;
+
+    transition-delay:
+        0ms,
+        0ms;
+}
+
+.pdf-card:hover .chaos-ring,
+.pdf-card.pdf-active .chaos-ring {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    /* IN */
+    transition:
+        stroke-dashoffset 15000ms ease,
+        fill 700ms ease;
+
+    transition-delay:
+        3400ms,
+        3500ms;
+}
+
+/* =========================================================
+   CHAOS CIRCUIT
+   Final and longest stage.
+   Begins before the ring is completely finished.
+   Purple resolves late, near completion of the circuit draw.
+   ========================================================= */
+
+.chaos-circuit {
+    --path-length: 6000;
+
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
+    stroke-width: .75px;
+    paint-order: fill stroke;
+
+    stroke-dasharray:
+        var(--path-length)
+        var(--path-length);
+
+    stroke-dashoffset: var(--path-length);
+
+    /* OUT / resting */
+    transition:
+        stroke-dashoffset 700ms ease,
+        fill 350ms ease;
+
+    transition-delay:
+        0ms,
+        0ms;
+}
+
+.pdf-card:hover .chaos-circuit,
+.pdf-card.pdf-active .chaos-circuit {
+    stroke-dashoffset: 0;
+    fill: rgb(116, 1, 232);
+
+    /* IN */
+    transition:
+        stroke-dashoffset 14000ms ease,
+        fill 2200ms ease;
+
+    transition-delay:
+        4000ms,
+        5700ms;
+}
+/*** END Chaos System GPT — Layered SVG Experimental Animation ***/button[title="Back to top button"] {
   color: #0eba00 !important;
   box-shadow: 0px 0px 8px 2px #0eba00 !important;
   transition:
