@@ -1,32 +1,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
         font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -41,6 +33,14 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
         font-weight: 400;
         font-style: regular;
@@ -49,8 +49,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -65,8 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,16 +86,16 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -110,9 +110,9 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -120,22 +120,6 @@
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -150,8 +134,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -166,6 +150,14 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
         font-weight: 600;
         font-style: regular;
@@ -174,8 +166,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -406,8 +406,8 @@
     .bg-ultragreen-300{--tw-bg-opacity:1;background-color:rgb(33 145 22 / var(--tw-bg-opacity))}
     .bg-ultragreen-800{--tw-bg-opacity:1;background-color:rgb(25 54 18 / var(--tw-bg-opacity))}
     .bg-ultragreen-900{--tw-bg-opacity:1;background-color:rgb(20 38 15 / var(--tw-bg-opacity))}
-    .bg-violet-800{--tw-bg-opacity:1;background-color:rgb(91 33 182 / var(--tw-bg-opacity))}
-    .bg-violet-950{--tw-bg-opacity:1;background-color:rgb(46 16 101 / var(--tw-bg-opacity))}
+    .bg-violet-800{--tw-bg-opacity:1;background-color:rgb(38 28 58 / var(--tw-bg-opacity))}
+    .bg-violet-950{--tw-bg-opacity:1;background-color:rgb(18 13 24 / var(--tw-bg-opacity))}
     .bg-white-50{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
     .bg-white-500{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
     .bg-opacity-\[100\%\]{--tw-bg-opacity:100%}
@@ -421,7 +421,7 @@
     .bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}
     .from-black-950\/\[--bgGradientFromOpacity\]{--tw-gradient-from:rgb(0 0 0 / var(--bgGradientFromOpacity)) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}
     .from-\[23\%\]{--tw-gradient-from-position:23%}
-    .via-violet-950\/\[--bgGradientViaOpacity\]{--tw-gradient-to:rgb(46 16 101 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(46 16 101 / var(--bgGradientViaOpacity)) var(--tw-gradient-via-position), var(--tw-gradient-to)}
+    .via-violet-950\/\[--bgGradientViaOpacity\]{--tw-gradient-to:rgb(18 13 24 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(18 13 24 / var(--bgGradientViaOpacity)) var(--tw-gradient-via-position), var(--tw-gradient-to)}
     .via-\[50\%\]{--tw-gradient-via-position:50%}
     .to-black-950\/\[--bgGradientToOpacity\]{--tw-gradient-to:rgb(0 0 0 / var(--bgGradientToOpacity)) var(--tw-gradient-to-position)}
     .to-\[78\%\]{--tw-gradient-to-position:78%}
@@ -432,7 +432,7 @@
     .bg-no-repeat{background-repeat:no-repeat}
     .fill-surface-50\/\[--svgOpacity\]{fill:rgb(245 247 250 / var(--svgOpacity))}
     .fill-ultragreen-50\/\[--svgOpacity\]{fill:rgb(0 226 0 / var(--svgOpacity))}
-    .fill-violet-600\/\[--svgOpacity\]{fill:rgb(124 58 237 / var(--svgOpacity))}
+    .fill-violet-600\/\[--svgOpacity\]{fill:rgb(59 41 95 / var(--svgOpacity))}
     .fill-white-50\/\[--svgOpacity\]{fill:rgb(255 255 255 / var(--svgOpacity))}
     .fill-zinc-400\/\[--svgOpacity\]{fill:rgb(161 161 170 / var(--svgOpacity))}
     .fill-zinc-600\/\[--svgOpacity\]{fill:rgb(82 82 91 / var(--svgOpacity))}
@@ -504,9 +504,9 @@
     .text-ultragreen-300{--tw-text-opacity:1;color:rgb(33 145 22 / var(--tw-text-opacity))}
     .text-ultragreen-50{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
     .text-ultragreen-50\/\[--svgOpacity\]{color:rgb(0 226 0 / var(--svgOpacity))}
-    .text-violet-500{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
-    .text-violet-600{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity))}
-    .text-violet-600\/\[--svgOpacity\]{color:rgb(124 58 237 / var(--svgOpacity))}
+    .text-violet-500{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
+    .text-violet-600{--tw-text-opacity:1;color:rgb(59 41 95 / var(--tw-text-opacity))}
+    .text-violet-600\/\[--svgOpacity\]{color:rgb(59 41 95 / var(--svgOpacity))}
     .text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .text-white-100{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .text-white-50{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
@@ -584,18 +584,18 @@
     .hover\:border-r-2:hover{border-right-width:0.125rem}
     .hover\:border-t-2:hover{border-top-width:0.125rem}
     .hover\:border-solid:hover{border-style:solid}
-    .hover\:border-violet-500\/\[100\%\]:hover{border-color:rgb(139 92 246 / 100%)}
+    .hover\:border-violet-500\/\[100\%\]:hover{border-color:rgb(70 48 115 / 100%)}
     .hover\:bg-ultragreen-400:hover{--tw-bg-opacity:1;background-color:rgb(33 126 23 / var(--tw-bg-opacity))}
     .hover\:bg-opacity-\[45\%\]:hover{--tw-bg-opacity:45%}
     .hover\:fill-brand-50\/\[--svgOpacity\]:hover{fill:rgb(239 247 255 / var(--svgOpacity))}
-    .hover\:fill-violet-700\/\[--svgOpacity\]:hover{fill:rgb(109 40 217 / var(--svgOpacity))}
+    .hover\:fill-violet-700\/\[--svgOpacity\]:hover{fill:rgb(49 34 76 / var(--svgOpacity))}
     .hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity))}
     .hover\:text-brand-50\/\[--svgOpacity\]:hover{color:rgb(239 247 255 / var(--svgOpacity))}
     .hover\:text-text-800:hover{--tw-text-opacity:1;color:rgb(214 219 225 / var(--tw-text-opacity))}
     .hover\:text-ultragreen-600:hover{--tw-text-opacity:1;color:rgb(31 89 22 / var(--tw-text-opacity))}
-    .hover\:text-violet-500:hover{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
-    .hover\:text-violet-600:hover{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity))}
-    .hover\:text-violet-700\/\[--svgOpacity\]:hover{color:rgb(109 40 217 / var(--svgOpacity))}
+    .hover\:text-violet-500:hover{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
+    .hover\:text-violet-600:hover{--tw-text-opacity:1;color:rgb(59 41 95 / var(--tw-text-opacity))}
+    .hover\:text-violet-700\/\[--svgOpacity\]:hover{color:rgb(49 34 76 / var(--svgOpacity))}
     .hover\:text-white-200:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .hover\:text-white-950:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .hover\:text-opacity-\[100\%\]:hover{--tw-text-opacity:100%}
@@ -610,18 +610,18 @@
     .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:skew-y-\[0deg\]{--tw-skew-y:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:scale-\[100\%\]{--tw-scale-x:100%;--tw-scale-y:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     .group\/thumb:hover .group-hover\/thumb\:scale-\[1\.23\]{--tw-scale-x:1.23;--tw-scale-y:1.23;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
-    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:fill-violet-700\/\[--svgOpacity\]{fill:rgb(109 40 217 / var(--svgOpacity))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:fill-violet-700\/\[--svgOpacity\]{fill:rgb(49 34 76 / var(--svgOpacity))}
     .group\/rw098856C2_4D31_45E6_8395_15D2E48D0DCF:hover .group-hover\/rw098856C2_4D31_45E6_8395_15D2E48D0DCF\:text-white-200{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .group\/rw79049A32_8543_4657_9FE5_BD88809EB37E:hover .group-hover\/rw79049A32_8543_4657_9FE5_BD88809EB37E\:text-white-200{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
-    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:text-violet-700\/\[--svgOpacity\]{color:rgb(109 40 217 / var(--svgOpacity))}
+    .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:text-violet-700\/\[--svgOpacity\]{color:rgb(49 34 76 / var(--svgOpacity))}
     .group\/rwCAFA3052_CC27_4715_AE80_85BE8F251942:hover .group-hover\/rwCAFA3052_CC27_4715_AE80_85BE8F251942\:text-white-200{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .group\/track:hover .group-hover\/track\:text-ultragreen-50{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
-    .group\/track:hover .group-hover\/track\:text-violet-500{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
+    .group\/track:hover .group-hover\/track\:text-violet-500{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
     .group\/rw098856C2_4D31_45E6_8395_15D2E48D0DCF:hover .group-hover\/rw098856C2_4D31_45E6_8395_15D2E48D0DCF\:text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .group\/rw79049A32_8543_4657_9FE5_BD88809EB37E:hover .group-hover\/rw79049A32_8543_4657_9FE5_BD88809EB37E\:text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .group\/rwCAFA3052_CC27_4715_AE80_85BE8F251942:hover .group-hover\/rwCAFA3052_CC27_4715_AE80_85BE8F251942\:text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .group\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6:hover .group-hover\/rw7CFF168C_9B9C_4E4F_9789_A8495E2628F6\:\[--svgOpacity\:100\%\]{--svgOpacity:100%}
-    .aria-\[current\=page\]\:text-violet-500[aria-current=page]{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
+    .aria-\[current\=page\]\:text-violet-500[aria-current=page]{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
     .aria-\[current\=page\]\:text-opacity-\[100\%\][aria-current=page]{--tw-text-opacity:100%}
     .aria-\[current\=page\]\:text-shadow-none[aria-current=page]{text-shadow:}
     :is(.dark .dark\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
@@ -647,22 +647,22 @@
     .\[\&_a\:hover\]\:font-\[400\] a:hover{font-weight:400}
     .\[\&_a\:hover\]\:text-brand-800 a:hover{--tw-text-opacity:1;color:rgb(29 75 176 / var(--tw-text-opacity))}
     .\[\&_a\:hover\]\:text-ultragreen-50 a:hover{--tw-text-opacity:1;color:rgb(0 226 0 / var(--tw-text-opacity))}
-    .\[\&_a\:hover\]\:text-violet-600 a:hover{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity))}
+    .\[\&_a\:hover\]\:text-violet-600 a:hover{--tw-text-opacity:1;color:rgb(59 41 95 / var(--tw-text-opacity))}
     .\[\&_a\:hover\]\:no-underline a:hover{text-decoration-line:none}
     .\[\&_a\:visited\]\:font-\[400\] a:visited{font-weight:400}
     .\[\&_a\:visited\]\:text-brand-800 a:visited{--tw-text-opacity:1;color:rgb(29 75 176 / var(--tw-text-opacity))}
-    .\[\&_a\:visited\]\:text-violet-500 a:visited{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
+    .\[\&_a\:visited\]\:text-violet-500 a:visited{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
     .\[\&_a\:visited\]\:text-white-600 a:visited{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .\[\&_a\:visited\]\:text-zinc-500 a:visited{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity))}
     .\[\&_a\:visited\]\:no-underline a:visited{text-decoration-line:none}
     .\[\&_a\]\:font-\[400\] a{font-weight:400}
     .\[\&_a\]\:text-brand-500 a{--tw-text-opacity:1;color:rgb(56 146 248 / var(--tw-text-opacity))}
-    .\[\&_a\]\:text-violet-500 a{--tw-text-opacity:1;color:rgb(139 92 246 / var(--tw-text-opacity))}
+    .\[\&_a\]\:text-violet-500 a{--tw-text-opacity:1;color:rgb(70 48 115 / var(--tw-text-opacity))}
     .\[\&_a\]\:text-white-50 a{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .\[\&_a\]\:text-zinc-500 a{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity))}
     .\[\&_a\]\:no-underline a{text-decoration-line:none}
     .\[\&_svg\]\:size-4 svg{width:1.0rem;height:1.0rem}
-    .\[\&_svg\]\:text-violet-600 svg{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity))}
+    .\[\&_svg\]\:text-violet-600 svg{--tw-text-opacity:1;color:rgb(59 41 95 / var(--tw-text-opacity))}
 .container{max-width:100%;}
 @media (min-width: 640px){.container{max-width:640px}}
 @media (min-width: 768px){.container{max-width:768px}}
@@ -791,7 +791,7 @@
 
     transition-delay:
         800ms,
-        1100ms;
+        2100ms;
 }
 
 /* PDF Overlay — OUT / resting state */
