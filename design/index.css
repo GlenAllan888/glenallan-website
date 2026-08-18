@@ -1,24 +1,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -33,8 +25,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -49,24 +41,32 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,64 +86,16 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -158,6 +110,54 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
         font-weight: 200;
         font-style: regular;
@@ -166,16 +166,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -658,71 +658,73 @@
     width: auto !important;
 }
 /*** =========================================================
-     GLOBAL LINK CARD ANIMATION SYSTEM
-     PDF LINKS + GPT LINKS
+     GLOBAL LINK / PDF / GPT ANIMATION SYSTEM
      ========================================================= ***/
-
+/** Search for
+chaos-gpt-card
+gpt-zero-omega-card
+to Edit Timings **/
 
 /* =========================================================
-   1. SHARED LINK CARD SHELL
-   Border / Shape / Outer Shadow
+   1. GLOBAL PDF / LINK CARD SHELL
+   Sitewide border + shape behavior
+   Normal PDF cards use this directly.
+
+   Enhanced GPT inner cards ALSO retain .pdf-card,
+   then receive .gpt-feature-link-card in addition.
    ========================================================= */
 
-/* OUT / resting state */
+
+/* ---------------------------------------------------------
+   PDF CARD — OUT / resting state
+   --------------------------------------------------------- */
+
 .pdf-card {
     border-width: 2px;
     border-style: solid;
     border-color: rgb(10, 215, 3);
     border-radius: 6px;
 
-    box-shadow:
-        0 0 0px rgba(0, 0, 0, 0),
-        0 0 0px rgba(0, 0, 0, 0),
-        0 0 0px rgba(0, 0, 0, 0),
-        0 0 0px rgba(0, 0, 0, 0);
-
     transition:
         border-color 600ms ease,
-        border-radius 600ms ease,
-        box-shadow 700ms ease;
+        border-radius 600ms ease;
 
     transition-delay:
-        0ms,
         0ms,
         0ms;
 }
 
-/* IN / hover or touch-active */
+
+/* ---------------------------------------------------------
+   PDF CARD — IN / hover or touch-active
+   --------------------------------------------------------- */
+
 .pdf-card:hover,
 .pdf-card.pdf-active {
     border-color: rgb(116, 1, 232);
     border-radius: 28px;
 
-    box-shadow:
-        0 0 3px rgba(0, 0, 0, 1),
-        0 0 10px rgba(0, 0, 0, 0.95),
-        0 0 20px rgba(0, 0, 0, 0.80),
-        0 0 32px rgba(0, 0, 0, 0.60);
-
     transition:
         border-color 1500ms ease,
-        border-radius 1500ms ease,
-        box-shadow 1400ms ease;
+        border-radius 1500ms ease;
 
     transition-delay:
         0ms,
-        0ms,
-        4000ms;
+        0ms;
 }
 
 
 /* =========================================================
-   2. SHARED LINK TEXT
+   2. GLOBAL LINK TEXT
    ========================================================= */
 
-/* OUT / resting */
+
+/* ---------------------------------------------------------
+   TEXT — OUT / resting state
+   --------------------------------------------------------- */
+
 .pdf-text {
-    color: rgba(255, 255, 255);
+    color: rgba(255, 255, 255, 1);
     opacity: 0;
     transform: translateY(-60px);
 
@@ -737,7 +739,11 @@
         0ms;
 }
 
-/* IN */
+
+/* ---------------------------------------------------------
+   TEXT — IN / hover or touch-active
+   --------------------------------------------------------- */
+
 .pdf-card:hover .pdf-text,
 .pdf-card.pdf-active .pdf-text {
     color: rgb(255, 255, 255);
@@ -757,10 +763,15 @@
 
 
 /* =========================================================
-   3. SHARED INNER BACKGROUND OVERLAY
+   3. GLOBAL INNER CARD OVERLAY
+   Dims PDF / link image beneath SVG + text
    ========================================================= */
 
-/* OUT / resting */
+
+/* ---------------------------------------------------------
+   OVERLAY — OUT / resting state
+   --------------------------------------------------------- */
+
 .pdf-overlay {
     background-color: rgba(0, 0, 0, 0);
 
@@ -771,10 +782,14 @@
         250ms;
 }
 
-/* IN */
+
+/* ---------------------------------------------------------
+   OVERLAY — IN / hover or touch-active
+   --------------------------------------------------------- */
+
 .pdf-card:hover .pdf-overlay,
 .pdf-card.pdf-active .pdf-overlay {
-    background-color: rgba(0, 0, 0, 0.80);
+    background-color: rgba(0, 0, 0, 0.83);
 
     transition:
         background-color 900ms ease;
@@ -789,7 +804,11 @@
    Overall opacity / transform / glow
    ========================================================= */
 
-/* OUT / resting */
+
+/* ---------------------------------------------------------
+   GENERIC PDF SVG — OUT
+   --------------------------------------------------------- */
+
 .pdf-svg {
     opacity: 0;
 
@@ -812,7 +831,11 @@
         0ms;
 }
 
-/* IN */
+
+/* ---------------------------------------------------------
+   GENERIC PDF SVG — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .pdf-svg,
 .pdf-card.pdf-active .pdf-svg {
     opacity: 1;
@@ -838,16 +861,21 @@
 
 
 /* =========================================================
-   4A. GENERIC PDF SVG PATH
-   Stroke draw / fill
+   5. GENERIC PDF SVG PATH
+   Stroke draw + fill
    ========================================================= */
 
-/* OUT / resting */
+
+/* ---------------------------------------------------------
+   GENERIC PDF PATH — OUT
+   --------------------------------------------------------- */
+
 .pdf-svg path {
-    fill: rgb(0,0,0);
-    stroke: rgb(0,255,100);
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
 
@@ -856,7 +884,11 @@
         fill 256ms ease;
 }
 
-/* IN */
+
+/* ---------------------------------------------------------
+   GENERIC PDF PATH — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .pdf-svg path,
 .pdf-card.pdf-active .pdf-svg path {
     stroke-dashoffset: 0;
@@ -873,16 +905,22 @@
 
 
 /* =========================================================
-   5. CHAOS SYSTEM SINGLE-PATH SVG
-   Existing / alternate version
+   6. LEGACY / SINGLE-PATH CHAOS LINK SVG
+   Keep until confirmed unused.
+   Can later be removed if layered Chaos SVG fully replaces it.
    ========================================================= */
 
-/* PATH — OUT */
+
+/* ---------------------------------------------------------
+   CHAOS SINGLE PATH — OUT
+   --------------------------------------------------------- */
+
 .chaos-link-svg path {
-    fill: rgb(0,0,0);
-    stroke: rgb(0,255,100);
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray: 3197.484619140625;
     stroke-dashoffset: 3197.484619140625;
 
@@ -891,7 +929,11 @@
         fill 3000ms ease;
 }
 
-/* PATH — IN */
+
+/* ---------------------------------------------------------
+   CHAOS SINGLE PATH — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .chaos-link-svg path,
 .pdf-card.pdf-active .chaos-link-svg path {
     stroke-dashoffset: 0;
@@ -906,7 +948,11 @@
         2100ms;
 }
 
-/* SVG — OUT */
+
+/* ---------------------------------------------------------
+   CHAOS SINGLE SVG — OUT
+   --------------------------------------------------------- */
+
 .chaos-link-svg {
     opacity: 0;
 
@@ -929,7 +975,11 @@
         0ms;
 }
 
-/* SVG — IN */
+
+/* ---------------------------------------------------------
+   CHAOS SINGLE SVG — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .chaos-link-svg,
 .pdf-card.pdf-active .chaos-link-svg {
     opacity: 1;
@@ -955,15 +1005,20 @@
 
 
 /* =========================================================
-   6. GPT-0Ω SVG
+   7. GPT-0Ω SVG
    ========================================================= */
 
-/* PATH — OUT */
+
+/* ---------------------------------------------------------
+   GPT-0Ω PATH — OUT
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-svg path {
-    fill: rgb(0,0,0);
-    stroke: rgb(0,255,100);
+    fill: rgb(0, 0, 0);
+    stroke: rgb(0, 255, 100);
     stroke-width: 3.5px;
     paint-order: fill stroke;
+
     stroke-dasharray: 8259.3818359375;
     stroke-dashoffset: 8259.3818359375;
 
@@ -972,7 +1027,11 @@
         fill 256ms ease;
 }
 
-/* PATH — IN */
+
+/* ---------------------------------------------------------
+   GPT-0Ω PATH — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .gpt-zero-omega-svg path,
 .pdf-card.pdf-active .gpt-zero-omega-svg path {
     stroke-dashoffset: 0;
@@ -987,7 +1046,11 @@
         2200ms;
 }
 
-/* SVG — OUT */
+
+/* ---------------------------------------------------------
+   GPT-0Ω SVG — OUT
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-svg {
     opacity: 0;
 
@@ -1010,7 +1073,11 @@
         0ms;
 }
 
-/* SVG — IN */
+
+/* ---------------------------------------------------------
+   GPT-0Ω SVG — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .gpt-zero-omega-svg,
 .pdf-card.pdf-active .gpt-zero-omega-svg {
     opacity: 1;
@@ -1036,11 +1103,15 @@
 
 
 /* =========================================================
-   7. CHAOS SYSTEM LAYERED SVG
-   Overall opacity / transform / glow
+   8. CHAOS SYSTEM LAYERED SVG
+   Overall SVG arrival / glow / transform
    ========================================================= */
 
-/* SVG — OUT */
+
+/* ---------------------------------------------------------
+   LAYERED CHAOS SVG — OUT
+   --------------------------------------------------------- */
+
 .chaos-link-layered-svg {
     opacity: 0;
 
@@ -1063,7 +1134,11 @@
         0ms;
 }
 
-/* SVG — IN */
+
+/* ---------------------------------------------------------
+   LAYERED CHAOS SVG — IN
+   --------------------------------------------------------- */
+
 .pdf-card:hover .chaos-link-layered-svg,
 .pdf-card.pdf-active .chaos-link-layered-svg {
     opacity: 1;
@@ -1089,14 +1164,15 @@
 
 
 /* =========================================================
-   8. CHAOS SYSTEM LAYERED INTERNAL PATHS
+   9. CHAOS SYSTEM INTERNAL LAYER CHOREOGRAPHY
    Eye → Arrows → Ring → Circuit
    ========================================================= */
 
 
-/* ---------- CHAOS EYE ---------- */
+/* ---------------------------------------------------------
+   CHAOS EYE — OUT
+   --------------------------------------------------------- */
 
-/* OUT */
 .chaos-eye {
     --path-length: 250;
 
@@ -1104,9 +1180,11 @@
     stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray:
         var(--path-length)
         var(--path-length);
+
     stroke-dashoffset: var(--path-length);
 
     transition:
@@ -1118,7 +1196,9 @@
         0ms;
 }
 
-/* IN */
+
+/* CHAOS EYE — IN */
+
 .pdf-card:hover .chaos-eye,
 .pdf-card.pdf-active .chaos-eye {
     stroke-dashoffset: 0;
@@ -1134,9 +1214,10 @@
 }
 
 
-/* ---------- CHAOS ARROWS ---------- */
+/* ---------------------------------------------------------
+   CHAOS ARROWS — OUT
+   --------------------------------------------------------- */
 
-/* OUT */
 .chaos-arrows {
     --path-length: 1400;
 
@@ -1144,9 +1225,11 @@
     stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray:
         var(--path-length)
         var(--path-length);
+
     stroke-dashoffset: var(--path-length);
 
     transition:
@@ -1158,7 +1241,9 @@
         0ms;
 }
 
-/* IN */
+
+/* CHAOS ARROWS — IN */
+
 .pdf-card:hover .chaos-arrows,
 .pdf-card.pdf-active .chaos-arrows {
     stroke-dashoffset: 0;
@@ -1174,9 +1259,10 @@
 }
 
 
-/* ---------- CHAOS RING ---------- */
+/* ---------------------------------------------------------
+   CHAOS RING — OUT
+   --------------------------------------------------------- */
 
-/* OUT */
 .chaos-ring {
     --path-length: 1000;
 
@@ -1184,9 +1270,11 @@
     stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray:
         var(--path-length)
         var(--path-length);
+
     stroke-dashoffset: var(--path-length);
 
     transition:
@@ -1198,7 +1286,9 @@
         0ms;
 }
 
-/* IN */
+
+/* CHAOS RING — IN */
+
 .pdf-card:hover .chaos-ring,
 .pdf-card.pdf-active .chaos-ring {
     stroke-dashoffset: 0;
@@ -1214,9 +1304,10 @@
 }
 
 
-/* ---------- CHAOS CIRCUIT ---------- */
+/* ---------------------------------------------------------
+   CHAOS CIRCUIT — OUT
+   --------------------------------------------------------- */
 
-/* OUT */
 .chaos-circuit {
     --path-length: 6000;
 
@@ -1224,9 +1315,11 @@
     stroke: rgb(0, 255, 100);
     stroke-width: .75px;
     paint-order: fill stroke;
+
     stroke-dasharray:
         var(--path-length)
         var(--path-length);
+
     stroke-dashoffset: var(--path-length);
 
     transition:
@@ -1238,7 +1331,9 @@
         0ms;
 }
 
-/* IN */
+
+/* CHAOS CIRCUIT — IN */
+
 .pdf-card:hover .chaos-circuit,
 .pdf-card.pdf-active .chaos-circuit {
     stroke-dashoffset: 0;
@@ -1255,41 +1350,264 @@
 
 
 /* =========================================================
-   9. CHAOS SYSTEM GPT OUTER PRESENTATION CARD
-   Background A → Background B
-   Black overlay → Green overlay
-   Inset shadow
-   Border + shape
+   10. SHARED GPT FEATURE CARD DESIGN LANGUAGE
+
+   Applies ONLY to:
+   .chaos-gpt-card
+   .gpt-zero-omega-card
+
+   SHARED:
+   - border geometry
+   - border colors
+   - border timing
+   - shadow geometry
+   - shadow opacity / strength
+   - ALL OUT timing
+
+   INDIVIDUAL:
+   - image IN duration + delay
+   - overlay IN duration + delay
+   - shadow IN duration + delay
    ========================================================= */
 
-/* CARD / BASE STATE */
+.chaos-gpt-card,
+.gpt-zero-omega-card {
+
+    /* ---------- BORDER COLOR ---------- */
+
+    --gpt-border-out-color: rgb(10, 215, 3);
+    --gpt-border-in-color: rgb(116, 1, 232);
+
+
+    /* ---------- BORDER SHAPE ---------- */
+
+    --gpt-radius-out: 6px;
+    --gpt-radius-in: 28px;
+
+
+    /* ---------- SHARED BORDER OUT TIMING ---------- */
+
+    --gpt-border-out-duration: 600ms;
+    --gpt-border-out-delay: 0ms;
+
+    --gpt-radius-out-duration: 600ms;
+    --gpt-radius-out-delay: 0ms;
+
+
+    /* ---------- SHARED BORDER IN TIMING ---------- */
+
+    --gpt-border-in-duration: 1500ms;
+    --gpt-border-in-delay: 0ms;
+
+    --gpt-radius-in-duration: 1500ms;
+    --gpt-radius-in-delay: 0ms;
+
+
+    /* ---------- SHADOW GEOMETRY ---------- */
+
+    --gpt-shadow-1: 3px;
+    --gpt-shadow-2: 10px;
+    --gpt-shadow-3: 20px;
+    --gpt-shadow-4: 30px;
+    --gpt-shadow-5: 42px;
+
+
+    /* ---------- SHADOW OPACITY ---------- */
+
+    --gpt-shadow-alpha-1: 1;
+    --gpt-shadow-alpha-2: 1;
+    --gpt-shadow-alpha-3: 1;
+    --gpt-shadow-alpha-4: 1;
+    --gpt-shadow-alpha-5: 1;
+
+
+    /* ---------- SHARED OUT TIMING ---------- */
+
+    --gpt-shadow-out-duration: 700ms;
+    --gpt-shadow-out-delay: 0ms;
+
+    --gpt-overlay-out-duration: 600ms;
+    --gpt-overlay-out-delay: 0ms;
+
+    --gpt-image-out-duration: 700ms;
+    --gpt-image-out-delay: 0ms;
+}
+
+
+/* =========================================================
+   11. CHAOS SYSTEM GPT — INDIVIDUAL IN TIMING
+   ========================================================= */
+
+.chaos-gpt-card {
+
+    /* HOVER BACKGROUND IMAGE */
+    --gpt-image-in-duration: 2500ms;
+    --gpt-image-in-delay: 5800ms;
+
+
+    /* COLOR OVERLAY */
+    --gpt-overlay-in-duration: 2500ms;
+    --gpt-overlay-in-delay: 5800ms;
+
+
+    /* INNER + OUTER SHADOW — SYNCHRONIZED */
+    --gpt-shadow-in-duration: 1600ms;
+    --gpt-shadow-in-delay: 5800ms;
+}
+
+
+/* =========================================================
+   12. GPT-0Ω — INDIVIDUAL IN TIMING
+
+   These are deliberately independent from Chaos.
+   Adjust freely to match GPT-0Ω's SVG choreography.
+   ========================================================= */
+
+.gpt-zero-omega-card {
+
+    /* HOVER BACKGROUND IMAGE */
+    --gpt-image-in-duration: 2500ms;
+    --gpt-image-in-delay: 2400ms;
+
+
+    /* COLOR OVERLAY */
+    --gpt-overlay-in-duration: 2500ms;
+    --gpt-overlay-in-delay: 2400ms;
+
+
+    /* INNER + OUTER SHADOW — SYNCHRONIZED */
+    --gpt-shadow-in-duration: 1600ms;
+    --gpt-shadow-in-delay: 2400ms;
+}
+
+
+/* =========================================================
+   13. ENHANCED GPT INNER LINK CARD
+
+   Add this class IN ADDITION TO .pdf-card:
+
+   pdf-card gpt-feature-link-card
+
+   Use on:
+   - Chaos System GPT inner link card
+   - GPT-0Ω inner link card
+
+   This adds the exterior black shadow while retaining
+   all global .pdf-card trigger behavior.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   GPT FEATURE INNER CARD — OUT
+   --------------------------------------------------------- */
+
+.gpt-feature-link-card {
+    border-width: 2px;
+    border-style: solid;
+
+    border-color: var(--gpt-border-out-color);
+    border-radius: var(--gpt-radius-out);
+
+    box-shadow:
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0),
+        0 0 0 rgba(0, 0, 0, 0);
+
+    transition:
+        border-color var(--gpt-border-out-duration) ease,
+        border-radius var(--gpt-radius-out-duration) ease,
+        box-shadow var(--gpt-shadow-out-duration) ease;
+
+    transition-delay:
+        var(--gpt-border-out-delay),
+        var(--gpt-radius-out-delay),
+        var(--gpt-shadow-out-delay);
+}
+
+
+/* ---------------------------------------------------------
+   GPT FEATURE INNER CARD — IN
+   --------------------------------------------------------- */
+
+.gpt-feature-link-card:hover,
+.gpt-feature-link-card.pdf-active {
+    border-color: var(--gpt-border-in-color);
+    border-radius: var(--gpt-radius-in);
+
+    /*
+       EXTERIOR SHADOW FROM INNER CARD
+       Mirrors outer card's inset shadow geometry.
+    */
+
+    box-shadow:
+        0 0 var(--gpt-shadow-1)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-1)),
+        0 0 var(--gpt-shadow-2)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-2)),
+        0 0 var(--gpt-shadow-3)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-3)),
+        0 0 var(--gpt-shadow-4)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-4)),
+        0 0 var(--gpt-shadow-5)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-5));
+
+    transition:
+        border-color var(--gpt-border-in-duration) ease,
+        border-radius var(--gpt-radius-in-duration) ease,
+        box-shadow var(--gpt-shadow-in-duration) ease;
+
+    transition-delay:
+        var(--gpt-border-in-delay),
+        var(--gpt-radius-in-delay),
+        var(--gpt-shadow-in-delay);
+}
+
+
+/* =========================================================
+   14. CHAOS SYSTEM GPT OUTER PRESENTATION CARD
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CHAOS OUTER CARD — BASE / OUT
+   --------------------------------------------------------- */
+
 .chaos-gpt-card {
     position: relative;
     isolation: isolate;
     overflow: hidden;
 
+    /* BASE FIELD IMAGE */
+
     background-image:
         url("/resources/images/repeating-fields/chaos-field_omega/chaos-field_omega_1.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(10, 215, 3);
-    border-radius: 6px;
+
+    border-color: var(--gpt-border-out-color);
+    border-radius: var(--gpt-radius-out);
 
     transition:
-        border-color 600ms ease,
-        border-radius 600ms ease;
+        border-color var(--gpt-border-out-duration) ease,
+        border-radius var(--gpt-radius-out-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-border-out-delay),
+        var(--gpt-radius-out-delay);
 }
 
 
-/* HOVER BACKGROUND IMAGE — OUT */
+/* ---------------------------------------------------------
+   CHAOS ALTERNATE BACKGROUND IMAGE — OUT
+   --------------------------------------------------------- */
+
 .chaos-gpt-card::before {
     content: "";
     position: absolute;
@@ -1297,6 +1615,7 @@
 
     background-image:
         url("/resources/images/repeating-fields/chaos-field_omega/chaos-field_omega_8.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1304,17 +1623,20 @@
     opacity: 0;
 
     transition:
-        opacity 700ms ease;
+        opacity var(--gpt-image-out-duration) ease;
 
     transition-delay:
-        0ms;
+        var(--gpt-image-out-delay);
 
     z-index: -2;
     pointer-events: none;
 }
 
 
-/* COLOR OVERLAY + INSET SHADOW — OUT */
+/* ---------------------------------------------------------
+   CHAOS OVERLAY + INSET SHADOW — OUT
+   --------------------------------------------------------- */
+
 .chaos-gpt-card::after {
     content: "";
     position: absolute;
@@ -1323,119 +1645,154 @@
     background-color: rgba(0, 0, 0, 0.8);
 
     box-shadow:
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001);
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0);
 
     transition:
-        background-color 600ms ease,
-        box-shadow 0ms ease;
+        background-color var(--gpt-overlay-out-duration) ease,
+        box-shadow var(--gpt-shadow-out-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-overlay-out-delay),
+        var(--gpt-shadow-out-delay);
 
     z-index: -1;
     pointer-events: none;
 }
 
 
-/* HOVER BACKGROUND IMAGE — IN */
+/* ---------------------------------------------------------
+   CHAOS ALTERNATE BACKGROUND IMAGE — IN
+   --------------------------------------------------------- */
+
 .chaos-gpt-card:hover::before,
 .chaos-gpt-card:has(.pdf-card.pdf-active)::before {
     opacity: 1;
 
     transition:
-        opacity 6000ms ease;
+        opacity var(--gpt-image-in-duration) ease;
 
     transition-delay:
-        4000ms;
+        var(--gpt-image-in-delay);
 }
 
 
-/* COLOR OVERLAY + INSET SHADOW — IN */
+/* ---------------------------------------------------------
+   CHAOS OVERLAY + INSET SHADOW — IN
+   --------------------------------------------------------- */
+
 .chaos-gpt-card:hover::after,
 .chaos-gpt-card:has(.pdf-card.pdf-active)::after {
     background-color: rgba(0, 35, 0, 0.604);
 
+    /*
+       INSET SHADOW FROM OUTER CARD
+       Mirrors inner card exterior shadow.
+    */
+
     box-shadow:
-        inset 0 0 3px rgba(0, 0, 0),
-        inset 0 0 10px rgba(0, 0, 0),
-        inset 0 0 20px rgba(0, 0, 0),
-        inset 0 0 30px rgba(0, 0, 0),
-        inset 0 0 42px rgba(0, 0, 0);
+        inset 0 0 var(--gpt-shadow-1)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-1)),
+        inset 0 0 var(--gpt-shadow-2)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-2)),
+        inset 0 0 var(--gpt-shadow-3)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-3)),
+        inset 0 0 var(--gpt-shadow-4)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-4)),
+        inset 0 0 var(--gpt-shadow-5)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-5));
 
     transition:
-        background-color 6000ms ease,
-        box-shadow 2000ms ease;
+        background-color var(--gpt-overlay-in-duration) ease,
+        box-shadow var(--gpt-shadow-in-duration) ease;
 
     transition-delay:
-        4000ms,
-        3000ms;
+        var(--gpt-overlay-in-delay),
+        var(--gpt-shadow-in-delay);
 }
 
 
-/* BORDER + SHAPE — IN */
+/* ---------------------------------------------------------
+   CHAOS OUTER BORDER + SHAPE — IN
+   --------------------------------------------------------- */
+
 .chaos-gpt-card:hover,
 .chaos-gpt-card:has(.pdf-card.pdf-active) {
-    border-color: rgb(116, 1, 232);
-    border-radius: 28px;
+    border-color: var(--gpt-border-in-color);
+    border-radius: var(--gpt-radius-in);
 
     transition:
-        border-color 1500ms ease,
-        border-radius 1500ms ease;
+        border-color var(--gpt-border-in-duration) ease,
+        border-radius var(--gpt-radius-in-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-border-in-delay),
+        var(--gpt-radius-in-delay);
 }
 
 
 /* =========================================================
-   10. GPT-0Ω OUTER PRESENTATION CARD
-   Same behavior as Chaos card.
-   REPLACE ONLY THE TWO IMAGE URLS BELOW.
+   15. GPT-0Ω OUTER PRESENTATION CARD
+   Same visual architecture as Chaos.
+   Unique IN timing comes from section 12.
    ========================================================= */
 
-/* CARD / BASE STATE */
+
+/* ---------------------------------------------------------
+   GPT-0Ω OUTER CARD — BASE / OUT
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card {
     position: relative;
     isolation: isolate;
     overflow: hidden;
 
-    /* GPT-0Ω BASE FIELD */
+    /*
+       GPT-0Ω BASE FIELD IMAGE PATH
+    */
+
     background-image:
         url("/resources/images/repeating-fields/gpt-zero-omega_field/gpt-zero-omega_field_5.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(10, 215, 3);
-    border-radius: 6px;
+
+    border-color: var(--gpt-border-out-color);
+    border-radius: var(--gpt-radius-out);
 
     transition:
-        border-color 600ms ease,
-        border-radius 600ms ease;
+        border-color var(--gpt-border-out-duration) ease,
+        border-radius var(--gpt-radius-out-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-border-out-delay),
+        var(--gpt-radius-out-delay);
 }
 
 
-/* HOVER BACKGROUND IMAGE — OUT */
+/* ---------------------------------------------------------
+   GPT-0Ω ALTERNATE BACKGROUND IMAGE — OUT
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    /* GPT-0Ω HOVER FIELD */
+    /*
+       GPT-0Ω HOVER FIELD IMAGE PATH
+    */
+
     background-image:
         url("/resources/images/repeating-fields/gpt-zero-omega_field/gpt-zero-omega_field_1.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1443,17 +1800,20 @@
     opacity: 0;
 
     transition:
-        opacity 700ms ease;
+        opacity var(--gpt-image-out-duration) ease;
 
     transition-delay:
-        0ms;
+        var(--gpt-image-out-delay);
 
     z-index: -2;
     pointer-events: none;
 }
 
 
-/* COLOR OVERLAY + INSET SHADOW — OUT */
+/* ---------------------------------------------------------
+   GPT-0Ω OVERLAY + INSET SHADOW — OUT
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card::after {
     content: "";
     position: absolute;
@@ -1462,81 +1822,93 @@
     background-color: rgba(0, 0, 0, 0.8);
 
     box-shadow:
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001),
-        inset 0 0 0px rgba(0, 0, 0, 0.001);
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0),
+        inset 0 0 0 rgba(0, 0, 0, 0);
 
     transition:
-        background-color 600ms ease,
-        box-shadow 0ms ease;
+        background-color var(--gpt-overlay-out-duration) ease,
+        box-shadow var(--gpt-shadow-out-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-overlay-out-delay),
+        var(--gpt-shadow-out-delay);
 
     z-index: -1;
     pointer-events: none;
 }
 
 
-/* HOVER BACKGROUND IMAGE — IN */
+/* ---------------------------------------------------------
+   GPT-0Ω ALTERNATE BACKGROUND IMAGE — IN
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card:hover::before,
 .gpt-zero-omega-card:has(.pdf-card.pdf-active)::before {
     opacity: 1;
 
     transition:
-        opacity 3000ms ease;
+        opacity var(--gpt-image-in-duration) ease;
 
     transition-delay:
-        2000ms;
+        var(--gpt-image-in-delay);
 }
 
 
-/* COLOR OVERLAY + INSET SHADOW — IN */
+/* ---------------------------------------------------------
+   GPT-0Ω OVERLAY + INSET SHADOW — IN
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card:hover::after,
 .gpt-zero-omega-card:has(.pdf-card.pdf-active)::after {
-    background-color: rgba(0, 35, 0, 0.822);
+    background-color: rgba(0, 35, 0, 0.604);
 
     box-shadow:
-        inset 0 0 3px rgba(0, 0, 0),
-        inset 0 0 10px rgba(0, 0, 0),
-        inset 0 0 20px rgba(0, 0, 0),
-        inset 0 0 30px rgba(0, 0, 0),
-        inset 0 0 42px rgba(0, 0, 0);
+        inset 0 0 var(--gpt-shadow-1)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-1)),
+        inset 0 0 var(--gpt-shadow-2)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-2)),
+        inset 0 0 var(--gpt-shadow-3)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-3)),
+        inset 0 0 var(--gpt-shadow-4)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-4)),
+        inset 0 0 var(--gpt-shadow-5)
+            rgba(0, 0, 0, var(--gpt-shadow-alpha-5));
 
     transition:
-        background-color 3000ms ease,
-        box-shadow 3000ms ease;
+        background-color var(--gpt-overlay-in-duration) ease,
+        box-shadow var(--gpt-shadow-in-duration) ease;
 
     transition-delay:
-        2000ms,
-        2000ms;
+        var(--gpt-overlay-in-delay),
+        var(--gpt-shadow-in-delay);
 }
 
 
-/* BORDER + SHAPE — IN */
+/* ---------------------------------------------------------
+   GPT-0Ω OUTER BORDER + SHAPE — IN
+   --------------------------------------------------------- */
+
 .gpt-zero-omega-card:hover,
 .gpt-zero-omega-card:has(.pdf-card.pdf-active) {
-    border-color: rgb(116, 1, 232);
-    border-radius: 28px;
+    border-color: var(--gpt-border-in-color);
+    border-radius: var(--gpt-radius-in);
 
     transition:
-        border-color 1500ms ease,
-        border-radius 1500ms ease;
+        border-color var(--gpt-border-in-duration) ease,
+        border-radius var(--gpt-radius-in-duration) ease;
 
     transition-delay:
-        0ms,
-        0ms;
+        var(--gpt-border-in-delay),
+        var(--gpt-radius-in-delay);
 }
 
 
 /*** =========================================================
-     END GLOBAL LINK CARD ANIMATION SYSTEM
-     ========================================================= ***/
-
-button[title="Back to top button"] {
+     END GLOBAL LINK / PDF / GPT ANIMATION SYSTEM
+     ========================================================= ***/button[title="Back to top button"] {
   color: #0eba00 !important;
   box-shadow: 0px 0px 8px 2px #0eba00 !important;
   transition:
