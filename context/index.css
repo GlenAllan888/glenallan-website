@@ -1,46 +1,6 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
         font-weight: 500;
         font-style: regular;
@@ -49,8 +9,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -65,8 +33,40 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -94,14 +94,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
         font-weight: 600;
         font-style: regular;
@@ -110,8 +102,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -121,6 +121,14 @@
         src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
         font-weight: 800;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -142,14 +150,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
         font-weight: 100;
         font-style: oblique;
@@ -158,8 +158,16 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -169,14 +177,6 @@
         src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
         font-weight: 300;
         font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
-        font-style: oblique;
         font-stretch: normal;
     }
     @font-face {
@@ -200,11 +200,13 @@
     .mb-3{margin-bottom:0.75rem}
     .mb-auto{margin-bottom:auto}
     .ml-0{margin-left:0.0rem}
+    .ml-8{margin-left:2.0rem}
     .ml-auto{margin-left:auto}
     .mr-0{margin-right:0.0rem}
     .mr-auto{margin-right:auto}
     .mt-0{margin-top:0.0rem}
     .mt-2{margin-top:0.5rem}
+    .mt-3{margin-top:0.75rem}
     .mt-auto{margin-top:auto}
     .block{display:block}
     .flex{display:flex}
@@ -224,6 +226,8 @@
     .w-\[100\%\]{width:100%}
     .w-\[40vw\]{width:40vw}
     .w-\[60px\]{width:60px}
+    .w-\[63vw\]{width:63vw}
+    .w-\[65vw\]{width:65vw}
     .w-\[75vw\]{width:75vw}
     .w-\[80vw\]{width:80vw}
     .w-auto{width:auto}
@@ -233,6 +237,7 @@
     .transform-gpu{transform:translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
     @keyframes spin{to{transform:rotate(360deg)}}
     .animate-spin{animation:spin 1s linear infinite}
+    .list-outside{list-style-position:outside}
     .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
     .flex-row{flex-direction:row}
     .flex-col{flex-direction:column}
@@ -241,6 +246,8 @@
     .items-center{align-items:center}
     .justify-center{justify-content:center}
     .justify-items-center{justify-items:center}
+    .gap-0{gap:0.0rem}
+    .gap-0\.5{gap:0.125rem}
     .gap-x-0{-moz-column-gap:0.0rem;column-gap:0.0rem}
     .gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}
     .gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}
@@ -257,9 +264,9 @@
     .rounded-full{border-radius:36.0rem}
     .border{border-width:0.12rem}
     .border-\[6px\]{border-width:6px}
-    .border-blue-600\/20{border-color:rgb(37 99 235 / 0.2)}
+    .border-violet-800\/20{border-color:rgb(91 33 182 / 0.2)}
     .border-white\/10{border-color:rgb(255 255 255 / 0.1)}
-    .border-t-blue-600{--tw-border-opacity:1;border-top-color:rgb(37 99 235 / var(--tw-border-opacity))}
+    .border-t-violet-800{--tw-border-opacity:1;border-top-color:rgb(91 33 182 / var(--tw-border-opacity))}
     .bg-black-50{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
     .bg-black-600{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}
     .bg-ultragreen-200{--tw-bg-opacity:1;background-color:rgb(31 164 20 / var(--tw-bg-opacity))}
@@ -284,8 +291,8 @@
     .text-\[10px\]{font-size:10px}
     .text-base{font-size:1.00rem;line-height:1.50rem}
     .text-sm{font-size:0.88rem;line-height:1.25rem}
-    .text-xl{font-size:1.25rem;line-height:1.75rem}
     .font-\[200\]{font-weight:200}
+    .font-\[300\]{font-weight:300}
     .font-\[400\]{font-weight:400}
     .font-\[500\]{font-weight:500}
     .font-bold{font-weight:700}
@@ -299,6 +306,7 @@
     .tracking-wide{letter-spacing:0.025em}
     .text-blacks-900\/\[--svgOpacity\]{color:rgb(41 41 41 / var(--svgOpacity))}
     .text-surface-900{--tw-text-opacity:1;color:rgb(48 60 77 / var(--tw-text-opacity))}
+    .text-text-950{--tw-text-opacity:1;color:rgb(246 248 249 / var(--tw-text-opacity))}
     .text-ultragreen-900{--tw-text-opacity:1;color:rgb(20 38 15 / var(--tw-text-opacity))}
     .text-white-50{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .text-white-50\/\[--svgOpacity\]{color:rgb(255 255 255 / var(--svgOpacity))}
@@ -318,13 +326,18 @@
     .text-shadow-none{text-shadow:}
     .\[--svgOpacity\:_100\%\]{--svgOpacity:100%}
     .\[--svgOpacity\:_28\%\]{--svgOpacity:28%}
+    .\[list-style-type\:circle\]{list-style-type:circle}
+    .marker\:text-\[30px\] *::marker{font-size:30px}
+    .marker\:text-violet-500 *::marker{color:rgb(139 92 246 )}
+    .marker\:text-\[30px\]::marker{font-size:30px}
+    .marker\:text-violet-500::marker{color:rgb(139 92 246 )}
     :is(.dark .dark\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
     :is(.dark .dark\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
-    @media (min-width: 640px){.sm\:mb-3{margin-bottom:0.75rem}.sm\:mb-auto{margin-bottom:auto}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mr-auto{margin-right:auto}.sm\:mt-2{margin-top:0.5rem}.sm\:mt-auto{margin-top:auto}.sm\:hidden{display:none}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:h-\[100\]{height:100}.sm\:w-14{width:3.5rem}.sm\:w-3{width:0.75rem}.sm\:w-\[65vw\]{width:65vw}.sm\:w-\[70vw\]{width:70vw}.sm\:flex-row{flex-direction:row}.sm\:flex-nowrap{flex-wrap:nowrap}.sm\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.sm\:gap-y-0{row-gap:0.0rem}.sm\:text-center{text-align:center}.sm\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.sm\:text-2xl{font-size:1.50rem;line-height:2.00rem}.sm\:text-3xl{font-size:1.88rem;line-height:2.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:font-\[200\]{font-weight:200}}
-    @media (min-width: 768px){.md\:mb-4{margin-bottom:1.0rem}.md\:mb-auto{margin-bottom:auto}.md\:ml-0{margin-left:0.0rem}.md\:ml-auto{margin-left:auto}.md\:mr-0{margin-right:0.0rem}.md\:mr-auto{margin-right:auto}.md\:mt-2{margin-top:0.5rem}.md\:mt-auto{margin-top:auto}.md\:hidden{display:none}.md\:h-0{height:0.0rem}.md\:h-0\.5{height:0.125rem}.md\:w-16{width:4.0rem}.md\:w-3{width:0.75rem}.md\:w-\[65vw\]{width:65vw}.md\:w-\[70vw\]{width:70vw}.md\:w-\[75vw\]{width:75vw}.md\:flex-row{flex-direction:row}.md\:flex-nowrap{flex-wrap:nowrap}.md\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.md\:gap-y-0{row-gap:0.0rem}.md\:text-center{text-align:center}.md\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.md\:text-2xl{font-size:1.50rem;line-height:2.00rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:font-\[200\]{font-weight:200}}
-    @media (min-width: 1024px){.lg\:mb-5{margin-bottom:1.25rem}.lg\:mb-auto{margin-bottom:auto}.lg\:ml-0{margin-left:0.0rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0.0rem}.lg\:mr-auto{margin-right:auto}.lg\:mt-3{margin-top:0.75rem}.lg\:mt-auto{margin-top:auto}.lg\:grid{display:grid}.lg\:h-0{height:0.0rem}.lg\:h-0\.5{height:0.125rem}.lg\:w-20{width:5.0rem}.lg\:w-3{width:0.75rem}.lg\:w-\[50vw\]{width:50vw}.lg\:w-\[60vw\]{width:60vw}.lg\:w-\[65vw\]{width:65vw}.lg\:w-\[70vw\]{width:70vw}.lg\:flex-row{flex-direction:row}.lg\:flex-nowrap{flex-wrap:nowrap}.lg\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.lg\:gap-y-0{row-gap:0.0rem}.lg\:text-center{text-align:center}.lg\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.lg\:text-3xl{font-size:1.88rem;line-height:2.25rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:font-\[200\]{font-weight:200}}
-    @media (min-width: 1280px){.xl\:mb-5{margin-bottom:1.25rem}.xl\:mb-auto{margin-bottom:auto}.xl\:ml-0{margin-left:0.0rem}.xl\:ml-auto{margin-left:auto}.xl\:mr-0{margin-right:0.0rem}.xl\:mr-auto{margin-right:auto}.xl\:mt-3{margin-top:0.75rem}.xl\:mt-auto{margin-top:auto}.xl\:grid{display:grid}.xl\:h-1{height:0.25rem}.xl\:w-28{width:7.0rem}.xl\:w-4{width:1.0rem}.xl\:w-\[60vw\]{width:60vw}.xl\:w-\[65vw\]{width:65vw}.xl\:w-\[70vw\]{width:70vw}.xl\:w-\[75vw\]{width:75vw}.xl\:flex-row{flex-direction:row}.xl\:flex-nowrap{flex-wrap:nowrap}.xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.xl\:gap-y-0{row-gap:0.0rem}.xl\:text-center{text-align:center}.xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.xl\:font-\[200\]{font-weight:200}}
-    @media (min-width: 1536px){.\32xl\:mb-0{margin-bottom:0.0rem}.\32xl\:ml-auto{margin-left:auto}.\32xl\:mr-auto{margin-right:auto}.\32xl\:mt-0{margin-top:0.0rem}.\32xl\:grid{display:grid}.\32xl\:h-1{height:0.25rem}.\32xl\:w-28{width:7.0rem}.\32xl\:w-4{width:1.0rem}.\32xl\:w-\[50vw\]{width:50vw}.\32xl\:w-\[60vw\]{width:60vw}.\32xl\:w-\[65vw\]{width:65vw}.\32xl\:w-\[70vw\]{width:70vw}.\32xl\:w-\[75vw\]{width:75vw}.\32xl\:flex-row{flex-direction:row}.\32xl\:flex-nowrap{flex-wrap:nowrap}.\32xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.\32xl\:gap-y-0{row-gap:0.0rem}.\32xl\:text-center{text-align:center}.\32xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.\32xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.\32xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.\32xl\:text-5xl{font-size:3.00rem;line-height:3.50rem}.\32xl\:font-\[200\]{font-weight:200}}
+    @media (min-width: 640px){.sm\:mb-0{margin-bottom:0.0rem}.sm\:mb-3{margin-bottom:0.75rem}.sm\:mb-auto{margin-bottom:auto}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mr-auto{margin-right:auto}.sm\:mt-0{margin-top:0.0rem}.sm\:mt-2{margin-top:0.5rem}.sm\:mt-auto{margin-top:auto}.sm\:hidden{display:none}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:h-\[100\]{height:100}.sm\:w-14{width:3.5rem}.sm\:w-3{width:0.75rem}.sm\:w-\[35vw\]{width:35vw}.sm\:w-\[65vw\]{width:65vw}.sm\:w-\[70vw\]{width:70vw}.sm\:flex-row{flex-direction:row}.sm\:flex-nowrap{flex-wrap:nowrap}.sm\:gap-0{gap:0.0rem}.sm\:gap-0\.5{gap:0.125rem}.sm\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.sm\:gap-y-0{row-gap:0.0rem}.sm\:text-center{text-align:center}.sm\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.sm\:text-2xl{font-size:1.50rem;line-height:2.00rem}.sm\:text-3xl{font-size:1.88rem;line-height:2.25rem}.sm\:text-base{font-size:1.00rem;line-height:1.50rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:font-\[200\]{font-weight:200}}
+    @media (min-width: 768px){.md\:mb-0{margin-bottom:0.0rem}.md\:mb-4{margin-bottom:1.0rem}.md\:mb-auto{margin-bottom:auto}.md\:ml-0{margin-left:0.0rem}.md\:ml-auto{margin-left:auto}.md\:mr-0{margin-right:0.0rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0.0rem}.md\:mt-2{margin-top:0.5rem}.md\:mt-auto{margin-top:auto}.md\:hidden{display:none}.md\:h-0{height:0.0rem}.md\:h-0\.5{height:0.125rem}.md\:w-16{width:4.0rem}.md\:w-3{width:0.75rem}.md\:w-\[40vw\]{width:40vw}.md\:w-\[65vw\]{width:65vw}.md\:w-\[70vw\]{width:70vw}.md\:w-\[75vw\]{width:75vw}.md\:flex-row{flex-direction:row}.md\:flex-nowrap{flex-wrap:nowrap}.md\:gap-1{gap:0.25rem}.md\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.md\:gap-y-0{row-gap:0.0rem}.md\:text-center{text-align:center}.md\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.md\:text-2xl{font-size:1.50rem;line-height:2.00rem}.md\:text-base{font-size:1.00rem;line-height:1.50rem}.md\:text-lg{font-size:1.12rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:font-\[200\]{font-weight:200}}
+    @media (min-width: 1024px){.lg\:mb-0{margin-bottom:0.0rem}.lg\:mb-5{margin-bottom:1.25rem}.lg\:mb-auto{margin-bottom:auto}.lg\:ml-0{margin-left:0.0rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0.0rem}.lg\:mr-auto{margin-right:auto}.lg\:mt-0{margin-top:0.0rem}.lg\:mt-3{margin-top:0.75rem}.lg\:mt-auto{margin-top:auto}.lg\:grid{display:grid}.lg\:h-0{height:0.0rem}.lg\:h-0\.5{height:0.125rem}.lg\:w-20{width:5.0rem}.lg\:w-3{width:0.75rem}.lg\:w-\[30vw\]{width:30vw}.lg\:w-\[50vw\]{width:50vw}.lg\:w-\[55vw\]{width:55vw}.lg\:w-\[60vw\]{width:60vw}.lg\:w-\[65vw\]{width:65vw}.lg\:w-\[70vw\]{width:70vw}.lg\:flex-row{flex-direction:row}.lg\:flex-nowrap{flex-wrap:nowrap}.lg\:gap-1{gap:0.25rem}.lg\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.lg\:gap-y-0{row-gap:0.0rem}.lg\:text-center{text-align:center}.lg\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.lg\:text-3xl{font-size:1.88rem;line-height:2.25rem}.lg\:text-lg{font-size:1.12rem;line-height:1.75rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:font-\[200\]{font-weight:200}}
+    @media (min-width: 1280px){.xl\:mb-0{margin-bottom:0.0rem}.xl\:mb-5{margin-bottom:1.25rem}.xl\:mb-auto{margin-bottom:auto}.xl\:ml-0{margin-left:0.0rem}.xl\:ml-auto{margin-left:auto}.xl\:mr-0{margin-right:0.0rem}.xl\:mr-auto{margin-right:auto}.xl\:mt-0{margin-top:0.0rem}.xl\:mt-3{margin-top:0.75rem}.xl\:mt-auto{margin-top:auto}.xl\:grid{display:grid}.xl\:h-1{height:0.25rem}.xl\:w-28{width:7.0rem}.xl\:w-4{width:1.0rem}.xl\:w-\[20vw\]{width:20vw}.xl\:w-\[45vw\]{width:45vw}.xl\:w-\[60vw\]{width:60vw}.xl\:w-\[65vw\]{width:65vw}.xl\:w-\[70vw\]{width:70vw}.xl\:w-\[75vw\]{width:75vw}.xl\:flex-row{flex-direction:row}.xl\:flex-nowrap{flex-wrap:nowrap}.xl\:gap-1{gap:0.25rem}.xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.xl\:gap-y-0{row-gap:0.0rem}.xl\:text-center{text-align:center}.xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.xl\:text-lg{font-size:1.12rem;line-height:1.75rem}.xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.xl\:font-\[200\]{font-weight:200}}
+    @media (min-width: 1536px){.\32xl\:mb-0{margin-bottom:0.0rem}.\32xl\:ml-0{margin-left:0.0rem}.\32xl\:ml-auto{margin-left:auto}.\32xl\:mr-0{margin-right:0.0rem}.\32xl\:mr-auto{margin-right:auto}.\32xl\:mt-0{margin-top:0.0rem}.\32xl\:grid{display:grid}.\32xl\:h-1{height:0.25rem}.\32xl\:w-28{width:7.0rem}.\32xl\:w-4{width:1.0rem}.\32xl\:w-\[20vw\]{width:20vw}.\32xl\:w-\[45vw\]{width:45vw}.\32xl\:w-\[50vw\]{width:50vw}.\32xl\:w-\[60vw\]{width:60vw}.\32xl\:w-\[65vw\]{width:65vw}.\32xl\:w-\[70vw\]{width:70vw}.\32xl\:w-\[75vw\]{width:75vw}.\32xl\:flex-row{flex-direction:row}.\32xl\:flex-nowrap{flex-wrap:nowrap}.\32xl\:gap-1{gap:0.25rem}.\32xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.\32xl\:gap-y-0{row-gap:0.0rem}.\32xl\:text-center{text-align:center}.\32xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.\32xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.\32xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.\32xl\:text-5xl{font-size:3.00rem;line-height:3.50rem}.\32xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.\32xl\:font-\[200\]{font-weight:200}}
     .\[\&\>\*\]\:col-start-1>*{grid-column-start:1}
     .\[\&\>\*\]\:row-start-1>*{grid-row-start:1}
     .\[\&\>\*\]\:min-w-0>*{min-width:0.0rem}
@@ -1460,7 +1473,11 @@
 
 /*** =========================================================
      END PAGEFLOW INTERMEDIARY SVG SEQUENCE
-     ========================================================= ***//* =========================================================
+     ========================================================= ***/
+
+     .pf-real-nav-container {
+        right: 5 !important;
+     }/* =========================================================
    CONTEXT MAP ANIMATION
    Complete standalone system
 
@@ -2182,6 +2199,876 @@
 .pf-live-mode .pf-anim-media-zoom-in { transform: scale(0.85) !important; }
 .pf-live-mode .pf-anim-media-fade-up { transform: translateY(40px) !important; }
 .pf-live-mode .pf-anim-media-fade-in { transform: scale(1) !important; }/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
 .pf-animator-wrapper {
 	display: contents; 
 }
