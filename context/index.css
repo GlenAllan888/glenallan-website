@@ -1,16 +1,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -25,22 +17,6 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
         font-weight: 200;
         font-style: regular;
@@ -49,8 +25,32 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -65,8 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -94,49 +94,17 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
         font-weight: 800;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -166,8 +134,32 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -177,6 +169,14 @@
         src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
         font-weight: 100;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
         font-stretch: normal;
     }
     @font-face {
@@ -7630,16 +7630,18 @@
   grid-row: 1 / -1;
 } */
 /* ============================================================
-   CHAOS SYSTEM HOMEPAGE NAVIGATION
+   CHAOS SYSTEM PAGEFLOW NAVIGATION
    Complete standalone system
 
    Includes:
-   - Responsive homepage SVG
-   - Construction intro
-   - Center-symbol stroke draw / fill / stroke removal
-   - Tendril-circuit stroke draw / fill / stroke removal
+   - Responsive Chaos System SVG
+   - Full construction intro on every PageFlow activation
+   - Center-symbol outline draw / fill / stroke removal
+   - Tendril-circuit outline draw / fill / stroke removal
    - Six-node reveal cascade
-   - Whole-interface lazy settle
+   - Whole-interface scale / upward settle
+   - Automatic reset when the PageFlow slide deactivates
+   - Replay whenever the PageFlow slide becomes current again
    - Existing route / center / node interaction behavior
    - Native route glow controls
    - Reduced-motion handling
@@ -7673,16 +7675,8 @@
 
 
   /* ==========================================================
-     HOMEPAGE INTRO — WHOLE INTERFACE SETTLE
+     PAGEFLOW DRAW — WHOLE INTERFACE SETTLE
      ========================================================== */
-
-  /*
-     Entire SVG starts slightly smaller and lower.
-
-     This is deliberately applied to the whole SVG rather
-     than individual internal groups so we do not interfere
-     with any SVG-native transforms.
-  */
 
   --chaos-intro-start-scale: .84;
   --chaos-intro-start-y: 23px;
@@ -7693,45 +7687,9 @@
     cubic-bezier(.18, .72, .18, 1);
 
 
-/* ============================================================
-   INTRO — TEMPORARILY DISABLE NORMAL INTERACTION TRANSITIONS
-   ============================================================ */
-
-/*
-   During homepage construction, JavaScript/WAAPI owns
-   the visible node opacity.
-
-   Prevent the ordinary hover-transition system from
-   interpolating the preparation and handoff states.
-*/
-
-.chaos-navigation.chaos-intro-active
-.chaos-node-normal,
-
-.chaos-navigation.chaos-intro-active
-.chaos-node-normal-background,
-
-.chaos-navigation.chaos-intro-active
-.chaos-node-inverted,
-
-.chaos-navigation.chaos-intro-active
-.chaos-node-inverted-background,
-
-.chaos-navigation.chaos-intro-active
-.chaos-center,
-
-.chaos-navigation.chaos-intro-active
-#chaos-eye,
-
-.chaos-navigation.chaos-intro-active
-#chaos-tendrils {
-
-  transition: none !important;
-}
-
 
   /* ==========================================================
-     HOMEPAGE INTRO — CENTER SYMBOL
+     PAGEFLOW DRAW — CENTER SYMBOL
      ========================================================== */
 
   /* ---------- CONSTRUCTION STROKE ---------- */
@@ -7755,12 +7713,7 @@
     cubic-bezier(.4, 0, .2, 1);
 
 
-  /* ---------- FILL / REAL ARTWORK APPEARANCE ---------- */
-
-  /*
-     Starts after the construction line is clearly visible,
-     but before the draw has completely finished.
-  */
+  /* ---------- FILL ---------- */
 
   --chaos-intro-center-fill-delay:
     1800ms;
@@ -7769,10 +7722,10 @@
     2300ms;
 
   --chaos-intro-center-fill-easing:
-    ease;
+    cubic-bezier(.64,.09,.29,.46);
 
 
-  /* ---------- CONSTRUCTION STROKE REMOVAL ---------- */
+  /* ---------- STROKE REMOVAL ---------- */
 
   --chaos-intro-center-stroke-out-delay:
     2500ms;
@@ -7786,7 +7739,7 @@
 
 
   /* ==========================================================
-     HOMEPAGE INTRO — TENDRIL / CIRCUIT PORTION OF LOGO
+     PAGEFLOW DRAW — TENDRIL / CIRCUIT PORTION
      ========================================================== */
 
   --chaos-intro-tendrils-stroke-color:
@@ -7798,10 +7751,6 @@
 
   /* ---------- DRAW ---------- */
 
-  /*
-     Begins before the center has completely resolved.
-  */
-
   --chaos-intro-tendrils-draw-delay:
     2700ms;
 
@@ -7812,7 +7761,7 @@
     cubic-bezier(.4, 0, .2, 1);
 
 
-  /* ---------- FILL / REAL ARTWORK APPEARANCE ---------- */
+  /* ---------- FILL ---------- */
 
   --chaos-intro-tendrils-fill-delay:
     6300ms;
@@ -7821,10 +7770,10 @@
     2300ms;
 
   --chaos-intro-tendrils-fill-easing:
-    ease;
+    cubic-bezier(.64,.09,.29,.46);
 
 
-  /* ---------- CONSTRUCTION STROKE REMOVAL ---------- */
+  /* ---------- STROKE REMOVAL ---------- */
 
   --chaos-intro-tendrils-stroke-out-delay:
     8500ms;
@@ -7838,24 +7787,15 @@
 
 
   /* ==========================================================
-     HOMEPAGE INTRO — SIX LINK NODES
+     PAGEFLOW DRAW — SIX LINK NODES
      ========================================================== */
-
-  /*
-     The first node waits until the full Chaos System logo
-     has substantially resolved.
-
-     All nodes overlap one another.
-  */
 
   --chaos-intro-node-duration:
     1600ms;
 
   --chaos-intro-node-easing:
-    cubic-bezier(.22, .7, .2, 1);
+    cubic-bezier(.64,.09,.29,.46);
 
-
-  /* ---------- NODE ORDER ---------- */
 
   --chaos-intro-video-delay:
     7500ms;
@@ -7879,7 +7819,6 @@
 
   /* ==========================================================
      BACKGROUND DIMMING
-     Existing interaction control
      ========================================================== */
 
   --chaos-background-opacity:
@@ -7968,14 +7907,10 @@
    ============================================================ */
 
 /*
-   The wrapper exists before the fetched SVG does.
+   Applied before the SVG fetch begins.
 
-   JavaScript adds .chaos-intro-preparing before fetching
-   the file and removes it only after every intro path has
-   been placed in the correct starting state.
-
-   This prevents the "full finished graphic flashes first"
-   problem.
+   Nothing becomes visible until JavaScript has put
+   every relevant element into the correct starting state.
 */
 
 .chaos-navigation.chaos-intro-preparing {
@@ -8006,7 +7941,45 @@
 
 
 /* ============================================================
-   4. WHOLE-INTERFACE INTRO SETTLE
+   4. TEMPORARILY DISABLE NORMAL INTERACTION TRANSITIONS
+   ============================================================ */
+
+/*
+   The PageFlow construction sequence temporarily owns opacity.
+
+   Normal hover/focus transitions remain disabled until
+   the entrance has completely handed control back.
+*/
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-normal,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-normal-background,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-inverted,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-inverted-background,
+
+.chaos-navigation.chaos-intro-active
+.chaos-center,
+
+.chaos-navigation.chaos-intro-active
+#chaos-eye,
+
+.chaos-navigation.chaos-intro-active
+#chaos-tendrils {
+
+  transition:
+    none !important;
+}
+
+
+
+/* ============================================================
+   5. PAGEFLOW DRAW — WHOLE SVG SETTLE
    ============================================================ */
 
 .chaos-navigation.chaos-intro-active svg {
@@ -8036,7 +8009,7 @@
 
 
 /* ============================================================
-   5. EXISTING HIDDEN INTERACTION ARTWORK
+   7. EXISTING HIDDEN INTERACTION ARTWORK
    ============================================================ */
 
 .chaos-navigation .chaos-route,
@@ -8052,7 +8025,7 @@
 
 
 /* ============================================================
-   6. NORMAL OUTER NODE ARTWORK
+   8. NORMAL OUTER NODE ARTWORK
    ============================================================ */
 
 .chaos-navigation .chaos-node-normal,
@@ -8066,7 +8039,7 @@
 
 
 /* ============================================================
-   7. DEFAULT CENTER SYMBOL
+   9. DEFAULT CENTER SYMBOL
    ============================================================ */
 
 .chaos-navigation #chaos-eye {
@@ -8079,7 +8052,7 @@
 
 
 /* ============================================================
-   8. TENDRIL / CIRCUIT PORTION OF LOGO
+   10. TENDRIL / CIRCUIT PORTION
    ============================================================ */
 
 .chaos-navigation #chaos-tendrils {
@@ -8104,7 +8077,7 @@
 
 
 /* ============================================================
-   9. ACTIVE ROUTE
+   11. ACTIVE ROUTE
    ============================================================ */
 
 .chaos-navigation .chaos-route {
@@ -8123,7 +8096,7 @@
 
 
 /* ============================================================
-   10. CENTER TRANSITION
+   12. CENTER TRANSITION
    ============================================================ */
 
 .chaos-navigation #chaos-eye,
@@ -8148,7 +8121,7 @@
 
 
 /* ============================================================
-   11. OUTER ICON INVERSION
+   13. OUTER ICON INVERSION
    ============================================================ */
 
 .chaos-navigation .chaos-node-normal,
@@ -8188,7 +8161,7 @@
 
 
 /* ============================================================
-   12. INTERACTION GEOMETRY
+   14. INTERACTION GEOMETRY
    ============================================================ */
 
 .chaos-navigation .chaos-hit-target {
@@ -8211,8 +8184,7 @@
 
 
 /*
-   Hit targets physically exist during the intro,
-   but cannot be used until the complete sequence finishes.
+   The interface is intentionally noninteractive while the PageFlow construction sequence is running.
 */
 
 .chaos-navigation.chaos-intro-active
@@ -8242,7 +8214,7 @@
 
 
 /* ============================================================
-   13. MOBILE ROUTE GLOW
+   15. MOBILE ROUTE GLOW
    ============================================================ */
 
 @media (max-width: 767px) {
@@ -8273,7 +8245,7 @@
 
 
 /* ============================================================
-   14. REDUCED MOTION
+   16. REDUCED MOTION
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {

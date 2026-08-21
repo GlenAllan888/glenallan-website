@@ -60,37 +60,17 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
     },
 
 
-    /*
-     * Slightly enlarges each visible circular node
-     * into a forgiving interaction target.
-     */
-
     nodeHitScale:
       1.18,
 
-
-    /*
-     * Center confirmation target derived from
-     * the Chaos Eye bounding box.
-     */
 
     centerHitScale:
       0.92,
 
 
-    /*
-     * Prevent immediate desktop reset while
-     * crossing empty space between nodes.
-     */
-
     desktopResetDelay:
       1000,
 
-
-    /*
-     * CSS drop-shadow blur values and SVG
-     * Gaussian deviation are not numerically equal.
-     */
 
     svgBlurScale:
       0.5
@@ -106,14 +86,17 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
     if (
       !root ||
-      root.dataset.chaosReady === "true"
+      root.dataset.chaosReady ===
+        "true"
     ) {
       return;
     }
 
 
     const svg =
-      root.querySelector("svg");
+      root.querySelector(
+        "svg"
+      );
 
 
     if (!svg) {
@@ -168,7 +151,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       null;
 
 
-    let introFinishTimer =
+    let entranceFinishTimer =
       null;
 
 
@@ -180,7 +163,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       new Map();
 
 
-    const introAnimations =
+    const entranceAnimations =
       new Set();
 
 
@@ -360,7 +343,6 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
     /* =======================================================
        SVG FILTER HELPERS
-       Existing active-route glow system
        ======================================================= */
 
     function createDropShadow({
@@ -511,7 +493,9 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
 
-    function syncNativeRouteFilter(filter) {
+    function syncNativeRouteFilter(
+      filter
+    ) {
 
       const scale =
         CONFIG.svgBlurScale;
@@ -832,6 +816,19 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
+       ENTRANCE STATE CHECK
+       ======================================================= */
+
+    function entranceIsActive() {
+
+      return root.classList.contains(
+        "chaos-intro-active"
+      );
+    }
+
+
+
+    /* =======================================================
        INTERACTION STATE
        ======================================================= */
 
@@ -884,9 +881,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
     function setActiveNode(name) {
 
       if (
-        root.classList.contains(
-          "chaos-intro-active"
-        )
+        entranceIsActive()
       ) {
         return;
       }
@@ -919,7 +914,9 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
       const record =
-        nodeRecords.get(name);
+        nodeRecords.get(
+          name
+        );
 
 
       record.route
@@ -1001,16 +998,16 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
     function navigateTo(name) {
 
       if (
-        root.classList.contains(
-          "chaos-intro-active"
-        )
+        entranceIsActive()
       ) {
         return;
       }
 
 
       const record =
-        nodeRecords.get(name);
+        nodeRecords.get(
+          name
+        );
 
 
       if (!record) {
@@ -1046,7 +1043,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       if (
         !source ||
         typeof source.getBBox !==
-        "function"
+          "function"
       ) {
         continue;
       }
@@ -1139,7 +1136,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           if (
             finePointerQuery.matches &&
             event.pointerType !==
-            "touch"
+              "touch"
           ) {
 
             cancelScheduledReset();
@@ -1160,9 +1157,9 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           if (
             finePointerQuery.matches &&
             event.pointerType !==
-            "touch" &&
+              "touch" &&
             keyboardNode ===
-            null
+              null
           ) {
 
             scheduleNavigationReset();
@@ -1179,7 +1176,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           if (
             finePointerQuery.matches &&
             event.detail !==
-            0
+              0
           ) {
 
             navigateTo(
@@ -1216,9 +1213,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
         () => {
 
           if (
-            root.classList.contains(
-              "chaos-intro-active"
-            )
+            entranceIsActive()
           ) {
             return;
           }
@@ -1287,7 +1282,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
           if (
             event.key ===
-            "Escape"
+              "Escape"
           ) {
 
             event.preventDefault();
@@ -1309,7 +1304,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
     if (
       chaosEye &&
       typeof chaosEye.getBBox ===
-      "function"
+        "function"
     ) {
 
       const box =
@@ -1385,7 +1380,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
             activeNode &&
             finePointerQuery.matches &&
             event.detail !==
-            0
+              0
           ) {
 
             navigateTo(
@@ -1467,7 +1462,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
         if (
           event.pointerType !==
-          "touch"
+            "touch"
         ) {
           return;
         }
@@ -1508,8 +1503,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       },
 
       {
-        passive:
-          true
+        passive: true
       }
     );
 
@@ -1542,7 +1536,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
           if (
             keyboardNode ===
-            null
+              null
           ) {
 
             resetNavigation();
@@ -1585,7 +1579,69 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
-       INTRO UTILITIES
+       ENTRANCE ANIMATION UTILITIES
+       ======================================================= */
+
+    function trackEntranceAnimation(
+      animation
+    ) {
+
+      entranceAnimations.add(
+        animation
+      );
+
+
+      animation.finished
+        .catch(() => {});
+
+
+      return animation;
+    }
+
+
+
+    function cancelEntranceAnimations() {
+
+      entranceAnimations.forEach(
+        animation => {
+
+          try {
+
+            animation.cancel();
+
+          } catch (_) {}
+        }
+      );
+
+
+      entranceAnimations.clear();
+    }
+
+
+
+    function clearEntranceTimer() {
+
+      if (
+        entranceFinishTimer ===
+          null
+      ) {
+        return;
+      }
+
+
+      window.clearTimeout(
+        entranceFinishTimer
+      );
+
+
+      entranceFinishTimer =
+        null;
+    }
+
+
+
+    /* =======================================================
+       FULL INTRO — DRAWABLE SHAPES
        ======================================================= */
 
     function getDrawableShapes(element) {
@@ -1635,7 +1691,9 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
 
-    function rememberIntroStyle(element) {
+    function rememberIntroStyle(
+      element
+    ) {
 
       if (
         introOriginalStyles.has(
@@ -1684,86 +1742,8 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
 
-    function restoreIntroStyles() {
-
-      introOriginalStyles.forEach(
-        (styles, element) => {
-
-          element.style.fillOpacity =
-            styles.fillOpacity;
-
-          element.style.stroke =
-            styles.stroke;
-
-          element.style.strokeWidth =
-            styles.strokeWidth;
-
-          element.style.strokeOpacity =
-            styles.strokeOpacity;
-
-          element.style.strokeDasharray =
-            styles.strokeDasharray;
-
-          element.style.strokeDashoffset =
-            styles.strokeDashoffset;
-
-          element.style.strokeLinecap =
-            styles.strokeLinecap;
-
-          element.style.strokeLinejoin =
-            styles.strokeLinejoin;
-
-          element.style.paintOrder =
-            styles.paintOrder;
-
-          element.style.opacity =
-            styles.opacity;
-        }
-      );
-
-
-      introOriginalStyles.clear();
-    }
-
-
-
-    function trackIntroAnimation(animation) {
-
-      introAnimations.add(
-        animation
-      );
-
-
-      animation.finished
-        .catch(() => {});
-
-
-      return animation;
-    }
-
-
-
-    function cancelIntroAnimations() {
-
-      introAnimations.forEach(
-        animation => {
-
-          try {
-
-            animation.cancel();
-
-          } catch (_) {}
-        }
-      );
-
-
-      introAnimations.clear();
-    }
-
-
-
     /* =======================================================
-       PREPARE DRAW / FILL INTRO PART
+       FULL INTRO — PREPARE DRAW / FILL PART
        ======================================================= */
 
     function prepareIntroPart(
@@ -1780,14 +1760,14 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       const strokeColor =
         readCssColor(
           strokeColorProperty,
-          "rgb(16, 216, 2)"
+          "rgb(255,255,255)"
         );
 
 
       const strokeWidth =
         readCssValue(
           strokeWidthProperty,
-          ".75px"
+          "3px"
         );
 
 
@@ -1806,7 +1786,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
           if (
             typeof shape.getTotalLength !==
-            "function"
+              "function"
           ) {
             return;
           }
@@ -1895,6 +1875,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           prepared.push({
             shape,
             hiddenLength,
+
             finalFillOpacity:
               Number.isFinite(
                 finalFillOpacity
@@ -1912,7 +1893,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
-       ANIMATE DRAW / FILL / STROKE-OUT
+       FULL INTRO — DRAW / FILL / STROKE OUT
        ======================================================= */
 
     function animateIntroPart(
@@ -1980,7 +1961,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       prepared.forEach(
         item => {
 
-          trackIntroAnimation(
+          trackEntranceAnimation(
             item.shape.animate(
 
               [
@@ -2012,7 +1993,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           );
 
 
-          trackIntroAnimation(
+          trackEntranceAnimation(
             item.shape.animate(
 
               [
@@ -2044,7 +2025,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           );
 
 
-          trackIntroAnimation(
+          trackEntranceAnimation(
             item.shape.animate(
 
               [
@@ -2081,7 +2062,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
-       PREPARE SIX NORMAL NODE LAYERS
+       FULL INTRO — PREPARE NODE
        ======================================================= */
 
     function prepareIntroNode(record) {
@@ -2118,6 +2099,7 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
             return {
               element,
+
               finalOpacity:
                 Number.isFinite(
                   computedOpacity
@@ -2158,13 +2140,12 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
       prepared.forEach(
         item => {
 
-          trackIntroAnimation(
+          trackEntranceAnimation(
             item.element.animate(
 
               [
                 {
-                  opacity:
-                    0
+                  opacity: 0
                 },
 
                 {
@@ -2174,14 +2155,9 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
               ],
 
               {
-                delay:
-                  delay,
-
-                duration:
-                  duration,
-
-                easing:
-                  easing,
+                delay,
+                duration,
+                easing,
 
                 fill:
                   "forwards"
@@ -2195,10 +2171,10 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
-       INTRO TOTAL TIME
+       FULL INTRO — TOTAL DURATION
        ======================================================= */
 
-    function getIntroTotalDuration() {
+    function getFullIntroDuration() {
 
       const centerEnd =
         Math.max(
@@ -2305,270 +2281,131 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
 
+
     /* =======================================================
-       FINISH INTRO CLEANLY
+       PAGEFLOW INTRO — RESTORE ORIGINAL SVG STATE
        ======================================================= */
 
-    function finishIntro() {
+    function restoreRememberedIntroStyles() {
 
-  if (
-    introFinishTimer !==
-    null
-  ) {
+      introOriginalStyles.forEach(
+        (styles, element) => {
 
-    window.clearTimeout(
-      introFinishTimer
-    );
+          element.style.fillOpacity =
+            styles.fillOpacity;
 
+          element.style.stroke =
+            styles.stroke;
 
-    introFinishTimer =
-      null;
-  }
+          element.style.strokeWidth =
+            styles.strokeWidth;
 
+          element.style.strokeOpacity =
+            styles.strokeOpacity;
 
-  /*
-   * =====================================================
-   * PHASE 1
-   *
-   * Put every intro-controlled element explicitly into
-   * its permanent final visual state WHILE ordinary
-   * interaction transitions are still disabled.
-   * =====================================================
-   */
+          element.style.strokeDasharray =
+            styles.strokeDasharray;
 
+          element.style.strokeDashoffset =
+            styles.strokeDashoffset;
 
-  /* ---------- CENTER ---------- */
+          element.style.strokeLinecap =
+            styles.strokeLinecap;
 
-  if (chaosEye) {
+          element.style.strokeLinejoin =
+            styles.strokeLinejoin;
 
-    chaosEye.style.opacity =
-      "1";
-  }
+          element.style.paintOrder =
+            styles.paintOrder;
 
-
-  /* ---------- TENDRILS / CIRCUITS ---------- */
-
-  if (chaosTendrils) {
-
-    chaosTendrils.style.opacity =
-      "1";
-  }
-
-
-  /* ---------- SIX NORMAL NODES ---------- */
-
-  for (
-    const record
-    of nodeRecords.values()
-  ) {
-
-    if (record.normal) {
-
-      record.normal.style.opacity =
-        "1";
-    }
-
-
-    if (
-      record.normalBackground
-    ) {
-
-      record.normalBackground.style.opacity =
-        "1";
-    }
-  }
-
-
-  /*
-   * Restore the construction-path properties,
-   * but leave the opacity values above intact for
-   * the moment.
-   */
-
-  introOriginalStyles.forEach(
-    (styles, element) => {
-
-      element.style.fillOpacity =
-        styles.fillOpacity;
-
-      element.style.stroke =
-        styles.stroke;
-
-      element.style.strokeWidth =
-        styles.strokeWidth;
-
-      element.style.strokeOpacity =
-        styles.strokeOpacity;
-
-      element.style.strokeDasharray =
-        styles.strokeDasharray;
-
-      element.style.strokeDashoffset =
-        styles.strokeDashoffset;
-
-      element.style.strokeLinecap =
-        styles.strokeLinecap;
-
-      element.style.strokeLinejoin =
-        styles.strokeLinejoin;
-
-      element.style.paintOrder =
-        styles.paintOrder;
-    }
-  );
-
-
-  /*
-   * The permanent visual state now exists underneath
-   * the Web Animations, so cancelling them cannot
-   * reveal a different frame.
-   */
-
-  cancelIntroAnimations();
-
-
-  /*
-   * Remove whole-SVG animation residue.
-   */
-
-  svg.getAnimations()
-    .forEach(
-      animation => {
-
-        try {
-
-          animation.cancel();
-
-        } catch (_) {}
-      }
-    );
-
-
-  svg.style.transform =
-    "translateY(0) scale(1)";
-
-
-  /*
-   * =====================================================
-   * PHASE 2
-   *
-   * Wait one painted frame before returning ownership
-   * to the normal homepage interaction CSS.
-   * =====================================================
-   */
-
-  window.requestAnimationFrame(
-    () => {
-
-      window.requestAnimationFrame(
-        () => {
-
-          /*
-           * Remove the intro state. Ordinary hover/focus
-           * transitions become legal again only now.
-           */
-
-          root.classList.remove(
-            "chaos-intro-active",
-            "chaos-intro-running"
-          );
-
-
-          /*
-           * Remove temporary inline opacity declarations.
-           *
-           * The normal CSS underneath is ALSO opacity:1,
-           * so this produces no visual change.
-           */
-
-          if (chaosEye) {
-
-            chaosEye.style.opacity =
-              "";
-          }
-
-
-          if (chaosTendrils) {
-
-            chaosTendrils.style.opacity =
-              "";
-          }
-
-
-          for (
-            const record
-            of nodeRecords.values()
-          ) {
-
-            if (record.normal) {
-
-              record.normal.style.opacity =
-                "";
-            }
-
-
-            if (
-              record.normalBackground
-            ) {
-
-              record.normalBackground.style.opacity =
-                "";
-            }
-          }
-
-
-          introOriginalStyles.clear();
-
-
-          svg.style.transform =
-            "";
-
-
-          root.removeAttribute(
-            "aria-busy"
-          );
-
-
-          root.dataset.chaosIntroComplete =
-            "true";
+          element.style.opacity =
+            styles.opacity;
         }
       );
+
+
+      introOriginalStyles.clear();
     }
-  );
-}
 
 
 
     /* =======================================================
-       START HOMEPAGE INTRO
+       PAGEFLOW INTRO — HARD RESET
        ======================================================= */
 
-    function startIntro() {
-
-      if (
-        root.dataset.chaosIntroComplete ===
-        "true"
-      ) {
-        return;
-      }
+    let preparedFullIntro =
+      null;
 
 
-      root.setAttribute(
-        "aria-busy",
-        "true"
+    function resetFullIntroToStart() {
+
+      /*
+       * Hide first. This prevents a completed-state flash
+       * while the slide is being reset offscreen.
+       */
+
+      root.classList.add(
+        "chaos-intro-preparing"
       );
 
+
+      clearEntranceTimer();
+
+      cancelEntranceAnimations();
+
+
+      svg.getAnimations()
+        .forEach(
+          animation => {
+
+            try {
+              animation.cancel();
+            } catch (_) {}
+          }
+        );
+
+
+      root.classList.remove(
+        "chaos-intro-running"
+      );
+
+
+      /*
+       * If the previous run was interrupted, put every
+       * element back into its native SVG/CSS state before
+       * preparing the next construction pass.
+       */
+
+      restoreRememberedIntroStyles();
+
+
+      svg.style.transform =
+        "";
+
+
+      root.removeAttribute(
+        "aria-busy"
+      );
+
+
+      root.removeAttribute(
+        "data-chaos-entrance-complete"
+      );
+
+
+      resetNavigation();
+
+
+      /*
+       * The intro-active class remains present while primed.
+       * This keeps interaction disabled until the draw has
+       * fully completed.
+       */
 
       root.classList.add(
         "chaos-intro-active"
       );
 
-
-      /*
-       * Prepare the ACTUAL logo paths.
-       *
-       * No clones.
-       */
 
       const centerPrepared =
         prepareIntroPart(
@@ -2634,37 +2471,132 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
         );
 
 
-      /*
-       * Everything has now been forced into the correct
-       * invisible starting state.
-       *
-       * It is finally safe to expose the component.
-       */
+      preparedFullIntro = {
+        centerPrepared,
+        tendrilsPrepared,
+        videoPrepared,
+        designPrepared,
+        audioPrepared,
+        aiPrepared,
+        resumePrepared,
+        contextPrepared
+      };
+    }
 
-      root.classList.remove(
-        "chaos-intro-preparing"
-      );
 
 
-      /*
-       * Reduced-motion preference receives the final
-       * completed interface immediately.
-       */
+    /* =======================================================
+       PAGEFLOW INTRO — FINISH
+       ======================================================= */
+
+    function finishFullIntro(
+      token
+    ) {
 
       if (
-        reducedMotionQuery.matches
+        token !== sequenceToken ||
+        !slideIsActive
       ) {
-
-        finishIntro();
-
         return;
       }
 
 
+      clearEntranceTimer();
+
+
       /*
-       * Two frames ensure the browser actually paints
-       * the prepared state before we launch animations.
+       * Establish the permanent final visual state while
+       * ordinary interaction transitions are still disabled.
        */
+
+      if (chaosEye) {
+        chaosEye.style.opacity =
+          "1";
+      }
+
+
+      if (chaosTendrils) {
+        chaosTendrils.style.opacity =
+          "1";
+      }
+
+
+      for (
+        const record
+        of nodeRecords.values()
+      ) {
+
+        if (record.normal) {
+          record.normal.style.opacity =
+            "1";
+        }
+
+
+        if (
+          record.normalBackground
+        ) {
+
+          record.normalBackground.style.opacity =
+            "1";
+        }
+      }
+
+
+      /*
+       * Restore the temporary construction properties.
+       * Keep explicit final opacity values during handoff.
+       */
+
+      introOriginalStyles.forEach(
+        (styles, element) => {
+
+          element.style.fillOpacity =
+            styles.fillOpacity;
+
+          element.style.stroke =
+            styles.stroke;
+
+          element.style.strokeWidth =
+            styles.strokeWidth;
+
+          element.style.strokeOpacity =
+            styles.strokeOpacity;
+
+          element.style.strokeDasharray =
+            styles.strokeDasharray;
+
+          element.style.strokeDashoffset =
+            styles.strokeDashoffset;
+
+          element.style.strokeLinecap =
+            styles.strokeLinecap;
+
+          element.style.strokeLinejoin =
+            styles.strokeLinejoin;
+
+          element.style.paintOrder =
+            styles.paintOrder;
+        }
+      );
+
+
+      cancelEntranceAnimations();
+
+
+      svg.getAnimations()
+        .forEach(
+          animation => {
+
+            try {
+              animation.cancel();
+            } catch (_) {}
+          }
+        );
+
+
+      svg.style.transform =
+        "translateY(0) scale(1)";
+
 
       window.requestAnimationFrame(
         () => {
@@ -2672,17 +2604,140 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
           window.requestAnimationFrame(
             () => {
 
+              if (
+                token !== sequenceToken ||
+                !slideIsActive
+              ) {
+                return;
+              }
+
+
+              root.classList.remove(
+                "chaos-intro-active",
+                "chaos-intro-running"
+              );
+
+
+              if (chaosEye) {
+                chaosEye.style.opacity =
+                  "";
+              }
+
+
+              if (chaosTendrils) {
+                chaosTendrils.style.opacity =
+                  "";
+              }
+
+
+              for (
+                const record
+                of nodeRecords.values()
+              ) {
+
+                if (record.normal) {
+                  record.normal.style.opacity =
+                    "";
+                }
+
+
+                if (
+                  record.normalBackground
+                ) {
+
+                  record.normalBackground.style.opacity =
+                    "";
+                }
+              }
+
+
+              introOriginalStyles.clear();
+
+
+              svg.style.transform =
+                "";
+
+
+              root.removeAttribute(
+                "aria-busy"
+              );
+
+
+              root.dataset.chaosEntranceComplete =
+                "true";
+            }
+          );
+        }
+      );
+    }
+
+
+
+    /* =======================================================
+       PAGEFLOW INTRO — PLAY PRIMED CONSTRUCTION
+       ======================================================= */
+
+    function playFullIntro(
+      token
+    ) {
+
+      if (
+        token !== sequenceToken ||
+        !slideIsActive
+      ) {
+        return;
+      }
+
+
+      root.setAttribute(
+        "aria-busy",
+        "true"
+      );
+
+
+      /*
+       * The SVG has already been placed into its exact
+       * construction starting state while hidden.
+       */
+
+      root.classList.remove(
+        "chaos-intro-preparing"
+      );
+
+
+      if (
+        reducedMotionQuery.matches
+      ) {
+
+        finishFullIntro(
+          token
+        );
+
+        return;
+      }
+
+
+      window.requestAnimationFrame(
+        () => {
+
+          window.requestAnimationFrame(
+            () => {
+
+              if (
+                token !== sequenceToken ||
+                !slideIsActive
+              ) {
+                return;
+              }
+
+
               root.classList.add(
                 "chaos-intro-running"
               );
 
 
-              /* -----------------------------------------
-                 CENTER
-                 ----------------------------------------- */
-
               animateIntroPart(
-                centerPrepared,
+                preparedFullIntro.centerPrepared,
                 {
                   drawDelay:
                     "--chaos-intro-center-draw-delay",
@@ -2714,12 +2769,8 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
               );
 
 
-              /* -----------------------------------------
-                 TENDRILS / CIRCUITS
-                 ----------------------------------------- */
-
               animateIntroPart(
-                tendrilsPrepared,
+                preparedFullIntro.tendrilsPrepared,
                 {
                   drawDelay:
                     "--chaos-intro-tendrils-draw-delay",
@@ -2751,54 +2802,53 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
               );
 
 
-              /* -----------------------------------------
-                 SIX NODES
-                 ----------------------------------------- */
-
               animateIntroNode(
-                videoPrepared,
+                preparedFullIntro.videoPrepared,
                 "--chaos-intro-video-delay"
               );
 
 
               animateIntroNode(
-                designPrepared,
+                preparedFullIntro.designPrepared,
                 "--chaos-intro-design-delay"
               );
 
 
               animateIntroNode(
-                audioPrepared,
+                preparedFullIntro.audioPrepared,
                 "--chaos-intro-audio-delay"
               );
 
 
               animateIntroNode(
-                aiPrepared,
+                preparedFullIntro.aiPrepared,
                 "--chaos-intro-ai-delay"
               );
 
 
               animateIntroNode(
-                resumePrepared,
+                preparedFullIntro.resumePrepared,
                 "--chaos-intro-resume-delay"
               );
 
 
               animateIntroNode(
-                contextPrepared,
+                preparedFullIntro.contextPrepared,
                 "--chaos-intro-context-delay"
               );
 
 
-              const totalDuration =
-                getIntroTotalDuration();
-
-
-              introFinishTimer =
+              entranceFinishTimer =
                 window.setTimeout(
-                  finishIntro,
-                  totalDuration + 100
+                  () => {
+
+                    finishFullIntro(
+                      token
+                    );
+                  },
+
+                  getFullIntroDuration() +
+                    100
                 );
             }
           );
@@ -2809,18 +2859,258 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /* =======================================================
-       INITIAL INTERACTION STATE
+       PAGEFLOW ACTIVE-SLIDE DETECTION
+       ======================================================= */
+
+    const slide =
+      root.closest(
+        ".pageflow-slide"
+      );
+
+
+    let slideIsActive =
+      false;
+
+
+    let sequenceToken =
+      0;
+
+
+
+    function isSlideCurrent() {
+
+      if (!slide) {
+        return true;
+      }
+
+
+      const styles =
+        getComputedStyle(
+          slide
+        );
+
+
+      if (
+        styles.visibility ===
+          "hidden" ||
+
+        parseFloat(
+          styles.opacity
+        ) <= 0
+      ) {
+        return false;
+      }
+
+
+      const transform =
+        styles.transform;
+
+
+      if (
+        !transform ||
+        transform ===
+          "none"
+      ) {
+        return true;
+      }
+
+
+      const matrixMatch =
+        transform.match(
+          /^matrix\(([^)]+)\)$/
+        );
+
+
+      if (matrixMatch) {
+
+        const parts =
+          matrixMatch[1]
+            .split(",")
+            .map(Number);
+
+
+        const tx =
+          parts[4] || 0;
+
+
+        const ty =
+          parts[5] || 0;
+
+
+        return (
+          Math.abs(tx) < 2 &&
+          Math.abs(ty) < 2
+        );
+      }
+
+
+      const matrix3dMatch =
+        transform.match(
+          /^matrix3d\(([^)]+)\)$/
+        );
+
+
+      if (matrix3dMatch) {
+
+        const parts =
+          matrix3dMatch[1]
+            .split(",")
+            .map(Number);
+
+
+        const tx =
+          parts[12] || 0;
+
+
+        const ty =
+          parts[13] || 0;
+
+
+        return (
+          Math.abs(tx) < 2 &&
+          Math.abs(ty) < 2
+        );
+      }
+
+
+      return false;
+    }
+
+
+
+    /* =======================================================
+       PAGEFLOW ACTIVATE / DEACTIVATE
+       ======================================================= */
+
+    function activate() {
+
+      if (slideIsActive) {
+        return;
+      }
+
+
+      slideIsActive =
+        true;
+
+
+      sequenceToken++;
+
+
+      const token =
+        sequenceToken;
+
+
+      /*
+       * Re-prime every activation. This guarantees a clean
+       * replay even if the previous visit was interrupted.
+       */
+
+      resetFullIntroToStart();
+
+
+      playFullIntro(
+        token
+      );
+    }
+
+
+
+    function deactivate() {
+
+      if (!slideIsActive) {
+
+        /*
+         * Even if PageFlow initializes this slide as inactive,
+         * keep it primed and hidden for its first arrival.
+         */
+
+        resetFullIntroToStart();
+
+        return;
+      }
+
+
+      slideIsActive =
+        false;
+
+
+      sequenceToken++;
+
+
+      resetFullIntroToStart();
+    }
+
+
+
+    function syncSlideState() {
+
+      if (
+        isSlideCurrent()
+      ) {
+
+        activate();
+
+      } else {
+
+        deactivate();
+      }
+    }
+
+
+
+    /* =======================================================
+       INITIAL INTERACTION / PAGEFLOW STATE
        ======================================================= */
 
     resetNavigation();
 
 
+    /*
+     * Prime immediately while the wrapper is still hidden.
+     */
 
-    /* =======================================================
-       START INTRO
-       ======================================================= */
+    resetFullIntroToStart();
 
-    startIntro();
+
+    if (slide) {
+
+      const slideObserver =
+        new MutationObserver(
+          syncSlideState
+        );
+
+
+      slideObserver.observe(
+        slide,
+        {
+          attributes:
+            true,
+
+          attributeFilter: [
+            "style",
+            "class"
+          ]
+        }
+      );
+
+
+      slide.addEventListener(
+        "transitionend",
+        syncSlideState
+      );
+
+
+      syncSlideState();
+
+    } else {
+
+      /*
+       * Fallback outside PageFlow:
+       * play the full construction immediately.
+       */
+
+      activate();
+    }
   }
 
 
@@ -2847,9 +3137,8 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
 
     /*
-     * Hide the wrapper BEFORE requesting the SVG.
-     *
-     * This is what prevents any completed-interface flash.
+     * Hide BEFORE fetching so the PageFlow slide can never
+     * reveal the completed interface before preparation.
      */
 
     root.classList.add(
@@ -2932,11 +3221,6 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
         );
       }
 
-
-      /*
-       * Remove fixed export dimensions.
-       * Preserve viewBox / square geometry.
-       */
 
       svg.removeAttribute(
         "width"
@@ -3024,15 +3308,14 @@ RWElements.rw7CA6A693_A0FF_453C_BB92_DF169FB802D0 = (function(componentId) {
 
   if (
     document.readyState ===
-    "loading"
+      "loading"
   ) {
 
     document.addEventListener(
       "DOMContentLoaded",
       initAllChaosNavigation,
       {
-        once:
-          true
+        once: true
       }
     );
 
