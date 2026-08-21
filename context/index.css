@@ -1,6 +1,22 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
         font-weight: 100;
         font-style: regular;
@@ -17,32 +33,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
         font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,16 +49,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,46 +86,6 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
         font-weight: 200;
         font-style: oblique;
@@ -134,32 +94,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
         font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -174,8 +110,72 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
         font-weight: 400;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -225,14 +225,17 @@
     .h-auto{height:auto}
     .h-full{height:100%}
     .h-screen{height:100vh}
+    .max-h-\[100svh\]{max-height:100svh}
     .max-h-\[90vh\]{max-height:90vh}
     .min-h-0{min-height:0.0rem}
+    .min-h-\[100svh\]{min-height:100svh}
     .w-14{width:3.5rem}
     .w-2{width:0.5rem}
     .w-2\.5{width:0.625rem}
     .w-20{width:5.0rem}
     .w-60{width:15.0rem}
     .w-\[100\%\]{width:100%}
+    .w-\[100vw\]{width:100vw}
     .w-\[25px\]{width:25px}
     .w-\[40px\]{width:40px}
     .w-\[40vw\]{width:40vw}
@@ -245,6 +248,8 @@
     .w-full{width:100%}
     .w-screen{width:100vw}
     .min-w-0{min-width:0.0rem}
+    .min-w-\[100\%\]{min-width:100%}
+    .max-w-\[100\%\]{max-width:100%}
     .max-w-auto{max-width:auto}
     .origin-center{transform-origin:center}
     .translate-x-\[0px\]{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
@@ -260,6 +265,7 @@
     .animate-spin{animation:spin 1s linear infinite}
     .list-outside{list-style-position:outside}
     .list-none{list-style-type:none}
+    .grid-flow-col{grid-auto-flow:column}
     .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
     .flex-row{flex-direction:row}
     .flex-col{flex-direction:column}
@@ -7559,4 +7565,726 @@
 		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
 		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
 	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* [data-rwx-droparea] {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+} */
+/* ============================================================
+   CHAOS SYSTEM HOMEPAGE NAVIGATION
+   Complete standalone system
+
+   Includes:
+   - Responsive homepage SVG
+   - Construction intro
+   - Center-symbol stroke draw / fill / stroke removal
+   - Tendril-circuit stroke draw / fill / stroke removal
+   - Six-node reveal cascade
+   - Whole-interface lazy settle
+   - Existing route / center / node interaction behavior
+   - Native route glow controls
+   - Reduced-motion handling
+   ============================================================ */
+
+
+/* ============================================================
+   1. MASTER CONTROLS
+   ============================================================ */
+
+.chaos-navigation {
+
+  /* ==========================================================
+     LAYOUT
+     ========================================================== */
+
+  display: grid;
+  place-items: center;
+
+  width: min(88vw, 88svh);
+  max-width: 100%;
+
+  margin-inline: auto;
+
+  line-height: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+
+
+  /* ==========================================================
+     HOMEPAGE INTRO — WHOLE INTERFACE SETTLE
+     ========================================================== */
+
+  /*
+     Entire SVG starts slightly smaller and lower.
+
+     This is deliberately applied to the whole SVG rather
+     than individual internal groups so we do not interfere
+     with any SVG-native transforms.
+  */
+
+  --chaos-intro-start-scale: .84;
+  --chaos-intro-start-y: 23px;
+
+  --chaos-intro-settle-duration: 7200ms;
+
+  --chaos-intro-settle-easing:
+    cubic-bezier(.18, .72, .18, 1);
+
+
+/* ============================================================
+   INTRO — TEMPORARILY DISABLE NORMAL INTERACTION TRANSITIONS
+   ============================================================ */
+
+/*
+   During homepage construction, JavaScript/WAAPI owns
+   the visible node opacity.
+
+   Prevent the ordinary hover-transition system from
+   interpolating the preparation and handoff states.
+*/
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-normal,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-normal-background,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-inverted,
+
+.chaos-navigation.chaos-intro-active
+.chaos-node-inverted-background,
+
+.chaos-navigation.chaos-intro-active
+.chaos-center,
+
+.chaos-navigation.chaos-intro-active
+#chaos-eye,
+
+.chaos-navigation.chaos-intro-active
+#chaos-tendrils {
+
+  transition: none !important;
+}
+
+
+  /* ==========================================================
+     HOMEPAGE INTRO — CENTER SYMBOL
+     ========================================================== */
+
+  /* ---------- CONSTRUCTION STROKE ---------- */
+
+  --chaos-intro-center-stroke-color:
+    rgb(255, 255, 255);
+
+  --chaos-intro-center-stroke-width:
+    3px;
+
+
+  /* ---------- DRAW ---------- */
+
+  --chaos-intro-center-draw-delay:
+    100ms;
+
+  --chaos-intro-center-draw-duration:
+    10000ms;
+
+  --chaos-intro-center-draw-easing:
+    cubic-bezier(.4, 0, .2, 1);
+
+
+  /* ---------- FILL / REAL ARTWORK APPEARANCE ---------- */
+
+  /*
+     Starts after the construction line is clearly visible,
+     but before the draw has completely finished.
+  */
+
+  --chaos-intro-center-fill-delay:
+    1800ms;
+
+  --chaos-intro-center-fill-duration:
+    2300ms;
+
+  --chaos-intro-center-fill-easing:
+    ease;
+
+
+  /* ---------- CONSTRUCTION STROKE REMOVAL ---------- */
+
+  --chaos-intro-center-stroke-out-delay:
+    2500ms;
+
+  --chaos-intro-center-stroke-out-duration:
+    1000ms;
+
+  --chaos-intro-center-stroke-out-easing:
+    ease;
+
+
+
+  /* ==========================================================
+     HOMEPAGE INTRO — TENDRIL / CIRCUIT PORTION OF LOGO
+     ========================================================== */
+
+  --chaos-intro-tendrils-stroke-color:
+    rgb(255, 255, 255);
+
+  --chaos-intro-tendrils-stroke-width:
+    3px;
+
+
+  /* ---------- DRAW ---------- */
+
+  /*
+     Begins before the center has completely resolved.
+  */
+
+  --chaos-intro-tendrils-draw-delay:
+    2700ms;
+
+  --chaos-intro-tendrils-draw-duration:
+    8000ms;
+
+  --chaos-intro-tendrils-draw-easing:
+    cubic-bezier(.4, 0, .2, 1);
+
+
+  /* ---------- FILL / REAL ARTWORK APPEARANCE ---------- */
+
+  --chaos-intro-tendrils-fill-delay:
+    6300ms;
+
+  --chaos-intro-tendrils-fill-duration:
+    2300ms;
+
+  --chaos-intro-tendrils-fill-easing:
+    ease;
+
+
+  /* ---------- CONSTRUCTION STROKE REMOVAL ---------- */
+
+  --chaos-intro-tendrils-stroke-out-delay:
+    8500ms;
+
+  --chaos-intro-tendrils-stroke-out-duration:
+    1000ms;
+
+  --chaos-intro-tendrils-stroke-out-easing:
+    ease;
+
+
+
+  /* ==========================================================
+     HOMEPAGE INTRO — SIX LINK NODES
+     ========================================================== */
+
+  /*
+     The first node waits until the full Chaos System logo
+     has substantially resolved.
+
+     All nodes overlap one another.
+  */
+
+  --chaos-intro-node-duration:
+    1600ms;
+
+  --chaos-intro-node-easing:
+    cubic-bezier(.22, .7, .2, 1);
+
+
+  /* ---------- NODE ORDER ---------- */
+
+  --chaos-intro-video-delay:
+    7500ms;
+
+  --chaos-intro-design-delay:
+    8000ms;
+
+  --chaos-intro-audio-delay:
+    8500ms;
+
+  --chaos-intro-ai-delay:
+    9000ms;
+
+  --chaos-intro-resume-delay:
+    9500ms;
+
+  --chaos-intro-context-delay:
+    10000ms;
+
+
+
+  /* ==========================================================
+     BACKGROUND DIMMING
+     Existing interaction control
+     ========================================================== */
+
+  --chaos-background-opacity:
+    0.16;
+
+
+
+  /* ==========================================================
+     ACTIVE ROUTE GLOW
+     ========================================================== */
+
+  --chaos-glow-color:
+    rgb(16, 216, 2);
+
+  --chaos-glow-near:
+    5px;
+
+  --chaos-glow-mid:
+    15px;
+
+  --chaos-glow-far:
+    34px;
+
+
+
+  /* ==========================================================
+     SOFT DARK EDGE SEPARATION
+     ========================================================== */
+
+  --chaos-edge-color:
+    rgb(0 0 0 / 1);
+
+  --chaos-edge-near:
+    10px;
+
+  --chaos-edge-far:
+    16px;
+
+
+
+  /* ==========================================================
+     EXISTING INTERACTION TIMING
+     ========================================================== */
+
+  --chaos-icon-out-duration:
+    560ms;
+
+  --chaos-icon-in-duration:
+    440ms;
+
+  --chaos-icon-in-delay:
+    30ms;
+
+  --chaos-center-duration:
+    580ms;
+
+  --chaos-route-duration:
+    800ms;
+
+  --chaos-background-duration:
+    620ms;
+
+
+
+  /* ==========================================================
+     EXISTING INTERACTION EASING
+     ========================================================== */
+
+  --chaos-icon-ease:
+    cubic-bezier(.22, .7, .2, 1);
+
+  --chaos-center-ease:
+    cubic-bezier(.2, .72, .2, 1);
+
+  --chaos-route-ease:
+    cubic-bezier(.08, .25, .5, 1);
+
+  --chaos-background-ease:
+    ease-in-out;
+}
+
+
+
+/* ============================================================
+   2. SAFE PRE-INITIALIZATION STATE
+   ============================================================ */
+
+/*
+   The wrapper exists before the fetched SVG does.
+
+   JavaScript adds .chaos-intro-preparing before fetching
+   the file and removes it only after every intro path has
+   been placed in the correct starting state.
+
+   This prevents the "full finished graphic flashes first"
+   problem.
+*/
+
+.chaos-navigation.chaos-intro-preparing {
+  visibility: hidden;
+}
+
+
+
+/* ============================================================
+   3. SVG BASE
+   ============================================================ */
+
+.chaos-navigation svg {
+
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  overflow: visible;
+
+  transform-origin:
+    center center;
+}
+
+
+
+/* ============================================================
+   4. WHOLE-INTERFACE INTRO SETTLE
+   ============================================================ */
+
+.chaos-navigation.chaos-intro-active svg {
+
+  transform:
+    translateY(
+      var(--chaos-intro-start-y)
+    )
+    scale(
+      var(--chaos-intro-start-scale)
+    );
+}
+
+
+.chaos-navigation.chaos-intro-active.chaos-intro-running svg {
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  transition:
+    transform
+    var(--chaos-intro-settle-duration)
+    var(--chaos-intro-settle-easing);
+}
+
+
+
+/* ============================================================
+   5. EXISTING HIDDEN INTERACTION ARTWORK
+   ============================================================ */
+
+.chaos-navigation .chaos-route,
+.chaos-navigation .chaos-center,
+.chaos-navigation .chaos-node-inverted,
+.chaos-navigation .chaos-node-inverted-background {
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+
+/* ============================================================
+   6. NORMAL OUTER NODE ARTWORK
+   ============================================================ */
+
+.chaos-navigation .chaos-node-normal,
+.chaos-navigation .chaos-node-normal-background {
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+
+
+/* ============================================================
+   7. DEFAULT CENTER SYMBOL
+   ============================================================ */
+
+.chaos-navigation #chaos-eye {
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+
+
+/* ============================================================
+   8. TENDRIL / CIRCUIT PORTION OF LOGO
+   ============================================================ */
+
+.chaos-navigation #chaos-tendrils {
+
+  opacity: 1;
+
+  pointer-events: none;
+
+  transition:
+    opacity
+    var(--chaos-background-duration)
+    var(--chaos-background-ease);
+}
+
+
+.chaos-navigation.is-engaged #chaos-tendrils {
+
+  opacity:
+    var(--chaos-background-opacity);
+}
+
+
+
+/* ============================================================
+   9. ACTIVE ROUTE
+   ============================================================ */
+
+.chaos-navigation .chaos-route {
+
+  transition:
+    opacity
+    var(--chaos-route-duration)
+    var(--chaos-route-ease);
+}
+
+
+.chaos-navigation .chaos-route.is-active {
+  opacity: 1;
+}
+
+
+
+/* ============================================================
+   10. CENTER TRANSITION
+   ============================================================ */
+
+.chaos-navigation #chaos-eye,
+.chaos-navigation .chaos-center {
+
+  transition:
+    opacity
+    var(--chaos-center-duration)
+    var(--chaos-center-ease);
+}
+
+
+.chaos-navigation.is-engaged #chaos-eye {
+  opacity: 0;
+}
+
+
+.chaos-navigation .chaos-center.is-active {
+  opacity: 1;
+}
+
+
+
+/* ============================================================
+   11. OUTER ICON INVERSION
+   ============================================================ */
+
+.chaos-navigation .chaos-node-normal,
+.chaos-navigation .chaos-node-normal-background {
+
+  transition:
+    opacity
+    var(--chaos-icon-out-duration)
+    var(--chaos-icon-ease);
+}
+
+
+.chaos-navigation .chaos-node-inverted,
+.chaos-navigation .chaos-node-inverted-background {
+
+  transition:
+    opacity
+    var(--chaos-icon-in-duration)
+    var(--chaos-icon-ease)
+    var(--chaos-icon-in-delay);
+}
+
+
+.chaos-navigation .chaos-node-normal.is-selected,
+.chaos-navigation .chaos-node-normal-background.is-selected {
+
+  opacity: 0;
+}
+
+
+.chaos-navigation .chaos-node-inverted.is-selected,
+.chaos-navigation .chaos-node-inverted-background.is-selected {
+
+  opacity: 1;
+}
+
+
+
+/* ============================================================
+   12. INTERACTION GEOMETRY
+   ============================================================ */
+
+.chaos-navigation .chaos-hit-target {
+
+  fill: transparent;
+
+  stroke: none;
+
+  cursor: pointer;
+
+  pointer-events: all;
+
+  outline: none;
+}
+
+
+.chaos-navigation .chaos-center-hit-target {
+  cursor: pointer;
+}
+
+
+/*
+   Hit targets physically exist during the intro,
+   but cannot be used until the complete sequence finishes.
+*/
+
+.chaos-navigation.chaos-intro-active
+.chaos-hit-target {
+
+  pointer-events:
+    none !important;
+}
+
+
+.chaos-navigation
+.chaos-hit-target:focus-visible {
+
+  stroke:
+    currentColor;
+
+  stroke-width:
+    8;
+
+  stroke-opacity:
+    0.72;
+
+  vector-effect:
+    non-scaling-stroke;
+}
+
+
+
+/* ============================================================
+   13. MOBILE ROUTE GLOW
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  .chaos-navigation {
+
+    --chaos-glow-color:
+      rgb(16, 216, 2);
+
+    --chaos-glow-mid:
+      20px;
+
+    --chaos-glow-far:
+      38px;
+
+
+    --chaos-edge-color:
+      rgb(0 0 0 / 1);
+
+    --chaos-edge-near:
+      16px;
+
+    --chaos-edge-far:
+      23px;
+  }
+}
+
+
+
+/* ============================================================
+   14. REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .chaos-navigation,
+  .chaos-navigation * {
+
+    transition-duration:
+      1ms !important;
+
+    transition-delay:
+      0ms !important;
+  }
 }
