@@ -1,24 +1,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
         font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -33,14 +25,6 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
         font-weight: 500;
         font-style: regular;
@@ -49,8 +33,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,22 +86,6 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-black.otf') format('truetype');
         font-weight: 800;
         font-style: regular;
@@ -110,16 +94,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
+        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -142,6 +118,14 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
         font-style: regular;
@@ -158,14 +142,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
         font-weight: 100;
         font-style: oblique;
@@ -174,8 +150,32 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
+        src: url('resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -219,18 +219,16 @@
   grid-row: 1 / -1;
 } */
 /* ============================================================
-   CHAOS SYSTEM PAGEFLOW NAVIGATION
+   CHAOS SYSTEM HOMEPAGE NAVIGATION
    Complete standalone system
 
    Includes:
-   - Responsive Chaos System SVG
-   - Full construction intro on every PageFlow activation
-   - Center-symbol outline draw / fill / stroke removal
-   - Tendril-circuit outline draw / fill / stroke removal
-   - Six-node reveal cascade
+   - Responsive homepage SVG
+   - FIRST VISIT:
+       full construction intro
+   - RETURNING VISIT:
+       short center / tendril / node fade intro
    - Whole-interface scale / upward settle
-   - Automatic reset when the PageFlow slide deactivates
-   - Replay whenever the PageFlow slide becomes current again
    - Existing route / center / node interaction behavior
    - Native route glow controls
    - Reduced-motion handling
@@ -264,7 +262,7 @@
 
 
   /* ==========================================================
-     PAGEFLOW DRAW — WHOLE INTERFACE SETTLE
+     FIRST VISIT — WHOLE INTERFACE SETTLE
      ========================================================== */
 
   --chaos-intro-start-scale: .84;
@@ -278,7 +276,7 @@
 
 
   /* ==========================================================
-     PAGEFLOW DRAW — CENTER SYMBOL
+     FIRST VISIT — CENTER SYMBOL
      ========================================================== */
 
   /* ---------- CONSTRUCTION STROKE ---------- */
@@ -328,7 +326,7 @@
 
 
   /* ==========================================================
-     PAGEFLOW DRAW — TENDRIL / CIRCUIT PORTION
+     FIRST VISIT — TENDRIL / CIRCUIT PORTION
      ========================================================== */
 
   --chaos-intro-tendrils-stroke-color:
@@ -376,7 +374,7 @@
 
 
   /* ==========================================================
-     PAGEFLOW DRAW — SIX LINK NODES
+     FIRST VISIT — SIX LINK NODES
      ========================================================== */
 
   --chaos-intro-node-duration:
@@ -403,6 +401,88 @@
 
   --chaos-intro-context-delay:
     10000ms;
+
+
+
+  /* ==========================================================
+     RETURNING VISITOR — WHOLE INTERFACE SETTLE
+     ========================================================== */
+
+  /*
+     Completely independent from the full intro.
+     This sequence contains NO stroke drawing.
+     Lower = starts moving immediately. Higher = hangs around near the starting position longer.
+
+① .12 — How quickly the animation gets moving.
+Lower = starts moving immediately. Higher = hangs around near the starting position longer.
+
+② .85 — How strongly it moves during the beginning.
+Higher = covers more of the movement early. Lower = more gradual/gentle beginning.
+
+③ .22 — How early it starts transitioning into the ending/settling behavior.
+Lower = starts shaping the landing earlier. Higher = carries the main movement farther before settling.
+
+④ 1.06 — How it arrives at the final position.
+1.00 = lands directly. Above 1 = overshoots and comes back. 
+The farther above 1, the more noticeable the overshoot.
+  */
+
+  --chaos-return-start-scale:
+    .70;
+
+  --chaos-return-start-y:
+    100px;
+
+  --chaos-return-settle-duration:
+    2500ms;
+
+  --chaos-return-settle-easing:
+    cubic-bezier(.3,.6,.5,1.3);
+
+
+
+  /* ==========================================================
+     RETURNING VISITOR — CENTER FADE
+     ========================================================== */
+
+  --chaos-return-center-delay:
+    400;
+
+  --chaos-return-center-duration:
+    1500ms;
+
+  --chaos-return-center-easing:
+    cubic-bezier(.67,0,.83,.34);
+
+
+
+  /* ==========================================================
+     RETURNING VISITOR — TENDRIL / CIRCUIT FADE
+     ========================================================== */
+
+  --chaos-return-tendrils-delay:
+    1200ms;
+
+  --chaos-return-tendrils-duration:
+    1500ms;
+
+  --chaos-return-tendrils-easing:
+    cubic-bezier(.67,0,.83,.34);
+
+
+
+  /* ==========================================================
+     RETURNING VISITOR — ALL SIX NODES TOGETHER
+     ========================================================== */
+
+  --chaos-return-nodes-delay:
+    2100ms;
+
+  --chaos-return-nodes-duration:
+    600ms;
+
+  --chaos-return-nodes-easing:
+    cubic-bezier(.67,0,.83,.8);
 
 
 
@@ -534,31 +614,52 @@
    ============================================================ */
 
 /*
-   The PageFlow construction sequence temporarily owns opacity.
+   Both entrance modes temporarily own opacity.
 
    Normal hover/focus transitions remain disabled until
    the entrance has completely handed control back.
 */
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-node-normal,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-node-normal-background,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-node-inverted,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-node-inverted-background,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-center,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 #chaos-eye,
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 #chaos-tendrils {
 
   transition:
@@ -568,7 +669,7 @@
 
 
 /* ============================================================
-   5. PAGEFLOW DRAW — WHOLE SVG SETTLE
+   5. FIRST VISIT — WHOLE SVG SETTLE
    ============================================================ */
 
 .chaos-navigation.chaos-intro-active svg {
@@ -593,6 +694,36 @@
     transform
     var(--chaos-intro-settle-duration)
     var(--chaos-intro-settle-easing);
+}
+
+
+
+/* ============================================================
+   6. RETURNING VISITOR — WHOLE SVG SETTLE
+   ============================================================ */
+
+.chaos-navigation.chaos-return-active svg {
+
+  transform:
+    translateY(
+      var(--chaos-return-start-y)
+    )
+    scale(
+      var(--chaos-return-start-scale)
+    );
+}
+
+
+.chaos-navigation.chaos-return-active.chaos-return-running svg {
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  transition:
+    transform
+    var(--chaos-return-settle-duration)
+    var(--chaos-return-settle-easing);
 }
 
 
@@ -773,10 +904,13 @@
 
 
 /*
-   The interface is intentionally noninteractive while the PageFlow construction sequence is running.
+   Neither entrance mode is interactive.
 */
 
-.chaos-navigation.chaos-intro-active
+.chaos-navigation:is(
+  .chaos-intro-active,
+  .chaos-return-active
+)
 .chaos-hit-target {
 
   pointer-events:

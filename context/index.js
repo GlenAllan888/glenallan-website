@@ -3404,6 +3404,65 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
 
   /* =========================================================
+     INTRO STORAGE
+     ========================================================= */
+
+  /*
+   * Change v1 → v2 someday if you significantly redesign
+   * the full intro and want everyone to receive the new
+   * construction sequence once.
+   */
+
+  const INTRO_STORAGE_KEY =
+    "chaos-home-intro-v1";
+
+
+
+  function hasCompletedFullIntro() {
+
+    try {
+
+      return (
+        window.localStorage.getItem(
+          INTRO_STORAGE_KEY
+        ) === "true"
+      );
+
+    } catch (_) {
+
+      /*
+       * Some privacy/security contexts can disable storage.
+       * In that case, simply behave like a first visit.
+       */
+
+      return false;
+    }
+  }
+
+
+
+  function markFullIntroComplete() {
+
+    try {
+
+      window.localStorage.setItem(
+        INTRO_STORAGE_KEY,
+        "true"
+      );
+
+    } catch (_) {
+
+      /*
+       * Storage unavailable:
+       * nothing breaks; the full intro simply plays again
+       * on a future visit.
+       */
+    }
+  }
+
+
+
+  /* =========================================================
      CONFIGURATION
      ========================================================= */
 
@@ -4210,8 +4269,13 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
     function entranceIsActive() {
 
-      return root.classList.contains(
-        "chaos-intro-active"
+      return (
+        root.classList.contains(
+          "chaos-intro-active"
+        ) ||
+        root.classList.contains(
+          "chaos-return-active"
+        )
       );
     }
 
@@ -5670,12 +5734,57 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
 
 
-
     /* =======================================================
-       PAGEFLOW INTRO — RESTORE ORIGINAL SVG STATE
+       FULL INTRO — FINISH
        ======================================================= */
 
-    function restoreRememberedIntroStyles() {
+    function finishFullIntro() {
+
+      clearEntranceTimer();
+
+
+      /*
+       * Establish permanent normal visual state while
+       * interaction transitions are still disabled.
+       */
+
+      if (chaosEye) {
+        chaosEye.style.opacity =
+          "1";
+      }
+
+
+      if (chaosTendrils) {
+        chaosTendrils.style.opacity =
+          "1";
+      }
+
+
+      for (
+        const record
+        of nodeRecords.values()
+      ) {
+
+        if (record.normal) {
+          record.normal.style.opacity =
+            "1";
+        }
+
+
+        if (
+          record.normalBackground
+        ) {
+
+          record.normalBackground.style.opacity =
+            "1";
+        }
+      }
+
+
+      /*
+       * Restore all temporary construction properties.
+       * Opacity stays explicitly final until the handoff.
+       */
 
       introOriginalStyles.forEach(
         (styles, element) => {
@@ -5706,39 +5815,9 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
           element.style.paintOrder =
             styles.paintOrder;
-
-          element.style.opacity =
-            styles.opacity;
         }
       );
 
-
-      introOriginalStyles.clear();
-    }
-
-
-
-    /* =======================================================
-       PAGEFLOW INTRO — HARD RESET
-       ======================================================= */
-
-    let preparedFullIntro =
-      null;
-
-
-    function resetFullIntroToStart() {
-
-      /*
-       * Hide first. This prevents a completed-state flash
-       * while the slide is being reset offscreen.
-       */
-
-      root.classList.add(
-        "chaos-intro-preparing"
-      );
-
-
-      clearEntranceTimer();
 
       cancelEntranceAnimations();
 
@@ -5754,42 +5833,96 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
         );
 
 
-      root.classList.remove(
-        "chaos-intro-running"
-      );
-
-
-      /*
-       * If the previous run was interrupted, put every
-       * element back into its native SVG/CSS state before
-       * preparing the next construction pass.
-       */
-
-      restoreRememberedIntroStyles();
-
-
       svg.style.transform =
-        "";
-
-
-      root.removeAttribute(
-        "aria-busy"
-      );
-
-
-      root.removeAttribute(
-        "data-chaos-entrance-complete"
-      );
-
-
-      resetNavigation();
+        "translateY(0) scale(1)";
 
 
       /*
-       * The intro-active class remains present while primed.
-       * This keeps interaction disabled until the draw has
-       * fully completed.
+       * The visitor only earns the returning-visitor mode
+       * after the COMPLETE full animation has finished.
        */
+
+      markFullIntroComplete();
+
+
+      window.requestAnimationFrame(
+        () => {
+
+          window.requestAnimationFrame(
+            () => {
+
+              root.classList.remove(
+                "chaos-intro-active",
+                "chaos-intro-running"
+              );
+
+
+              if (chaosEye) {
+                chaosEye.style.opacity =
+                  "";
+              }
+
+
+              if (chaosTendrils) {
+                chaosTendrils.style.opacity =
+                  "";
+              }
+
+
+              for (
+                const record
+                of nodeRecords.values()
+              ) {
+
+                if (record.normal) {
+                  record.normal.style.opacity =
+                    "";
+                }
+
+
+                if (
+                  record.normalBackground
+                ) {
+
+                  record.normalBackground.style.opacity =
+                    "";
+                }
+              }
+
+
+              introOriginalStyles.clear();
+
+
+              svg.style.transform =
+                "";
+
+
+              root.removeAttribute(
+                "aria-busy"
+              );
+
+
+              root.dataset.chaosEntranceComplete =
+                "true";
+            }
+          );
+        }
+      );
+    }
+
+
+
+    /* =======================================================
+       FULL INTRO — START
+       ======================================================= */
+
+    function startFullIntro() {
+
+      root.setAttribute(
+        "aria-busy",
+        "true"
+      );
+
 
       root.classList.add(
         "chaos-intro-active"
@@ -5860,42 +5993,325 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
         );
 
 
-      preparedFullIntro = {
-        centerPrepared,
-        tendrilsPrepared,
-        videoPrepared,
-        designPrepared,
-        audioPrepared,
-        aiPrepared,
-        resumePrepared,
-        contextPrepared
-      };
+      root.classList.remove(
+        "chaos-intro-preparing"
+      );
+
+
+      /*
+       * Accessibility preference:
+       * go directly to completed state.
+       *
+       * We also mark the full intro as complete because
+       * deliberately replaying a long motion sequence on
+       * every visit would defeat the user's preference.
+       */
+
+      if (
+        reducedMotionQuery.matches
+      ) {
+
+        markFullIntroComplete();
+
+        finishFullIntro();
+
+        return;
+      }
+
+
+      window.requestAnimationFrame(
+        () => {
+
+          window.requestAnimationFrame(
+            () => {
+
+              root.classList.add(
+                "chaos-intro-running"
+              );
+
+
+              animateIntroPart(
+                centerPrepared,
+                {
+                  drawDelay:
+                    "--chaos-intro-center-draw-delay",
+
+                  drawDuration:
+                    "--chaos-intro-center-draw-duration",
+
+                  drawEasing:
+                    "--chaos-intro-center-draw-easing",
+
+                  fillDelay:
+                    "--chaos-intro-center-fill-delay",
+
+                  fillDuration:
+                    "--chaos-intro-center-fill-duration",
+
+                  fillEasing:
+                    "--chaos-intro-center-fill-easing",
+
+                  strokeOutDelay:
+                    "--chaos-intro-center-stroke-out-delay",
+
+                  strokeOutDuration:
+                    "--chaos-intro-center-stroke-out-duration",
+
+                  strokeOutEasing:
+                    "--chaos-intro-center-stroke-out-easing"
+                }
+              );
+
+
+              animateIntroPart(
+                tendrilsPrepared,
+                {
+                  drawDelay:
+                    "--chaos-intro-tendrils-draw-delay",
+
+                  drawDuration:
+                    "--chaos-intro-tendrils-draw-duration",
+
+                  drawEasing:
+                    "--chaos-intro-tendrils-draw-easing",
+
+                  fillDelay:
+                    "--chaos-intro-tendrils-fill-delay",
+
+                  fillDuration:
+                    "--chaos-intro-tendrils-fill-duration",
+
+                  fillEasing:
+                    "--chaos-intro-tendrils-fill-easing",
+
+                  strokeOutDelay:
+                    "--chaos-intro-tendrils-stroke-out-delay",
+
+                  strokeOutDuration:
+                    "--chaos-intro-tendrils-stroke-out-duration",
+
+                  strokeOutEasing:
+                    "--chaos-intro-tendrils-stroke-out-easing"
+                }
+              );
+
+
+              animateIntroNode(
+                videoPrepared,
+                "--chaos-intro-video-delay"
+              );
+
+
+              animateIntroNode(
+                designPrepared,
+                "--chaos-intro-design-delay"
+              );
+
+
+              animateIntroNode(
+                audioPrepared,
+                "--chaos-intro-audio-delay"
+              );
+
+
+              animateIntroNode(
+                aiPrepared,
+                "--chaos-intro-ai-delay"
+              );
+
+
+              animateIntroNode(
+                resumePrepared,
+                "--chaos-intro-resume-delay"
+              );
+
+
+              animateIntroNode(
+                contextPrepared,
+                "--chaos-intro-context-delay"
+              );
+
+
+              entranceFinishTimer =
+                window.setTimeout(
+                  finishFullIntro,
+                  getFullIntroDuration() +
+                    100
+                );
+            }
+          );
+        }
+      );
     }
 
 
 
     /* =======================================================
-       PAGEFLOW INTRO — FINISH
+       RETURNING VISITOR — PREPARE
        ======================================================= */
 
-    function finishFullIntro(
-      token
-    ) {
+    function prepareReturningIntro() {
 
-      if (
-        token !== sequenceToken ||
-        !slideIsActive
-      ) {
-        return;
+      if (chaosEye) {
+        chaosEye.style.opacity =
+          "0";
       }
 
+
+      if (chaosTendrils) {
+        chaosTendrils.style.opacity =
+          "0";
+      }
+
+
+      for (
+        const record
+        of nodeRecords.values()
+      ) {
+
+        if (record.normal) {
+          record.normal.style.opacity =
+            "0";
+        }
+
+
+        if (
+          record.normalBackground
+        ) {
+
+          record.normalBackground.style.opacity =
+            "0";
+        }
+      }
+    }
+
+
+
+    /* =======================================================
+       RETURNING VISITOR — GROUP FADE
+       ======================================================= */
+
+    function animateReturningGroup(
+      elements,
+      delayProperty,
+      durationProperty,
+      easingProperty
+    ) {
+
+      const delay =
+        readCssTime(
+          delayProperty
+        );
+
+
+      const duration =
+        readCssTime(
+          durationProperty
+        );
+
+
+      const easing =
+        readCssValue(
+          easingProperty,
+          "ease"
+        );
+
+
+      elements
+        .filter(Boolean)
+        .forEach(
+          element => {
+
+            trackEntranceAnimation(
+              element.animate(
+
+                [
+                  {
+                    opacity: 0
+                  },
+
+                  {
+                    opacity: 1
+                  }
+                ],
+
+                {
+                  delay,
+                  duration,
+                  easing,
+
+                  fill:
+                    "forwards"
+                }
+              )
+            );
+          }
+        );
+    }
+
+
+
+    /* =======================================================
+       RETURNING VISITOR — TOTAL DURATION
+       ======================================================= */
+
+    function getReturningIntroDuration() {
+
+      const centerEnd =
+        readCssTime(
+          "--chaos-return-center-delay"
+        ) +
+        readCssTime(
+          "--chaos-return-center-duration"
+        );
+
+
+      const tendrilsEnd =
+        readCssTime(
+          "--chaos-return-tendrils-delay"
+        ) +
+        readCssTime(
+          "--chaos-return-tendrils-duration"
+        );
+
+
+      const nodesEnd =
+        readCssTime(
+          "--chaos-return-nodes-delay"
+        ) +
+        readCssTime(
+          "--chaos-return-nodes-duration"
+        );
+
+
+      const settleEnd =
+        readCssTime(
+          "--chaos-return-settle-duration"
+        );
+
+
+      return Math.max(
+        centerEnd,
+        tendrilsEnd,
+        nodesEnd,
+        settleEnd
+      );
+    }
+
+
+
+    /* =======================================================
+       RETURNING VISITOR — FINISH
+       ======================================================= */
+
+    function finishReturningIntro() {
 
       clearEntranceTimer();
 
 
       /*
-       * Establish the permanent final visual state while
-       * ordinary interaction transitions are still disabled.
+       * Write the permanent final state underneath
+       * the fill-forwards animations first.
        */
 
       if (chaosEye) {
@@ -5931,44 +6347,6 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
       }
 
 
-      /*
-       * Restore the temporary construction properties.
-       * Keep explicit final opacity values during handoff.
-       */
-
-      introOriginalStyles.forEach(
-        (styles, element) => {
-
-          element.style.fillOpacity =
-            styles.fillOpacity;
-
-          element.style.stroke =
-            styles.stroke;
-
-          element.style.strokeWidth =
-            styles.strokeWidth;
-
-          element.style.strokeOpacity =
-            styles.strokeOpacity;
-
-          element.style.strokeDasharray =
-            styles.strokeDasharray;
-
-          element.style.strokeDashoffset =
-            styles.strokeDashoffset;
-
-          element.style.strokeLinecap =
-            styles.strokeLinecap;
-
-          element.style.strokeLinejoin =
-            styles.strokeLinejoin;
-
-          element.style.paintOrder =
-            styles.paintOrder;
-        }
-      );
-
-
       cancelEntranceAnimations();
 
 
@@ -5993,17 +6371,9 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
           window.requestAnimationFrame(
             () => {
 
-              if (
-                token !== sequenceToken ||
-                !slideIsActive
-              ) {
-                return;
-              }
-
-
               root.classList.remove(
-                "chaos-intro-active",
-                "chaos-intro-running"
+                "chaos-return-active",
+                "chaos-return-running"
               );
 
 
@@ -6040,9 +6410,6 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
               }
 
 
-              introOriginalStyles.clear();
-
-
               svg.style.transform =
                 "";
 
@@ -6063,20 +6430,10 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
 
     /* =======================================================
-       PAGEFLOW INTRO — PLAY PRIMED CONSTRUCTION
+       RETURNING VISITOR — START
        ======================================================= */
 
-    function playFullIntro(
-      token
-    ) {
-
-      if (
-        token !== sequenceToken ||
-        !slideIsActive
-      ) {
-        return;
-      }
-
+    function startReturningIntro() {
 
       root.setAttribute(
         "aria-busy",
@@ -6084,10 +6441,13 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
       );
 
 
-      /*
-       * The SVG has already been placed into its exact
-       * construction starting state while hidden.
-       */
+      root.classList.add(
+        "chaos-return-active"
+      );
+
+
+      prepareReturningIntro();
+
 
       root.classList.remove(
         "chaos-intro-preparing"
@@ -6098,9 +6458,7 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
         reducedMotionQuery.matches
       ) {
 
-        finishFullIntro(
-          token
-        );
+        finishReturningIntro();
 
         return;
       }
@@ -6112,131 +6470,85 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
           window.requestAnimationFrame(
             () => {
 
-              if (
-                token !== sequenceToken ||
-                !slideIsActive
+              root.classList.add(
+                "chaos-return-running"
+              );
+
+
+              /* ---------------- CENTER ---------------- */
+
+              animateReturningGroup(
+                [
+                  chaosEye
+                ],
+
+                "--chaos-return-center-delay",
+
+                "--chaos-return-center-duration",
+
+                "--chaos-return-center-easing"
+              );
+
+
+              /* ------------- TENDRILS ---------------- */
+
+              animateReturningGroup(
+                [
+                  chaosTendrils
+                ],
+
+                "--chaos-return-tendrils-delay",
+
+                "--chaos-return-tendrils-duration",
+
+                "--chaos-return-tendrils-easing"
+              );
+
+
+              /* ------------- ALL NODES --------------- */
+
+              const nodeElements =
+                [];
+
+
+              for (
+                const record
+                of nodeRecords.values()
               ) {
-                return;
+
+                if (record.normal) {
+                  nodeElements.push(
+                    record.normal
+                  );
+                }
+
+
+                if (
+                  record.normalBackground
+                ) {
+
+                  nodeElements.push(
+                    record.normalBackground
+                  );
+                }
               }
 
 
-              root.classList.add(
-                "chaos-intro-running"
-              );
+              animateReturningGroup(
+                nodeElements,
 
+                "--chaos-return-nodes-delay",
 
-              animateIntroPart(
-                preparedFullIntro.centerPrepared,
-                {
-                  drawDelay:
-                    "--chaos-intro-center-draw-delay",
+                "--chaos-return-nodes-duration",
 
-                  drawDuration:
-                    "--chaos-intro-center-draw-duration",
-
-                  drawEasing:
-                    "--chaos-intro-center-draw-easing",
-
-                  fillDelay:
-                    "--chaos-intro-center-fill-delay",
-
-                  fillDuration:
-                    "--chaos-intro-center-fill-duration",
-
-                  fillEasing:
-                    "--chaos-intro-center-fill-easing",
-
-                  strokeOutDelay:
-                    "--chaos-intro-center-stroke-out-delay",
-
-                  strokeOutDuration:
-                    "--chaos-intro-center-stroke-out-duration",
-
-                  strokeOutEasing:
-                    "--chaos-intro-center-stroke-out-easing"
-                }
-              );
-
-
-              animateIntroPart(
-                preparedFullIntro.tendrilsPrepared,
-                {
-                  drawDelay:
-                    "--chaos-intro-tendrils-draw-delay",
-
-                  drawDuration:
-                    "--chaos-intro-tendrils-draw-duration",
-
-                  drawEasing:
-                    "--chaos-intro-tendrils-draw-easing",
-
-                  fillDelay:
-                    "--chaos-intro-tendrils-fill-delay",
-
-                  fillDuration:
-                    "--chaos-intro-tendrils-fill-duration",
-
-                  fillEasing:
-                    "--chaos-intro-tendrils-fill-easing",
-
-                  strokeOutDelay:
-                    "--chaos-intro-tendrils-stroke-out-delay",
-
-                  strokeOutDuration:
-                    "--chaos-intro-tendrils-stroke-out-duration",
-
-                  strokeOutEasing:
-                    "--chaos-intro-tendrils-stroke-out-easing"
-                }
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.videoPrepared,
-                "--chaos-intro-video-delay"
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.designPrepared,
-                "--chaos-intro-design-delay"
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.audioPrepared,
-                "--chaos-intro-audio-delay"
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.aiPrepared,
-                "--chaos-intro-ai-delay"
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.resumePrepared,
-                "--chaos-intro-resume-delay"
-              );
-
-
-              animateIntroNode(
-                preparedFullIntro.contextPrepared,
-                "--chaos-intro-context-delay"
+                "--chaos-return-nodes-easing"
               );
 
 
               entranceFinishTimer =
                 window.setTimeout(
-                  () => {
-
-                    finishFullIntro(
-                      token
-                    );
-                  },
-
-                  getFullIntroDuration() +
+                  finishReturningIntro,
+                  getReturningIntroDuration() +
                     100
                 );
             }
@@ -6248,257 +6560,26 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
 
     /* =======================================================
-       PAGEFLOW ACTIVE-SLIDE DETECTION
-       ======================================================= */
-
-    const slide =
-      root.closest(
-        ".pageflow-slide"
-      );
-
-
-    let slideIsActive =
-      false;
-
-
-    let sequenceToken =
-      0;
-
-
-
-    function isSlideCurrent() {
-
-      if (!slide) {
-        return true;
-      }
-
-
-      const styles =
-        getComputedStyle(
-          slide
-        );
-
-
-      if (
-        styles.visibility ===
-          "hidden" ||
-
-        parseFloat(
-          styles.opacity
-        ) <= 0
-      ) {
-        return false;
-      }
-
-
-      const transform =
-        styles.transform;
-
-
-      if (
-        !transform ||
-        transform ===
-          "none"
-      ) {
-        return true;
-      }
-
-
-      const matrixMatch =
-        transform.match(
-          /^matrix\(([^)]+)\)$/
-        );
-
-
-      if (matrixMatch) {
-
-        const parts =
-          matrixMatch[1]
-            .split(",")
-            .map(Number);
-
-
-        const tx =
-          parts[4] || 0;
-
-
-        const ty =
-          parts[5] || 0;
-
-
-        return (
-          Math.abs(tx) < 2 &&
-          Math.abs(ty) < 2
-        );
-      }
-
-
-      const matrix3dMatch =
-        transform.match(
-          /^matrix3d\(([^)]+)\)$/
-        );
-
-
-      if (matrix3dMatch) {
-
-        const parts =
-          matrix3dMatch[1]
-            .split(",")
-            .map(Number);
-
-
-        const tx =
-          parts[12] || 0;
-
-
-        const ty =
-          parts[13] || 0;
-
-
-        return (
-          Math.abs(tx) < 2 &&
-          Math.abs(ty) < 2
-        );
-      }
-
-
-      return false;
-    }
-
-
-
-    /* =======================================================
-       PAGEFLOW ACTIVATE / DEACTIVATE
-       ======================================================= */
-
-    function activate() {
-
-      if (slideIsActive) {
-        return;
-      }
-
-
-      slideIsActive =
-        true;
-
-
-      sequenceToken++;
-
-
-      const token =
-        sequenceToken;
-
-
-      /*
-       * Re-prime every activation. This guarantees a clean
-       * replay even if the previous visit was interrupted.
-       */
-
-      resetFullIntroToStart();
-
-
-      playFullIntro(
-        token
-      );
-    }
-
-
-
-    function deactivate() {
-
-      if (!slideIsActive) {
-
-        /*
-         * Even if PageFlow initializes this slide as inactive,
-         * keep it primed and hidden for its first arrival.
-         */
-
-        resetFullIntroToStart();
-
-        return;
-      }
-
-
-      slideIsActive =
-        false;
-
-
-      sequenceToken++;
-
-
-      resetFullIntroToStart();
-    }
-
-
-
-    function syncSlideState() {
-
-      if (
-        isSlideCurrent()
-      ) {
-
-        activate();
-
-      } else {
-
-        deactivate();
-      }
-    }
-
-
-
-    /* =======================================================
-       INITIAL INTERACTION / PAGEFLOW STATE
+       INITIAL INTERACTION STATE
        ======================================================= */
 
     resetNavigation();
 
 
-    /*
-     * Prime immediately while the wrapper is still hidden.
-     */
 
-    resetFullIntroToStart();
+    /* =======================================================
+       CHOOSE ENTRANCE MODE
+       ======================================================= */
 
+    if (
+      hasCompletedFullIntro()
+    ) {
 
-    if (slide) {
-
-      const slideObserver =
-        new MutationObserver(
-          syncSlideState
-        );
-
-
-      slideObserver.observe(
-        slide,
-        {
-          attributes:
-            true,
-
-          attributeFilter: [
-            "style",
-            "class"
-          ]
-        }
-      );
-
-
-      slide.addEventListener(
-        "transitionend",
-        syncSlideState
-      );
-
-
-      syncSlideState();
+      startReturningIntro();
 
     } else {
 
-      /*
-       * Fallback outside PageFlow:
-       * play the full construction immediately.
-       */
-
-      activate();
+      startFullIntro();
     }
   }
 
@@ -6526,8 +6607,8 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
 
 
     /*
-     * Hide BEFORE fetching so the PageFlow slide can never
-     * reveal the completed interface before preparation.
+     * Hide BEFORE fetching so neither entrance mode can
+     * ever begin with a completed-interface flash.
      */
 
     root.classList.add(
@@ -6646,7 +6727,9 @@ RWElements.rw3320C47C_C893_45E3_B116_657B58A282D9 = (function(componentId) {
       root.classList.remove(
         "chaos-intro-preparing",
         "chaos-intro-active",
-        "chaos-intro-running"
+        "chaos-intro-running",
+        "chaos-return-active",
+        "chaos-return-running"
       );
 
 
