@@ -26,7 +26,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
        ------------------------------------------------------ */
 
     const BLACK_START_HOLD_MS =
-        100;
+        1000;
 
 
 
@@ -37,7 +37,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
        ------------------------------------------------------ */
 
     const SYMBOL_IN_DELAY_MS =
-        600;
+        1000;
 
     const SYMBOL_IN_DURATION_MS =
         2500;
@@ -51,7 +51,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
        ------------------------------------------------------ */
 
     const TEXT_IN_DELAY_MS =
-        1200;
+        1500;
 
     const TEXT_IN_DURATION_MS =
         2500;
@@ -80,7 +80,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
         300;
 
     const SYMBOL_OUT_DURATION_MS =
-        2500;
+        1300;
 
 
 
@@ -91,10 +91,10 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
        ------------------------------------------------------ */
 
     const TEXT_OUT_DELAY_MS =
-        600;
+        900;
 
     const TEXT_OUT_DURATION_MS =
-        2500;
+        1300;
 
 
 
