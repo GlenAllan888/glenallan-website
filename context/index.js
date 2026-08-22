@@ -13,6 +13,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
     /* ======================================================
        CONTEXT PRELOADER
        COMPLETE STARTUP CONTROLLER
+       + INPUT / NAVIGATION LOCK
        ====================================================== */
 
 
@@ -66,7 +67,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
        ------------------------------------------------------ */
 
     const HOLD_MS =
-        2000;
+        1500;
 
 
 
@@ -117,9 +118,6 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
     /* ------------------------------------------------------
        EMERGENCY FAILSAFE ONLY
-
-       Keep this comfortably longer than the complete
-       preloader sequence while tuning.
        ------------------------------------------------------ */
 
     const SAFETY_RELEASE_MS =
@@ -139,11 +137,197 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
     /* ======================================================
-       3. RELEASE WITHOUT PRELOADER
+       3. INPUT / PAGEFLOW NAVIGATION LOCK
+
+       While context-preloading exists, prevent:
+
+       - mouse-wheel navigation
+       - trackpad scrolling
+       - touch scrolling / swiping
+       - PageFlow keyboard navigation
+
+       This does NOT remain active after the preloader
+       releases.
+       ====================================================== */
+
+    const startupGateIsActive =
+        () => {
+
+            return document.documentElement
+                .classList.contains(
+                    "context-preloading"
+                );
+        };
+
+
+
+    const blockNavigationEvent =
+        event => {
+
+            if (
+                !startupGateIsActive()
+            ) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            event.stopImmediatePropagation();
+        };
+
+
+
+    const blockNavigationKey =
+        event => {
+
+            if (
+                !startupGateIsActive()
+            ) {
+                return;
+            }
+
+
+            const blockedKeys = [
+
+                "ArrowUp",
+                "ArrowDown",
+                "ArrowLeft",
+                "ArrowRight",
+
+                "PageUp",
+                "PageDown",
+
+                "Home",
+                "End",
+
+                " "
+            ];
+
+
+            if (
+                !blockedKeys.includes(
+                    event.key
+                )
+            ) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            event.stopImmediatePropagation();
+        };
+
+
+
+    window.addEventListener(
+        "wheel",
+        blockNavigationEvent,
+        {
+            passive: false,
+            capture: true
+        }
+    );
+
+
+    window.addEventListener(
+        "touchstart",
+        blockNavigationEvent,
+        {
+            passive: false,
+            capture: true
+        }
+    );
+
+
+    window.addEventListener(
+        "touchmove",
+        blockNavigationEvent,
+        {
+            passive: false,
+            capture: true
+        }
+    );
+
+
+    window.addEventListener(
+        "touchend",
+        blockNavigationEvent,
+        {
+            passive: false,
+            capture: true
+        }
+    );
+
+
+    window.addEventListener(
+        "keydown",
+        blockNavigationKey,
+        {
+            capture: true
+        }
+    );
+
+
+
+    /* ======================================================
+       4. REMOVE INPUT LOCK
+       ====================================================== */
+
+    const removeInputLock =
+        () => {
+
+            window.removeEventListener(
+                "wheel",
+                blockNavigationEvent,
+                true
+            );
+
+
+            window.removeEventListener(
+                "touchstart",
+                blockNavigationEvent,
+                true
+            );
+
+
+            window.removeEventListener(
+                "touchmove",
+                blockNavigationEvent,
+                true
+            );
+
+
+            window.removeEventListener(
+                "touchend",
+                blockNavigationEvent,
+                true
+            );
+
+
+            window.removeEventListener(
+                "keydown",
+                blockNavigationKey,
+                true
+            );
+        };
+
+
+
+    /* ======================================================
+       5. RELEASE WITHOUT PRELOADER
        ====================================================== */
 
     const emergencyGateRelease =
         () => {
+
+            removeInputLock();
+
 
             document.documentElement
                 .classList.remove(
@@ -161,7 +345,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
     /* ======================================================
-       4. INITIALIZE
+       6. INITIALIZE
        ====================================================== */
 
     const initContextPreloader =
@@ -205,7 +389,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
             /* =================================================
-               5. SEND FADE DURATIONS TO CSS
+               7. SEND FADE DURATIONS TO CSS
 
                DASH CONTROLS REMAIN COMPLETELY CSS-OWNED.
                ================================================= */
@@ -242,7 +426,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
             /* =================================================
-               6. STATE
+               8. STATE
                ================================================= */
 
             let finished =
@@ -251,7 +435,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
             /* =================================================
-               7. FINAL RELEASE
+               9. FINAL RELEASE
 
                By the time this runs:
 
@@ -263,6 +447,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
                - remove preloader
                - commit that state
+               - remove input lock
                - remove startup gate
                - fire starting event
                ================================================= */
@@ -279,6 +464,40 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
                         true;
 
 
+
+                    /*
+                     * PAGEFLOW ACTIVE-SLIDE DISPLAY REPAIR
+                     *
+                     * PageFlow can mark the first slide as
+                     * pf-slide-active while leaving it at
+                     * display:none during the preloader handoff.
+                     *
+                     * Restore that active slide to its normal
+                     * grid display BEFORE removing the startup
+                     * gate, so the Context Map can begin visibly
+                     * from frame zero when released.
+                     */
+
+                    const activeSlide =
+                        document.querySelector(
+                            ".pageflow-slide.pf-slide-active"
+                        );
+
+
+                    if (
+                        activeSlide &&
+                        getComputedStyle(
+                            activeSlide
+                        ).display ===
+                            "none"
+                    ) {
+
+                        activeSlide.style.display =
+                            "grid";
+                    }
+
+
+
                     if (
                         preloader.isConnected
                     ) {
@@ -292,8 +511,12 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
                             /*
                              * Force the browser to commit
-                             * the loader removal while the
-                             * page is STILL gated.
+                             * BOTH:
+                             *
+                             * - active-slide display repair
+                             * - loader removal
+                             *
+                             * while the page is STILL gated.
                              */
 
                             void document.body.offsetHeight;
@@ -301,6 +524,15 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
                             requestAnimationFrame(
                                 () => {
+
+                                    /*
+                                     * Restore normal page
+                                     * input immediately before
+                                     * PageFlow is released.
+                                     */
+
+                                    removeInputLock();
+
 
                                     document.documentElement
                                         .classList.remove(
@@ -322,7 +554,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
             /* =================================================
-               8. PHASE 1 — INITIAL BLACK HOLD
+               10. PHASE 1 — INITIAL BLACK HOLD
                ================================================= */
 
             setTimeout(
@@ -447,8 +679,9 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
                                                PHASE 5
                                                BACKGROUND OUT
 
-                                               Everything else
-                                               remains gated.
+                                               PageFlow remains
+                                               gated and input
+                                               remains locked.
                                                ================= */
 
                                             setTimeout(
@@ -507,7 +740,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
             /* =================================================
-               9. EMERGENCY FAILSAFE
+               11. EMERGENCY FAILSAFE
                ================================================= */
 
             setTimeout(
@@ -534,7 +767,7 @@ RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
 
 
     /* ======================================================
-       10. WAIT FOR ELEMENTS DOM
+       12. WAIT FOR ELEMENTS DOM
        ====================================================== */
 
     if (
@@ -2381,10 +2614,18 @@ document.addEventListener(
                     }
 
 
-                    const green =
+                    const textStrokeColor =
                         readCSS(
                             root,
-                            "--cm-green",
+                            "--cm-text-stroke-color",
+                            "#18ff1c"
+                        );
+
+
+                    const textFillColor =
+                        readCSS(
+                            root,
+                            "--cm-text-fill-color",
                             "#18ff1c"
                         );
 
@@ -2427,7 +2668,7 @@ document.addEventListener(
 
 
                         element.style.stroke =
-                            green;
+                            textStrokeColor;
 
 
                         trackAnimation(
@@ -2482,7 +2723,7 @@ document.addEventListener(
 
                                         {
                                             fill:
-                                                green
+                                                textFillColor
                                         }
                                     ],
 
@@ -2522,7 +2763,7 @@ document.addEventListener(
                                     [
                                         {
                                             stroke:
-                                                green
+                                                textStrokeColor
                                         },
 
                                         {

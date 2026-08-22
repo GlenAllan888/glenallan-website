@@ -74,6 +74,163 @@ RWElements.rw3D67B462_70CF_4853_A96A_6BEBA046E08B = (function(componentId) {
 
 
   /* =========================================================
+     RETURNING-VISITOR REPLAY EASTER EGG
+     ========================================================= */
+
+  function getIntroResetControls() {
+
+    return Array.from(
+      document.querySelectorAll(
+        ".chaos-intro-reset"
+      )
+    );
+  }
+
+
+
+  function hideIntroResetControls() {
+
+    getIntroResetControls()
+      .forEach(
+        control => {
+
+          control.classList.remove(
+            "is-available"
+          );
+        }
+      );
+  }
+
+
+
+  function showIntroResetControls() {
+
+    getIntroResetControls()
+      .forEach(
+        control => {
+
+          control.classList.add(
+            "is-available"
+          );
+        }
+      );
+  }
+
+
+
+  function resetFullIntroForReplay() {
+
+    try {
+
+      window.localStorage.removeItem(
+        INTRO_STORAGE_KEY
+      );
+
+    } catch (_) {
+
+      /*
+       * If storage is unavailable there is nothing to clear.
+       * Reloading remains safe.
+       */
+    }
+
+
+    window.location.reload();
+  }
+
+
+
+  function installIntroResetControls() {
+
+    getIntroResetControls()
+      .forEach(
+        control => {
+
+          control.classList.remove(
+            "is-available"
+          );
+
+
+          if (
+            control.dataset.chaosResetReady ===
+              "true"
+          ) {
+            return;
+          }
+
+
+          control.dataset.chaosResetReady =
+            "true";
+
+
+          if (
+            control.tagName !==
+              "BUTTON"
+          ) {
+
+            control.setAttribute(
+              "role",
+              "button"
+            );
+
+
+            if (
+              !control.hasAttribute(
+                "tabindex"
+              )
+            ) {
+
+              control.setAttribute(
+                "tabindex",
+                "0"
+              );
+            }
+          }
+
+
+          control.setAttribute(
+            "aria-label",
+            "Replay full Chaos System intro"
+          );
+
+
+          control.addEventListener(
+            "click",
+            event => {
+
+              event.preventDefault();
+
+              resetFullIntroForReplay();
+            }
+          );
+
+
+          control.addEventListener(
+            "keydown",
+            event => {
+
+              if (
+                event.key !==
+                  "Enter" &&
+                event.key !==
+                  " "
+              ) {
+                return;
+              }
+
+
+              event.preventDefault();
+
+              resetFullIntroForReplay();
+            }
+          );
+        }
+      );
+  }
+
+
+
+  /* =========================================================
      CONFIGURATION
      ========================================================= */
 
@@ -3032,6 +3189,16 @@ RWElements.rw3D67B462_70CF_4853_A96A_6BEBA046E08B = (function(componentId) {
 
               root.dataset.chaosEntranceComplete =
                 "true";
+
+
+              /*
+               * Reveal the replay Easter egg only after
+               * the RETURNING-VISITOR entrance is complete.
+               * The first-visit full intro never reveals it
+               * during that same visit.
+               */
+
+              showIntroResetControls();
             }
           );
         }
@@ -3373,6 +3540,17 @@ RWElements.rw3D67B462_70CF_4853_A96A_6BEBA046E08B = (function(componentId) {
      ========================================================= */
 
   function initAllChaosNavigation() {
+
+    /*
+     * Install and hide replay controls before choosing
+     * the entrance mode. The returning path will reveal
+     * them only after its short entrance completes.
+     */
+
+    installIntroResetControls();
+
+    hideIntroResetControls();
+
 
     document
       .querySelectorAll(
