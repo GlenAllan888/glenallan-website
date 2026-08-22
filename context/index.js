@@ -2,6 +2,562 @@
 
 var RWElements={};
 
+RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = {};
+RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777 = (function(componentId) {
+    
+(() => {
+
+    "use strict";
+
+
+    /* ======================================================
+       CONTEXT PRELOADER
+       COMPLETE STARTUP CONTROLLER
+       ====================================================== */
+
+
+    /* ======================================================
+       1. MASTER TIMING CONTROLS
+       ====================================================== */
+
+
+    /* ------------------------------------------------------
+       INITIAL BLACK HOLD
+       ------------------------------------------------------ */
+
+    const BLACK_START_HOLD_MS =
+        100;
+
+
+
+    /* ------------------------------------------------------
+       SYMBOL FADE IN
+
+       Delay begins AFTER initial black hold.
+       ------------------------------------------------------ */
+
+    const SYMBOL_IN_DELAY_MS =
+        600;
+
+    const SYMBOL_IN_DURATION_MS =
+        2500;
+
+
+
+    /* ------------------------------------------------------
+       TEXT FADE IN
+
+       Delay begins AFTER initial black hold.
+       ------------------------------------------------------ */
+
+    const TEXT_IN_DELAY_MS =
+        1200;
+
+    const TEXT_IN_DURATION_MS =
+        2500;
+
+
+
+    /* ------------------------------------------------------
+       FULLY VISIBLE HOLD
+
+       Begins only after BOTH symbol and text
+       have completely finished fading in.
+       ------------------------------------------------------ */
+
+    const HOLD_MS =
+        2000;
+
+
+
+    /* ------------------------------------------------------
+       SYMBOL FADE OUT
+
+       Delay begins at start of content exit phase.
+       ------------------------------------------------------ */
+
+    const SYMBOL_OUT_DELAY_MS =
+        300;
+
+    const SYMBOL_OUT_DURATION_MS =
+        2500;
+
+
+
+    /* ------------------------------------------------------
+       TEXT FADE OUT
+
+       Delay begins at start of content exit phase.
+       ------------------------------------------------------ */
+
+    const TEXT_OUT_DELAY_MS =
+        600;
+
+    const TEXT_OUT_DURATION_MS =
+        2500;
+
+
+
+    /* ------------------------------------------------------
+       BACKGROUND FADE OUT
+
+       Begins only AFTER symbol and text are both gone.
+
+       PageFlow and Context Map remain gated during
+       the entire background fade.
+       ------------------------------------------------------ */
+
+    const BACKGROUND_OUT_DELAY_MS =
+        300;
+
+    const BACKGROUND_OUT_DURATION_MS =
+        100;
+
+
+
+    /* ------------------------------------------------------
+       EMERGENCY FAILSAFE ONLY
+
+       Keep this comfortably longer than the complete
+       preloader sequence while tuning.
+       ------------------------------------------------------ */
+
+    const SAFETY_RELEASE_MS =
+        30000;
+
+
+
+    /* ======================================================
+       2. APPLY MASTER STARTUP GATE IMMEDIATELY
+       ====================================================== */
+
+    document.documentElement
+        .classList.add(
+            "context-preloading"
+        );
+
+
+
+    /* ======================================================
+       3. RELEASE WITHOUT PRELOADER
+       ====================================================== */
+
+    const emergencyGateRelease =
+        () => {
+
+            document.documentElement
+                .classList.remove(
+                    "context-preloading"
+                );
+
+
+            window.dispatchEvent(
+                new CustomEvent(
+                    "context-preloader-released"
+                )
+            );
+        };
+
+
+
+    /* ======================================================
+       4. INITIALIZE
+       ====================================================== */
+
+    const initContextPreloader =
+        () => {
+
+            const preloader =
+                document.querySelector(
+                    ".context-preloader"
+                );
+
+
+            const symbol =
+                document.querySelector(
+                    ".context-preloader-symbol"
+                );
+
+
+            const text =
+                document.querySelector(
+                    ".context-preloader-text"
+                );
+
+
+            if (
+                !preloader ||
+                !symbol ||
+                !text
+            ) {
+
+                console.warn(
+                    "Context preloader elements not found."
+                );
+
+
+                emergencyGateRelease();
+
+
+                return;
+            }
+
+
+
+            /* =================================================
+               5. SEND FADE DURATIONS TO CSS
+
+               DASH CONTROLS REMAIN COMPLETELY CSS-OWNED.
+               ================================================= */
+
+            preloader.style.setProperty(
+                "--preloader-symbol-in-duration",
+                `${SYMBOL_IN_DURATION_MS}ms`
+            );
+
+
+            preloader.style.setProperty(
+                "--preloader-text-in-duration",
+                `${TEXT_IN_DURATION_MS}ms`
+            );
+
+
+            preloader.style.setProperty(
+                "--preloader-symbol-out-duration",
+                `${SYMBOL_OUT_DURATION_MS}ms`
+            );
+
+
+            preloader.style.setProperty(
+                "--preloader-text-out-duration",
+                `${TEXT_OUT_DURATION_MS}ms`
+            );
+
+
+            preloader.style.setProperty(
+                "--preloader-background-out-duration",
+                `${BACKGROUND_OUT_DURATION_MS}ms`
+            );
+
+
+
+            /* =================================================
+               6. STATE
+               ================================================= */
+
+            let finished =
+                false;
+
+
+
+            /* =================================================
+               7. FINAL RELEASE
+
+               By the time this runs:
+
+               - symbol is gone
+               - text is gone
+               - black background is fully transparent
+
+               Then:
+
+               - remove preloader
+               - commit that state
+               - remove startup gate
+               - fire starting event
+               ================================================= */
+
+            const releaseStartupGate =
+                () => {
+
+                    if (finished) {
+                        return;
+                    }
+
+
+                    finished =
+                        true;
+
+
+                    if (
+                        preloader.isConnected
+                    ) {
+
+                        preloader.remove();
+                    }
+
+
+                    requestAnimationFrame(
+                        () => {
+
+                            /*
+                             * Force the browser to commit
+                             * the loader removal while the
+                             * page is STILL gated.
+                             */
+
+                            void document.body.offsetHeight;
+
+
+                            requestAnimationFrame(
+                                () => {
+
+                                    document.documentElement
+                                        .classList.remove(
+                                            "context-preloading"
+                                        );
+
+
+                                    window.dispatchEvent(
+                                        new CustomEvent(
+                                            "context-preloader-released"
+                                        )
+                                    );
+                                }
+                            );
+                        }
+                    );
+                };
+
+
+
+            /* =================================================
+               8. PHASE 1 — INITIAL BLACK HOLD
+               ================================================= */
+
+            setTimeout(
+                () => {
+
+
+                    /* =========================================
+                       PHASE 2 — SYMBOL + TEXT FADE IN
+                       ========================================= */
+
+                    setTimeout(
+                        () => {
+
+                            symbol.classList.add(
+                                "is-visible"
+                            );
+
+                        },
+
+                        SYMBOL_IN_DELAY_MS
+                    );
+
+
+                    setTimeout(
+                        () => {
+
+                            text.classList.add(
+                                "is-visible"
+                            );
+
+                        },
+
+                        TEXT_IN_DELAY_MS
+                    );
+
+
+
+                    /*
+                     * Wait until BOTH entrance fades
+                     * have completely finished.
+                     */
+
+                    const entranceCompleteAt =
+                        Math.max(
+
+                            SYMBOL_IN_DELAY_MS +
+                            SYMBOL_IN_DURATION_MS,
+
+                            TEXT_IN_DELAY_MS +
+                            TEXT_IN_DURATION_MS
+                        );
+
+
+
+                    setTimeout(
+                        () => {
+
+
+                            /* =================================
+                               PHASE 3 — FULLY VISIBLE HOLD
+                               ================================= */
+
+                            setTimeout(
+                                () => {
+
+
+                                    /* =========================
+                                       PHASE 4
+                                       SYMBOL + TEXT FADE OUT
+                                       ========================= */
+
+                                    setTimeout(
+                                        () => {
+
+                                            symbol.classList.add(
+                                                "is-leaving"
+                                            );
+
+                                        },
+
+                                        SYMBOL_OUT_DELAY_MS
+                                    );
+
+
+                                    setTimeout(
+                                        () => {
+
+                                            text.classList.add(
+                                                "is-leaving"
+                                            );
+
+                                        },
+
+                                        TEXT_OUT_DELAY_MS
+                                    );
+
+
+
+                                    /*
+                                     * Wait until BOTH content
+                                     * elements are completely
+                                     * gone.
+                                     */
+
+                                    const contentOutCompleteAt =
+                                        Math.max(
+
+                                            SYMBOL_OUT_DELAY_MS +
+                                            SYMBOL_OUT_DURATION_MS,
+
+                                            TEXT_OUT_DELAY_MS +
+                                            TEXT_OUT_DURATION_MS
+                                        );
+
+
+
+                                    setTimeout(
+                                        () => {
+
+
+                                            /* =================
+                                               PHASE 5
+                                               BACKGROUND OUT
+
+                                               Everything else
+                                               remains gated.
+                                               ================= */
+
+                                            setTimeout(
+                                                () => {
+
+                                                    preloader
+                                                        .classList.add(
+                                                            "is-leaving"
+                                                        );
+
+
+
+                                                    /*
+                                                     * Wait until
+                                                     * the black
+                                                     * curtain is
+                                                     * completely
+                                                     * gone.
+                                                     */
+
+                                                    setTimeout(
+                                                        () => {
+
+                                                            releaseStartupGate();
+
+                                                        },
+
+                                                        BACKGROUND_OUT_DURATION_MS
+                                                    );
+
+                                                },
+
+                                                BACKGROUND_OUT_DELAY_MS
+                                            );
+
+                                        },
+
+                                        contentOutCompleteAt
+                                    );
+
+                                },
+
+                                HOLD_MS
+                            );
+
+                        },
+
+                        entranceCompleteAt
+                    );
+
+                },
+
+                BLACK_START_HOLD_MS
+            );
+
+
+
+            /* =================================================
+               9. EMERGENCY FAILSAFE
+               ================================================= */
+
+            setTimeout(
+                () => {
+
+                    if (finished) {
+                        return;
+                    }
+
+
+                    console.warn(
+                        "Context preloader safety release."
+                    );
+
+
+                    releaseStartupGate();
+
+                },
+
+                SAFETY_RELEASE_MS
+            );
+        };
+
+
+
+    /* ======================================================
+       10. WAIT FOR ELEMENTS DOM
+       ====================================================== */
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initContextPreloader,
+            {
+                once: true
+            }
+        );
+
+    } else {
+
+        initContextPreloader();
+    }
+
+})();
+
+return componentId;})(RWElements.rw844AAECA_BA9B_4FBF_9A20_6955C319B777);
 RWElements.rw6E45E7B5_073B_4B14_852B_77991D0DA416 = {};
 RWElements.rw6E45E7B5_073B_4B14_852B_77991D0DA416 = (function(componentId) {
     
@@ -587,606 +1143,1124 @@ return componentId;})(RWElements.rw62E419DA_8201_4C74_B625_90E6FDD01BF5);
 RWElements.rw68470102_25D3_4E0E_AA37_39C045377C31 = {};
 RWElements.rw68470102_25D3_4E0E_AA37_39C045377C31 = (function(componentId) {
     
-document.addEventListener('DOMContentLoaded', () => {
-
-    /* =====================================================
-       MAIN CONTEXT MAP
-       ===================================================== */
-
-    const roots =
-        document.querySelectorAll(
-            '.context-map-animation'
-        );
-
-    if (!roots.length) return;
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
 
+        /* =====================================================
+           MAIN CONTEXT MAP
+           ===================================================== */
 
-    /* =====================================================
-       CONSTRUCTION PAINT ORDER
-
-       IMPORTANT:
-       Chaos Field overlays do NOT live here.
-
-       They are triggered by the purple fill of their
-       corresponding base geometry so they do not alter
-       the construction cadence.
-       ===================================================== */
-
-    const paintOrder = [
-
-        'text_0',
-        'inner-circle',
-
-        'ring_1',
-        'dotted-ring_1',
-
-        'dotted-ring_2',
-        'ring-band',
-        'dotted-ring_3',
-
-        'spoke_1',
-        'outer-ring_1',
-        'outer-dotted-ring_1',
-        'outer-circle_1',
-        'text_1',
-
-        'spoke_2',
-        'outer-ring_2',
-        'outer-dotted-ring_2',
-        'outer-circle_2',
-        'text_2',
-
-        'spoke_3',
-        'outer-ring_3',
-        'outer-dotted-ring_3',
-        'outer-circle_3',
-        'text_3',
-
-        'spoke_4',
-        'outer-ring_4',
-        'outer-dotted-ring_4',
-        'outer-circle_4',
-        'text_4',
-
-        'spoke_5',
-        'outer-ring_5',
-        'outer-dotted-ring_5',
-        'outer-circle_5',
-        'text_5',
-
-        'spoke_6',
-        'outer-ring_6',
-        'outer-dotted-ring_6',
-        'outer-circle_6',
-        'text_6',
-
-        'spoke_7',
-        'outer-ring_7',
-        'outer-dotted-ring_7',
-        'outer-circle_7',
-        'text_7',
-
-        'spoke_8',
-        'outer-ring_8',
-        'outer-dotted-ring_8',
-        'outer-circle_8',
-        'text_8',
-
-        'spoke_9',
-        'outer-ring_9',
-        'outer-dotted-ring_9',
-        'outer-circle_9',
-        'text_9',
-
-        'spoke_10',
-        'outer-ring_10',
-        'outer-dotted-ring_10',
-        'outer-circle_10',
-        'text_10'
-    ];
-
-
-
-    /* =====================================================
-       OVERLAY PAIRS
-       ===================================================== */
-
-    const overlayMap = {
-
-        'inner-circle':
-            'inner-circle-overlay',
-
-        'ring-band':
-            'ring-band-overlay',
-
-        'outer-circle_1':
-            'outer-circle-overlay_1',
-
-        'outer-circle_2':
-            'outer-circle-overlay_2',
-
-        'outer-circle_3':
-            'outer-circle-overlay_3',
-
-        'outer-circle_4':
-            'outer-circle-overlay_4',
-
-        'outer-circle_5':
-            'outer-circle-overlay_5',
-
-        'outer-circle_6':
-            'outer-circle-overlay_6',
-
-        'outer-circle_7':
-            'outer-circle-overlay_7',
-
-        'outer-circle_8':
-            'outer-circle-overlay_8',
-
-        'outer-circle_9':
-            'outer-circle-overlay_9',
-
-        'outer-circle_10':
-            'outer-circle-overlay_10'
-    };
-
-
-    const overlayClasses =
-        Object.values(
-            overlayMap
-        );
-
-
-
-    /* =====================================================
-       UTILITIES
-       ===================================================== */
-
-    const readCSS = (
-        element,
-        property,
-        fallback = ''
-    ) => {
-
-        const value =
-            getComputedStyle(element)
-                .getPropertyValue(property)
-                .trim();
-
-        return value || fallback;
-    };
-
-
-    const readTime = (
-        element,
-        property
-    ) => {
-
-        const value =
-            readCSS(
-                element,
-                property,
-                '0ms'
+        const roots =
+            document.querySelectorAll(
+                ".context-map-animation"
             );
 
-        if (value.endsWith('ms')) {
-            return parseFloat(value) || 0;
+
+        if (!roots.length) {
+            return;
         }
 
-        if (value.endsWith('s')) {
-            return (
-                (parseFloat(value) || 0) *
-                1000
+
+
+        /* =====================================================
+           CONSTRUCTION PAINT ORDER
+           ===================================================== */
+
+        const paintOrder = [
+
+            "text_0",
+            "inner-circle",
+
+            "ring_1",
+            "dotted-ring_1",
+
+            "dotted-ring_2",
+            "ring-band",
+            "dotted-ring_3",
+
+            "spoke_1",
+            "outer-ring_1",
+            "outer-dotted-ring_1",
+            "outer-circle_1",
+            "text_1",
+
+            "spoke_2",
+            "outer-ring_2",
+            "outer-dotted-ring_2",
+            "outer-circle_2",
+            "text_2",
+
+            "spoke_3",
+            "outer-ring_3",
+            "outer-dotted-ring_3",
+            "outer-circle_3",
+            "text_3",
+
+            "spoke_4",
+            "outer-ring_4",
+            "outer-dotted-ring_4",
+            "outer-circle_4",
+            "text_4",
+
+            "spoke_5",
+            "outer-ring_5",
+            "outer-dotted-ring_5",
+            "outer-circle_5",
+            "text_5",
+
+            "spoke_6",
+            "outer-ring_6",
+            "outer-dotted-ring_6",
+            "outer-circle_6",
+            "text_6",
+
+            "spoke_7",
+            "outer-ring_7",
+            "outer-dotted-ring_7",
+            "outer-circle_7",
+            "text_7",
+
+            "spoke_8",
+            "outer-ring_8",
+            "outer-dotted-ring_8",
+            "outer-circle_8",
+            "text_8",
+
+            "spoke_9",
+            "outer-ring_9",
+            "outer-dotted-ring_9",
+            "outer-circle_9",
+            "text_9",
+
+            "spoke_10",
+            "outer-ring_10",
+            "outer-dotted-ring_10",
+            "outer-circle_10",
+            "text_10"
+        ];
+
+
+
+        /* =====================================================
+           OVERLAY PAIRS
+           ===================================================== */
+
+        const overlayMap = {
+
+            "inner-circle":
+                "inner-circle-overlay",
+
+            "ring-band":
+                "ring-band-overlay",
+
+            "outer-circle_1":
+                "outer-circle-overlay_1",
+
+            "outer-circle_2":
+                "outer-circle-overlay_2",
+
+            "outer-circle_3":
+                "outer-circle-overlay_3",
+
+            "outer-circle_4":
+                "outer-circle-overlay_4",
+
+            "outer-circle_5":
+                "outer-circle-overlay_5",
+
+            "outer-circle_6":
+                "outer-circle-overlay_6",
+
+            "outer-circle_7":
+                "outer-circle-overlay_7",
+
+            "outer-circle_8":
+                "outer-circle-overlay_8",
+
+            "outer-circle_9":
+                "outer-circle-overlay_9",
+
+            "outer-circle_10":
+                "outer-circle-overlay_10"
+        };
+
+
+        const overlayClasses =
+            Object.values(
+                overlayMap
             );
-        }
-
-        return parseFloat(value) || 0;
-    };
 
 
-    const readNumber = (
-        element,
-        property,
-        fallback = 0
-    ) => {
 
-        const value =
-            parseFloat(
+        /* =====================================================
+           UTILITIES
+           ===================================================== */
+
+        const readCSS = (
+            element,
+            property,
+            fallback = ""
+        ) => {
+
+            const value =
+                getComputedStyle(
+                    element
+                )
+                    .getPropertyValue(
+                        property
+                    )
+                    .trim();
+
+
+            return value || fallback;
+        };
+
+
+        const readTime = (
+            element,
+            property
+        ) => {
+
+            const value =
                 readCSS(
                     element,
                     property,
-                    `${fallback}`
+                    "0ms"
+                );
+
+
+            if (
+                value.endsWith(
+                    "ms"
                 )
+            ) {
+
+                return (
+                    parseFloat(
+                        value
+                    ) || 0
+                );
+            }
+
+
+            if (
+                value.endsWith(
+                    "s"
+                )
+            ) {
+
+                return (
+                    (
+                        parseFloat(
+                            value
+                        ) || 0
+                    ) * 1000
+                );
+            }
+
+
+            return (
+                parseFloat(
+                    value
+                ) || 0
             );
-
-        return Number.isFinite(value)
-            ? value
-            : fallback;
-    };
+        };
 
 
-    const wait = ms =>
-        new Promise(resolve =>
-            setTimeout(
-                resolve,
-                ms
+        const readNumber = (
+            element,
+            property,
+            fallback = 0
+        ) => {
+
+            const value =
+                parseFloat(
+                    readCSS(
+                        element,
+                        property,
+                        `${fallback}`
+                    )
+                );
+
+
+            return Number.isFinite(
+                value
             )
-        );
-
-
-    const isSpoke =
-        element => {
-
-            if (!element) return false;
-
-            return Array.from(
-                element.classList
-            ).some(className =>
-                /^spoke_\d+$/.test(
-                    className
-                )
-            );
+                ? value
+                : fallback;
         };
 
 
+        const wait =
+            ms =>
+                new Promise(
+                    resolve =>
+                        setTimeout(
+                            resolve,
+                            ms
+                        )
+                );
 
-    /* =====================================================
-       DETERMINE LAYER TYPE
-       ===================================================== */
 
-    const getType =
-        className => {
+        const isSpoke =
+            element => {
+
+                if (!element) {
+                    return false;
+                }
+
+
+                return Array.from(
+                    element.classList
+                ).some(
+                    className =>
+                        /^spoke_\d+$/.test(
+                            className
+                        )
+                );
+            };
+
+
+
+        /* =====================================================
+           DETERMINE LAYER TYPE
+           ===================================================== */
+
+        const getType =
+            className => {
+
+                if (
+                    /^text_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "text";
+                }
+
+
+                if (
+                    className ===
+                    "inner-circle"
+                ) {
+                    return "inner-circle";
+                }
+
+
+                if (
+                    className ===
+                    "ring-band"
+                ) {
+                    return "ring-band";
+                }
+
+
+                if (
+                    /^ring_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "ring";
+                }
+
+
+                if (
+                    /^dotted-ring_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "dotted-ring";
+                }
+
+
+                if (
+                    /^spoke_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "spoke";
+                }
+
+
+                if (
+                    /^outer-ring_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "outer-ring";
+                }
+
+
+                if (
+                    /^outer-dotted-ring_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "outer-dotted-ring";
+                }
+
+
+                if (
+                    /^outer-circle_\d+$/.test(
+                        className
+                    )
+                ) {
+                    return "outer-circle";
+                }
+
+
+                return "unknown";
+            };
+
+
+
+        /* =====================================================
+           GET TIMING
+           ===================================================== */
+
+        const getTiming = (
+            root,
+            type
+        ) => {
 
             if (
-                /^text_\d+$/.test(
-                    className
-                )
+                type ===
+                "text"
             ) {
-                return 'text';
+
+                return {
+
+                    drawDuration:
+                        readTime(
+                            root,
+                            "--cm-text-draw-duration"
+                        ),
+
+                    drawEasing:
+                        readCSS(
+                            root,
+                            "--cm-text-draw-easing",
+                            "linear"
+                        ),
+
+                    fillDelay:
+                        readTime(
+                            root,
+                            "--cm-text-fill-delay"
+                        ),
+
+                    fillDuration:
+                        readTime(
+                            root,
+                            "--cm-text-fill-duration"
+                        ),
+
+                    fillEasing:
+                        readCSS(
+                            root,
+                            "--cm-text-fill-easing",
+                            "ease"
+                        ),
+
+                    darkenDelay:
+                        readTime(
+                            root,
+                            "--cm-text-darken-delay"
+                        ),
+
+                    darkenDuration:
+                        readTime(
+                            root,
+                            "--cm-text-darken-duration"
+                        ),
+
+                    darkenEasing:
+                        readCSS(
+                            root,
+                            "--cm-text-darken-easing",
+                            "ease"
+                        ),
+
+                    shadowDelay:
+                        readTime(
+                            root,
+                            "--cm-text-shadow-delay"
+                        ),
+
+                    shadowDuration:
+                        readTime(
+                            root,
+                            "--cm-text-shadow-duration"
+                        ),
+
+                    shadowEasing:
+                        readCSS(
+                            root,
+                            "--cm-text-shadow-easing",
+                            "ease"
+                        ),
+
+                    advance:
+                        readTime(
+                            root,
+                            "--cm-text-advance"
+                        )
+                };
             }
 
-            if (
-                className ===
-                'inner-circle'
-            ) {
-                return 'inner-circle';
-            }
 
-            if (
-                className ===
-                'ring-band'
-            ) {
-                return 'ring-band';
-            }
+            const prefix =
+                `--cm-${type}`;
 
-            if (
-                /^ring_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'ring';
-            }
-
-            if (
-                /^dotted-ring_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'dotted-ring';
-            }
-
-            if (
-                /^spoke_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'spoke';
-            }
-
-            if (
-                /^outer-ring_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'outer-ring';
-            }
-
-            if (
-                /^outer-dotted-ring_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'outer-dotted-ring';
-            }
-
-            if (
-                /^outer-circle_\d+$/.test(
-                    className
-                )
-            ) {
-                return 'outer-circle';
-            }
-
-            return 'unknown';
-        };
-
-
-
-    /* =====================================================
-       GET TIMING
-       ===================================================== */
-
-    const getTiming = (
-        root,
-        type
-    ) => {
-
-        if (type === 'text') {
 
             return {
 
                 drawDuration:
                     readTime(
                         root,
-                        '--cm-text-draw-duration'
+                        `${prefix}-draw-duration`
                     ),
 
                 drawEasing:
                     readCSS(
                         root,
-                        '--cm-text-draw-easing',
-                        'linear'
+                        `${prefix}-draw-easing`,
+                        "linear"
                     ),
 
                 fillDelay:
                     readTime(
                         root,
-                        '--cm-text-fill-delay'
+                        `${prefix}-fill-delay`
                     ),
 
                 fillDuration:
                     readTime(
                         root,
-                        '--cm-text-fill-duration'
+                        `${prefix}-fill-duration`
                     ),
 
                 fillEasing:
                     readCSS(
                         root,
-                        '--cm-text-fill-easing',
-                        'ease'
-                    ),
-
-                darkenDelay:
-                    readTime(
-                        root,
-                        '--cm-text-darken-delay'
-                    ),
-
-                darkenDuration:
-                    readTime(
-                        root,
-                        '--cm-text-darken-duration'
-                    ),
-
-                darkenEasing:
-                    readCSS(
-                        root,
-                        '--cm-text-darken-easing',
-                        'ease'
-                    ),
-
-                shadowDelay:
-                    readTime(
-                        root,
-                        '--cm-text-shadow-delay'
-                    ),
-
-                shadowDuration:
-                    readTime(
-                        root,
-                        '--cm-text-shadow-duration'
-                    ),
-
-                shadowEasing:
-                    readCSS(
-                        root,
-                        '--cm-text-shadow-easing',
-                        'ease'
+                        `${prefix}-fill-easing`,
+                        "ease"
                     ),
 
                 advance:
                     readTime(
                         root,
-                        '--cm-text-advance'
+                        `${prefix}-advance`
                     )
             };
-        }
-
-
-        const prefix =
-            `--cm-${type}`;
-
-
-        return {
-
-            drawDuration:
-                readTime(
-                    root,
-                    `${prefix}-draw-duration`
-                ),
-
-            drawEasing:
-                readCSS(
-                    root,
-                    `${prefix}-draw-easing`,
-                    'linear'
-                ),
-
-            fillDelay:
-                readTime(
-                    root,
-                    `${prefix}-fill-delay`
-                ),
-
-            fillDuration:
-                readTime(
-                    root,
-                    `${prefix}-fill-duration`
-                ),
-
-            fillEasing:
-                readCSS(
-                    root,
-                    `${prefix}-fill-easing`,
-                    'ease'
-                ),
-
-            advance:
-                readTime(
-                    root,
-                    `${prefix}-advance`
-                )
         };
-    };
 
 
 
-    /* =====================================================
-       INITIALIZE EACH MAP
-       ===================================================== */
+        /* =====================================================
+           INITIALIZE EACH MAP
+           ===================================================== */
 
-    roots.forEach(
-        (root, rootIndex) => {
-
-            const svg =
-                root.matches('svg')
-                    ? root
-                    : root.querySelector('svg');
+        roots.forEach(
+            (
+                root,
+                rootIndex
+            ) => {
 
 
-            if (!svg) return;
-
-
-            const slide =
-                root.closest(
-                    '.pageflow-slide'
-                );
-
-
-            const overlay =
-                slide
-                    ? slide.querySelector(
-                        '.context-nav-overlay'
+                const svg =
+                    root.matches(
+                        "svg"
                     )
-                    : document.querySelector(
-                        '.context-nav-overlay'
+                        ? root
+                        : root.querySelector(
+                            "svg"
+                        );
+
+
+                if (!svg) {
+                    return;
+                }
+
+
+                const slide =
+                    root.closest(
+                        ".pageflow-slide"
                     );
 
 
-            const navText =
-                overlay
-                    ? overlay.querySelector(
-                        '.context-nav-instruction'
-                    )
-                    : null;
+                const overlay =
+                    slide
+                        ? slide.querySelector(
+                            ".context-nav-overlay"
+                        )
+                        : document.querySelector(
+                            ".context-nav-overlay"
+                        );
 
 
-            const navArrow =
-                overlay
-                    ? overlay.querySelector(
-                        '.context-nav-arrow'
-                    )
-                    : null;
+                const navText =
+                    overlay
+                        ? overlay.querySelector(
+                            ".context-nav-instruction"
+                        )
+                        : null;
 
 
-            let sequenceToken = 0;
-            let slideIsActive = false;
+                const navArrow =
+                    overlay
+                        ? overlay.querySelector(
+                            ".context-nav-arrow"
+                        )
+                        : null;
 
 
-            const runningAnimations =
-                new Set();
+                let sequenceToken =
+                    0;
+
+
+                let slideIsActive =
+                    false;
+
+
+                const runningAnimations =
+                    new Set();
 
 
 
-            /* =================================================
-               ANIMATION TRACKING
-               ================================================= */
+                /* =================================================
+                   STARTUP GATE
+                   ================================================= */
 
-            const trackAnimation =
-                animation => {
+                const startupGateIsActive =
+                    () => {
 
-                    runningAnimations.add(
-                        animation
-                    );
+                        return (
 
-                    animation.finished
-                        .catch(() => {});
+                            document.documentElement
+                                .classList.contains(
+                                    "context-preloading"
+                                )
 
-                    return animation;
-                };
+                            ||
+
+                            Boolean(
+                                document.querySelector(
+                                    ".context-preloader"
+                                )
+                            )
+                        );
+                    };
 
 
-            const cancelAnimations =
-                () => {
 
-                    runningAnimations.forEach(
-                        animation => {
+                /* =================================================
+                   ANIMATION TRACKING
+                   ================================================= */
 
-                            try {
-                                animation.cancel();
-                            } catch (_) {}
+                const trackAnimation =
+                    animation => {
+
+                        runningAnimations.add(
+                            animation
+                        );
+
+
+                        animation.finished
+                            .catch(
+                                () => {}
+                            );
+
+
+                        return animation;
+                    };
+
+
+                const cancelAnimations =
+                    () => {
+
+                        runningAnimations.forEach(
+                            animation => {
+
+                                try {
+
+                                    animation.cancel();
+
+                                } catch (_) {}
+
+                            }
+                        );
+
+
+                        runningAnimations.clear();
+                    };
+
+
+
+                /* =================================================
+                   RESET STANDARD MAP LAYER
+                   ================================================= */
+
+                const resetLayer =
+                    element => {
+
+                        if (!element) {
+                            return;
                         }
-                    );
 
-                    runningAnimations.clear();
+
+                        const black =
+                            readCSS(
+                                root,
+                                "--cm-black",
+                                "#000000"
+                            );
+
+
+                        element.style.fill =
+                            black;
+
+
+                        element.style.stroke =
+                            black;
+
+
+                        element.style.filter =
+                            "";
+
+
+                        element.style.opacity =
+                            isSpoke(
+                                element
+                            )
+                                ? "0"
+                                : "1";
+
+
+                        if (
+                            typeof element.getTotalLength ===
+                            "function"
+                        ) {
+
+                            const length =
+                                element.getTotalLength();
+
+
+                            const hiddenLength =
+                                length * 1.025;
+
+
+                            element.style.strokeDasharray =
+                                `${hiddenLength} ${hiddenLength}`;
+
+
+                            element.style.strokeDashoffset =
+                                `${hiddenLength}`;
+                        }
+                    };
+
+
+
+                /* =================================================
+                   RESET CHAOS FIELD OVERLAY
+                   ================================================= */
+
+                const resetOverlay =
+                    element => {
+
+                        if (!element) {
+                            return;
+                        }
+
+
+                        element.style.fill =
+                            readCSS(
+                                root,
+                                "--cm-overlay-color",
+                                "#1b003d"
+                            );
+
+
+                        element.style.stroke =
+                            "none";
+
+
+                        element.style.opacity =
+                            "0";
+
+
+                        element.style.filter =
+                            "";
+
+
+                        element.style.strokeDasharray =
+                            "none";
+
+
+                        element.style.strokeDashoffset =
+                            "0";
+                    };
+
+
+
+                /* =================================================
+                   ANIMATE CHAOS FIELD OVERLAY
+                   ================================================= */
+
+                const animateOverlay = (
+                    baseClassName,
+                    baseFillDelay,
+                    token
+                ) => {
+
+                    const overlayClass =
+                        overlayMap[
+                            baseClassName
+                        ];
+
+
+                    if (!overlayClass) {
+                        return;
+                    }
+
+
+                    const element =
+                        svg.querySelector(
+                            `.${overlayClass}`
+                        );
+
+
+                    if (!element) {
+                        return;
+                    }
+
+
+                    const overlayDelay =
+                        readTime(
+                            root,
+                            "--cm-overlay-delay"
+                        );
+
+
+                    const overlayDuration =
+                        readTime(
+                            root,
+                            "--cm-overlay-duration"
+                        );
+
+
+                    const overlayEasing =
+                        readCSS(
+                            root,
+                            "--cm-overlay-easing",
+                            "ease"
+                        );
+
+
+                    const overlayOpacity =
+                        readNumber(
+                            root,
+                            "--cm-overlay-opacity",
+                            .55
+                        );
+
+
+                    const overlayColor =
+                        readCSS(
+                            root,
+                            "--cm-overlay-color",
+                            "#1b003d"
+                        );
+
+
+                    setTimeout(
+                        () => {
+
+                            if (
+                                token !== sequenceToken ||
+                                !slideIsActive ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            element.style.fill =
+                                overlayColor;
+
+
+                            element.style.stroke =
+                                "none";
+
+
+                            trackAnimation(
+                                element.animate(
+
+                                    [
+                                        {
+                                            opacity: 0
+                                        },
+
+                                        {
+                                            opacity:
+                                                overlayOpacity
+                                        }
+                                    ],
+
+                                    {
+                                        duration:
+                                            overlayDuration,
+
+                                        easing:
+                                            overlayEasing,
+
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
+
+                        },
+
+                        baseFillDelay +
+                        overlayDelay
+                    );
                 };
 
 
 
-            /* =================================================
-               RESET STANDARD MAP LAYER
-               ================================================= */
+                /* =================================================
+                   REMOVE GENERATED ARROW GRADIENT COPIES
+                   ================================================= */
 
-            const resetLayer =
-                element => {
+                const removeArrowGradientOverlays =
+                    () => {
 
-                    if (!element) return;
+                        if (!navArrow) {
+                            return;
+                        }
+
+
+                        navArrow
+                            .querySelectorAll(
+                                "[data-context-gradient-overlay]"
+                            )
+                            .forEach(
+                                element => {
+
+                                    element.remove();
+                                }
+                            );
+                    };
+
+
+
+                /* =================================================
+                   RESET NAVIGATION
+                   ================================================= */
+
+                const resetNavigation =
+                    () => {
+
+                        if (navText) {
+
+                            navText.style.opacity =
+                                "0";
+
+
+                            navText.style.visibility =
+                                "hidden";
+
+
+                            navText.style.transform =
+                                "";
+                        }
+
+
+                        if (navArrow) {
+
+                            navArrow.style.opacity =
+                                "0";
+
+
+                            navArrow.style.visibility =
+                                "hidden";
+
+
+                            navArrow.style.transform =
+                                "translateY(0)";
+
+
+                            navArrow
+                                .getAnimations({
+                                    subtree: true
+                                })
+                                .forEach(
+                                    animation => {
+
+                                        try {
+
+                                            animation.cancel();
+
+                                        } catch (_) {}
+
+                                    }
+                                );
+
+
+                            removeArrowGradientOverlays();
+
+
+                            const shapes =
+                                navArrow.querySelectorAll(
+                                    `
+                                    svg path:not([data-context-gradient-overlay]),
+                                    svg polygon:not([data-context-gradient-overlay]),
+                                    svg polyline:not([data-context-gradient-overlay]),
+                                    svg rect:not([data-context-gradient-overlay]),
+                                    svg circle:not([data-context-gradient-overlay]),
+                                    svg ellipse:not([data-context-gradient-overlay])
+                                    `
+                                );
+
+
+                            shapes.forEach(
+                                shape => {
+
+                                    shape.style.fill =
+                                        "";
+
+
+                                    shape.style.stroke =
+                                        "";
+
+
+                                    shape.style.strokeWidth =
+                                        "";
+
+
+                                    shape.style.strokeDasharray =
+                                        "";
+
+
+                                    shape.style.strokeDashoffset =
+                                        "";
+
+
+                                    shape.style.filter =
+                                        "";
+                                }
+                            );
+                        }
+                    };
+
+
+
+                /* =================================================
+                   COMPLETE HARD RESET
+                   ================================================= */
+
+                const resetMap =
+                    () => {
+
+                        cancelAnimations();
+
+
+                        paintOrder.forEach(
+                            className => {
+
+                                resetLayer(
+                                    svg.querySelector(
+                                        `.${className}`
+                                    )
+                                );
+                            }
+                        );
+
+
+                        overlayClasses.forEach(
+                            className => {
+
+                                resetOverlay(
+                                    svg.querySelector(
+                                        `.${className}`
+                                    )
+                                );
+                            }
+                        );
+
+
+                        root.style.opacity =
+                            "1";
+
+
+                        resetNavigation();
+                    };
+
+
+
+                /* =================================================
+                   DRAW NON-TEXT GEOMETRY
+                   ================================================= */
+
+                const animateGeometry = (
+                    element,
+                    timing,
+                    token,
+                    className
+                ) => {
+
+                    if (!element) {
+                        return;
+                    }
+
+
+                    if (
+                        startupGateIsActive()
+                    ) {
+                        return;
+                    }
+
+
+                    if (
+                        isSpoke(
+                            element
+                        )
+                    ) {
+
+                        element.style.opacity =
+                            "1";
+                    }
+
+
+                    const green =
+                        readCSS(
+                            root,
+                            "--cm-green",
+                            "#18ff1c"
+                        );
+
+
+                    const purple =
+                        readCSS(
+                            root,
+                            "--cm-purple",
+                            "#6900e5"
+                        );
 
 
                     const black =
                         readCSS(
                             root,
-                            '--cm-black',
-                            '#000000'
+                            "--cm-black",
+                            "#000000"
                         );
-
-
-                    element.style.fill =
-                        black;
-
-                    element.style.stroke =
-                        black;
-
-                    element.style.filter =
-                        '';
-
-
-                    /*
-                     * Spokes are invisible until
-                     * their own construction begins.
-                     */
-
-                    element.style.opacity =
-                        isSpoke(element)
-                            ? '0'
-                            : '1';
 
 
                     if (
                         typeof element.getTotalLength ===
-                        'function'
+                        "function"
                     ) {
 
                         const length =
@@ -1197,147 +2271,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             length * 1.025;
 
 
-                        element.style.strokeDasharray =
-                            `${hiddenLength} ${hiddenLength}`;
-
-
-                        element.style.strokeDashoffset =
-                            `${hiddenLength}`;
-                    }
-                };
-
-
-
-            /* =================================================
-               RESET CHAOS FIELD OVERLAY
-               ================================================= */
-
-            const resetOverlay =
-                element => {
-
-                    if (!element) return;
-
-
-                    element.style.fill =
-                        readCSS(
-                            root,
-                            '--cm-overlay-color',
-                            '#1b003d'
-                        );
-
-
-                    element.style.stroke =
-                        'none';
-
-
-                    element.style.opacity =
-                        '0';
-
-
-                    element.style.filter =
-                        '';
-
-
-                    element.style.strokeDasharray =
-                        'none';
-
-
-                    element.style.strokeDashoffset =
-                        '0';
-                };
-
-
-
-            /* =================================================
-               ANIMATE CHAOS FIELD OVERLAY
-               ================================================= */
-
-            const animateOverlay = (
-                baseClassName,
-                baseFillDelay,
-                token
-            ) => {
-
-                const overlayClass =
-                    overlayMap[
-                        baseClassName
-                    ];
-
-
-                if (!overlayClass) {
-                    return;
-                }
-
-
-                const element =
-                    svg.querySelector(
-                        `.${overlayClass}`
-                    );
-
-
-                if (!element) {
-                    return;
-                }
-
-
-                const overlayDelay =
-                    readTime(
-                        root,
-                        '--cm-overlay-delay'
-                    );
-
-
-                const overlayDuration =
-                    readTime(
-                        root,
-                        '--cm-overlay-duration'
-                    );
-
-
-                const overlayEasing =
-                    readCSS(
-                        root,
-                        '--cm-overlay-easing',
-                        'ease'
-                    );
-
-
-                const overlayOpacity =
-                    readNumber(
-                        root,
-                        '--cm-overlay-opacity',
-                        .55
-                    );
-
-
-                const overlayColor =
-                    readCSS(
-                        root,
-                        '--cm-overlay-color',
-                        '#1b003d'
-                    );
-
-
-                /*
-                 * Delay is relative to PURPLE FILL START.
-                 */
-
-                setTimeout(
-                    () => {
-
-                        if (
-                            token !== sequenceToken ||
-                            !slideIsActive
-                        ) {
-                            return;
-                        }
-
-
-                        element.style.fill =
-                            overlayColor;
-
                         element.style.stroke =
-                            'none';
+                            green;
 
 
                         trackAnimation(
@@ -1345,2044 +2280,2032 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 [
                                     {
-                                        opacity: 0
+                                        strokeDashoffset:
+                                            `${hiddenLength}`
                                     },
 
                                     {
-                                        opacity:
-                                            overlayOpacity
+                                        strokeDashoffset:
+                                            "0"
                                     }
                                 ],
 
                                 {
                                     duration:
-                                        overlayDuration,
+                                        timing.drawDuration,
 
                                     easing:
-                                        overlayEasing,
+                                        timing.drawEasing,
 
                                     fill:
-                                        'forwards'
+                                        "forwards"
                                 }
                             )
                         );
-
-                    },
-
-                    baseFillDelay +
-                    overlayDelay
-                );
-            };
+                    }
 
 
+                    setTimeout(
+                        () => {
 
-            /* =================================================
-               REMOVE GENERATED ARROW GRADIENT COPIES
-               ================================================= */
-
-            const removeArrowGradientOverlays =
-                () => {
-
-                    if (!navArrow) return;
-
-
-                    navArrow
-                        .querySelectorAll(
-                            '[data-context-gradient-overlay]'
-                        )
-                        .forEach(
-                            element => {
-
-                                element.remove();
+                            if (
+                                token !== sequenceToken ||
+                                startupGateIsActive()
+                            ) {
+                                return;
                             }
-                        );
-                };
 
 
+                            trackAnimation(
+                                element.animate(
 
-            /* =================================================
-               RESET NAVIGATION
-               ================================================= */
-
-            const resetNavigation =
-                () => {
-
-                    if (navText) {
-
-                        navText.style.opacity =
-                            '0';
-
-                        navText.style.visibility =
-                            'hidden';
-
-                        navText.style.transform =
-                            '';
-                    }
-
-
-                    if (navArrow) {
-
-                        navArrow.style.opacity =
-                            '0';
-
-                        navArrow.style.visibility =
-                            'hidden';
-
-                        navArrow.style.transform =
-                            'translateY(0)';
-
-
-                        navArrow
-                            .getAnimations({
-                                subtree: true
-                            })
-                            .forEach(
-                                animation => {
-
-                                    try {
-                                        animation.cancel();
-                                    } catch (_) {}
-                                }
-                            );
-
-
-                        removeArrowGradientOverlays();
-
-
-                        const shapes =
-                            navArrow.querySelectorAll(
-                                `
-                                svg path:not([data-context-gradient-overlay]),
-                                svg polygon:not([data-context-gradient-overlay]),
-                                svg polyline:not([data-context-gradient-overlay]),
-                                svg rect:not([data-context-gradient-overlay]),
-                                svg circle:not([data-context-gradient-overlay]),
-                                svg ellipse:not([data-context-gradient-overlay])
-                                `
-                            );
-
-
-                        shapes.forEach(
-                            shape => {
-
-                                shape.style.fill =
-                                    '';
-
-                                shape.style.stroke =
-                                    '';
-
-                                shape.style.strokeWidth =
-                                    '';
-
-                                shape.style.strokeDasharray =
-                                    '';
-
-                                shape.style.strokeDashoffset =
-                                    '';
-
-                                shape.style.filter =
-                                    '';
-                            }
-                        );
-                    }
-                };
-
-
-
-            /* =================================================
-               COMPLETE HARD RESET
-               ================================================= */
-
-            const resetMap =
-                () => {
-
-                    cancelAnimations();
-
-
-                    paintOrder.forEach(
-                        className => {
-
-                            resetLayer(
-                                svg.querySelector(
-                                    `.${className}`
-                                )
-                            );
-                        }
-                    );
-
-
-                    overlayClasses.forEach(
-                        className => {
-
-                            resetOverlay(
-                                svg.querySelector(
-                                    `.${className}`
-                                )
-                            );
-                        }
-                    );
-
-
-                    root.style.opacity =
-                        '1';
-
-
-                    resetNavigation();
-                };
-
-
-
-            /* =================================================
-               DRAW NON-TEXT GEOMETRY
-               ================================================= */
-
-            const animateGeometry = (
-                element,
-                timing,
-                token,
-                className
-            ) => {
-
-                if (!element) return;
-
-
-                /*
-                 * Spokes become visible only when
-                 * their own animation begins.
-                 */
-
-                if (
-                    isSpoke(element)
-                ) {
-
-                    element.style.opacity =
-                        '1';
-                }
-
-
-                const green =
-                    readCSS(
-                        root,
-                        '--cm-green',
-                        '#18ff1c'
-                    );
-
-
-                const purple =
-                    readCSS(
-                        root,
-                        '--cm-purple',
-                        '#6900e5'
-                    );
-
-
-                const black =
-                    readCSS(
-                        root,
-                        '--cm-black',
-                        '#000000'
-                    );
-
-
-                if (
-                    typeof element.getTotalLength ===
-                    'function'
-                ) {
-
-                    const length =
-                        element.getTotalLength();
-
-
-                    const hiddenLength =
-                        length * 1.025;
-
-
-                    element.style.stroke =
-                        green;
-
-
-                    trackAnimation(
-                        element.animate(
-
-                            [
-                                {
-                                    strokeDashoffset:
-                                        `${hiddenLength}`
-                                },
-
-                                {
-                                    strokeDashoffset:
-                                        '0'
-                                }
-                            ],
-
-                            {
-                                duration:
-                                    timing.drawDuration,
-
-                                easing:
-                                    timing.drawEasing,
-
-                                fill:
-                                    'forwards'
-                            }
-                        )
-                    );
-                }
-
-
-
-                /* -----------------------------------------
-                   PURPLE FILL
-                   ----------------------------------------- */
-
-                setTimeout(
-                    () => {
-
-                        if (
-                            token !== sequenceToken
-                        ) {
-                            return;
-                        }
-
-
-                        trackAnimation(
-                            element.animate(
-
-                                [
-                                    {
-                                        fill:
-                                            black
-                                    },
-
-                                    {
-                                        fill:
-                                            purple
-                                    }
-                                ],
-
-                                {
-                                    duration:
-                                        timing.fillDuration,
-
-                                    easing:
-                                        timing.fillEasing,
-
-                                    fill:
-                                        'forwards'
-                                }
-                            )
-                        );
-
-                    },
-
-                    timing.fillDelay
-                );
-
-
-
-                /*
-                 * If this geometry owns a Chaos Field,
-                 * begin that texture shortly after the
-                 * purple fill starts.
-                 */
-
-                animateOverlay(
-                    className,
-                    timing.fillDelay,
-                    token
-                );
-            };
-
-
-
-            /* =================================================
-               DRAW TEXT
-               ================================================= */
-
-            const animateText = (
-                element,
-                timing,
-                token
-            ) => {
-
-                if (!element) return;
-
-
-                const green =
-                    readCSS(
-                        root,
-                        '--cm-green',
-                        '#18ff1c'
-                    );
-
-
-                const black =
-                    readCSS(
-                        root,
-                        '--cm-black',
-                        '#000000'
-                    );
-
-
-                const shadowStart =
-                    readCSS(
-                        root,
-                        '--cm-text-shadow-start',
-                        'none'
-                    );
-
-
-                const shadow =
-                    readCSS(
-                        root,
-                        '--cm-text-shadow',
-                        'none'
-                    );
-
-
-                if (
-                    typeof element.getTotalLength ===
-                    'function'
-                ) {
-
-                    const length =
-                        element.getTotalLength();
-
-
-                    const hiddenLength =
-                        length * 1.025;
-
-
-                    element.style.stroke =
-                        green;
-
-
-                    trackAnimation(
-                        element.animate(
-
-                            [
-                                {
-                                    strokeDashoffset:
-                                        `${hiddenLength}`
-                                },
-
-                                {
-                                    strokeDashoffset:
-                                        '0'
-                                }
-                            ],
-
-                            {
-                                duration:
-                                    timing.drawDuration,
-
-                                easing:
-                                    timing.drawEasing,
-
-                                fill:
-                                    'forwards'
-                            }
-                        )
-                    );
-                }
-
-
-
-                /* GREEN FILL */
-
-                setTimeout(
-                    () => {
-
-                        if (
-                            token !== sequenceToken
-                        ) return;
-
-
-                        trackAnimation(
-                            element.animate(
-
-                                [
-                                    {
-                                        fill:
-                                            black
-                                    },
-
-                                    {
-                                        fill:
-                                            green
-                                    }
-                                ],
-
-                                {
-                                    duration:
-                                        timing.fillDuration,
-
-                                    easing:
-                                        timing.fillEasing,
-
-                                    fill:
-                                        'forwards'
-                                }
-                            )
-                        );
-
-                    },
-
-                    timing.fillDelay
-                );
-
-
-
-                /* GREEN STROKE → BLACK */
-
-                setTimeout(
-                    () => {
-
-                        if (
-                            token !== sequenceToken
-                        ) return;
-
-
-                        trackAnimation(
-                            element.animate(
-
-                                [
-                                    {
-                                        stroke:
-                                            green
-                                    },
-
-                                    {
-                                        stroke:
-                                            black
-                                    }
-                                ],
-
-                                {
-                                    duration:
-                                        timing.darkenDuration,
-
-                                    easing:
-                                        timing.darkenEasing,
-
-                                    fill:
-                                        'forwards'
-                                }
-                            )
-                        );
-
-                    },
-
-                    timing.darkenDelay
-                );
-
-
-
-                /* DROP SHADOW */
-
-                setTimeout(
-                    () => {
-
-                        if (
-                            token !== sequenceToken
-                        ) return;
-
-
-                        trackAnimation(
-                            element.animate(
-
-                                [
-                                    {
-                                        filter:
-                                            shadowStart
-                                    },
-
-                                    {
-                                        filter:
-                                            shadow
-                                    }
-                                ],
-
-                                {
-                                    duration:
-                                        timing.shadowDuration,
-
-                                    easing:
-                                        timing.shadowEasing,
-
-                                    fill:
-                                        'forwards'
-                                }
-                            )
-                        );
-
-                    },
-
-                    timing.shadowDelay
-                );
-            };
-
-
-
-            /* =================================================
-               BUILD NAV ARROW
-               ================================================= */
-
-            const initializeArrow =
-                () => {
-
-                    if (!navArrow) return;
-
-
-                    const arrowSvg =
-                        navArrow.querySelector(
-                            'svg'
-                        );
-
-
-                    if (!arrowSvg) return;
-
-
-                    const namespace =
-                        'http://www.w3.org/2000/svg';
-
-
-                    const make =
-                        tag =>
-                            document.createElementNS(
-                                namespace,
-                                tag
-                            );
-
-
-                    let defs =
-                        arrowSvg.querySelector(
-                            'defs'
-                        );
-
-
-                    if (!defs) {
-
-                        defs =
-                            make('defs');
-
-
-                        arrowSvg.insertBefore(
-                            defs,
-                            arrowSvg.firstChild
-                        );
-                    }
-
-
-
-                    /* -----------------------------------------
-                       GRADIENT
-                       ----------------------------------------- */
-
-                    const gradientID =
-                        `context-nav-gradient-${rootIndex}`;
-
-
-                    let gradient =
-                        arrowSvg.querySelector(
-                            `#${gradientID}`
-                        );
-
-
-                    if (!gradient) {
-
-                        gradient =
-                            make(
-                                'linearGradient'
-                            );
-
-
-                        gradient.setAttribute(
-                            'id',
-                            gradientID
-                        );
-
-
-                        defs.appendChild(
-                            gradient
-                        );
-                    }
-
-
-                    gradient.setAttribute(
-                        'x1',
-                        '0%'
-                    );
-
-                    gradient.setAttribute(
-                        'y1',
-                        '0%'
-                    );
-
-                    gradient.setAttribute(
-                        'x2',
-                        '0%'
-                    );
-
-                    gradient.setAttribute(
-                        'y2',
-                        '100%'
-                    );
-
-
-                    while (
-                        gradient.firstChild
-                    ) {
-
-                        gradient.removeChild(
-                            gradient.firstChild
-                        );
-                    }
-
-
-                    const addStop = (
-                        offset,
-                        colorProperty,
-                        opacityProperty,
-                        fallbackColor
-                    ) => {
-
-                        const stop =
-                            make('stop');
-
-
-                        stop.setAttribute(
-                            'offset',
-                            offset
-                        );
-
-
-                        stop.setAttribute(
-                            'stop-color',
-                            readCSS(
-                                root,
-                                colorProperty,
-                                fallbackColor
-                            )
-                        );
-
-
-                        stop.setAttribute(
-                            'stop-opacity',
-                            readCSS(
-                                root,
-                                opacityProperty,
-                                '1'
-                            )
-                        );
-
-
-                        gradient.appendChild(
-                            stop
-                        );
-                    };
-
-
-                    addStop(
-                        '0%',
-                        '--cm-nav-arrow-gradient-top',
-                        '--cm-nav-arrow-gradient-top-opacity',
-                        '#000000'
-                    );
-
-
-                    addStop(
-                        readCSS(
-                            root,
-                            '--cm-nav-arrow-gradient-midpoint',
-                            '50%'
-                        ),
-                        '--cm-nav-arrow-gradient-mid',
-                        '--cm-nav-arrow-gradient-mid-opacity',
-                        'rgba(0,0,0,.29)'
-                    );
-
-
-                    addStop(
-                        '100%',
-                        '--cm-nav-arrow-gradient-bottom',
-                        '--cm-nav-arrow-gradient-bottom-opacity',
-                        '#52ff02'
-                    );
-
-
-                    navArrow
-                        ._contextGradientID =
-                            gradientID;
-
-
-
-                    /* -----------------------------------------
-                       THREE-LAYER INNER SHADOW
-                       ----------------------------------------- */
-
-                    const filterID =
-                        `context-nav-inner-shadow-${rootIndex}`;
-
-
-                    const oldFilter =
-                        arrowSvg.querySelector(
-                            `#${filterID}`
-                        );
-
-
-                    if (oldFilter) {
-                        oldFilter.remove();
-                    }
-
-
-                    const filter =
-                        make('filter');
-
-
-                    filter.setAttribute(
-                        'id',
-                        filterID
-                    );
-
-                    filter.setAttribute(
-                        'x',
-                        '-50%'
-                    );
-
-                    filter.setAttribute(
-                        'y',
-                        '-50%'
-                    );
-
-                    filter.setAttribute(
-                        'width',
-                        '200%'
-                    );
-
-                    filter.setAttribute(
-                        'height',
-                        '200%'
-                    );
-
-
-                    const shadowResults =
-                        [];
-
-
-                    const addInnerShadow =
-                        layer => {
-
-                            const blurResult =
-                                `innerBlur${layer}`;
-
-                            const offsetResult =
-                                `innerOffset${layer}`;
-
-                            const edgeResult =
-                                `innerEdge${layer}`;
-
-                            const floodResult =
-                                `innerColor${layer}`;
-
-                            const finalResult =
-                                `innerShadow${layer}`;
-
-
-                            const blur =
-                                make(
-                                    'feGaussianBlur'
-                                );
-
-
-                            blur.setAttribute(
-                                'in',
-                                'SourceAlpha'
-                            );
-
-
-                            blur.setAttribute(
-                                'stdDeviation',
-                                readNumber(
-                                    root,
-                                    `--cm-nav-arrow-inner-shadow-${layer}-blur`,
-                                    layer === 1
-                                        ? 1.5
-                                        : layer === 2
-                                            ? 3
-                                            : 6
-                                )
-                            );
-
-
-                            blur.setAttribute(
-                                'result',
-                                blurResult
-                            );
-
-
-                            const offset =
-                                make(
-                                    'feOffset'
-                                );
-
-
-                            offset.setAttribute(
-                                'in',
-                                blurResult
-                            );
-
-
-                            offset.setAttribute(
-                                'dx',
-                                readNumber(
-                                    root,
-                                    `--cm-nav-arrow-inner-shadow-${layer}-offset-x`,
-                                    0
-                                )
-                            );
-
-
-                            offset.setAttribute(
-                                'dy',
-                                readNumber(
-                                    root,
-                                    `--cm-nav-arrow-inner-shadow-${layer}-offset-y`,
-                                    layer === 1
-                                        ? .5
-                                        : layer === 2
-                                            ? 1
-                                            : 1.5
-                                )
-                            );
-
-
-                            offset.setAttribute(
-                                'result',
-                                offsetResult
-                            );
-
-
-                            const edge =
-                                make(
-                                    'feComposite'
-                                );
-
-
-                            edge.setAttribute(
-                                'in',
-                                'SourceAlpha'
-                            );
-
-
-                            edge.setAttribute(
-                                'in2',
-                                offsetResult
-                            );
-
-
-                            edge.setAttribute(
-                                'operator',
-                                'out'
-                            );
-
-
-                            edge.setAttribute(
-                                'result',
-                                edgeResult
-                            );
-
-
-                            const flood =
-                                make(
-                                    'feFlood'
-                                );
-
-
-                            flood.setAttribute(
-                                'flood-color',
-                                readCSS(
-                                    root,
-                                    '--cm-nav-arrow-inner-shadow-color',
-                                    '#000000'
-                                )
-                            );
-
-
-                            flood.setAttribute(
-                                'flood-opacity',
-                                readNumber(
-                                    root,
-                                    `--cm-nav-arrow-inner-shadow-${layer}-opacity`,
-                                    layer === 1
-                                        ? 1
-                                        : layer === 2
-                                            ? .85
-                                            : .55
-                                )
-                            );
-
-
-                            flood.setAttribute(
-                                'result',
-                                floodResult
-                            );
-
-
-                            const color =
-                                make(
-                                    'feComposite'
-                                );
-
-
-                            color.setAttribute(
-                                'in',
-                                floodResult
-                            );
-
-
-                            color.setAttribute(
-                                'in2',
-                                edgeResult
-                            );
-
-
-                            color.setAttribute(
-                                'operator',
-                                'in'
-                            );
-
-
-                            color.setAttribute(
-                                'result',
-                                finalResult
-                            );
-
-
-                            filter.appendChild(
-                                blur
-                            );
-
-                            filter.appendChild(
-                                offset
-                            );
-
-                            filter.appendChild(
-                                edge
-                            );
-
-                            filter.appendChild(
-                                flood
-                            );
-
-                            filter.appendChild(
-                                color
-                            );
-
-
-                            shadowResults.push(
-                                finalResult
-                            );
-                        };
-
-
-                    addInnerShadow(1);
-                    addInnerShadow(2);
-                    addInnerShadow(3);
-
-
-                    const merge =
-                        make(
-                            'feMerge'
-                        );
-
-
-                    const sourceNode =
-                        make(
-                            'feMergeNode'
-                        );
-
-
-                    sourceNode.setAttribute(
-                        'in',
-                        'SourceGraphic'
-                    );
-
-
-                    merge.appendChild(
-                        sourceNode
-                    );
-
-
-                    shadowResults.forEach(
-                        result => {
-
-                            const node =
-                                make(
-                                    'feMergeNode'
-                                );
-
-
-                            node.setAttribute(
-                                'in',
-                                result
-                            );
-
-
-                            merge.appendChild(
-                                node
-                            );
-                        }
-                    );
-
-
-                    filter.appendChild(
-                        merge
-                    );
-
-
-                    defs.appendChild(
-                        filter
-                    );
-
-
-                    navArrow
-                        ._contextInnerShadowID =
-                            filterID;
-                };
-
-
-            initializeArrow();
-
-
-
-            /* =================================================
-               ARROW BOUNCE
-               ================================================= */
-
-            const startArrowBounce =
-                async token => {
-
-                    if (!navArrow) return;
-
-
-                    const initialDelay =
-                        readTime(
-                            root,
-                            '--cm-nav-arrow-bounce-delay'
-                        );
-
-
-                    const duration =
-                        readTime(
-                            root,
-                            '--cm-nav-arrow-bounce-duration'
-                        );
-
-
-                    const pause =
-                        readTime(
-                            root,
-                            '--cm-nav-arrow-bounce-pause'
-                        );
-
-
-                    const first =
-                        readNumber(
-                            root,
-                            '--cm-nav-arrow-bounce-first',
-                            11
-                        );
-
-
-                    const second =
-                        readNumber(
-                            root,
-                            '--cm-nav-arrow-bounce-second',
-                            6
-                        );
-
-
-                    await wait(
-                        initialDelay
-                    );
-
-
-                    while (
-                        token === sequenceToken &&
-                        slideIsActive
-                    ) {
-
-                        const animation =
-                            navArrow.animate(
-
-                                [
-                                    {
-                                        transform:
-                                            'translateY(0)',
-                                        offset: 0
-                                    },
-
-                                    {
-                                        transform:
-                                            `translateY(${first}px)`,
-                                        offset: .20
-                                    },
-
-                                    {
-                                        transform:
-                                            'translateY(0)',
-                                        offset: .40
-                                    },
-
-                                    {
-                                        transform:
-                                            `translateY(${second}px)`,
-                                        offset: .62
-                                    },
-
-                                    {
-                                        transform:
-                                            'translateY(0)',
-                                        offset: 1
-                                    }
-                                ],
-
-                                {
-                                    duration,
-                                    easing:
-                                        'ease-in-out'
-                                }
-                            );
-
-
-                        trackAnimation(
-                            animation
-                        );
-
-
-                        try {
-                            await animation.finished;
-                        } catch (_) {
-                            return;
-                        }
-
-
-                        await wait(
-                            pause
-                        );
-                    }
-                };
-
-
-
-            /* =================================================
-               NAVIGATION OUTRO
-               ================================================= */
-
-            const showNavigation =
-                async token => {
-
-                    const hold =
-                        readTime(
-                            root,
-                            '--cm-nav-hold-duration'
-                        );
-
-
-                    await wait(
-                        hold
-                    );
-
-
-                    if (
-                        token !== sequenceToken ||
-                        !slideIsActive
-                    ) {
-                        return;
-                    }
-
-
-
-                    /* DIM MAP */
-
-                    const dimOpacity =
-                        readNumber(
-                            root,
-                            '--cm-map-dim-opacity',
-                            .15
-                        );
-
-
-                    const dimDuration =
-                        readTime(
-                            root,
-                            '--cm-map-dim-duration'
-                        );
-
-
-                    const dimEasing =
-                        readCSS(
-                            root,
-                            '--cm-map-dim-easing',
-                            'ease'
-                        );
-
-
-                    trackAnimation(
-                        root.animate(
-
-                            [
-                                {
-                                    opacity: 1
-                                },
-
-                                {
-                                    opacity:
-                                        dimOpacity
-                                }
-                            ],
-
-                            {
-                                duration:
-                                    dimDuration,
-
-                                easing:
-                                    dimEasing,
-
-                                fill:
-                                    'forwards'
-                            }
-                        )
-                    );
-
-
-
-                    /* NAV TEXT */
-
-                    if (navText) {
-
-                        navText.style.visibility =
-                            'visible';
-
-
-                        await wait(
-                            readTime(
-                                root,
-                                '--cm-nav-text-delay'
-                            )
-                        );
-
-
-                        if (
-                            token !== sequenceToken ||
-                            !slideIsActive
-                        ) {
-                            return;
-                        }
-
-
-                        const offset =
-                            readCSS(
-                                root,
-                                '--cm-nav-text-start-offset',
-                                '8px'
-                            );
-
-
-                        trackAnimation(
-                            navText.animate(
-
-                                [
-                                    {
-                                        opacity: 0,
-
-                                        transform:
-                                            `translateY(${offset})`
-                                    },
-
-                                    {
-                                        opacity: 1,
-
-                                        transform:
-                                            'translateY(0)'
-                                    }
-                                ],
-
-                                {
-                                    duration:
-                                        readTime(
-                                            root,
-                                            '--cm-nav-text-duration'
-                                        ),
-
-                                    easing:
-                                        readCSS(
-                                            root,
-                                            '--cm-nav-text-easing',
-                                            'ease'
-                                        ),
-
-                                    fill:
-                                        'forwards'
-                                }
-                            )
-                        );
-                    }
-
-
-
-                    /* NAV ARROW */
-
-                    if (navArrow) {
-
-                        await wait(
-                            readTime(
-                                root,
-                                '--cm-nav-arrow-delay'
-                            )
-                        );
-
-
-                        if (
-                            token !== sequenceToken ||
-                            !slideIsActive
-                        ) {
-                            return;
-                        }
-
-
-                        navArrow.style.visibility =
-                            'visible';
-
-
-                        navArrow.style.opacity =
-                            '1';
-
-
-                        removeArrowGradientOverlays();
-
-
-                        const shapes =
-                            navArrow.querySelectorAll(
-                                `
-                                svg path:not([data-context-gradient-overlay]),
-                                svg polygon:not([data-context-gradient-overlay]),
-                                svg polyline:not([data-context-gradient-overlay]),
-                                svg rect:not([data-context-gradient-overlay]),
-                                svg circle:not([data-context-gradient-overlay]),
-                                svg ellipse:not([data-context-gradient-overlay])
-                                `
-                            );
-
-
-                        const strokeColor =
-                            readCSS(
-                                root,
-                                '--cm-nav-arrow-stroke',
-                                '#6900e5'
-                            );
-
-
-                        const strokeWidth =
-                            readCSS(
-                                root,
-                                '--cm-nav-arrow-stroke-width',
-                                '1px'
-                            );
-
-
-                        const drawDuration =
-                            readTime(
-                                root,
-                                '--cm-nav-arrow-draw-duration'
-                            );
-
-
-                        const drawEasing =
-                            readCSS(
-                                root,
-                                '--cm-nav-arrow-draw-easing',
-                                'ease'
-                            );
-
-
-                        const fillDelay =
-                            readTime(
-                                root,
-                                '--cm-nav-arrow-fill-delay'
-                            );
-
-
-                        const fillDuration =
-                            readTime(
-                                root,
-                                '--cm-nav-arrow-fill-duration'
-                            );
-
-
-                        const fillEasing =
-                            readCSS(
-                                root,
-                                '--cm-nav-arrow-fill-easing',
-                                'ease'
-                            );
-
-
-                        const gradientID =
-                            navArrow
-                                ._contextGradientID;
-
-
-                        const innerShadowID =
-                            navArrow
-                                ._contextInnerShadowID;
-
-
-                        shapes.forEach(
-                            shape => {
-
-                                shape.style.stroke =
-                                    strokeColor;
-
-
-                                shape.style.strokeWidth =
-                                    strokeWidth;
-
-
-                                shape.style.fill =
-                                    '#000000';
-
-
-
-                                if (
-                                    typeof shape.getTotalLength ===
-                                    'function'
-                                ) {
-
-                                    const length =
-                                        shape.getTotalLength();
-
-
-                                    shape.style.strokeDasharray =
-                                        `${length} ${length}`;
-
-
-                                    shape.style.strokeDashoffset =
-                                        `${length}`;
-
-
-                                    trackAnimation(
-                                        shape.animate(
-
-                                            [
-                                                {
-                                                    strokeDashoffset:
-                                                        `${length}`
-                                                },
-
-                                                {
-                                                    strokeDashoffset:
-                                                        '0'
-                                                }
-                                            ],
-
-                                            {
-                                                duration:
-                                                    drawDuration,
-
-                                                easing:
-                                                    drawEasing,
-
-                                                fill:
-                                                    'forwards'
-                                            }
-                                        )
-                                    );
-                                }
-
-
-                                if (gradientID) {
-
-                                    const gradientShape =
-                                        shape.cloneNode(
-                                            true
-                                        );
-
-
-                                    gradientShape.setAttribute(
-                                        'data-context-gradient-overlay',
-                                        'true'
-                                    );
-
-
-                                    gradientShape.removeAttribute(
-                                        'id'
-                                    );
-
-
-                                    gradientShape.style.stroke =
-                                        'none';
-
-
-                                    gradientShape.style.fill =
-                                        `url(#${gradientID})`;
-
-
-                                    gradientShape.style.opacity =
-                                        '0';
-
-
-                                    gradientShape.style.strokeDasharray =
-                                        'none';
-
-
-                                    gradientShape.style.strokeDashoffset =
-                                        '0';
-
-
-                                    if (
-                                        innerShadowID
-                                    ) {
-
-                                        gradientShape.style.filter =
-                                            `url(#${innerShadowID})`;
-                                    }
-
-
-                                    shape.parentNode
-                                        .insertBefore(
-                                            gradientShape,
-                                            shape.nextSibling
-                                        );
-
-
-                                    setTimeout(
-                                        () => {
-
-                                            if (
-                                                token !== sequenceToken ||
-                                                !slideIsActive
-                                            ) {
-
-                                                gradientShape.remove();
-
-                                                return;
-                                            }
-
-
-                                            trackAnimation(
-                                                gradientShape.animate(
-
-                                                    [
-                                                        {
-                                                            opacity: 0
-                                                        },
-
-                                                        {
-                                                            opacity: 1
-                                                        }
-                                                    ],
-
-                                                    {
-                                                        duration:
-                                                            fillDuration,
-
-                                                        easing:
-                                                            fillEasing,
-
-                                                        fill:
-                                                            'forwards'
-                                                    }
-                                                )
-                                            );
-
+                                    [
+                                        {
+                                            fill:
+                                                black
                                         },
 
-                                        fillDelay
-                                    );
-                                }
-                            }
-                        );
+                                        {
+                                            fill:
+                                                purple
+                                        }
+                                    ],
 
+                                    {
+                                        duration:
+                                            timing.fillDuration,
 
-                        startArrowBounce(
-                            token
-                        );
-                    }
-                };
+                                        easing:
+                                            timing.fillEasing,
 
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
 
+                        },
 
-            /* =================================================
-               PLAY CONSTRUCTION CASCADE
-               ================================================= */
-
-            const playSequence =
-                async token => {
-
-                    await wait(
-                        readTime(
-                            root,
-                            '--cm-sequence-start-delay'
-                        )
+                        timing.fillDelay
                     );
 
 
-                    for (
-                        const className
-                        of paintOrder
-                    ) {
-
-                        if (
-                            token !== sequenceToken ||
-                            !slideIsActive
-                        ) {
-                            return;
-                        }
-
-
-                        const element =
-                            svg.querySelector(
-                                `.${className}`
-                            );
-
-
-                        if (!element) {
-                            continue;
-                        }
-
-
-                        const type =
-                            getType(
-                                className
-                            );
-
-
-                        const timing =
-                            getTiming(
-                                root,
-                                type
-                            );
-
-
-                        if (
-                            type === 'text'
-                        ) {
-
-                            animateText(
-                                element,
-                                timing,
-                                token
-                            );
-
-                        } else {
-
-                            animateGeometry(
-                                element,
-                                timing,
-                                token,
-                                className
-                            );
-                        }
-
-
-                        await wait(
-                            timing.advance
-                        );
-                    }
-
-
-
-                    /* FINAL TEXT TAIL */
-
-                    const lastTiming =
-                        getTiming(
-                            root,
-                            'text'
-                        );
-
-
-                    const finalTail =
-                        Math.max(
-
-                            lastTiming.drawDuration,
-
-                            lastTiming.fillDelay +
-                                lastTiming.fillDuration,
-
-                            lastTiming.darkenDelay +
-                                lastTiming.darkenDuration,
-
-                            lastTiming.shadowDelay +
-                                lastTiming.shadowDuration
-                        );
-
-
-                    await wait(
-                        finalTail
-                    );
-
-
-                    if (
-                        token !== sequenceToken ||
-                        !slideIsActive
-                    ) {
-                        return;
-                    }
-
-
-                    showNavigation(
+                    animateOverlay(
+                        className,
+                        timing.fillDelay,
                         token
                     );
                 };
 
 
 
-            /* =================================================
-               PAGEFLOW ACTIVE SLIDE DETECTION
-               ================================================= */
+                /* =================================================
+                   DRAW TEXT
+                   ================================================= */
 
-            const isSlideCurrent =
-                () => {
+                const animateText = (
+                    element,
+                    timing,
+                    token
+                ) => {
 
-                    if (!slide) {
-                        return true;
+                    if (!element) {
+                        return;
                     }
-
-
-                    const styles =
-                        getComputedStyle(
-                            slide
-                        );
 
 
                     if (
-                        styles.visibility ===
-                            'hidden' ||
-
-                        parseFloat(
-                            styles.opacity
-                        ) <= 0
-                    ) {
-                        return false;
-                    }
-
-
-                    const transform =
-                        styles.transform;
-
-
-                    if (
-                        !transform ||
-                        transform === 'none'
-                    ) {
-                        return true;
-                    }
-
-
-                    const matrixMatch =
-                        transform.match(
-                            /^matrix\(([^)]+)\)$/
-                        );
-
-
-                    if (matrixMatch) {
-
-                        const parts =
-                            matrixMatch[1]
-                                .split(',')
-                                .map(Number);
-
-
-                        return (
-                            Math.abs(
-                                parts[4] || 0
-                            ) < 2 &&
-
-                            Math.abs(
-                                parts[5] || 0
-                            ) < 2
-                        );
-                    }
-
-
-                    const matrix3dMatch =
-                        transform.match(
-                            /^matrix3d\(([^)]+)\)$/
-                        );
-
-
-                    if (matrix3dMatch) {
-
-                        const parts =
-                            matrix3dMatch[1]
-                                .split(',')
-                                .map(Number);
-
-
-                        return (
-                            Math.abs(
-                                parts[12] || 0
-                            ) < 2 &&
-
-                            Math.abs(
-                                parts[13] || 0
-                            ) < 2
-                        );
-                    }
-
-
-                    return false;
-                };
-
-
-
-            /* =================================================
-               ACTIVATE / DEACTIVATE
-               ================================================= */
-
-            const activate =
-                () => {
-
-                    if (
-                        slideIsActive
+                        startupGateIsActive()
                     ) {
                         return;
                     }
 
 
-                    slideIsActive =
-                        true;
+                    const green =
+                        readCSS(
+                            root,
+                            "--cm-green",
+                            "#18ff1c"
+                        );
 
 
-                    sequenceToken++;
+                    const black =
+                        readCSS(
+                            root,
+                            "--cm-black",
+                            "#000000"
+                        );
 
 
-                    const token =
-                        sequenceToken;
+                    const shadowStart =
+                        readCSS(
+                            root,
+                            "--cm-text-shadow-start",
+                            "none"
+                        );
 
 
-                    resetMap();
+                    const shadow =
+                        readCSS(
+                            root,
+                            "--cm-text-shadow",
+                            "none"
+                        );
 
 
-                    requestAnimationFrame(
+                    if (
+                        typeof element.getTotalLength ===
+                        "function"
+                    ) {
+
+                        const length =
+                            element.getTotalLength();
+
+
+                        const hiddenLength =
+                            length * 1.025;
+
+
+                        element.style.stroke =
+                            green;
+
+
+                        trackAnimation(
+                            element.animate(
+
+                                [
+                                    {
+                                        strokeDashoffset:
+                                            `${hiddenLength}`
+                                    },
+
+                                    {
+                                        strokeDashoffset:
+                                            "0"
+                                    }
+                                ],
+
+                                {
+                                    duration:
+                                        timing.drawDuration,
+
+                                    easing:
+                                        timing.drawEasing,
+
+                                    fill:
+                                        "forwards"
+                                }
+                            )
+                        );
+                    }
+
+
+                    setTimeout(
                         () => {
+
+                            if (
+                                token !== sequenceToken ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            trackAnimation(
+                                element.animate(
+
+                                    [
+                                        {
+                                            fill:
+                                                black
+                                        },
+
+                                        {
+                                            fill:
+                                                green
+                                        }
+                                    ],
+
+                                    {
+                                        duration:
+                                            timing.fillDuration,
+
+                                        easing:
+                                            timing.fillEasing,
+
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
+
+                        },
+
+                        timing.fillDelay
+                    );
+
+
+                    setTimeout(
+                        () => {
+
+                            if (
+                                token !== sequenceToken ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            trackAnimation(
+                                element.animate(
+
+                                    [
+                                        {
+                                            stroke:
+                                                green
+                                        },
+
+                                        {
+                                            stroke:
+                                                black
+                                        }
+                                    ],
+
+                                    {
+                                        duration:
+                                            timing.darkenDuration,
+
+                                        easing:
+                                            timing.darkenEasing,
+
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
+
+                        },
+
+                        timing.darkenDelay
+                    );
+
+
+                    setTimeout(
+                        () => {
+
+                            if (
+                                token !== sequenceToken ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            trackAnimation(
+                                element.animate(
+
+                                    [
+                                        {
+                                            filter:
+                                                shadowStart
+                                        },
+
+                                        {
+                                            filter:
+                                                shadow
+                                        }
+                                    ],
+
+                                    {
+                                        duration:
+                                            timing.shadowDuration,
+
+                                        easing:
+                                            timing.shadowEasing,
+
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
+
+                        },
+
+                        timing.shadowDelay
+                    );
+                };
+
+
+
+                /* =================================================
+                   BUILD NAV ARROW
+                   ================================================= */
+
+                const initializeArrow =
+                    () => {
+
+                        if (!navArrow) {
+                            return;
+                        }
+
+
+                        const arrowSvg =
+                            navArrow.querySelector(
+                                "svg"
+                            );
+
+
+                        if (!arrowSvg) {
+                            return;
+                        }
+
+
+                        const namespace =
+                            "http://www.w3.org/2000/svg";
+
+
+                        const make =
+                            tag =>
+                                document.createElementNS(
+                                    namespace,
+                                    tag
+                                );
+
+
+                        let defs =
+                            arrowSvg.querySelector(
+                                "defs"
+                            );
+
+
+                        if (!defs) {
+
+                            defs =
+                                make(
+                                    "defs"
+                                );
+
+
+                            arrowSvg.insertBefore(
+                                defs,
+                                arrowSvg.firstChild
+                            );
+                        }
+
+
+                        const gradientID =
+                            `context-nav-gradient-${rootIndex}`;
+
+
+                        let gradient =
+                            arrowSvg.querySelector(
+                                `#${gradientID}`
+                            );
+
+
+                        if (!gradient) {
+
+                            gradient =
+                                make(
+                                    "linearGradient"
+                                );
+
+
+                            gradient.setAttribute(
+                                "id",
+                                gradientID
+                            );
+
+
+                            defs.appendChild(
+                                gradient
+                            );
+                        }
+
+
+                        gradient.setAttribute(
+                            "x1",
+                            "0%"
+                        );
+
+
+                        gradient.setAttribute(
+                            "y1",
+                            "0%"
+                        );
+
+
+                        gradient.setAttribute(
+                            "x2",
+                            "0%"
+                        );
+
+
+                        gradient.setAttribute(
+                            "y2",
+                            "100%"
+                        );
+
+
+                        while (
+                            gradient.firstChild
+                        ) {
+
+                            gradient.removeChild(
+                                gradient.firstChild
+                            );
+                        }
+
+
+                        const addStop = (
+                            offset,
+                            colorProperty,
+                            opacityProperty,
+                            fallbackColor
+                        ) => {
+
+                            const stop =
+                                make(
+                                    "stop"
+                                );
+
+
+                            stop.setAttribute(
+                                "offset",
+                                offset
+                            );
+
+
+                            stop.setAttribute(
+                                "stop-color",
+                                readCSS(
+                                    root,
+                                    colorProperty,
+                                    fallbackColor
+                                )
+                            );
+
+
+                            stop.setAttribute(
+                                "stop-opacity",
+                                readCSS(
+                                    root,
+                                    opacityProperty,
+                                    "1"
+                                )
+                            );
+
+
+                            gradient.appendChild(
+                                stop
+                            );
+                        };
+
+
+                        addStop(
+                            "0%",
+                            "--cm-nav-arrow-gradient-top",
+                            "--cm-nav-arrow-gradient-top-opacity",
+                            "#000000"
+                        );
+
+
+                        addStop(
+                            readCSS(
+                                root,
+                                "--cm-nav-arrow-gradient-midpoint",
+                                "50%"
+                            ),
+                            "--cm-nav-arrow-gradient-mid",
+                            "--cm-nav-arrow-gradient-mid-opacity",
+                            "rgba(0,0,0,.29)"
+                        );
+
+
+                        addStop(
+                            "100%",
+                            "--cm-nav-arrow-gradient-bottom",
+                            "--cm-nav-arrow-gradient-bottom-opacity",
+                            "#52ff02"
+                        );
+
+
+                        navArrow
+                            ._contextGradientID =
+                                gradientID;
+
+
+                        const filterID =
+                            `context-nav-inner-shadow-${rootIndex}`;
+
+
+                        const oldFilter =
+                            arrowSvg.querySelector(
+                                `#${filterID}`
+                            );
+
+
+                        if (oldFilter) {
+
+                            oldFilter.remove();
+                        }
+
+
+                        const filter =
+                            make(
+                                "filter"
+                            );
+
+
+                        filter.setAttribute(
+                            "id",
+                            filterID
+                        );
+
+
+                        filter.setAttribute(
+                            "x",
+                            "-50%"
+                        );
+
+
+                        filter.setAttribute(
+                            "y",
+                            "-50%"
+                        );
+
+
+                        filter.setAttribute(
+                            "width",
+                            "200%"
+                        );
+
+
+                        filter.setAttribute(
+                            "height",
+                            "200%"
+                        );
+
+
+                        const shadowResults =
+                            [];
+
+
+                        const addInnerShadow =
+                            layer => {
+
+                                const blurResult =
+                                    `innerBlur${layer}`;
+
+
+                                const offsetResult =
+                                    `innerOffset${layer}`;
+
+
+                                const edgeResult =
+                                    `innerEdge${layer}`;
+
+
+                                const floodResult =
+                                    `innerColor${layer}`;
+
+
+                                const finalResult =
+                                    `innerShadow${layer}`;
+
+
+                                const blur =
+                                    make(
+                                        "feGaussianBlur"
+                                    );
+
+
+                                blur.setAttribute(
+                                    "in",
+                                    "SourceAlpha"
+                                );
+
+
+                                blur.setAttribute(
+                                    "stdDeviation",
+                                    readNumber(
+                                        root,
+                                        `--cm-nav-arrow-inner-shadow-${layer}-blur`,
+                                        layer === 1
+                                            ? 1.5
+                                            : layer === 2
+                                                ? 3
+                                                : 6
+                                    )
+                                );
+
+
+                                blur.setAttribute(
+                                    "result",
+                                    blurResult
+                                );
+
+
+                                const offset =
+                                    make(
+                                        "feOffset"
+                                    );
+
+
+                                offset.setAttribute(
+                                    "in",
+                                    blurResult
+                                );
+
+
+                                offset.setAttribute(
+                                    "dx",
+                                    readNumber(
+                                        root,
+                                        `--cm-nav-arrow-inner-shadow-${layer}-offset-x`,
+                                        0
+                                    )
+                                );
+
+
+                                offset.setAttribute(
+                                    "dy",
+                                    readNumber(
+                                        root,
+                                        `--cm-nav-arrow-inner-shadow-${layer}-offset-y`,
+                                        layer === 1
+                                            ? .5
+                                            : layer === 2
+                                                ? 1
+                                                : 1.5
+                                    )
+                                );
+
+
+                                offset.setAttribute(
+                                    "result",
+                                    offsetResult
+                                );
+
+
+                                const edge =
+                                    make(
+                                        "feComposite"
+                                    );
+
+
+                                edge.setAttribute(
+                                    "in",
+                                    "SourceAlpha"
+                                );
+
+
+                                edge.setAttribute(
+                                    "in2",
+                                    offsetResult
+                                );
+
+
+                                edge.setAttribute(
+                                    "operator",
+                                    "out"
+                                );
+
+
+                                edge.setAttribute(
+                                    "result",
+                                    edgeResult
+                                );
+
+
+                                const flood =
+                                    make(
+                                        "feFlood"
+                                    );
+
+
+                                flood.setAttribute(
+                                    "flood-color",
+                                    readCSS(
+                                        root,
+                                        "--cm-nav-arrow-inner-shadow-color",
+                                        "#000000"
+                                    )
+                                );
+
+
+                                flood.setAttribute(
+                                    "flood-opacity",
+                                    readNumber(
+                                        root,
+                                        `--cm-nav-arrow-inner-shadow-${layer}-opacity`,
+                                        layer === 1
+                                            ? 1
+                                            : layer === 2
+                                                ? .85
+                                                : .55
+                                    )
+                                );
+
+
+                                flood.setAttribute(
+                                    "result",
+                                    floodResult
+                                );
+
+
+                                const color =
+                                    make(
+                                        "feComposite"
+                                    );
+
+
+                                color.setAttribute(
+                                    "in",
+                                    floodResult
+                                );
+
+
+                                color.setAttribute(
+                                    "in2",
+                                    edgeResult
+                                );
+
+
+                                color.setAttribute(
+                                    "operator",
+                                    "in"
+                                );
+
+
+                                color.setAttribute(
+                                    "result",
+                                    finalResult
+                                );
+
+
+                                filter.appendChild(
+                                    blur
+                                );
+
+
+                                filter.appendChild(
+                                    offset
+                                );
+
+
+                                filter.appendChild(
+                                    edge
+                                );
+
+
+                                filter.appendChild(
+                                    flood
+                                );
+
+
+                                filter.appendChild(
+                                    color
+                                );
+
+
+                                shadowResults.push(
+                                    finalResult
+                                );
+                            };
+
+
+                        addInnerShadow(
+                            1
+                        );
+
+
+                        addInnerShadow(
+                            2
+                        );
+
+
+                        addInnerShadow(
+                            3
+                        );
+
+
+                        const merge =
+                            make(
+                                "feMerge"
+                            );
+
+
+                        const sourceNode =
+                            make(
+                                "feMergeNode"
+                            );
+
+
+                        sourceNode.setAttribute(
+                            "in",
+                            "SourceGraphic"
+                        );
+
+
+                        merge.appendChild(
+                            sourceNode
+                        );
+
+
+                        shadowResults.forEach(
+                            result => {
+
+                                const node =
+                                    make(
+                                        "feMergeNode"
+                                    );
+
+
+                                node.setAttribute(
+                                    "in",
+                                    result
+                                );
+
+
+                                merge.appendChild(
+                                    node
+                                );
+                            }
+                        );
+
+
+                        filter.appendChild(
+                            merge
+                        );
+
+
+                        defs.appendChild(
+                            filter
+                        );
+
+
+                        navArrow
+                            ._contextInnerShadowID =
+                                filterID;
+                    };
+
+
+                initializeArrow();
+
+
+
+                /* =================================================
+                   ARROW BOUNCE
+                   ================================================= */
+
+                const startArrowBounce =
+                    async token => {
+
+                        if (!navArrow) {
+                            return;
+                        }
+
+
+                        const initialDelay =
+                            readTime(
+                                root,
+                                "--cm-nav-arrow-bounce-delay"
+                            );
+
+
+                        const duration =
+                            readTime(
+                                root,
+                                "--cm-nav-arrow-bounce-duration"
+                            );
+
+
+                        const pause =
+                            readTime(
+                                root,
+                                "--cm-nav-arrow-bounce-pause"
+                            );
+
+
+                        const first =
+                            readNumber(
+                                root,
+                                "--cm-nav-arrow-bounce-first",
+                                11
+                            );
+
+
+                        const second =
+                            readNumber(
+                                root,
+                                "--cm-nav-arrow-bounce-second",
+                                6
+                            );
+
+
+                        await wait(
+                            initialDelay
+                        );
+
+
+                        while (
+                            token === sequenceToken &&
+                            slideIsActive &&
+                            !startupGateIsActive()
+                        ) {
+
+                            const animation =
+                                navArrow.animate(
+
+                                    [
+                                        {
+                                            transform:
+                                                "translateY(0)",
+                                            offset: 0
+                                        },
+
+                                        {
+                                            transform:
+                                                `translateY(${first}px)`,
+                                            offset: .20
+                                        },
+
+                                        {
+                                            transform:
+                                                "translateY(0)",
+                                            offset: .40
+                                        },
+
+                                        {
+                                            transform:
+                                                `translateY(${second}px)`,
+                                            offset: .62
+                                        },
+
+                                        {
+                                            transform:
+                                                "translateY(0)",
+                                            offset: 1
+                                        }
+                                    ],
+
+                                    {
+                                        duration,
+
+                                        easing:
+                                            "ease-in-out"
+                                    }
+                                );
+
+
+                            trackAnimation(
+                                animation
+                            );
+
+
+                            try {
+
+                                await animation.finished;
+
+                            } catch (_) {
+
+                                return;
+                            }
+
+
+                            await wait(
+                                pause
+                            );
+                        }
+                    };
+
+
+
+                /* =================================================
+                   NAVIGATION OUTRO
+                   ================================================= */
+
+                const showNavigation =
+                    async token => {
+
+                        const hold =
+                            readTime(
+                                root,
+                                "--cm-nav-hold-duration"
+                            );
+
+
+                        await wait(
+                            hold
+                        );
+
+
+                        if (
+                            token !== sequenceToken ||
+                            !slideIsActive ||
+                            startupGateIsActive()
+                        ) {
+                            return;
+                        }
+
+
+                        const dimOpacity =
+                            readNumber(
+                                root,
+                                "--cm-map-dim-opacity",
+                                .15
+                            );
+
+
+                        const dimDuration =
+                            readTime(
+                                root,
+                                "--cm-map-dim-duration"
+                            );
+
+
+                        const dimEasing =
+                            readCSS(
+                                root,
+                                "--cm-map-dim-easing",
+                                "ease"
+                            );
+
+
+                        trackAnimation(
+                            root.animate(
+
+                                [
+                                    {
+                                        opacity: 1
+                                    },
+
+                                    {
+                                        opacity:
+                                            dimOpacity
+                                    }
+                                ],
+
+                                {
+                                    duration:
+                                        dimDuration,
+
+                                    easing:
+                                        dimEasing,
+
+                                    fill:
+                                        "forwards"
+                                }
+                            )
+                        );
+
+
+                        if (navText) {
+
+                            navText.style.visibility =
+                                "visible";
+
+
+                            await wait(
+                                readTime(
+                                    root,
+                                    "--cm-nav-text-delay"
+                                )
+                            );
+
+
+                            if (
+                                token !== sequenceToken ||
+                                !slideIsActive ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            const offset =
+                                readCSS(
+                                    root,
+                                    "--cm-nav-text-start-offset",
+                                    "8px"
+                                );
+
+
+                            trackAnimation(
+                                navText.animate(
+
+                                    [
+                                        {
+                                            opacity: 0,
+
+                                            transform:
+                                                `translateY(${offset})`
+                                        },
+
+                                        {
+                                            opacity: 1,
+
+                                            transform:
+                                                "translateY(0)"
+                                        }
+                                    ],
+
+                                    {
+                                        duration:
+                                            readTime(
+                                                root,
+                                                "--cm-nav-text-duration"
+                                            ),
+
+                                        easing:
+                                            readCSS(
+                                                root,
+                                                "--cm-nav-text-easing",
+                                                "ease"
+                                            ),
+
+                                        fill:
+                                            "forwards"
+                                    }
+                                )
+                            );
+                        }
+
+
+                        if (navArrow) {
+
+                            await wait(
+                                readTime(
+                                    root,
+                                    "--cm-nav-arrow-delay"
+                                )
+                            );
+
+
+                            if (
+                                token !== sequenceToken ||
+                                !slideIsActive ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            navArrow.style.visibility =
+                                "visible";
+
+
+                            navArrow.style.opacity =
+                                "1";
+
+
+                            removeArrowGradientOverlays();
+
+
+                            const shapes =
+                                navArrow.querySelectorAll(
+                                    `
+                                    svg path:not([data-context-gradient-overlay]),
+                                    svg polygon:not([data-context-gradient-overlay]),
+                                    svg polyline:not([data-context-gradient-overlay]),
+                                    svg rect:not([data-context-gradient-overlay]),
+                                    svg circle:not([data-context-gradient-overlay]),
+                                    svg ellipse:not([data-context-gradient-overlay])
+                                    `
+                                );
+
+
+                            const strokeColor =
+                                readCSS(
+                                    root,
+                                    "--cm-nav-arrow-stroke",
+                                    "#6900e5"
+                                );
+
+
+                            const strokeWidth =
+                                readCSS(
+                                    root,
+                                    "--cm-nav-arrow-stroke-width",
+                                    "1px"
+                                );
+
+
+                            const drawDuration =
+                                readTime(
+                                    root,
+                                    "--cm-nav-arrow-draw-duration"
+                                );
+
+
+                            const drawEasing =
+                                readCSS(
+                                    root,
+                                    "--cm-nav-arrow-draw-easing",
+                                    "ease"
+                                );
+
+
+                            const fillDelay =
+                                readTime(
+                                    root,
+                                    "--cm-nav-arrow-fill-delay"
+                                );
+
+
+                            const fillDuration =
+                                readTime(
+                                    root,
+                                    "--cm-nav-arrow-fill-duration"
+                                );
+
+
+                            const fillEasing =
+                                readCSS(
+                                    root,
+                                    "--cm-nav-arrow-fill-easing",
+                                    "ease"
+                                );
+
+
+                            const gradientID =
+                                navArrow
+                                    ._contextGradientID;
+
+
+                            const innerShadowID =
+                                navArrow
+                                    ._contextInnerShadowID;
+
+
+                            shapes.forEach(
+                                shape => {
+
+                                    shape.style.stroke =
+                                        strokeColor;
+
+
+                                    shape.style.strokeWidth =
+                                        strokeWidth;
+
+
+                                    shape.style.fill =
+                                        "#000000";
+
+
+                                    if (
+                                        typeof shape.getTotalLength ===
+                                        "function"
+                                    ) {
+
+                                        const length =
+                                            shape.getTotalLength();
+
+
+                                        shape.style.strokeDasharray =
+                                            `${length} ${length}`;
+
+
+                                        shape.style.strokeDashoffset =
+                                            `${length}`;
+
+
+                                        trackAnimation(
+                                            shape.animate(
+
+                                                [
+                                                    {
+                                                        strokeDashoffset:
+                                                            `${length}`
+                                                    },
+
+                                                    {
+                                                        strokeDashoffset:
+                                                            "0"
+                                                    }
+                                                ],
+
+                                                {
+                                                    duration:
+                                                        drawDuration,
+
+                                                    easing:
+                                                        drawEasing,
+
+                                                    fill:
+                                                        "forwards"
+                                                }
+                                            )
+                                        );
+                                    }
+
+
+                                    if (gradientID) {
+
+                                        const gradientShape =
+                                            shape.cloneNode(
+                                                true
+                                            );
+
+
+                                        gradientShape.setAttribute(
+                                            "data-context-gradient-overlay",
+                                            "true"
+                                        );
+
+
+                                        gradientShape.removeAttribute(
+                                            "id"
+                                        );
+
+
+                                        gradientShape.style.stroke =
+                                            "none";
+
+
+                                        gradientShape.style.fill =
+                                            `url(#${gradientID})`;
+
+
+                                        gradientShape.style.opacity =
+                                            "0";
+
+
+                                        gradientShape.style.strokeDasharray =
+                                            "none";
+
+
+                                        gradientShape.style.strokeDashoffset =
+                                            "0";
+
+
+                                        if (
+                                            innerShadowID
+                                        ) {
+
+                                            gradientShape.style.filter =
+                                                `url(#${innerShadowID})`;
+                                        }
+
+
+                                        shape.parentNode
+                                            .insertBefore(
+                                                gradientShape,
+                                                shape.nextSibling
+                                            );
+
+
+                                        setTimeout(
+                                            () => {
+
+                                                if (
+                                                    token !== sequenceToken ||
+                                                    !slideIsActive ||
+                                                    startupGateIsActive()
+                                                ) {
+
+                                                    gradientShape.remove();
+
+
+                                                    return;
+                                                }
+
+
+                                                trackAnimation(
+                                                    gradientShape.animate(
+
+                                                        [
+                                                            {
+                                                                opacity: 0
+                                                            },
+
+                                                            {
+                                                                opacity: 1
+                                                            }
+                                                        ],
+
+                                                        {
+                                                            duration:
+                                                                fillDuration,
+
+                                                            easing:
+                                                                fillEasing,
+
+                                                            fill:
+                                                                "forwards"
+                                                        }
+                                                    )
+                                                );
+
+                                            },
+
+                                            fillDelay
+                                        );
+                                    }
+                                }
+                            );
+
+
+                            startArrowBounce(
+                                token
+                            );
+                        }
+                    };
+
+
+
+                /* =================================================
+                   PLAY CONSTRUCTION CASCADE
+                   ================================================= */
+
+                const playSequence =
+                    async token => {
+
+                        if (
+                            startupGateIsActive()
+                        ) {
+                            return;
+                        }
+
+
+                        await wait(
+                            readTime(
+                                root,
+                                "--cm-sequence-start-delay"
+                            )
+                        );
+
+
+                        for (
+                            const className
+                            of paintOrder
+                        ) {
+
+                            if (
+                                token !== sequenceToken ||
+                                !slideIsActive ||
+                                startupGateIsActive()
+                            ) {
+                                return;
+                            }
+
+
+                            const element =
+                                svg.querySelector(
+                                    `.${className}`
+                                );
+
+
+                            if (!element) {
+                                continue;
+                            }
+
+
+                            const type =
+                                getType(
+                                    className
+                                );
+
+
+                            const timing =
+                                getTiming(
+                                    root,
+                                    type
+                                );
+
+
+                            if (
+                                type ===
+                                "text"
+                            ) {
+
+                                animateText(
+                                    element,
+                                    timing,
+                                    token
+                                );
+
+                            } else {
+
+                                animateGeometry(
+                                    element,
+                                    timing,
+                                    token,
+                                    className
+                                );
+                            }
+
+
+                            await wait(
+                                timing.advance
+                            );
+                        }
+
+
+                        const lastTiming =
+                            getTiming(
+                                root,
+                                "text"
+                            );
+
+
+                        const finalTail =
+                            Math.max(
+
+                                lastTiming.drawDuration,
+
+                                lastTiming.fillDelay +
+                                    lastTiming.fillDuration,
+
+                                lastTiming.darkenDelay +
+                                    lastTiming.darkenDuration,
+
+                                lastTiming.shadowDelay +
+                                    lastTiming.shadowDuration
+                            );
+
+
+                        await wait(
+                            finalTail
+                        );
+
+
+                        if (
+                            token !== sequenceToken ||
+                            !slideIsActive ||
+                            startupGateIsActive()
+                        ) {
+                            return;
+                        }
+
+
+                        showNavigation(
+                            token
+                        );
+                    };
+
+
+
+                /* =================================================
+                   PAGEFLOW ACTIVE SLIDE DETECTION
+                   ================================================= */
+
+                const isSlideCurrent =
+                    () => {
+
+                        /*
+                         * MASTER STARTUP GATE
+                         */
+
+                        if (
+                            startupGateIsActive()
+                        ) {
+
+                            return false;
+                        }
+
+
+                        if (!slide) {
+
+                            return true;
+                        }
+
+
+                        const styles =
+                            getComputedStyle(
+                                slide
+                            );
+
+
+                        if (
+                            styles.visibility ===
+                                "hidden" ||
+
+                            parseFloat(
+                                styles.opacity
+                            ) <= 0
+                        ) {
+
+                            return false;
+                        }
+
+
+                        const transform =
+                            styles.transform;
+
+
+                        if (
+                            !transform ||
+                            transform ===
+                                "none"
+                        ) {
+
+                            return true;
+                        }
+
+
+                        const matrixMatch =
+                            transform.match(
+                                /^matrix\(([^)]+)\)$/
+                            );
+
+
+                        if (
+                            matrixMatch
+                        ) {
+
+                            const parts =
+                                matrixMatch[1]
+                                    .split(",")
+                                    .map(
+                                        Number
+                                    );
+
+
+                            return (
+
+                                Math.abs(
+                                    parts[4] || 0
+                                ) < 2
+
+                                &&
+
+                                Math.abs(
+                                    parts[5] || 0
+                                ) < 2
+                            );
+                        }
+
+
+                        const matrix3dMatch =
+                            transform.match(
+                                /^matrix3d\(([^)]+)\)$/
+                            );
+
+
+                        if (
+                            matrix3dMatch
+                        ) {
+
+                            const parts =
+                                matrix3dMatch[1]
+                                    .split(",")
+                                    .map(
+                                        Number
+                                    );
+
+
+                            return (
+
+                                Math.abs(
+                                    parts[12] || 0
+                                ) < 2
+
+                                &&
+
+                                Math.abs(
+                                    parts[13] || 0
+                                ) < 2
+                            );
+                        }
+
+
+                        return false;
+                    };
+
+
+
+                /* =================================================
+                   ACTIVATE
+                   ================================================= */
+
+                const activate =
+                    () => {
+
+                        if (
+                            startupGateIsActive()
+                        ) {
+
+                            return;
+                        }
+
+
+                        if (
+                            slideIsActive
+                        ) {
+
+                            return;
+                        }
+
+
+                        slideIsActive =
+                            true;
+
+
+                        sequenceToken++;
+
+
+                        const token =
+                            sequenceToken;
+
+
+                        resetMap();
+
+
+                        requestAnimationFrame(
+                            () => {
+
+                                requestAnimationFrame(
+                                    () => {
+
+                                        if (
+                                            token !== sequenceToken ||
+                                            !slideIsActive ||
+                                            startupGateIsActive()
+                                        ) {
+
+                                            return;
+                                        }
+
+
+                                        playSequence(
+                                            token
+                                        );
+                                    }
+                                );
+                            }
+                        );
+                    };
+
+
+
+                /* =================================================
+                   DEACTIVATE
+                   ================================================= */
+
+                const deactivate =
+                    () => {
+
+                        if (
+                            !slideIsActive
+                        ) {
+
+                            if (
+                                startupGateIsActive()
+                            ) {
+
+                                resetMap();
+                            }
+
+
+                            return;
+                        }
+
+
+                        slideIsActive =
+                            false;
+
+
+                        sequenceToken++;
+
+
+                        resetMap();
+                    };
+
+
+
+                /* =================================================
+                   SYNC STATE
+                   ================================================= */
+
+                const syncSlideState =
+                    () => {
+
+                        if (
+                            startupGateIsActive()
+                        ) {
+
+                            deactivate();
+
+
+                            return;
+                        }
+
+
+                        if (
+                            isSlideCurrent()
+                        ) {
+
+                            activate();
+
+                        } else {
+
+                            deactivate();
+                        }
+                    };
+
+
+
+                /* =================================================
+                   PAGEFLOW MODE
+                   ================================================= */
+
+                if (slide) {
+
+
+                    /* ---------------------------------------------
+                       WATCH PAGEFLOW SLIDE
+                       --------------------------------------------- */
+
+                    const slideObserver =
+                        new MutationObserver(
+                            syncSlideState
+                        );
+
+
+                    slideObserver.observe(
+                        slide,
+                        {
+                            attributes: true,
+
+                            attributeFilter: [
+                                "style",
+                                "class"
+                            ]
+                        }
+                    );
+
+
+                    slide.addEventListener(
+                        "transitionend",
+                        syncSlideState
+                    );
+
+
+
+                    /* ---------------------------------------------
+                       WATCH MASTER PRELOADER CLASS
+                       --------------------------------------------- */
+
+                    const startupObserver =
+                        new MutationObserver(
+                            syncSlideState
+                        );
+
+
+                    startupObserver.observe(
+                        document.documentElement,
+                        {
+                            attributes: true,
+
+                            attributeFilter: [
+                                "class"
+                            ]
+                        }
+                    );
+
+
+
+                    /* ---------------------------------------------
+                       EXPLICIT PRELOADER RELEASE EVENT
+                       --------------------------------------------- */
+
+                    window.addEventListener(
+                        "context-preloader-released",
+                        () => {
+
+                            /*
+                             * Force one final clean reset
+                             * immediately before startup.
+                             */
+
+                            slideIsActive =
+                                false;
+
+
+                            sequenceToken++;
+
+
+                            resetMap();
+
 
                             requestAnimationFrame(
                                 () => {
 
-                                    if (
-                                        token !== sequenceToken ||
-                                        !slideIsActive
-                                    ) {
-                                        return;
-                                    }
+                                    requestAnimationFrame(
+                                        () => {
 
+                                            syncSlideState();
 
-                                    playSequence(
-                                        token
+                                        }
                                     );
                                 }
                             );
                         }
                     );
-                };
 
 
-            const deactivate =
-                () => {
 
-                    if (
-                        !slideIsActive
-                    ) {
-                        return;
-                    }
-
-
-                    slideIsActive =
-                        false;
-
-
-                    sequenceToken++;
-
+                    /* ---------------------------------------------
+                       INITIAL HARD RESET
+                       --------------------------------------------- */
 
                     resetMap();
-                };
 
 
-            const syncSlideState =
-                () => {
+                    syncSlideState();
+
+
+                } else {
+
+
+                    /* =================================================
+                       NON-PAGEFLOW FALLBACK
+                       ================================================= */
+
+                    resetMap();
+
+
+                    const startStandalone =
+                        () => {
+
+                            if (
+                                startupGateIsActive()
+                            ) {
+
+                                return;
+                            }
+
+
+                            if (
+                                slideIsActive
+                            ) {
+
+                                return;
+                            }
+
+
+                            slideIsActive =
+                                true;
+
+
+                            sequenceToken++;
+
+
+                            const token =
+                                sequenceToken;
+
+
+                            resetMap();
+
+
+                            requestAnimationFrame(
+                                () => {
+
+                                    requestAnimationFrame(
+                                        () => {
+
+                                            if (
+                                                token !== sequenceToken ||
+                                                startupGateIsActive()
+                                            ) {
+
+                                                return;
+                                            }
+
+
+                                            playSequence(
+                                                token
+                                            );
+                                        }
+                                    );
+                                }
+                            );
+                        };
+
 
                     if (
-                        isSlideCurrent()
+                        startupGateIsActive()
                     ) {
 
-                        activate();
+                        window.addEventListener(
+                            "context-preloader-released",
+                            startStandalone,
+                            {
+                                once: true
+                            }
+                        );
 
                     } else {
 
-                        deactivate();
+                        startStandalone();
                     }
-                };
-
-
-
-            /* =================================================
-               PAGEFLOW OBSERVER
-               ================================================= */
-
-            if (slide) {
-
-                const slideObserver =
-                    new MutationObserver(
-                        syncSlideState
-                    );
-
-
-                slideObserver.observe(
-                    slide,
-                    {
-                        attributes: true,
-
-                        attributeFilter: [
-                            'style',
-                            'class'
-                        ]
-                    }
-                );
-
-
-                slide.addEventListener(
-                    'transitionend',
-                    syncSlideState
-                );
-
-
-                resetMap();
-
-                syncSlideState();
-
-            } else {
-
-                resetMap();
-
-
-                slideIsActive =
-                    true;
-
-
-                sequenceToken++;
-
-
-                playSequence(
-                    sequenceToken
-                );
+                }
             }
-        }
-    );
-});
+        );
+    }
+);
 
 return componentId;})(RWElements.rw68470102_25D3_4E0E_AA37_39C045377C31);
 RWElements.rw9CB44C5B_398C_4882_8219_DAD0518472DF = {};
