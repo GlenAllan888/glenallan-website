@@ -1,40 +1,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
+        font-weight: 100;
         font-style: regular;
         font-stretch: normal;
     }
@@ -49,8 +25,24 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -65,8 +57,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-200.ttf') format('truetype');
-        font-weight: 100;
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,25 +86,9 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -120,6 +104,46 @@
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
         font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
+        font-weight: 200;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -142,22 +166,6 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
         font-weight: 400;
         font-style: oblique;
@@ -166,16 +174,8 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -831,8 +831,8 @@ html.context-preloading
    one graphic-specific class, e.g.
 
    context-svg
-   beginning-svg
-   reflections-svg
+   beginning-svg_1
+   reflections-svg_1
    etc.
    ========================================================= */
 
@@ -845,11 +845,8 @@ html.context-preloading
 
     /* ---------- COLORS ---------- */
 
-    --field-stroke-color-start: rgb(26, 26, 26);
+    --field-stroke-color-start: rgb(40, 40, 40);
     --field-stroke-color-end: rgb(0, 0, 0);
-
-    --field-fill-color: rgb(24, 24, 24);
-
     --field-stroke-width: 1px;
 
 
@@ -899,15 +896,16 @@ html.context-preloading
     --field-stroke-5-delay: 4000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   3. BEGINNING SVG
+   3. BEGINNING SVG 1
    ========================================================= */
 
-.beginning-svg {
+.beginning-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -933,15 +931,51 @@ html.context-preloading
     --field-stroke-5-delay: 4000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   4. REFLECTIONS SVG
+   4. BEGINNING SVG 2
    ========================================================= */
 
-.reflections-svg {
+.beginning-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1000ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 3000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 4000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   5. REFLECTIONS SVG 1
+   ========================================================= */
+
+.reflections-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -967,15 +1001,51 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   5. EARLY WORK SVG
+   6. REFLECTIONS SVG 2
    ========================================================= */
 
-.early-work-svg {
+.reflections-svg_2 {
+
+    --field-stroke-1-duration: 15000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 5000;
+
+    --field-stroke-2-duration: 9000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 4000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 3000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 500;
+
+    --field-stroke-4-duration: 8000ms;
+    --field-stroke-4-delay: 4500ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 300;
+
+    --field-stroke-5-duration: 8000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 600;
+
+}
+
+
+
+/* =========================================================
+   7. EARLY WORK SVG 1
+   ========================================================= */
+
+.early-work-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1001,15 +1071,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   6. KEYNOTE SVG
+   8. EARLY WORK SVG 2
    ========================================================= */
 
-.keynote-svg {
+.early-work-svg_2 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1035,15 +1106,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   7. RELATIONSHIPS SVG
+   9. KEYNOTE SVG 1
    ========================================================= */
 
-.relationships-svg {
+.keynote-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1069,15 +1141,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   8. CONNECTION SVG
+   10. KEYNOTE SVG 2
    ========================================================= */
 
-.connection-svg {
+.keynote-svg_2 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1103,15 +1176,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   9. PROBLEM SVG
+   11. KEYNOTE SVG 3
    ========================================================= */
 
-.problem-svg {
+.keynote-svg_3 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1137,15 +1211,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   10. EVERYTHING SVG
+   12. RELATIONSHIPS SVG 1
    ========================================================= */
 
-.everything-svg {
+.relationships-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1171,15 +1246,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   11. REFINEMENT SVG
+   24. RELATIONSHIPS SVG 2
    ========================================================= */
 
-.refinement-svg {
+.relationships-svg_2 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1205,15 +1281,16 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
 }
 
 
 
 /* =========================================================
-   12. SYSTEMS SVG
+   25. CONNECTION SVG 1
    ========================================================= */
 
-.systems-svg {
+.connection-svg_1 {
 
     --field-stroke-1-duration: 2000ms;
     --field-stroke-1-delay: 0ms;
@@ -1239,6 +1316,322 @@ html.context-preloading
     --field-stroke-5-delay: 6000ms;
     --field-stroke-5-easing: linear;
     --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   26. CONNECTION SVG 2
+   ========================================================= */
+
+.connection-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   27. PROBLEM SVG 1
+   ========================================================= */
+
+.problem-svg_1 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   28. PROBLEM SVG 2
+   ========================================================= */
+
+.problem-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   29. EVERYTHING SVG 1
+   ========================================================= */
+
+.everything-svg_1 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   30. EVERYTHING SVG 2
+   ========================================================= */
+
+.everything-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   31. REFINEMENT SVG 1
+   ========================================================= */
+
+.refinement-svg_1 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   32. REFINEMENT SVG 2
+   ========================================================= */
+
+.refinement-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   33. SYSTEMS SVG 1
+   ========================================================= */
+
+.systems-svg_1 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
+}
+
+
+
+/* =========================================================
+   23. SYSTEMS SVG 2
+   ========================================================= */
+
+.systems-svg_2 {
+
+    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-delay: 0ms;
+    --field-stroke-1-easing: linear;
+    --field-stroke-1-length: 10000;
+
+    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-delay: 1500ms;
+    --field-stroke-2-easing: linear;
+    --field-stroke-2-length: 10000;
+
+    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-delay: 2000ms;
+    --field-stroke-3-easing: linear;
+    --field-stroke-3-length: 10000;
+
+    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-delay: 4000ms;
+    --field-stroke-4-easing: linear;
+    --field-stroke-4-length: 10000;
+
+    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-delay: 6000ms;
+    --field-stroke-5-easing: linear;
+    --field-stroke-5-length: 10000;
+
 }
 
 
@@ -1535,13 +1928,14 @@ html.context-preloading
 
 .svg-field-effect:not(.svg-field-active) .svg-fill {
 
-    fill-opacity: 0;
+    opacity: 0;
 
     transition:
-        fill-opacity 300ms ease;
+        opacity 300ms ease;
 
     transition-delay: 0ms;
-}/*** =========================================================
+}
+/*** =========================================================
      PAGEFLOW INTERMEDIARY SVG SEQUENCE
 
      Divider:
@@ -2834,6 +3228,156 @@ body.pf-live-mode
 .pf-live-mode .pf-anim-media-zoom-in { transform: scale(0.85) !important; }
 .pf-live-mode .pf-anim-media-fade-up { transform: translateY(40px) !important; }
 .pf-live-mode .pf-anim-media-fade-in { transform: scale(1) !important; }/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
+.pf-animator-wrapper {
+	display: contents; 
+}
+
+/* Stato INIZIALE del contenuto della dropzone (> *) */
+/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
+.pf-live-mode .pf-animator-wrapper > * {
+	opacity: 0 !important;
+	will-change: transform, opacity;
+	transition: opacity 0.4s ease, transform 0.4s ease !important;
+	transition-delay: 0ms !important;
+}
+
+/* Mappatura delle posizioni di partenza */
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
+.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
+
+/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
+.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
+	opacity: 1 !important;
+	transform: translate(0, 0) scale(1) !important;
+	
+	transition: 
+		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
+		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
+	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
+}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
 .pf-animator-wrapper {
 	display: contents; 
 }
