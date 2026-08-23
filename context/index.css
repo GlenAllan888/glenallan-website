@@ -1,8 +1,16 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
+        font-weight: 200;
         font-style: regular;
         font-stretch: normal;
     }
@@ -25,6 +33,14 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
         font-weight: 500;
         font-style: regular;
@@ -33,16 +49,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-300.ttf') format('truetype');
-        font-weight: 200;
+        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
+        font-weight: 400;
         font-style: regular;
         font-stretch: normal;
     }
@@ -57,16 +65,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,32 +86,8 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
-        font-weight: 200;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
         font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
         font-style: oblique;
         font-stretch: normal;
     }
@@ -126,17 +102,33 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
-        font-weight: 600;
+        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
+        font-weight: 400;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
+        font-weight: 200;
+        font-style: regular;
         font-stretch: normal;
     }
 
@@ -144,14 +136,6 @@
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -166,17 +150,33 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
-        font-weight: 400;
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
         font-style: oblique;
         font-stretch: normal;
     }
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/cera/cera-pro-bold-italic.otf') format('truetype');
+        font-weight: 600;
         font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
         font-stretch: normal;
     }
     @font-face {
@@ -3228,156 +3228,6 @@ body.pf-live-mode
 .pf-live-mode .pf-anim-media-zoom-in { transform: scale(0.85) !important; }
 .pf-live-mode .pf-anim-media-fade-up { transform: translateY(40px) !important; }
 .pf-live-mode .pf-anim-media-fade-in { transform: scale(1) !important; }/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
 .pf-animator-wrapper {
 	display: contents; 
 }
