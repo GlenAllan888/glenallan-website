@@ -1,8 +1,40 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
-        font-weight: 800;
+        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
+        font-weight: 700;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
+        font-weight: 600;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
+        font-weight: 500;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
+        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+        font-weight: 300;
         font-style: regular;
         font-stretch: normal;
     }
@@ -25,8 +57,8 @@
 
     @font-face {
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-regular.ttf') format('truetype');
-        font-weight: 300;
+        src: url('../resources/fonts/montserrat/montserrat-900.ttf') format('truetype');
+        font-weight: 800;
         font-style: regular;
         font-stretch: normal;
     }
@@ -35,38 +67,6 @@
         font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
         src: url('../resources/fonts/montserrat/montserrat-500.ttf') format('truetype');
         font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-700.ttf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-100.ttf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-600.ttf') format('truetype');
-        font-weight: 500;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-C05572EE-56E1-409D-B16E-FC892E2EF126';
-        src: url('../resources/fonts/montserrat/montserrat-800.ttf') format('truetype');
-        font-weight: 700;
         font-style: regular;
         font-stretch: normal;
     }
@@ -86,6 +86,38 @@
     }
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
+        font-weight: 300;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
+        font-weight: 800;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
+        font-weight: 300;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
+        font-weight: 400;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-light-italic.otf') format('truetype');
         font-weight: 200;
         font-style: oblique;
@@ -94,8 +126,40 @@
 
     @font-face {
         font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
+        font-weight: 100;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
+        font-weight: 100;
+        font-style: oblique;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
         src: url('../resources/fonts/cera/cera-pro-light.otf') format('truetype');
         font-weight: 200;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
+        font-weight: 800;
+        font-style: regular;
+        font-stretch: normal;
+    }
+
+    @font-face {
+        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
+        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
+        font-weight: 600;
         font-style: regular;
         font-stretch: normal;
     }
@@ -113,70 +177,6 @@
         src: url('../resources/fonts/cera/cera-pro-medium-italic.otf') format('truetype');
         font-weight: 400;
         font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-bold.otf') format('truetype');
-        font-weight: 600;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular.otf') format('truetype');
-        font-weight: 300;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-medium.otf') format('truetype');
-        font-weight: 400;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin.otf') format('truetype');
-        font-weight: 100;
-        font-style: regular;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black-italic.otf') format('truetype');
-        font-weight: 800;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-thin-italic.otf') format('truetype');
-        font-weight: 100;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-regular-italic.otf') format('truetype');
-        font-weight: 300;
-        font-style: oblique;
-        font-stretch: normal;
-    }
-
-    @font-face {
-        font-family: 'font-EBD1CBA6-140B-4558-9BA8-2187AC86246C';
-        src: url('../resources/fonts/cera/cera-pro-black.otf') format('truetype');
-        font-weight: 800;
-        font-style: regular;
         font-stretch: normal;
     }
     @font-face {
@@ -203,7 +203,6 @@
     .mb-3{margin-bottom:0.75rem}
     .mb-auto{margin-bottom:auto}
     .ml-0{margin-left:0.0rem}
-    .ml-11{margin-left:2.75rem}
     .ml-8{margin-left:2.0rem}
     .ml-auto{margin-left:auto}
     .mr-0{margin-right:0.0rem}
@@ -212,7 +211,6 @@
     .mt-1{margin-top:0.25rem}
     .mt-2{margin-top:0.5rem}
     .mt-3{margin-top:0.75rem}
-    .mt-3\.5{margin-top:0.875rem}
     .mt-auto{margin-top:auto}
     .block{display:block}
     .flex{display:flex}
@@ -241,7 +239,6 @@
     .w-2\.5{width:0.625rem}
     .w-20{width:5.0rem}
     .w-40{width:10.0rem}
-    .w-60{width:15.0rem}
     .w-\[100\%\]{width:100%}
     .w-\[100vw\]{width:100vw}
     .w-\[16px\]{width:16px}
@@ -298,7 +295,6 @@
     .gap-y-2{row-gap:0.5rem}
     .gap-y-2\.5{row-gap:0.625rem}
     .self-center{align-self:center}
-    .justify-self-auto{justify-self:auto}
     .justify-self-center{justify-self:center}
     .overflow-hidden{overflow:hidden}
     .overflow-visible{overflow:visible}
@@ -324,7 +320,6 @@
     .fill-white-50\/\[--svgOpacity\]{fill:rgb(255 255 255 / var(--svgOpacity))}
     .fill-white-900\/\[--svgOpacity\]{fill:rgb(255 255 255 / var(--svgOpacity))}
     .fill-zinc-500\/\[--svgOpacity\]{fill:rgb(113 113 122 / var(--svgOpacity))}
-    .fill-zinc-700\/\[--svgOpacity\]{fill:rgb(63 63 70 / var(--svgOpacity))}
     .stroke-black-50\/\[--strokeOpacity\]{stroke:rgb(0 0 0 / var(--strokeOpacity))}
     .stroke-\[2px\]{stroke-width:2px}
     .px-8{padding-left:2.0rem;padding-right:2.0rem}
@@ -374,7 +369,6 @@
     .text-white-900{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}
     .text-white-900\/\[--svgOpacity\]{color:rgb(255 255 255 / var(--svgOpacity))}
     .text-zinc-500\/\[--svgOpacity\]{color:rgb(113 113 122 / var(--svgOpacity))}
-    .text-zinc-700\/\[--svgOpacity\]{color:rgb(63 63 70 / var(--svgOpacity))}
     .text-opacity-\[100\%\]{--tw-text-opacity:100%}
     .opacity-60{opacity:0.6}
     .shadow-2xl{--tw-shadow:0px 12px 12px 0px rgba(26,41,82,0.20), 0px 30px 26px 0px rgba(26,41,82,0.20);--tw-shadow-colored:0px 12px 12px 0px var(--tw-shadow-color), 0px 30px 26px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
@@ -429,11 +423,11 @@
     .hover\:\[filter\:drop-shadow\(0px_0px_4px_rgba\(111\2c 68\2c 206\2c 1\.00\)\)_drop-shadow\(0px_0px_3px_rgba\(111\2c 68\2c 206\2c 1\.00\)\)\]:hover{filter:drop-shadow(0px 0px 4px rgba(111,68,206,1.00)) drop-shadow(0px 0px 3px rgba(111,68,206,1.00))}
     :is(.dark .dark\:bg-opacity-\[100\%\]){--tw-bg-opacity:100%}
     :is(.dark .dark\:text-opacity-\[100\%\]){--tw-text-opacity:100%}
-    @media (min-width: 640px){.sm\:right-3{right:0.75rem}.sm\:mb-0{margin-bottom:0.0rem}.sm\:mb-3{margin-bottom:0.75rem}.sm\:mb-auto{margin-bottom:auto}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mr-auto{margin-right:auto}.sm\:mt-0{margin-top:0.0rem}.sm\:mt-2{margin-top:0.5rem}.sm\:mt-3{margin-top:0.75rem}.sm\:mt-auto{margin-top:auto}.sm\:hidden{display:none}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:h-\[100\]{height:100}.sm\:max-h-\[90vh\]{max-height:90vh}.sm\:w-14{width:3.5rem}.sm\:w-3{width:0.75rem}.sm\:w-60{width:15.0rem}.sm\:w-\[16px\]{width:16px}.sm\:w-\[30px\]{width:30px}.sm\:w-\[35vw\]{width:35vw}.sm\:w-\[50px\]{width:50px}.sm\:w-\[65vw\]{width:65vw}.sm\:w-\[70vw\]{width:70vw}.sm\:w-\[90vw\]{width:90vw}.sm\:flex-row{flex-direction:row}.sm\:flex-nowrap{flex-wrap:nowrap}.sm\:gap-0{gap:0.0rem}.sm\:gap-0\.5{gap:0.125rem}.sm\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.sm\:gap-y-0{row-gap:0.0rem}.sm\:text-center{text-align:center}.sm\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.sm\:text-2xl{font-size:1.50rem;line-height:2.00rem}.sm\:text-3xl{font-size:1.88rem;line-height:2.25rem}.sm\:text-base{font-size:1.00rem;line-height:1.50rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:font-\[200\]{font-weight:200}.sm\:marker\:text-\[18px\] *::marker{font-size:18px}.sm\:marker\:text-\[18px\]::marker{font-size:18px}}
-    @media (min-width: 768px){.md\:right-4{right:1.0rem}.md\:mb-0{margin-bottom:0.0rem}.md\:mb-3{margin-bottom:0.75rem}.md\:mb-auto{margin-bottom:auto}.md\:ml-0{margin-left:0.0rem}.md\:ml-auto{margin-left:auto}.md\:mr-0{margin-right:0.0rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0.0rem}.md\:mt-2{margin-top:0.5rem}.md\:mt-3{margin-top:0.75rem}.md\:mt-auto{margin-top:auto}.md\:hidden{display:none}.md\:h-0{height:0.0rem}.md\:h-0\.5{height:0.125rem}.md\:max-h-\[85vh\]{max-height:85vh}.md\:w-16{width:4.0rem}.md\:w-3{width:0.75rem}.md\:w-72{width:18.0rem}.md\:w-\[16px\]{width:16px}.md\:w-\[30px\]{width:30px}.md\:w-\[40vw\]{width:40vw}.md\:w-\[50px\]{width:50px}.md\:w-\[65vw\]{width:65vw}.md\:w-\[70vw\]{width:70vw}.md\:w-\[75vw\]{width:75vw}.md\:w-\[90vw\]{width:90vw}.md\:flex-row{flex-direction:row}.md\:flex-nowrap{flex-wrap:nowrap}.md\:gap-1{gap:0.25rem}.md\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.md\:gap-y-0{row-gap:0.0rem}.md\:text-center{text-align:center}.md\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.md\:text-2xl{font-size:1.50rem;line-height:2.00rem}.md\:text-base{font-size:1.00rem;line-height:1.50rem}.md\:text-lg{font-size:1.12rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:font-\[200\]{font-weight:200}.md\:marker\:text-\[18px\] *::marker{font-size:18px}.md\:marker\:text-\[18px\]::marker{font-size:18px}}
-    @media (min-width: 1024px){.lg\:right-6{right:1.5rem}.lg\:mb-0{margin-bottom:0.0rem}.lg\:mb-3{margin-bottom:0.75rem}.lg\:mb-auto{margin-bottom:auto}.lg\:ml-0{margin-left:0.0rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0.0rem}.lg\:mr-auto{margin-right:auto}.lg\:mt-0{margin-top:0.0rem}.lg\:mt-3{margin-top:0.75rem}.lg\:mt-auto{margin-top:auto}.lg\:grid{display:grid}.lg\:h-0{height:0.0rem}.lg\:h-0\.5{height:0.125rem}.lg\:max-h-\[80vh\]{max-height:80vh}.lg\:w-20{width:5.0rem}.lg\:w-3{width:0.75rem}.lg\:w-80{width:20.0rem}.lg\:w-\[16px\]{width:16px}.lg\:w-\[30px\]{width:30px}.lg\:w-\[30vw\]{width:30vw}.lg\:w-\[50px\]{width:50px}.lg\:w-\[50vw\]{width:50vw}.lg\:w-\[60vw\]{width:60vw}.lg\:w-\[70vw\]{width:70vw}.lg\:flex-row{flex-direction:row}.lg\:flex-nowrap{flex-wrap:nowrap}.lg\:gap-1{gap:0.25rem}.lg\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.lg\:gap-y-0{row-gap:0.0rem}.lg\:text-center{text-align:center}.lg\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.lg\:text-3xl{font-size:1.88rem;line-height:2.25rem}.lg\:text-lg{font-size:1.12rem;line-height:1.75rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:font-\[200\]{font-weight:200}.lg\:marker\:text-\[23px\] *::marker{font-size:23px}.lg\:marker\:text-\[23px\]::marker{font-size:23px}}
-    @media (min-width: 1280px){.xl\:right-6{right:1.5rem}.xl\:mb-0{margin-bottom:0.0rem}.xl\:mb-3{margin-bottom:0.75rem}.xl\:mb-auto{margin-bottom:auto}.xl\:ml-0{margin-left:0.0rem}.xl\:ml-auto{margin-left:auto}.xl\:mr-0{margin-right:0.0rem}.xl\:mr-auto{margin-right:auto}.xl\:mt-0{margin-top:0.0rem}.xl\:mt-3{margin-top:0.75rem}.xl\:mt-auto{margin-top:auto}.xl\:grid{display:grid}.xl\:h-1{height:0.25rem}.xl\:max-h-\[80vh\]{max-height:80vh}.xl\:w-28{width:7.0rem}.xl\:w-4{width:1.0rem}.xl\:w-80{width:20.0rem}.xl\:w-\[18px\]{width:18px}.xl\:w-\[20vw\]{width:20vw}.xl\:w-\[35px\]{width:35px}.xl\:w-\[55vw\]{width:55vw}.xl\:w-\[58px\]{width:58px}.xl\:w-\[60vw\]{width:60vw}.xl\:w-\[65vw\]{width:65vw}.xl\:flex-row{flex-direction:row}.xl\:flex-nowrap{flex-wrap:nowrap}.xl\:gap-1{gap:0.25rem}.xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.xl\:gap-y-0{row-gap:0.0rem}.xl\:text-center{text-align:center}.xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.xl\:text-lg{font-size:1.12rem;line-height:1.75rem}.xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.xl\:font-\[200\]{font-weight:200}.xl\:marker\:text-\[30px\] *::marker{font-size:30px}.xl\:marker\:text-\[30px\]::marker{font-size:30px}}
-    @media (min-width: 1536px){.\32xl\:right-6{right:1.5rem}.\32xl\:mb-0{margin-bottom:0.0rem}.\32xl\:mb-3{margin-bottom:0.75rem}.\32xl\:ml-0{margin-left:0.0rem}.\32xl\:ml-auto{margin-left:auto}.\32xl\:mr-0{margin-right:0.0rem}.\32xl\:mr-auto{margin-right:auto}.\32xl\:mt-0{margin-top:0.0rem}.\32xl\:mt-3{margin-top:0.75rem}.\32xl\:grid{display:grid}.\32xl\:h-1{height:0.25rem}.\32xl\:max-h-\[85vh\]{max-height:85vh}.\32xl\:w-28{width:7.0rem}.\32xl\:w-4{width:1.0rem}.\32xl\:w-96{width:24.0rem}.\32xl\:w-\[20px\]{width:20px}.\32xl\:w-\[20vw\]{width:20vw}.\32xl\:w-\[35px\]{width:35px}.\32xl\:w-\[50vw\]{width:50vw}.\32xl\:w-\[58px\]{width:58px}.\32xl\:w-\[65vw\]{width:65vw}.\32xl\:flex-row{flex-direction:row}.\32xl\:flex-nowrap{flex-wrap:nowrap}.\32xl\:gap-1{gap:0.25rem}.\32xl\:gap-auto{gap:auto}.\32xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.\32xl\:gap-y-0{row-gap:0.0rem}.\32xl\:text-center{text-align:center}.\32xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.\32xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.\32xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.\32xl\:text-5xl{font-size:3.00rem;line-height:3.50rem}.\32xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.\32xl\:font-\[200\]{font-weight:200}.\32xl\:marker\:text-\[30px\] *::marker{font-size:30px}.\32xl\:marker\:text-\[30px\]::marker{font-size:30px}}
+    @media (min-width: 640px){.sm\:right-3{right:0.75rem}.sm\:mb-0{margin-bottom:0.0rem}.sm\:mb-3{margin-bottom:0.75rem}.sm\:mb-auto{margin-bottom:auto}.sm\:ml-0{margin-left:0.0rem}.sm\:ml-auto{margin-left:auto}.sm\:mr-0{margin-right:0.0rem}.sm\:mr-auto{margin-right:auto}.sm\:mt-0{margin-top:0.0rem}.sm\:mt-2{margin-top:0.5rem}.sm\:mt-3{margin-top:0.75rem}.sm\:mt-auto{margin-top:auto}.sm\:hidden{display:none}.sm\:h-0{height:0.0rem}.sm\:h-0\.5{height:0.125rem}.sm\:h-\[100\]{height:100}.sm\:max-h-\[90vh\]{max-height:90vh}.sm\:w-14{width:3.5rem}.sm\:w-3{width:0.75rem}.sm\:w-\[16px\]{width:16px}.sm\:w-\[30px\]{width:30px}.sm\:w-\[35vw\]{width:35vw}.sm\:w-\[50px\]{width:50px}.sm\:w-\[65vw\]{width:65vw}.sm\:w-\[70vw\]{width:70vw}.sm\:w-\[90vw\]{width:90vw}.sm\:flex-row{flex-direction:row}.sm\:flex-nowrap{flex-wrap:nowrap}.sm\:gap-0{gap:0.0rem}.sm\:gap-0\.5{gap:0.125rem}.sm\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.sm\:gap-y-0{row-gap:0.0rem}.sm\:text-center{text-align:center}.sm\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.sm\:text-2xl{font-size:1.50rem;line-height:2.00rem}.sm\:text-3xl{font-size:1.88rem;line-height:2.25rem}.sm\:text-base{font-size:1.00rem;line-height:1.50rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:font-\[200\]{font-weight:200}.sm\:marker\:text-\[18px\] *::marker{font-size:18px}.sm\:marker\:text-\[18px\]::marker{font-size:18px}}
+    @media (min-width: 768px){.md\:right-4{right:1.0rem}.md\:mb-0{margin-bottom:0.0rem}.md\:mb-3{margin-bottom:0.75rem}.md\:mb-auto{margin-bottom:auto}.md\:ml-0{margin-left:0.0rem}.md\:ml-auto{margin-left:auto}.md\:mr-0{margin-right:0.0rem}.md\:mr-auto{margin-right:auto}.md\:mt-0{margin-top:0.0rem}.md\:mt-2{margin-top:0.5rem}.md\:mt-3{margin-top:0.75rem}.md\:mt-auto{margin-top:auto}.md\:hidden{display:none}.md\:h-0{height:0.0rem}.md\:h-0\.5{height:0.125rem}.md\:max-h-\[85vh\]{max-height:85vh}.md\:w-16{width:4.0rem}.md\:w-3{width:0.75rem}.md\:w-\[16px\]{width:16px}.md\:w-\[30px\]{width:30px}.md\:w-\[40vw\]{width:40vw}.md\:w-\[50px\]{width:50px}.md\:w-\[65vw\]{width:65vw}.md\:w-\[70vw\]{width:70vw}.md\:w-\[75vw\]{width:75vw}.md\:w-\[90vw\]{width:90vw}.md\:flex-row{flex-direction:row}.md\:flex-nowrap{flex-wrap:nowrap}.md\:gap-1{gap:0.25rem}.md\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.md\:gap-y-0{row-gap:0.0rem}.md\:text-center{text-align:center}.md\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.md\:text-2xl{font-size:1.50rem;line-height:2.00rem}.md\:text-base{font-size:1.00rem;line-height:1.50rem}.md\:text-lg{font-size:1.12rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:font-\[200\]{font-weight:200}.md\:marker\:text-\[18px\] *::marker{font-size:18px}.md\:marker\:text-\[18px\]::marker{font-size:18px}}
+    @media (min-width: 1024px){.lg\:right-6{right:1.5rem}.lg\:mb-0{margin-bottom:0.0rem}.lg\:mb-3{margin-bottom:0.75rem}.lg\:mb-auto{margin-bottom:auto}.lg\:ml-0{margin-left:0.0rem}.lg\:ml-auto{margin-left:auto}.lg\:mr-0{margin-right:0.0rem}.lg\:mr-auto{margin-right:auto}.lg\:mt-0{margin-top:0.0rem}.lg\:mt-3{margin-top:0.75rem}.lg\:mt-auto{margin-top:auto}.lg\:grid{display:grid}.lg\:h-0{height:0.0rem}.lg\:h-0\.5{height:0.125rem}.lg\:max-h-\[80vh\]{max-height:80vh}.lg\:w-20{width:5.0rem}.lg\:w-3{width:0.75rem}.lg\:w-\[16px\]{width:16px}.lg\:w-\[30px\]{width:30px}.lg\:w-\[30vw\]{width:30vw}.lg\:w-\[50px\]{width:50px}.lg\:w-\[50vw\]{width:50vw}.lg\:w-\[60vw\]{width:60vw}.lg\:w-\[70vw\]{width:70vw}.lg\:flex-row{flex-direction:row}.lg\:flex-nowrap{flex-wrap:nowrap}.lg\:gap-1{gap:0.25rem}.lg\:gap-x-2{-moz-column-gap:0.5rem;column-gap:0.5rem}.lg\:gap-y-0{row-gap:0.0rem}.lg\:text-center{text-align:center}.lg\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.lg\:text-3xl{font-size:1.88rem;line-height:2.25rem}.lg\:text-lg{font-size:1.12rem;line-height:1.75rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}.lg\:font-\[200\]{font-weight:200}.lg\:marker\:text-\[23px\] *::marker{font-size:23px}.lg\:marker\:text-\[23px\]::marker{font-size:23px}}
+    @media (min-width: 1280px){.xl\:right-6{right:1.5rem}.xl\:mb-0{margin-bottom:0.0rem}.xl\:mb-3{margin-bottom:0.75rem}.xl\:mb-auto{margin-bottom:auto}.xl\:ml-0{margin-left:0.0rem}.xl\:ml-auto{margin-left:auto}.xl\:mr-0{margin-right:0.0rem}.xl\:mr-auto{margin-right:auto}.xl\:mt-0{margin-top:0.0rem}.xl\:mt-3{margin-top:0.75rem}.xl\:mt-auto{margin-top:auto}.xl\:grid{display:grid}.xl\:h-1{height:0.25rem}.xl\:max-h-\[80vh\]{max-height:80vh}.xl\:w-28{width:7.0rem}.xl\:w-4{width:1.0rem}.xl\:w-\[18px\]{width:18px}.xl\:w-\[20vw\]{width:20vw}.xl\:w-\[35px\]{width:35px}.xl\:w-\[55vw\]{width:55vw}.xl\:w-\[58px\]{width:58px}.xl\:w-\[60vw\]{width:60vw}.xl\:w-\[65vw\]{width:65vw}.xl\:flex-row{flex-direction:row}.xl\:flex-nowrap{flex-wrap:nowrap}.xl\:gap-1{gap:0.25rem}.xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.xl\:gap-y-0{row-gap:0.0rem}.xl\:text-center{text-align:center}.xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.xl\:text-lg{font-size:1.12rem;line-height:1.75rem}.xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.xl\:font-\[200\]{font-weight:200}.xl\:marker\:text-\[30px\] *::marker{font-size:30px}.xl\:marker\:text-\[30px\]::marker{font-size:30px}}
+    @media (min-width: 1536px){.\32xl\:right-6{right:1.5rem}.\32xl\:mb-0{margin-bottom:0.0rem}.\32xl\:mb-3{margin-bottom:0.75rem}.\32xl\:ml-0{margin-left:0.0rem}.\32xl\:ml-auto{margin-left:auto}.\32xl\:mr-0{margin-right:0.0rem}.\32xl\:mr-auto{margin-right:auto}.\32xl\:mt-0{margin-top:0.0rem}.\32xl\:mt-3{margin-top:0.75rem}.\32xl\:grid{display:grid}.\32xl\:h-1{height:0.25rem}.\32xl\:max-h-\[85vh\]{max-height:85vh}.\32xl\:w-28{width:7.0rem}.\32xl\:w-4{width:1.0rem}.\32xl\:w-\[20px\]{width:20px}.\32xl\:w-\[20vw\]{width:20vw}.\32xl\:w-\[35px\]{width:35px}.\32xl\:w-\[50vw\]{width:50vw}.\32xl\:w-\[58px\]{width:58px}.\32xl\:w-\[65vw\]{width:65vw}.\32xl\:flex-row{flex-direction:row}.\32xl\:flex-nowrap{flex-wrap:nowrap}.\32xl\:gap-1{gap:0.25rem}.\32xl\:gap-auto{gap:auto}.\32xl\:gap-x-3{-moz-column-gap:0.75rem;column-gap:0.75rem}.\32xl\:gap-y-0{row-gap:0.0rem}.\32xl\:text-center{text-align:center}.\32xl\:font-montserrat{font-family:font-C05572EE-56E1-409D-B16E-FC892E2EF126}.\32xl\:text-2xl{font-size:1.50rem;line-height:2.00rem}.\32xl\:text-4xl{font-size:2.25rem;line-height:2.50rem}.\32xl\:text-5xl{font-size:3.00rem;line-height:3.50rem}.\32xl\:text-xl{font-size:1.25rem;line-height:1.75rem}.\32xl\:font-\[200\]{font-weight:200}.\32xl\:marker\:text-\[30px\] *::marker{font-size:30px}.\32xl\:marker\:text-\[30px\]::marker{font-size:30px}}
     .\[\&\>\*\]\:col-start-1>*{grid-column-start:1}
     .\[\&\>\*\]\:row-start-1>*{grid-row-start:1}
     .\[\&\>\*\]\:min-w-0>*{min-width:0.0rem}
@@ -916,30 +910,30 @@ html.context-preloading
 
 .beginning-svg_1 {
 
-    --field-stroke-1-duration: 2000ms;
+    --field-stroke-1-duration: 6000ms;
     --field-stroke-1-delay: 0ms;
     --field-stroke-1-easing: linear;
-    --field-stroke-1-length: 10000;
+    --field-stroke-1-length:1000;
 
-    --field-stroke-2-duration: 7000ms;
+    --field-stroke-2-duration: 6000ms;
     --field-stroke-2-delay: 1000ms;
     --field-stroke-2-easing: linear;
-    --field-stroke-2-length: 10000;
+    --field-stroke-2-length: 1000;
 
-    --field-stroke-3-duration: 30000ms;
+    --field-stroke-3-duration: 6000ms;
     --field-stroke-3-delay: 2000ms;
     --field-stroke-3-easing: linear;
-    --field-stroke-3-length: 10000;
+    --field-stroke-3-length: 1000;
 
-    --field-stroke-4-duration: 10000ms;
+    --field-stroke-4-duration: 6000ms;
     --field-stroke-4-delay: 3000ms;
     --field-stroke-4-easing: linear;
-    --field-stroke-4-length: 10000;
+    --field-stroke-4-length: 8000;
 
-    --field-stroke-5-duration: 2000ms;
+    --field-stroke-5-duration: 10000ms;
     --field-stroke-5-delay: 4000ms;
     --field-stroke-5-easing: linear;
-    --field-stroke-5-length: 10000;
+    --field-stroke-5-length: 7000;
 
 }
 
@@ -3234,126 +3228,6 @@ body.pf-live-mode
 .pf-live-mode .pf-anim-media-zoom-in { transform: scale(0.85) !important; }
 .pf-live-mode .pf-anim-media-fade-up { transform: translateY(40px) !important; }
 .pf-live-mode .pf-anim-media-fade-in { transform: scale(1) !important; }/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
-.pf-animator-wrapper {
-	display: contents; 
-}
-
-/* Stato INIZIALE del contenuto della dropzone (> *) */
-/* Resta visibile nell'editor. Si nasconde solo quando la pagina è caricata online! */
-.pf-live-mode .pf-animator-wrapper > * {
-	opacity: 0 !important;
-	will-change: transform, opacity;
-	transition: opacity 0.4s ease, transform 0.4s ease !important;
-	transition-delay: 0ms !important;
-}
-
-/* Mappatura delle posizioni di partenza */
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-up"] > * { transform: translateY(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-left"] > * { transform: translateX(-50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="slide-right"] > * { transform: translateX(50px) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="zoom-in"] > * { transform: scale(0.85) !important; }
-.pf-live-mode .pf-animator-wrapper[data-effect="fade-in"] > * { transform: none !important; }
-
-/* Stato ATTIVO (Quando la slide genitore entra in scena e riceve la classe dal JS) */
-.pf-live-mode .pf-slide-active .pf-animator-wrapper > * {
-	opacity: 1 !important;
-	transform: translate(0, 0) scale(1) !important;
-	
-	transition: 
-		opacity calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1), 
-		transform calc(var(--pf-dur, 800) * 1ms) cubic-bezier(0.25, 1, 0.5, 1) !important;
-	transition-delay: calc(var(--pf-del, 0) * 1ms) !important;
-}/* Il Wrapper diventa un "Fantasma" per non disturbare i Layout (Flexbox/Grid) dell'utente */
 .pf-animator-wrapper {
 	display: contents; 
 }
